@@ -1,0 +1,40 @@
+table.default {
+    td, th {
+        border: 0.0625rem solid rgba($black, 0.2);
+        padding: 0.5rem;
+        min-width: 4rem;
+        max-width: 25rem;
+    }
+    th {
+        background-color: rgba($black, 0.1);
+    }
+    tr {
+        &:hover {
+            background-color: rgba($black, 0.05);
+        }
+    }
+    thead {
+        tr {
+            td {
+                font-weight: 700;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                //
+            }
+        }
+    }
+    tfoot {
+        tr {
+            &:first-child {
+                border-top: 0.25rem solid $black;
+            }
+            td {
+                //
+            }
+        }
+    }
+}

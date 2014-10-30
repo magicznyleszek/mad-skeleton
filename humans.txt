@@ -1,0 +1,21 @@
+## TEAM
+
+[Your title]: [Name Surname]
+Site: [url]
+Email: [email]
+Location: [city, country]
+
+
+## THANKS
+
+Christopher Eppstein: compass-style.org
+Chirag Mehta: chir.ag/projects/name-that-color
+Glen Maddern: amcss.github.io
+[Name]: [url/email]
+
+
+## SITE
+
+Last update: YYYY/MM/DD
+Language: English
+Software: Atom

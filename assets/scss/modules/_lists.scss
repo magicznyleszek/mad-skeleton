@@ -1,0 +1,19 @@
+[am-list] {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    > li {
+        display: inline-block;
+    }
+}
+[am-list~="centered"] {
+    text-align: center;
+}
+[am-list~="spaced"] {
+    > li {
+        padding: 1.5rem;
+    }
+}
+[am-list~="padded"] {
+    padding: 1.5rem;
+}

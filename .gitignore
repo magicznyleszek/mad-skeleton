@@ -1,0 +1,5 @@
+## ignore compass cache
+.sass-cache
+
+## please do
+.wild-trilobites

@@ -1,0 +1,16 @@
+[am-box] {
+    @include box-sizing(border-box);
+}
+[am-box~="white"] {
+    background-color: $white;
+}
+[am-box~="black"] {
+    color: $white;
+    background-color: $black;
+}
+[am-box~="rounded"] {
+    @include border-radius(rem(4px));
+}
+[am-box~="padded"] {
+    padding: rem(12px);
+}

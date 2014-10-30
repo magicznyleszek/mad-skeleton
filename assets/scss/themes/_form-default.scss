@@ -1,0 +1,44 @@
+form.default {
+    input, select, textarea, button {
+        @include input-placeholder {
+            color: rgba($black, 0.5);
+        }
+    }
+    input:disabled {
+        @include opacity(0.5);
+    }
+    input[type="checkbox"], input[type="radio"] {
+        @include appearance(initial);
+        position: relative;
+        border: 0.125rem solid rgba($black, 0.5);
+        width: 1rem;
+        height: 1rem;
+        &:checked {
+            border-color: $black;
+        }
+    }
+    input[type="radio"] {
+        @include border-radius(50%);
+    }
+    input[type="checkbox"]:checked:after, input[type="radio"]:checked:after {
+        @include absolute(top 0 left 0 right 0 bottom 0);
+        margin: auto;
+        font-family: 'FontAwesome';
+        font-size: 1rem;
+        width: 1rem;
+        height: 1rem;
+        line-height: 1;
+    }
+    input[type="checkbox"]:checked:after {
+        content: '\f00d';
+    }
+    input[type="radio"]:checked:after {
+        content: '\f111';
+    }
+    input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="time"], input[type="number"], input[type="file"], textarea, select {
+        @include appearance(initial);
+        &:focus, &:hover {
+            
+        }
+    }
+}

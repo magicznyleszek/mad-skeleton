@@ -1,0 +1,57 @@
+[am-text] {}
+
+[am-text~="100"] {
+    font-weight: 100;
+}
+[am-text~="200"] {
+    font-weight: 200;
+}
+[am-text~="300"] {
+    font-weight: 300;
+}
+[am-text~="400"] {
+    font-weight: 400;
+}
+[am-text~="500"] {
+    font-weight: 500;
+}
+[am-text~="600"] {
+    font-weight: 600;
+}
+[am-text~="700"] {
+    font-weight: 700;
+}
+[am-text~="800"] {
+    font-weight: 800;
+}
+[am-text~="900"] {
+    font-weight: 900;
+}
+
+[am-text~="colossal"] {
+    font-size: rem(66px);
+}
+[am-text~="huge"] {
+    font-size: rem(55px);
+}
+[am-text~="giant"] {
+    font-size: rem(36px);
+}
+[am-text~="big"] {
+    font-size: rem(30px);
+}
+[am-text~="large"] {
+    font-size: rem(20px);
+}
+[am-text~="medium"] {
+    font-size: rem(16px);
+}
+[am-text~="small"] {
+    font-size: rem(14px);
+}
+[am-text~="little"] {
+    font-size: rem(12px);
+}
+[am-text~="tiny"] {
+    font-size: rem(10px);
+}

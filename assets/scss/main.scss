@@ -1,0 +1,38 @@
+// Start with the config and base styles and then build up the rest.
+// And remember about The Inception Rule: "do not go more than four levels deep"
+
+// main config with color pallette and other variables
+@import "config";
+
+// third party libraries
+@import "compass/reset";
+@import "compass/css3";
+
+// helpers and tools used across the project
+@import "helpers/columns";
+@import "helpers/functions";
+@import "helpers/mixins";
+@import "helpers/animations";
+
+// base resets, fonts and normalizations
+@import "base/normalize";
+@import "base/print";
+@import "base/typography";
+@import "base/fonts";
+
+// main sections of the layout
+@import "layout/header";
+@import "layout/content";
+@import "layout/footer";
+
+// small modules
+@import "modules/boxes";
+@import "modules/buttons";
+@import "modules/columns";
+@import "modules/icons";
+@import "modules/lists";
+@import "modules/texts";
+
+// specific themes for third party modules
+@import "themes/form-default";
+@import "themes/table-default";

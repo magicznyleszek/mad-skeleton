@@ -1,0 +1,15 @@
+// fade in
+@include keyframes(framesFadeIn) {
+    0% {
+        @include opacity(0);
+        visibility: hidden;
+    }
+    100% {
+        @include opacity(1);
+        visibility: visible;
+    }
+}
+@mixin fadeIn {
+    @include opacity(0);
+    @include animation(framesFadeIn, $slow, $fastest, 1, linear, forwards, normal);
+}

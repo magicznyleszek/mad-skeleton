@@ -1,0 +1,41 @@
+// typography and font sizes for breakpoints
+$source: "Source Sans Pro", sans-serif;
+$code: "Source Code Pro", monospace;
+$fontSizeMedium: 20px;
+$fontSizeBig: 24px;
+$fontSizeSmall: 16px;
+
+// base colors
+$black: rgb(0,0,0);
+$white: rgb(255,255,255);
+
+// additional colors
+$crimson: rgb(240,20,60);
+$crimsonDark: shade($crimson, 15);
+$crimsonLight: tint($crimson, 30);
+$sandstone: rgb(120,110,100);
+$sandstoneDark: shade($sandstone, 45);
+$sandstoneDarker: shade($sandstone, 90);
+$sandstoneLight: tint($sandstone, 60);
+$sandstoneLighter: tint($sandstone, 90);
+
+// breakpoints and content widths settings
+$breakBig: 1280px;
+$breakSmall: 640px;
+$appContentWidth: 1024px;
+
+// speed
+$fastest: 0.125s;
+$faster: 0.25s;
+$fast: 0.5s;
+$slow: 1s;
+$slower: 1.5s;
+$slowest: 2s;
+
+// images
+$wildPteranodonsBg: url("../img/wild-pteranodons-background.png");
+
+// z-indexes
+$zIndex0: -1;
+$zIndex1: 10;
+$zIndex2: 20;

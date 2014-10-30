@@ -1,0 +1,18 @@
+[am-icon] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1rem;
+    height: 1rem;
+    max-width: none;
+}
+[am-icon~="big"] {
+    width: 2rem;
+    height: 2rem;
+}
+[am-icon~="small"] {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+[am-icon~="crimson"] {
+    fill: $crimson;
+}

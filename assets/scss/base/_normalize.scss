@@ -1,0 +1,56 @@
+body {
+    min-height: 100%;
+}
+a {
+    color: $crimson;
+    outline: none;
+    text-decoration: underline;
+    &:visited {
+        color: $crimsonDark;
+    }
+    &:hover {
+        color: $crimsonLight;
+        text-decoration: none;
+    }
+}
+nav {
+    ul, ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+:focus {
+    outline-color: $crimson;
+    outline-style: auto;
+    outline-width: 0.25rem;
+}
+::-moz-focus-inner {
+    border: 0;
+}
+img, svg, embed, object, video {
+    max-width: 100%;
+}
+::selection {
+    color: $white;
+    background-color: $crimson;
+}
+::-moz-selection {
+    color: $white;
+    background-color: $crimson;
+}
+table {
+    width: 100%;
+}
+form {
+    input, select, textarea, button {
+        font: inherit;
+    }
+    textarea {
+        resize: vertical;
+    }
+    input, label {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
