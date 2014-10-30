@@ -7,12 +7,23 @@
     padding: 0.5rem 0.75rem;
     text-decoration: none;
     border: 0;
-    border-width: 0.125rem;
+    border-bottom-width: 0.125rem;
     border-style: solid;
     border-color: rgba($black, 0.4);
+    &[disabled] {
+        @include opacity(0.333);
+    }
     &:hover {
         background-color: rgba($black, 0.1);
         border-color: rgba($black, 0.3);
+    }
+    [am-icon] {
+        vertical-align: middle;
+        & + * {
+            margin-left: rem(20px);
+            display: inline-block;
+            vertical-align: middle;
+        }
     }
 }
 [am-button~="important"] {

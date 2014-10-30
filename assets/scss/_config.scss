@@ -13,11 +13,6 @@ $white: rgb(255,255,255);
 $crimson: rgb(240,20,60);
 $crimsonDark: shade($crimson, 15);
 $crimsonLight: tint($crimson, 30);
-$sandstone: rgb(120,110,100);
-$sandstoneDark: shade($sandstone, 45);
-$sandstoneDarker: shade($sandstone, 90);
-$sandstoneLight: tint($sandstone, 60);
-$sandstoneLighter: tint($sandstone, 90);
 
 // breakpoints and content widths settings
 $breakBig: 1280px;
@@ -32,6 +27,17 @@ $slow: 1s;
 $slower: 1.5s;
 $slowest: 2s;
 
+// sizes
+$sizeColossal: 72px;
+$sizeHuge: 60px;
+$sizeGiant: 48px;
+$sizeBig: 36px;
+$sizeLarge: 24px;
+$sizeMedium: 20px;
+$sizeSmall: 16px;
+$sizeLittle: 12px;
+$sizeTiny: 9px;
+
 // images
 $wildPteranodonsBg: url("../img/wild-pteranodons-background.png");
 
@@ -39,3 +45,10 @@ $wildPteranodonsBg: url("../img/wild-pteranodons-background.png");
 $zIndex0: -1;
 $zIndex1: 10;
 $zIndex2: 20;
+$zIndex3: 30;
+$zIndex4: 40;
+$zIndex5: 50;
+$zIndex6: 60;
+$zIndex7: 70;
+$zIndex8: 80;
+$zIndex9: 90;

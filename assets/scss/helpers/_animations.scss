@@ -13,3 +13,6 @@
     @include opacity(0);
     @include animation(framesFadeIn, $slow, $fastest, 1, linear, forwards, normal);
 }
+[am-animate~="fadeIn"] {
+    @include fadeIn();
+}

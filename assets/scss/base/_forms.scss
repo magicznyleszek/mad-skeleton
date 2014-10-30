@@ -1,4 +1,4 @@
-form.default {
+form {
     input, select, textarea, button {
         @include input-placeholder {
             color: rgba($black, 0.5);
@@ -38,7 +38,7 @@ form.default {
     input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="time"], input[type="number"], input[type="file"], textarea, select {
         @include appearance(initial);
         &:focus, &:hover {
-            
+
         }
     }
 }

@@ -1,57 +1,53 @@
 [am-text] {}
 
-[am-text~="100"] {
-    font-weight: 100;
+[am-text~="lefted"] {
+    text-align: left;
 }
-[am-text~="200"] {
-    font-weight: 200;
+[am-text~="righted"] {
+    text-align: right;
 }
-[am-text~="300"] {
-    font-weight: 300;
+[am-text~="centered"] {
+    text-align: center;
 }
+
+[am-text~="uppercased"] {
+    text-transform: uppercase;
+}
+
 [am-text~="400"] {
     font-weight: 400;
 }
 [am-text~="500"] {
     font-weight: 500;
 }
-[am-text~="600"] {
-    font-weight: 600;
-}
 [am-text~="700"] {
     font-weight: 700;
 }
-[am-text~="800"] {
-    font-weight: 800;
-}
-[am-text~="900"] {
-    font-weight: 900;
-}
 
 [am-text~="colossal"] {
-    font-size: rem(66px);
+    font-size: rem($sizeColossal);
 }
 [am-text~="huge"] {
-    font-size: rem(55px);
+    font-size: rem($sizeHuge);
 }
 [am-text~="giant"] {
-    font-size: rem(36px);
+    font-size: rem($sizeGiant);
 }
 [am-text~="big"] {
-    font-size: rem(30px);
+    font-size: rem($sizeBig);
 }
 [am-text~="large"] {
-    font-size: rem(20px);
+    font-size: rem($sizeLarge);
 }
 [am-text~="medium"] {
-    font-size: rem(16px);
+    font-size: rem($sizeMedium);
 }
 [am-text~="small"] {
-    font-size: rem(14px);
+    font-size: rem($sizeSmall);
 }
 [am-text~="little"] {
-    font-size: rem(12px);
+    font-size: rem($sizeLittle);
 }
 [am-text~="tiny"] {
-    font-size: rem(10px);
+    font-size: rem($sizeTiny);
 }

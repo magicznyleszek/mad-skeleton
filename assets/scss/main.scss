@@ -15,10 +15,12 @@
 @import "helpers/animations";
 
 // base resets, fonts and normalizations
+@import "base/fonts";
+@import "base/forms";
 @import "base/normalize";
 @import "base/print";
+@import "base/tables";
 @import "base/typography";
-@import "base/fonts";
 
 // main sections of the layout
 @import "layout/header";
@@ -26,13 +28,10 @@
 @import "layout/footer";
 
 // small modules
+@import "modules/backgrounds";
 @import "modules/boxes";
 @import "modules/buttons";
 @import "modules/columns";
 @import "modules/icons";
 @import "modules/lists";
 @import "modules/texts";
-
-// specific themes for third party modules
-@import "themes/form-default";
-@import "themes/table-default";
