@@ -1,18 +1,29 @@
-// fade in
+// fade in once
 @include keyframes(framesFadeIn) {
-    0% {
-        @include opacity(0);
-        visibility: hidden;
-    }
-    100% {
-        @include opacity(1);
-        visibility: visible;
-    }
+    0% { @include opacity(0); visibility: hidden; }
+    100% { @include opacity(1); visibility: visible; }
 }
 @mixin fadeIn {
     @include opacity(0);
     @include animation(framesFadeIn, $slow, $fastest, 1, linear, forwards, normal);
 }
-[am-animate~="fadeIn"] {
+[am-animation~="fadeIn"] {
     @include fadeIn();
+}
+
+// pulse loop
+@include keyframes(framesPulse) {
+    0% { @include scale(1); }
+    30% { @include scale(1); }
+    40% { @include scale(1.125); }
+    50% { @include scale(1); }
+    60% { @include scale(1.125); }
+    70% { @include scale(1); }
+    100% { @include scale(1); }
+}
+@mixin pulse {
+    @include animation(framesPulse, $slower, 0, infinite, ease-in, none, normal);
+}
+[am-animation~="pulse"] {
+    @include pulse;
 }
