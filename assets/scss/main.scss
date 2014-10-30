@@ -16,22 +16,22 @@
 
 // base resets, fonts and normalizations
 @import "base/fonts";
-@import "base/forms";
 @import "base/normalize";
 @import "base/print";
-@import "base/tables";
 @import "base/typography";
 
 // main sections of the layout
-@import "layout/header";
-@import "layout/content";
-@import "layout/footer";
+@import "sections/header";
+@import "sections/content";
+@import "sections/footer";
 
 // small modules
 @import "modules/backgrounds";
 @import "modules/boxes";
 @import "modules/buttons";
 @import "modules/columns";
+@import "modules/forms";
 @import "modules/icons";
 @import "modules/lists";
+@import "modules/tables";
 @import "modules/texts";

@@ -1,4 +1,4 @@
-form {
+[am-form] {
     input, select, textarea, button {
         @include input-placeholder {
             color: rgba($black, 0.5);
@@ -40,5 +40,10 @@ form {
         &:focus, &:hover {
 
         }
+    }
+}
+[am-form-row] {
+    &:not(:first-child) {
+        margin-top: 1.5rem;
     }
 }

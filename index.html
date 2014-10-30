@@ -35,7 +35,7 @@
     <!-- fonts -->
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic&subset=latin,latin-ext" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
@@ -63,11 +63,11 @@
 
             <h2>I use <a href="">AM-CSS</a> philosophy</h2>
 
-            <button am-button>Button</button>
+            <p><button am-button>Button</button></p>
 
-            <button am-button="important">Important button</button>
+            <p><button am-button="important">Important button</button></p>
 
-            <button am-button="important big">Important big button</button>
+            <p><button am-button="important big">Important big button</button></p>
 
         </article>
 
@@ -75,99 +75,115 @@
 
             <h2>Scalable svg icons or super-fast Font Awesome way</h2>
 
-            <svg am-icon="big crimson"><use xlink:href="#icon-check"></svg>
+            <p>With svg: <svg am-icon="big crimson"><use xlink:href="#icon-check"></svg></p>
 
-            <i class="fa fa-2x fa-check"></i>
+            <p>With font: <i class="fa fa-2x fa-check"></i></p>
 
         </article>
 
         <article>
 
-            <form action="do-stuff.php" method="post" validate
+            <form am-form action="do-stuff.php" method="post" validate
 enctype="multipart/form-data">
 
                 <h2>There are some form resets</h2>
 
-                <label for="form-email">Email</label>
-                <input id="form-email" placeholder="Email" type="email" name="email" required>
+                <div am-form-row>
+                    <label for="form-nickname">Nickname</label>
+                    <input id="form-nickname" placeholder="Nickname" type="text" name="nickname" required>
+                </div>
 
-                <label for="form-password">Password</label>
-                <input id="form-password" placeholder="Password" type="password" name="password" required>
+                <div am-form-row>
+                    <label for="form-first-kill">First Kill</label>
+                    <input id="form-first-kill" type="date" name="first-kill">
+                    <input id="form-first-kill-time" type="time" name="first-kill-time">
+                </div>
 
-                <label for="form-nickname">Nickname</label>
-                <input id="form-nickname" placeholder="Nickname" type="text" name="nickname" required>
+                <div am-form-row>
 
-                <label for="form-first-kill">First Kill</label>
-                <input id="form-first-kill" type="date" name="first-kill">
+                    <label>Species</label>
 
-                <label for="form-dinner">Dinner</label>
-                <input id="form-dinner" type="time" name="dinner">
+                    <ol>
 
-                <h3>Species</h3>
+                        <li>
+                            <input id="form-species-1" type="radio" name="species" value="Trilobite">
+                            <label for="form-species-1">Trilobite</label>
+                        </li>
 
-                <ol>
+                        <li>
+                            <input id="form-species-2" type="radio" name="species" value="Raptor">
+                            <label for="form-species-2">Raptor</label>
+                        </li>
 
-                    <li>
-                        <input id="form-species-1" type="radio" name="species" value="Trilobite">
-                        <label for="form-species-1">Trilobite</label>
-                    </li>
+                        <li>
+                            <input id="form-species-3" type="radio" name="species" value="Pteranodon">
+                            <label for="form-species-3">Pteranodon</label>
+                        </li>
 
-                    <li>
-                        <input id="form-species-2" type="radio" name="species" value="Raptor">
-                        <label for="form-species-2">Raptor</label>
-                    </li>
+                    </ol>
 
-                    <li>
-                        <input id="form-species-3" type="radio" name="species" value="Pteranodon">
-                        <label for="form-species-3">Pteranodon</label>
-                    </li>
+                </div>
 
-                </ol>
+                <div am-form-row>
 
-                <label for="form-limbs">Limbs</label>
-                <input id="form-limbs" placeholder="0-10" type="number" min="0" max="10" step="1" name="limbs" required>
+                    <label>Weapons</label>
 
-                <label for="form-length">Length</label>
-                <input id="form-length" type="range" min="0" max="10" step="1" name="length" required>
+                    <ol>
 
-                <label for="form-portrait">Portrait</label>
-                <input id="form-portrait" type="file" name="portrait">
+                        <li>
+                            <input id="form-weapons-1" type="checkbox" name="weapons" value="Spikes">
+                            <label for="form-weapons-1">Spikes</label>
+                        </li>
 
-                <label for="form-biography">Biography</label>
-                <textarea id="form-biography" rows="5" name="biography"></textarea>
+                        <li>
+                            <input id="form-weapons-2" type="checkbox" name="weapons" value="Teeth">
+                            <label for="form-weapons-2">Teeth</label>
+                        </li>
 
-                <label for="form-sex">Sex</label>
-                <select id="form-sex" name="sex" required>
-                    <!-- placeholder option -->
-                    <option value="" disabled selected>Choose sex</option>
-                    <!-- real options -->
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Androgyne">Androgyne</option>
-                </select>
+                        <li>
+                            <input id="form-weapons-3" type="checkbox" name="weapons" value="Claws">
+                            <label for="form-weapons-3">Claws</label>
+                        </li>
 
-                <h3>Weapons</h3>
+                    </ol>
 
-                <ol>
+                </div>
 
-                    <li>
-                        <input id="form-weapons-1" type="checkbox" name="weapons" value="Spikes">
-                        <label for="form-weapons-1">Spikes</label>
-                    </li>
+                <div am-form-row>
+                    <label for="form-limbs">Limbs</label>
+                    <input id="form-limbs" placeholder="0-10" type="number" min="0" max="10" step="1" name="limbs" required>
+                </div>
 
-                    <li>
-                        <input id="form-weapons-2" type="checkbox" name="weapons" value="Teeth">
-                        <label for="form-weapons-2">Teeth</label>
-                    </li>
+                <div am-form-row>
+                    <label for="form-length">Length</label>
+                    <input id="form-length" type="range" min="0" max="10" step="1" name="length" required>
+                </div>
 
-                    <li>
-                        <input id="form-weapons-3" type="checkbox" name="weapons" value="Claws">
-                        <label for="form-weapons-3">Claws</label>
-                    </li>
+                <div am-form-row>
+                    <label for="form-portrait">Portrait</label>
+                    <input id="form-portrait" type="file" name="portrait">
+                </div>
 
-                </ol>
+                <div am-form-row>
+                    <label for="form-biography">Biography</label>
+                    <textarea id="form-biography" rows="5" name="biography"></textarea>
+                </div>
 
-                <button type="submit" am-button="important">Roar!</button>
+                <div am-form-row>
+                    <label for="form-sex">Sex</label>
+                    <select id="form-sex" name="sex" required>
+                        <!-- placeholder option -->
+                        <option value="" disabled selected>Choose sex</option>
+                        <!-- real options -->
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Androgyne">Androgyne</option>
+                    </select>
+                </div>
+
+                <div am-form-row>
+                    <button type="submit" am-button="important">Bang!</button>
+                </div>
 
             </form>
 
@@ -188,9 +204,19 @@ enctype="multipart/form-data">
 
             <h4>Lorem h4 ipsum</h4>
 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, accusantium.</p>
+
             <h5>Lorem h5 ipsum</h5>
 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, praesentium.</p>
+
+            <hr>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis minima quas aspernatur deleniti voluptas perferendis optio non, excepturi. Officiis temporibus nostrum ab, inventore perferendis aspernatur repellendus esse?</p>
+
             <h6>Lorem h6 ipsum</h6>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, recusandae?</p>
 
         </article>
 
@@ -198,7 +224,7 @@ enctype="multipart/form-data">
 
             <h2>There are some default table themes</h2>
 
-            <table>
+            <table am-table>
                 <caption>Middle Jurassic sections</caption>
                 <thead>
                     <tr>
