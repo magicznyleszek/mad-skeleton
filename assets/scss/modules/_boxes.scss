@@ -1,16 +1,17 @@
 [am-box] {
     @include box-sizing(border-box);
 }
-[am-box~="white"] {
-    background-color: $white;
+[am-box~="silver"] {
+    background-color: $silver;
 }
 [am-box~="black"] {
     color: $white;
     background-color: $black;
 }
-[am-box~="rounded"] {
-    @include border-radius(rem(4px));
+[am-box~="crimson"] {
+    color: $white;
+    background-color: $crimson;
 }
 [am-box~="padded"] {
-    padding: rem(12px);
+    padding: 0.75rem 1.5rem;
 }

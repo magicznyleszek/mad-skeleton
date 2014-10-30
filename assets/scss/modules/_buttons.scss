@@ -2,21 +2,25 @@
     cursor: pointer;
     display: inline-block;
     color: $black;
-    background-color: rgba($black, 0.2);
+    background-color: $silver;
     font-size: 1rem;
     line-height: 1;
     padding: 0.5rem 0.75rem;
     text-decoration: none;
     border: 0;
-    border-bottom-width: 0.125rem;
+    border-bottom-width: 0.175rem;
     border-style: solid;
-    border-color: rgba($black, 0.4);
+    border-color: shade($silver, 20);
+    @include border-radius(0 0 0.175rem 0.175rem);
     &[disabled] {
         @include opacity(0.333);
     }
     &:hover {
-        background-color: rgba($black, 0.1);
-        border-color: rgba($black, 0.3);
+        background-color: tint($silver, 20);
+        border-color: shade($silver, 10);
+        margin-top: 0.175rem;
+        border-bottom-width: 0;
+        @include border-radius(0);
     }
     [am-icon] {
         vertical-align: middle;
@@ -30,10 +34,10 @@
 [am-button~="important"] {
     color: $white;
     background-color: $crimson;
-    border-color: $crimsonDark;
+    border-color: shade($crimson, 20);
     &:hover {
-        background-color: $crimsonLight;
-        border-color: $crimson;
+        background-color: tint($crimson, 20);
+        border-color: shade($crimson, 10);
     }
 }
 [am-button~="small"] {

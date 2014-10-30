@@ -11,14 +11,13 @@ body {
     min-height: 100%;
 }
 a {
-    color: $crimson;
-    outline: none;
+    color: inherit;
     text-decoration: underline;
     &:visited {
-        color: $crimsonDark;
+        color: inherit;
     }
     &:hover {
-        color: $crimsonLight;
+        color: inherit;
         text-decoration: none;
     }
 }
