@@ -9,21 +9,9 @@
 @import "compass/css3";
 
 // helpers and tools used across the project
-@import "helpers/columns";
 @import "helpers/functions";
 @import "helpers/mixins";
 @import "helpers/animations";
-
-// base resets, fonts and normalizations
-@import "base/fonts";
-@import "base/normalize";
-@import "base/print";
-@import "base/typography";
-
-// main sections of the layout
-@import "sections/header";
-@import "sections/content";
-@import "sections/footer";
 
 // small modules
 @import "modules/backgrounds";
@@ -35,3 +23,14 @@
 @import "modules/lists";
 @import "modules/tables";
 @import "modules/texts";
+
+// base resets, fonts and normalizations
+@import "base/fonts";
+@import "base/normalize";
+@import "base/print";
+@import "base/typography";
+
+// main sections of the layout
+@import "sections/header";
+@import "sections/content";
+@import "sections/footer";
