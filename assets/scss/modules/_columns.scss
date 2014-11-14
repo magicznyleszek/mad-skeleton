@@ -41,7 +41,7 @@ $contextMax: 16;
 [am-column~="bottom"] { vertical-align: bottom; }
 
 // generate all useful ams with loop
-@for $a from 2 through 16 {
+@for $a from 2 through $contextMax {
     @for $b from 1 through ($a - 1) {
         // sets column width
         [am-column~="#{$b}/#{$a}"] { @include columnSet($b,$a); }
