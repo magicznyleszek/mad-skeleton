@@ -15,12 +15,16 @@
     &[disabled] {
         @include opacity(0.333);
     }
-    &:hover {
+    &:not([disabled]):hover {
         background-color: tint($silver, 20);
         border-color: shade($silver, 10);
         margin-top: 0.175rem;
         border-bottom-width: 0;
         @include border-radius(0);
+    }
+    &:not([disabled]):active {
+        background-color: tint($silver, 40);
+        border-color: shade($silver, 10);
     }
     [am-icon] {
         vertical-align: middle;
