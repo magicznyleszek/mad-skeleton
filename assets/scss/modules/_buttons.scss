@@ -18,6 +18,10 @@
     &:hover {
         background-color: tint($silver, 20);
         border-color: shade($silver, 10);
+    }
+    &:active {
+        background-color: tint($silver, 40);
+        border-color: shade($silver, 20);
         margin-top: 0.175rem;
         border-bottom-width: 0;
         @include border-radius(0);
@@ -38,6 +42,10 @@
     &:hover {
         background-color: tint($crimson, 20);
         border-color: shade($crimson, 10);
+    }
+    &:active {
+        background-color: tint($crimson, 40);
+        border-color: shade($crimson, 20);
     }
 }
 [am-button~="small"] {
