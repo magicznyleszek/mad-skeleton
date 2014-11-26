@@ -1,7 +1,5 @@
 html {
     font: 400 #{$rootFontSize}/$rootLineHeight $rootFontFamily;
-    color: $app-txt-c;
-    background-color: $app-bg-c;
     @media screen and (min-width: #{$break-bigger}) {
         font-size: $rootFontSize * 1.2;
     }
