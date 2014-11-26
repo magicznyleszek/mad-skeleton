@@ -1,0 +1,87 @@
+// buttons module
+
+/*
+    <button am-button="green wide" disabled>CANTGO</button>
+*/
+
+@import "modules/buttons/config";
+
+[am-button] {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    @include box-sizing(border-box);
+    margin: 0;
+    border: 0;
+    outline: 0;
+    padding: ($space-small + 2) $space-medium ($space-small + 1);
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    color: $button-default-txt-c;
+    background-color: $button-default-bg-c;
+    @include box-shadow($button-default-sh);
+    @include border-radius($input-br);
+    @include transition($d-faster);
+    &[disabled] {
+        color: $button-default-txt-c;
+        background-color: $button-default-bg-c;
+        @include box-shadow($button-default-sh);
+    }
+    &:not([disabled]):hover {
+        background-color: $button-default-bg-hover-c;
+    }
+    &:not([disabled]):active, &:not([disabled]).active {
+        background-color: $button-default-bg-active-c;
+    }
+}
+
+[am-button~="naked"] {
+    color: inherit;
+    border-radius: 0;
+    @include box-shadow(none);
+    background-color: transparent;
+    font-weight: inherit;
+    &:not([disabled]):hover {
+        @include opacity(0.8);
+        background-color: transparent;
+    }
+    &:not([disabled]):active, &:not([disabled]).active {
+        @include opacity(0.6);
+        background-color: transparent;
+    }
+}
+
+[am-button~="spacelessH"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+[am-button~="wide"] {
+    padding-left: $space-big;
+    padding-right: $space-big;
+}
+
+[am-button~="small"] {
+    font-size: 12px;
+    padding: ($space-little + 1) $space-small ($space-little - 1);
+}
+
+[am-button~="full"] {
+    width: 100%;
+    text-align: left;
+}
+
+[am-button~="important"] {
+    color: $button-important-txt-c;
+    background-color: $button-important-bg-c;
+    @include box-shadow($button-important-sh);
+    &:not([disabled]):hover {
+        background-color: $button-important-bg-hover-c;
+    }
+    &:not([disabled]):active, &:not([disabled]).active {
+        background-color: $button-important-bg-active-c;
+    }
+}

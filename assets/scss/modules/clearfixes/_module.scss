@@ -1,0 +1,13 @@
+// clearfixes module
+
+/*
+    <h3 am-clearfix></h3>
+*/
+
+[am-clearfix]{
+    @include clearfix();
+}
+
+[am-clearfix~="unwrapped"] {
+    overflow: auto;
+}

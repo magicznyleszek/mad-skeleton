@@ -1,55 +1,32 @@
-// typography and font sizes for breakpoints
-$source: "Source Sans Pro", sans-serif;
-$code: "Source Code Pro", monospace;
-$fontSizeMedium: 20px;
-$fontSizeBig: 24px;
-$fontSizeSmall: 16px;
+// configuration
 
-// base colors
-$black: rgb(0,0,0);
-$white: rgb(255,255,255);
+// resets
+@import 'config/resets';
 
-// additional colors
-$crimson: rgb(240,20,60);
-$crimsonDark: shade($crimson, 15);
-$crimsonLight: tint($crimson, 30);
-$silver: rgb(204,204,204);
+// fonts
+@import 'config/fonts';
 
-// breakpoints and content widths settings
-$breakBig: 1280px;
-$breakSmall: 640px;
-$appContentWidth: 1024px;
+// all descriptive variables (colors, sizes, etc.) are defined here
+@import 'config/variables/descriptive';
 
-// speed
-$fastest: 0.125s;
-$faster: 0.25s;
-$fast: 0.5s;
-$slow: 1s;
-$slower: 1.5s;
-$slowest: 2s;
+// most of the functional variables are kept in each module configuration file, here are only the commons
+@import 'config/variables/functional';
 
-// sizes
-$sizeColossal: 72px;
-$sizeHuge: 60px;
-$sizeGiant: 48px;
-$sizeBig: 36px;
-$sizeLarge: 24px;
-$sizeMedium: 20px;
-$sizeSmall: 16px;
-$sizeLittle: 12px;
-$sizeTiny: 9px;
+// useful mixins and functions
+@import 'config/helpers';
 
-// images
-$wildPteranodonsBg: url("../img/wild-pteranodons-background.png");
 
-// z-indexes
-$zIndex0: -1;
-$zIndex1: 10;
-$zIndex2: 20;
-$zIndex3: 30;
-$zIndex4: 40;
-$zIndex5: 50;
-$zIndex6: 60;
-$zIndex7: 70;
-$zIndex8: 80;
-$zIndex9: 90;
+/*
+    naming convention for abbreviations
+
+    c - color
+    d - duration
+    f - fraction
+    p - percent
+    w - width
+    z - z-index
+    txt - text
+    bg - background
+    sh - shadow
+    br - border radius
+*/

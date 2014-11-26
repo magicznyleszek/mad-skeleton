@@ -1,0 +1,48 @@
+// all FUNCTIONAL variables
+
+// base colors
+$app-txt-c: $c-black;
+$app-bg-c: $c-white;
+
+// layout widths
+$app-content-w: 1024px;
+
+// breakpoints
+$break-bigger: 1280px;
+$break-smaller: 640px;
+
+// root typography
+$rootLineHeight: 1.5;
+$rootFontSize: $w-medium;
+$rootFontFamily: $family-sourceSansPro;
+
+// for margins and paddings
+$space-giant: $w-giant;
+$space-big: $w-big;
+$space-large: $w-large;
+$space-medium: $w-medium;
+$space-small: $w-small;
+$space-little: $w-little;
+$space-tiny: $w-tiny;
+
+// hr
+$hr-bg-c: $c-silver;
+$hr-h: 2px;
+
+// focus and selection
+$focus-outline-c: $c-crimson;
+$selection-txt-c: $c-white;
+$selection-bg-c: $c-crimson;
+
+// code element
+$code-family: $family-sourceCodePro;
+$code-bg-c: rgba($c-black, $f-small);
+$code-border-c: rgba($c-black, $f-medium);
+
+// inputs
+$input-txt-c: $c-black;
+$input-bg-c: $c-silverLighter;
+$input-sh: 0 0 0 1px $c-silverDark;
+$input-br: 2px;
+$input-disabled-o: $f-big;
+$input-placeholder-txt-c: rgba($input-txt-c, $f-big);

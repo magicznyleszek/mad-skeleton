@@ -1,44 +1,59 @@
-h1, h2, h3, h4, h5, h6,
-p, ol, ul, blockquote, hr,
-article, section, header, footer, table {
-    &:not(:first-child) {
-        margin-top: 1.5rem;
-    }
-}
 h1, h2, h3, h4 {
     line-height: 1;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    margin: 0;
+    padding-top: ($rootLineHeight - 1) * 0.5rem;
+    padding-bottom: ($rootLineHeight - 1) * 0.5rem;
 }
+
 h1 {
     font-size: 3rem;
 }
+
 h2 {
     font-size: 2rem;
 }
+
 h3 {
     font-size: 1.5rem;
 }
+
 h4 {
+    font-size: inherit;
     font-weight: 700;
 }
+
+p {
+    margin: 0;
+}
+
 blockquote {
     font-style: italic;
     cite {
         font-style: normal;
     }
 }
+
 ul, ol {
     margin-left: 1.5rem;
 }
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
 code {
-    font-family: $code;
+    font-family: $code-family;
     font-size: 75%;
-    background-color: rgba($black, 0.1);
-    border: 0.0625rem solid rgba($black, 0.2);
+    background-color: $code-bg-c;
+    border: 0.0625rem solid $code-border-c;
     padding: 0 0.125rem;
     @include border-radius(0.25rem);
 }
+
 pre {
     code {
         display: block;
@@ -47,4 +62,30 @@ pre {
         @include box-sizing(border-box);
         padding: 0.5rem;
     }
+}
+
+small, sub, sup {
+    font-size: 75%;
+}
+
+sub, sup {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
 }

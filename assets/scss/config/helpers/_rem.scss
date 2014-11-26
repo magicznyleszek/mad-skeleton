@@ -4,9 +4,9 @@
 }
 
 // converter to rem value
-// uses $fontSizeMedium
+// uses $rootFontSize
 @function rem($value) {
-    $root: parseInt($fontSizeMedium);
+    $root: parseInt($rootFontSize);
     $val: parseInt($value);
     $return: ();
     @if unit($value) == "px" {

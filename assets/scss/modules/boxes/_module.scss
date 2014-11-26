@@ -1,0 +1,35 @@
+// boxes module
+
+/*
+    <div am-box="padded black"></div>
+*/
+
+@import "modules/boxes/config";
+
+[am-box] {
+    @include box-sizing(border-box);
+}
+
+[am-box~="inline"] {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+[am-box~="padded"] {
+    padding: $space-medium;
+}
+
+[am-box~="black"] {
+    color: $box-black-txt-c;
+    background-color: $box-black-bg-c;
+}
+
+[am-box~="crimson"] {
+    color: $box-crimson-txt-c;
+    background-color: $box-crimson-bg-c;
+}
+
+[am-box~="silver"] {
+    color: $box-silver-txt-c;
+    background-color: $box-silver-bg-c;
+}

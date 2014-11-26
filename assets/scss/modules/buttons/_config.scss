@@ -1,0 +1,15 @@
+// buttons config
+
+// default
+$button-default-txt-c: $c-black;
+$button-default-bg-c: $c-silver;
+$button-default-sh: 0 2px 0 0 $c-silverDark;
+$button-default-bg-hover-c: $c-silverLight;
+$button-default-bg-active-c: $c-silverLighter;
+
+// important
+$button-important-txt-c: $c-white;
+$button-important-bg-c: $c-crimson;
+$button-important-sh: 0 2px 0 0 $c-crimsonDark;
+$button-important-bg-hover-c: $c-crimsonLight;
+$button-important-bg-active-c: $c-crimsonLighter;

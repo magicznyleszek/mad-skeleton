@@ -35,7 +35,7 @@
     <!-- fonts -->
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic&subset=latin,latin-ext" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
@@ -51,25 +51,25 @@
 
     </svg>
 
-    <header id="app-header">
+    <header id="appHeader">
 
         <h1>Boilerplate assets</h1>
 
     </header>
 
-    <section id="app-content" role="main">
+    <section id="appContent" role="main">
 
         <article>
 
             <h2 am-box="padded silver">I use <a href="">AM-CSS</a> philosophy</h2>
 
-            <p><button am-button>Button</button></p>
-
-            <p><button am-button="important">Important button</button></p>
-
-            <p><button am-button="small fake">Small fake button</button></p>
-
-            <p><button am-button="fake" am-animation="pulse">I <i class="fa fa-heart"></i> buttons</button></p>
+            <p>
+                <button am-button>Button</button>
+                <button am-button="important">Important button</button>
+                <button am-button="important" disabled>Important disabled button</button>
+                <button am-button="small" disabled>Small disabled button</button>
+                <button am-button am-animation="pulse">I <i class="fa fa-heart"></i> buttons</button>
+            </p>
 
         </article>
 
@@ -91,93 +91,93 @@
 
         <article>
 
-            <form am-form action="do-stuff.php" method="post" validate
+            <form action="do-stuff.php" method="post" validate
 enctype="multipart/form-data">
 
                 <h2 am-box="padded silver">There are some form resets</h2>
 
-                <div am-form-row>
+                <section>
                     <label for="form-nickname">Nickname</label>
-                    <input id="form-nickname" placeholder="Nickname" type="text" name="nickname" required>
-                </div>
+                    <input am-textBox id="form-nickname" placeholder="Nickname" type="text" name="nickname" required>
+                </section>
 
-                <div am-form-row>
+                <section>
                     <label for="form-first-kill">First Kill</label>
-                    <input id="form-first-kill" type="date" name="first-kill">
-                    <input id="form-first-kill-time" type="time" name="first-kill-time">
-                </div>
+                    <input am-textBox id="form-first-kill" type="date" name="first-kill">
+                    <input am-textBox id="form-first-kill-time" type="time" name="first-kill-time">
+                </section>
 
-                <div am-form-row>
+                <section>
 
-                    <label>Species</label>
+                    <h4>Species</h4>
 
-                    <ol>
+                    <ol am-list>
 
                         <li>
-                            <input id="form-species-1" type="radio" name="species" value="Trilobite">
+                            <input am-radio id="form-species-1" type="radio" name="species" value="Trilobite">
                             <label for="form-species-1">Trilobite</label>
                         </li>
 
                         <li>
-                            <input id="form-species-2" type="radio" name="species" value="Raptor">
+                            <input am-radio id="form-species-2" type="radio" name="species" value="Raptor">
                             <label for="form-species-2">Raptor</label>
                         </li>
 
                         <li>
-                            <input id="form-species-3" type="radio" name="species" value="Pteranodon">
+                            <input am-radio id="form-species-3" type="radio" name="species" value="Pteranodon">
                             <label for="form-species-3">Pteranodon</label>
                         </li>
 
                     </ol>
 
-                </div>
+                </section>
 
-                <div am-form-row>
+                <section>
 
-                    <label>Weapons</label>
+                    <h4>Weapons</h4>
 
-                    <ol>
+                    <ol am-list>
 
                         <li>
-                            <input id="form-weapons-1" type="checkbox" name="weapons" value="Spikes">
+                            <input am-checkbox id="form-weapons-1" type="checkbox" name="weapons" value="Spikes">
                             <label for="form-weapons-1">Spikes</label>
                         </li>
 
                         <li>
-                            <input id="form-weapons-2" type="checkbox" name="weapons" value="Teeth">
+                            <input am-checkbox id="form-weapons-2" type="checkbox" name="weapons" value="Teeth">
                             <label for="form-weapons-2">Teeth</label>
                         </li>
 
                         <li>
-                            <input id="form-weapons-3" type="checkbox" name="weapons" value="Claws">
+                            <input am-checkbox id="form-weapons-3" type="checkbox" name="weapons" value="Claws">
                             <label for="form-weapons-3">Claws</label>
                         </li>
 
                     </ol>
 
-                </div>
+                </section>
 
-                <div am-form-row>
+                <section>
                     <label for="form-limbs">Limbs</label>
                     <input id="form-limbs" placeholder="0-10" type="number" min="0" max="10" step="1" name="limbs" required>
-                </div>
+                </section>
 
-                <div am-form-row>
+                <section>
                     <label for="form-length">Length</label>
                     <input id="form-length" type="range" min="0" max="10" step="1" name="length" required>
-                </div>
+                </section>
 
-                <div am-form-row>
+                <section>
                     <label for="form-portrait">Portrait</label>
                     <input id="form-portrait" type="file" name="portrait">
-                </div>
+                </section>
 
-                <div am-form-row>
+                <section>
                     <label for="form-biography">Biography</label>
                     <textarea id="form-biography" rows="5" name="biography"></textarea>
-                </div>
+                </section>
 
-                <div am-form-row>
+                <section>
                     <label for="form-sex">Sex</label>
                     <select id="form-sex" name="sex" required>
                         <!-- placeholder option -->
@@ -187,11 +187,11 @@ enctype="multipart/form-data">
                         <option value="Female">Female</option>
                         <option value="Androgyne">Androgyne</option>
                     </select>
-                </div>
+                </section>
 
-                <div am-form-row>
+                <section>
                     <button type="submit" am-button="important">Bang!</button>
-                </div>
+                </section>
 
             </form>
 
@@ -237,17 +237,9 @@ enctype="multipart/form-data">
 
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, accusantium.</p>
 
-            <h5>Lorem h5 ipsum</h5>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, praesentium.</p>
-
             <hr>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis minima quas aspernatur deleniti voluptas perferendis optio non, excepturi. Officiis temporibus nostrum ab, inventore perferendis aspernatur repellendus esse?</p>
-
-            <h6>Lorem h6 ipsum</h6>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, recusandae?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, accusantium.</p>
 
         </article>
 
@@ -305,7 +297,7 @@ enctype="multipart/form-data">
 
     </section>
 
-    <footer id="app-footer">
+    <footer id="appFooter">
 
         <p><small><a href="http://leszekpietrzak.com">by Leszek Pietrzak</a></small></p>
 

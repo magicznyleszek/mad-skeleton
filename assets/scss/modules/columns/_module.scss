@@ -1,0 +1,57 @@
+// columns module
+
+/*
+    <div am-column="1/2 middle">LEFT</div>
+    <div am-column="1/2 middle">RIGHT</div>
+*/
+
+@import "modules/columns/config";
+
+// Remember to truncate the white space between columns!
+
+// for setting the width of the column
+@mixin columnSet($amount:$column-max, $context:$column-max) {
+    width: $amount * (100 / $context) * 1%;
+}
+
+// defines all the stuff necessary for a column
+@mixin columnInit() {
+    @include box-sizing(border-box);
+    display: inline-block;
+    vertical-align: top;
+}
+
+// defines a simple-fraction column that defaults to single column
+@mixin column($amount:$column-max, $context:$column-max) {
+    @include columnInit();
+    @include columnSet($amount, $context);
+}
+
+// create an empty space on the left
+@mixin columnPush($offset:1, $context:$column-max) {
+    margin-left: $offset * (100 / $context) * 1%;
+}
+
+// create an empty space on the right
+@mixin columnPull($offset:1, $context:$column-max) {
+    margin-right: $offset * (100 / $context) * 1%;
+}
+
+// define column base
+[am-column] { @include columnInit(); }
+
+// custom vertical aligns
+[am-column~="top"] { vertical-align: top; }
+[am-column~="middle"] { vertical-align: middle; }
+[am-column~="bottom"] { vertical-align: bottom; }
+
+// generate all useful ams with loop
+@for $a from 2 through $column-max {
+    @for $b from 1 through ($a - 1) {
+        // sets column width
+        [am-column~="#{$b}/#{$a}"] { @include columnSet($b,$a); }
+        // sets spaces on left or right
+        [am-columnPush~="#{$b}/#{$a}"] { @include columnPush($b,$a); }
+        [am-columnPull~="#{$b}/#{$a}"] { @include columnPull($b,$a); }
+    }
+}

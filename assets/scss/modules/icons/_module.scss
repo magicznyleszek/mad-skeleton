@@ -1,0 +1,43 @@
+// icons module
+
+/*
+    <svg am-icon="small"><use xlink:href="#icon-plus"/></svg>
+*/
+
+@import "modules/icons/config";
+
+[am-icon] {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.25rem;
+    width: 1.25rem;
+    fill: currentColor;
+    shape-rendering: geometricPrecision;
+    color: inherit;
+}
+
+[am-icon~="lefted"] {
+    float: left;
+    margin-left: 0;
+    margin-right: $space-small;
+}
+
+[am-icon~="righted"] {
+    float: right;
+    margin-right: 0;
+    margin-left: $space-small;
+}
+
+[am-icon~="big"] {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+[am-icon~="small"] {
+    height: 0.75rem;
+    width: 0.75rem;
+}
+
+[am-icon~="crimson"] {
+    fill: $c-crimson;
+}

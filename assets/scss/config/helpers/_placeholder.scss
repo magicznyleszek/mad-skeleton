@@ -1,0 +1,7 @@
+// for cross-browser styling of placeholders
+
+@mixin input-placeholder {
+    &::-moz-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+}

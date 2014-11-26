@@ -1,0 +1,33 @@
+// lists module
+
+/*
+    <ul am-list="padded">
+        <li>ONE</li>
+        <li>TWO</li>
+    </ul>
+*/
+
+[am-list] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+[am-list~="inline"] {
+    display: inline-block;
+    vertical-align: middle;
+    & > li {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+[am-list~="spaced"] {
+    & > li {
+        padding: 0.75rem;
+    }
+}
+
+[am-list~="padded"] {
+    padding: 0.75rem;
+}

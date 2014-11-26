@@ -1,0 +1,25 @@
+// spacing
+
+// vertical
+h1, h2, h3, h4, h5, h6,
+p, ol, ul, blockquote, hr,
+article, section, header, footer, table,
+[am-progress]:not([am-progress~="inline"]) {
+    &:not(:last-child) {
+        margin-bottom: $rootLineHeight * 1rem;
+    }
+}
+
+// horizontal
+[am-box~="inline"],
+[am-button],
+[am-checkbox],
+[am-radio],
+[am-icon],
+[am-image],
+[am-progress~="inline"],
+[am-textBox] {
+    &:not(:last-child) {
+        margin-right: $space-little;
+    }
+}

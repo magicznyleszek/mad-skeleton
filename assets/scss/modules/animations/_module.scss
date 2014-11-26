@@ -1,3 +1,5 @@
+// animations module
+
 // fade in once
 @include keyframes(framesFadeIn) {
     0% { @include opacity(0); visibility: hidden; }
@@ -5,7 +7,7 @@
 }
 @mixin fadeIn {
     @include opacity(0);
-    @include animation(framesFadeIn, $slow, $fastest, 1, linear, forwards, normal);
+    @include animation(framesFadeIn, $d-medium, $d-faster, 1, linear, forwards, normal);
 }
 [am-animation~="fadeIn"] {
     @include fadeIn();
@@ -22,7 +24,7 @@
     100% { @include scale(1); }
 }
 @mixin pulse {
-    @include animation(framesPulse, $slower, 0, infinite, ease-in, none, normal);
+    @include animation(framesPulse, $d-slow, 0, infinite, ease-in, none, normal);
 }
 [am-animation~="pulse"] {
     @include pulse;

@@ -1,0 +1,56 @@
+// checkboxes module
+
+/*
+    <input am-checkbox type="checkbox" id="SOMETHING-1" name="SOMETHING"> <label for="SOMETHING-1">YES</label>
+*/
+
+[am-checkbox] {
+    position: relative;
+    @include appearance(initial);
+    display: inline-block;
+    vertical-align: middle;
+    outline: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    @include box-sizing(border-box);
+    width: 0.75rem;
+    height: 0.75rem;
+    @include box-shadow($input-sh);
+    color: $input-txt-c;
+    background-color: $input-bg-c;
+    &:after {
+        content: '\2713';
+        display: block;
+        position: absolute;
+        z-index: $z-1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        line-height: 0.75rem;
+        text-align: center;
+        color: transparent;
+        @include transition(color $d-faster);
+    }
+    &:not([disabled]):not(:checked):hover:after {
+        color: rgba($input-txt-c, 0.2);
+    }
+    &:not([disabled]):not(:checked):active:after {
+        color: rgba($input-txt-c, 0.4);
+    }
+    &:not([disabled]):checked:hover:after {
+        color: rgba($input-txt-c, 0.8);
+    }
+    &:not([disabled]):checked:active:after {
+        color: rgba($input-txt-c, 0.6);
+    }
+    &:checked:after {
+        color: inherit;
+    }
+}
+
+// label after checkbox input
+[am-checkbox] + label {
+    display: inline-block;
+    vertical-align: middle;
+}
