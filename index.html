@@ -55,6 +55,43 @@
 
         <h1>Boilerplate assets</h1>
 
+        <figure am-progress="inline">
+            <span style="width: 80%;"></span>
+        </figure>
+
+        <p>The main architecture is more or less done. The modules are about 80% ready.</p>
+
+        <pre><code>// normalizations
+base/_normalize.scss
+base/_spacing.scss
+base/_typography.scss
+
+// config
+config/helpers/_someHelper.scss
+config/variables/_descriptive.scss
+config/variables/_functional.scss
+config/_fonts.scss
+config/_helpers.scss
+config/_resets.scss
+
+// layout
+layout/_content.scss
+layout/_footer.scss
+layout/_header.scss
+
+// all the am-modules
+modules/someModule/_config.scss
+modules/someModule/_module.scss
+
+// aggregators for the main file
+_base.scss
+_config.scss
+_layout.scss
+_modules.scss
+
+// the main file
+main.scss</code></pre>
+
     </header>
 
     <section id="appContent" role="main">

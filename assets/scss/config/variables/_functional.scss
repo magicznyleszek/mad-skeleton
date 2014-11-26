@@ -36,13 +36,16 @@ $selection-bg-c: $c-crimson;
 
 // code element
 $code-family: $family-sourceCodePro;
-$code-bg-c: rgba($c-black, $f-small);
-$code-border-c: rgba($c-black, $f-medium);
+$code-bg-c: rgba($c-silver, $f-big);
+$code-br: 2px;
+$code-sh: 0 0 0 1px $c-silver;
 
 // inputs
-$input-txt-c: $c-black;
-$input-bg-c: $c-silverLighter;
-$input-sh: 0 0 0 1px $c-silverDark;
 $input-br: 2px;
+$input-sh: 0 0 0 1px $c-silver;
+$input-txt-c: $c-black;
+$input-bg-c: rgba($c-silver, $f-big);
+$input-bg-hover-c: rgba($c-silver, $f-giant);
+$input-bg-focus-c: $c-silver;
 $input-disabled-o: $f-big;
 $input-placeholder-txt-c: rgba($input-txt-c, $f-big);

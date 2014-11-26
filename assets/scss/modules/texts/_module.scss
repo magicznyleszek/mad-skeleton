@@ -1,9 +1,7 @@
-/*----------------------------------------------------------------------------*\
-    texts module
-\*----------------------------------------------------------------------------*/
+// texts module
 
 /*
-<p am-text="uppercased centered">UPPERCASED CENTERED</p>
+    <p am-text="uppercased centered">UPPERCASED CENTERED</p>
 */
 
 // aligns
@@ -15,7 +13,7 @@
 [am-text~="uppercased"] { text-transform: uppercase; }
 [am-text~="untransformed"] { text-transform: none; }
 
-[am-text~="dimmed"] { @include opacity(0.5); }
+[am-text~="dimmed"] { @include opacity($f-big); }
 
 // trims text with an ellipsis
 [am-text~="trimmed"] {

@@ -1,4 +1,4 @@
-:root {
+html {
     font: 400 #{$rootFontSize}/$rootLineHeight $rootFontFamily;
     color: $app-txt-c;
     background-color: $app-bg-c;
@@ -66,5 +66,25 @@ input, select, textarea, button {
         font-size: inherit;
         line-height: $rootLineHeight;
         color: $input-placeholder-txt-c;
+    }
+}
+
+code {
+    font-family: $code-family;
+    font-size: 0.75rem;
+    background-color: $code-bg-c;
+    padding-left: 0.125rem;
+    padding-right: 0.125rem;
+    @include box-shadow($code-sh);
+    @include border-radius($code-br);
+}
+
+pre {
+    code {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        @include box-sizing(border-box);
+        padding: 0.5rem;
     }
 }

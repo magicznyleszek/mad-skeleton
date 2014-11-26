@@ -45,25 +45,6 @@ ol {
     list-style-type: decimal;
 }
 
-code {
-    font-family: $code-family;
-    font-size: 75%;
-    background-color: $code-bg-c;
-    border: 0.0625rem solid $code-border-c;
-    padding: 0 0.125rem;
-    @include border-radius(0.25rem);
-}
-
-pre {
-    code {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        @include box-sizing(border-box);
-        padding: 0.5rem;
-    }
-}
-
 small, sub, sup {
     font-size: 75%;
 }

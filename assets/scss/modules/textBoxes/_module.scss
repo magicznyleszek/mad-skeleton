@@ -17,13 +17,10 @@
     display: inline-block;
     vertical-align: middle;
     &:not([disabled]):hover {
-        //
-    }
-    &:not([disabled]):active {
-        //
+        background-color: $input-bg-hover-c;
     }
     &:not([disabled]):focus {
-        //
+        background-color: $input-bg-focus-c;
     }
 }
 
