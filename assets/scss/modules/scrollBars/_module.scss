@@ -1,0 +1,16 @@
+// scrollBars module
+
+@import "modules/scrollbars/config";
+
+[am-scrollBar] {
+    &::-webkit-scrollbar {
+        width: $scrollBar-w;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $scrollBar-default-thumb-bg-c;
+        @include border-radius($scrollBar-thumb-br);
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $scrollBar-default-track-bg-c;
+    }
+}

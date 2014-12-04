@@ -11,14 +11,14 @@
 [am-progress] {
     width: 100%;
     height: $progress-h;
-    background-color: $progress-bg-c;
+    background-color: $progress-default-bg-c;
     @include border-radius($progress-br);
     span {
         display: block;
         height: 100%;
         min-width: $progress-indicator-w;
         width: 0%;
-        background-color: $progress-indicator-bg-c;
+        background-color: $progress-default-indicator-bg-c;
         @include border-radius($progress-br);
         @include transition($d-fast);
     }

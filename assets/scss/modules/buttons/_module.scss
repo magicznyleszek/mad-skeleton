@@ -59,7 +59,7 @@
 }
 
 [am-button~="small"] {
-    font-size: 12px;
+    font-size: $p-giant;
     padding: ($space-little + 1) $space-small ($space-little - 1);
 }
 

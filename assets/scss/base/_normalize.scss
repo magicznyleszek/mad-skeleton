@@ -8,6 +8,10 @@ html {
     }
 }
 
+body {
+    overflow: auto;
+}
+
 a {
     color: inherit;
     text-decoration: underline;
@@ -55,11 +59,12 @@ img, svg, embed, object, video {
     background-color: $selection-bg-c;
 }
 
+*[disabled] {
+    pointer-events: none;
+    @include opacity($input-disabled-o);
+}
+
 input, select, textarea, button {
-    &[disabled] {
-        pointer-events: none;
-        @include opacity($input-disabled-o);
-    }
     @include input-placeholder {
         font-size: inherit;
         line-height: $rootLineHeight;
@@ -69,7 +74,7 @@ input, select, textarea, button {
 
 code {
     font-family: $code-family;
-    font-size: 0.75rem;
+    font-size: $p-giant;
     background-color: $code-bg-c;
     padding-left: 0.125rem;
     padding-right: 0.125rem;
