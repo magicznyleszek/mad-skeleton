@@ -14,7 +14,7 @@
     margin: 0;
     border: 0;
     outline: 0;
-    padding: $space-small $space-medium;
+    padding: rem($space-small) rem($space-medium);
     line-height: 1;
     font-weight: 700;
     text-align: center;
@@ -23,7 +23,7 @@
     background-color: $button-default-bg-c;
     @include box-shadow($button-default-sh);
     @include border-radius($input-br);
-    @include transition($d-faster);
+    @include transition(background-color $d-faster);
     &:not([disabled]):hover {
         background-color: $button-default-bg-hover-c;
     }
@@ -54,13 +54,13 @@
 }
 
 [am-button~="wide"] {
-    padding-left: $space-big;
-    padding-right: $space-big;
+    padding-left: rem($space-giant);
+    padding-right: rem($space-giant);
 }
 
 [am-button~="small"] {
     font-size: $p-giant;
-    padding: ($space-little + 1) $space-small ($space-little - 1);
+    padding: rem($space-little + 1) rem($space-small) rem($space-little - 1);
 }
 
 [am-button~="full"] {

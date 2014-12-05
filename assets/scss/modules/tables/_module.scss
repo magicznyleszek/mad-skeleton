@@ -4,10 +4,10 @@
 
 [am-table] {
     td, th {
-        border: 0.0625rem solid $table-border-c;
-        padding: 0.5rem;
-        min-width: 4rem;
-        max-width: 25rem;
+        border: 1px solid $table-border-c;
+        padding: rem($w-small);
+        min-width: rem(80px);
+        max-width: rem(400px);
     }
     th {
         background-color: $table-header-bg-c;
@@ -34,7 +34,7 @@
     tfoot {
         tr {
             &:first-child {
-                border-top: 0.25rem solid $table-border-c;
+                border-top: 2px solid $table-border-c;
             }
             td {
                 //

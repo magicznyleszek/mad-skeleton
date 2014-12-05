@@ -3,6 +3,5 @@
     width: 100%;
     color: $app-txt-c;
     background-color: $app-bg-c;
-    border: $rootLineHeight * 1rem solid $c-silver;
-    padding: $rootLineHeight * 1rem;
+    padding: rem($space-large);
 }

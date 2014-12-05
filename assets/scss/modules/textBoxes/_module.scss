@@ -9,7 +9,7 @@
     outline: 0;
     margin: 0;
     border: 0;
-    padding: $space-little;
+    padding: rem($space-tiny);
     color: $input-txt-c;
     @include box-shadow($input-sh);
     background-color: $input-bg-c;

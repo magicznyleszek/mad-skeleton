@@ -9,8 +9,8 @@
 [am-icon] {
     display: inline-block;
     vertical-align: middle;
-    height: 1.25rem;
-    width: 1.25rem;
+    height: rem($w-large);
+    width: rem($w-large);
     fill: currentColor;
     shape-rendering: geometricPrecision;
     color: inherit;
@@ -29,13 +29,13 @@
 }
 
 [am-icon~="big"] {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: rem($w-big);
+    height: rem($w-big);
 }
 
 [am-icon~="small"] {
-    height: 0.75rem;
-    width: 0.75rem;
+    height: rem($w-small);
+    width: rem($w-small);
 }
 
 [am-icon~="crimson"] {

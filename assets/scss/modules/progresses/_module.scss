@@ -16,7 +16,7 @@
     span {
         display: block;
         height: 100%;
-        min-width: $progress-indicator-w;
+        min-width: $progress-indicator-min-w;
         width: 0%;
         background-color: $progress-default-indicator-bg-c;
         @include border-radius($progress-br);
@@ -27,5 +27,5 @@
 [am-progress~="inline"] {
     display: inline-block;
     vertical-align: middle;
-    width: 8rem;
+    width: $progress-inline-w;
 }

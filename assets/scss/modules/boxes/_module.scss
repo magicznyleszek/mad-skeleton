@@ -16,7 +16,7 @@
 }
 
 [am-box~="padded"] {
-    padding: $space-medium;
+    padding: rem($space-large);
 }
 
 [am-box~="black"] {

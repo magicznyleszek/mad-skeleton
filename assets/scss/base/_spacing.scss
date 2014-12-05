@@ -4,7 +4,8 @@
 h1, h2, h3, h4, h5, h6,
 p, ol, ul, blockquote, hr,
 article, section, header, footer, table, figure,
-[am-progress]:not([am-progress~="inline"]) {
+[am-progress]:not([am-progress~="inline"]),
+table > caption {
     &:not(:last-child) {
         margin-bottom: $rootLineHeight * 1rem;
     }
@@ -21,6 +22,6 @@ label,
 [am-progress~="inline"],
 [am-textBox] {
     &:not(:last-child) {
-        margin-right: $space-little;
+        margin-right: rem($space-little);
     }
 }

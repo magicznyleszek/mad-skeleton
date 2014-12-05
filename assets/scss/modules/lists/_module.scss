@@ -24,10 +24,10 @@
 
 [am-list~="spaced"] {
     & > li {
-        padding: 0.75rem;
+        padding: rem($w-small);
     }
 }
 
 [am-list~="padded"] {
-    padding: 0.75rem;
+    padding: rem($w-small);
 }

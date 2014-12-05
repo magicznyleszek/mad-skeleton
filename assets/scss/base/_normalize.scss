@@ -1,13 +1,3 @@
-html {
-    font: 400 #{$rootFontSize}/$rootLineHeight $rootFontFamily;
-    @media screen and (min-width: #{$break-bigger}) {
-        font-size: $rootFontSize * 1.2;
-    }
-    @media screen and (max-width: #{$break-smaller}) {
-        font-size: $rootFontSize * 0.8;
-    }
-}
-
 body {
     overflow: auto;
 }

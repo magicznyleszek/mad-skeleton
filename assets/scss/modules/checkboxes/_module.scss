@@ -14,8 +14,9 @@
     margin: 0;
     padding: 0;
     @include box-sizing(border-box);
-    width: 0.75rem;
-    height: 0.75rem;
+    font-size: rem($w-small);
+    width: rem($w-small);
+    height: rem($w-small);
     @include box-shadow($input-sh);
     color: $input-txt-c;
     background-color: $input-bg-c;
@@ -27,7 +28,8 @@
         top: 0;
         left: 0;
         width: 100%;
-        line-height: 0.75rem;
+        height: 100%;
+        line-height: 1.1;
         text-align: center;
         color: transparent;
         @include transition(color $d-faster);

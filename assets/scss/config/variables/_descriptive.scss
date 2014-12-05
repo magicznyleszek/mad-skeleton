@@ -3,21 +3,14 @@
 // colors
 $c-black: black;
 $c-white: white;
-$c-crimson: rgb(240,20,60);
-$c-crimsonLight: lighten($c-crimson, 10%);
-$c-crimsonLighter: lighten($c-crimson, 20%);
-$c-crimsonDark: darken($c-crimson, 10%);
-$c-silver: rgb(204,204,204);
-$c-silverLight: lighten($c-silver, 5%);
-$c-silverLighter: lighten($c-silver, 10%);
-$c-silverDark: darken($c-silver, 5%);
-
-// durations
-$d-faster: 0.125s;
-$d-fast: 0.25s;
-$d-medium: 0.5s;
-$d-slow: 0.75s;
-$d-slower: 1s;
+$c-crimson: hsl(350, 90%, 50%);
+$c-crimsonLight: hsl(350, 100%, 60%);
+$c-crimsonLighter: hsl(350, 100%, 70%);
+$c-crimsonDark: hsl(350, 90%, 45%);
+$c-silver: hsl(0, 0%, 80%);
+$c-silverLight: hsl(0, 0%, 85%);
+$c-silverLighter: hsl(0, 0%, 90%);
+$c-silverDark: hsl(0, 0%, 75%);
 
 // font families
 $family-sourceSansPro: "Source Sans Pro", sans-serif;
@@ -37,16 +30,23 @@ $p-medium: $f-medium * 100%;
 $p-small: $f-small * 100%;
 $p-tiny: $f-tiny * 100%;
 
+// durations
+$d-slower: 1s;
+$d-slow: 0.75s;
+$d-medium: 0.5s;
+$d-fast: 0.25s;
+$d-faster: 0.125s;
+
 // widths
-$w-colossal: 72px;
-$w-huge: 60px;
-$w-giant: 48px;
-$w-big: 36px;
-$w-large: 24px;
-$w-medium: 20px;
-$w-small: 16px;
-$w-little: 12px;
-$w-tiny: 9px;
+$w-colossal: 80px; // 5rem
+$w-huge: 64px; // 4rem
+$w-giant: 40px; // 2.5rem
+$w-big: 32px; // 2rem
+$w-large: 20px; // 1.25rem
+$w-medium: 16px; // 1rem
+$w-small: 10px; // 0.625rem
+$w-little: 8px; // 0.5rem
+$w-tiny: 5px; // 0.3125rem
 
 // z-indexes
 $z-negative: -1;

@@ -9,6 +9,10 @@
 
 [am-flexContainer] {
     display: flex;
+    [am-flexItem] {
+        flex: 1;
+    }
+
 }
 
 [am-flexContainer~="vertical"] {
@@ -27,8 +31,7 @@
 
 [am-flexContainer~="centered"] {
     align-items: center;
-}
-
-[am-flexItem] {
-    flex: 1;
+    [am-flexItem] {
+        align-self: center;
+    }
 }
