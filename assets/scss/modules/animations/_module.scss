@@ -7,7 +7,7 @@
 }
 @mixin fadeIn {
     @include opacity(0);
-    @include animation(framesFadeIn, $d-medium, $d-faster, 1, linear, forwards, normal);
+    @include animation(framesFadeIn $d-medium linear $d-faster 1 forwards);
 }
 [am-animation~="fadeIn"] {
     @include fadeIn();
@@ -24,7 +24,7 @@
     100% { @include scale(1); }
 }
 @mixin pulse {
-    @include animation(framesPulse, $d-slow, 0, infinite, ease-in, none, normal);
+    @include animation(framesPulse $d-slow ease-in 0 infinite);
 }
 [am-animation~="pulse"] {
     @include pulse;
