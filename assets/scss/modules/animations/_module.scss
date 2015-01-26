@@ -1,4 +1,6 @@
+//------------------------------------------------------------------------------
 // animations module
+//------------------------------------------------------------------------------
 
 // fade in once
 @include keyframes(framesFadeIn) {
@@ -9,7 +11,7 @@
     @include opacity(0);
     @include animation(framesFadeIn $d-medium linear $d-faster 1 forwards);
 }
-[am-animation~="fadeIn"] {
+[am-animation~='fadeIn'] {
     @include fadeIn();
 }
 
@@ -26,6 +28,6 @@
 @mixin pulse {
     @include animation(framesPulse $d-slow ease-in 0 infinite);
 }
-[am-animation~="pulse"] {
+[am-animation~='pulse'] {
     @include pulse;
 }

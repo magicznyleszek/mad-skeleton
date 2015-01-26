@@ -1,10 +1,12 @@
+//------------------------------------------------------------------------------
 // icons module
+//------------------------------------------------------------------------------
 
 /*
-    <svg am-icon="small"><use xlink:href="#icon-plus"/></svg>
+    <svg am-icon='small'><use xlink:href='#icon-plus'/></svg>
 */
 
-@import "modules/icons/config";
+@import 'modules/icons/config';
 
 [am-icon] {
     display: inline-block;
@@ -16,28 +18,28 @@
     color: inherit;
 }
 
-[am-icon~="lefted"] {
+[am-icon~='lefted'] {
     float: left;
     margin-left: 0;
     margin-right: $space-small;
 }
 
-[am-icon~="righted"] {
+[am-icon~='righted'] {
     float: right;
     margin-right: 0;
     margin-left: $space-small;
 }
 
-[am-icon~="big"] {
+[am-icon~='big'] {
     width: rem($w-big);
     height: rem($w-big);
 }
 
-[am-icon~="small"] {
+[am-icon~='small'] {
     height: rem($w-small);
     width: rem($w-small);
 }
 
-[am-icon~="crimson"] {
+[am-icon~='crimson'] {
     fill: $c-crimson;
 }

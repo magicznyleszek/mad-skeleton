@@ -1,7 +1,9 @@
+//------------------------------------------------------------------------------
 // textBoxes module
+//------------------------------------------------------------------------------
 
 /*
-    <input am-textBox="light" type="text" id="TEXTBOXID">
+    <input am-textBox='light' type='text' id='TEXTBOXID'>
 */
 
 [am-textBox] {
@@ -24,7 +26,7 @@
     }
 }
 
-[am-textBox~="naked"] {
+[am-textBox~='naked'] {
     color: inherit;
     @include box-shadow(none);
     background-color: transparent;

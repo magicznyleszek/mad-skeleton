@@ -1,4 +1,6 @@
-// all DESCRIPTIVE variables
+//------------------------------------------------------------------------------
+// all DESCRIPTIVE variables (colors, sizes, etc.)
+//------------------------------------------------------------------------------
 
 // colors
 $c-black: black;
@@ -13,8 +15,8 @@ $c-silverLighter: hsl(0, 0%, 90%);
 $c-silverDark: hsl(0, 0%, 75%);
 
 // font families
-$family-sourceSansPro: "Source Sans Pro", sans-serif;
-$family-sourceCodePro: "Source Code Pro", monospace;
+$family-sourceSansPro: 'Source Sans Pro', sans-serif;
+$family-sourceCodePro: 'Source Code Pro', monospace;
 
 // fractions
 $f-giant: 0.75;

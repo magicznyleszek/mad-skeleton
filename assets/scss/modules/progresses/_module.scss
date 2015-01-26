@@ -1,12 +1,14 @@
+//------------------------------------------------------------------------------
 // progresses module
+//------------------------------------------------------------------------------
 
 /*
-    <div am-progress="inline">
-        <span style="width: 50%;"></span>
+    <div am-progress='inline'>
+        <span style='width: 50%;'></span>
     </div>
 */
 
-@import "modules/progresses/config";
+@import 'modules/progresses/config';
 
 [am-progress] {
     width: 100%;
@@ -24,7 +26,7 @@
     }
 }
 
-[am-progress~="inline"] {
+[am-progress~='inline'] {
     display: inline-block;
     vertical-align: middle;
     width: $progress-inline-w;

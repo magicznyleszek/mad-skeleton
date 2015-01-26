@@ -1,7 +1,9 @@
+//------------------------------------------------------------------------------
 // lists module
+//------------------------------------------------------------------------------
 
 /*
-    <ul am-list="padded">
+    <ul am-list='padded'>
         <li>ONE</li>
         <li>TWO</li>
     </ul>
@@ -13,7 +15,7 @@
     padding: 0;
 }
 
-[am-list~="inline"] {
+[am-list~='inline'] {
     display: inline-block;
     vertical-align: middle;
     & > li {
@@ -22,12 +24,12 @@
     }
 }
 
-[am-list~="spaced"] {
+[am-list~='spaced'] {
     & > li {
         padding: rem($w-small);
     }
 }
 
-[am-list~="padded"] {
+[am-list~='padded'] {
     padding: rem($w-small);
 }

@@ -1,7 +1,9 @@
+//------------------------------------------------------------------------------
 // flexes module
+//------------------------------------------------------------------------------
 
 /*
-    <div am-flexContainer="horizontal">
+    <div am-flexContainer='horizontal'>
         <div am-flexItem>STRETCHING</div>
         <div>OTHER</div>
     </div>
@@ -15,21 +17,21 @@
 
 }
 
-[am-flexContainer~="vertical"] {
+[am-flexContainer~='vertical'] {
     flex-direction: column;
-    &[am-flexContainer~="full"] {
+    &[am-flexContainer~='full'] {
         width: 100%;
     }
 }
 
-[am-flexContainer~="horizontal"] {
+[am-flexContainer~='horizontal'] {
     flex-direction: row;
-    &[am-flexContainer~="full"] {
+    &[am-flexContainer~='full'] {
         height: 100%;
     }
 }
 
-[am-flexContainer~="centered"] {
+[am-flexContainer~='centered'] {
     align-items: center;
     [am-flexItem] {
         align-self: center;

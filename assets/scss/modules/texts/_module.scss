@@ -1,22 +1,24 @@
+//------------------------------------------------------------------------------
 // texts module
+//------------------------------------------------------------------------------
 
 /*
-    <p am-text="uppercased centered">UPPERCASED CENTERED</p>
+    <p am-text='uppercased centered'>UPPERCASED CENTERED</p>
 */
 
 // aligns
-[am-text~="lefted"] { text-align: left; }
-[am-text~="righted"] { text-align: right; }
-[am-text~="centered"] { text-align: center; }
+[am-text~='lefted'] { text-align: left; }
+[am-text~='righted'] { text-align: right; }
+[am-text~='centered'] { text-align: center; }
 
 // text transforms
-[am-text~="uppercased"] { text-transform: uppercase; }
-[am-text~="untransformed"] { text-transform: none; }
+[am-text~='uppercased'] { text-transform: uppercase; }
+[am-text~='untransformed'] { text-transform: none; }
 
-[am-text~="dimmed"] { @include opacity($f-big); }
+[am-text~='dimmed'] { @include opacity($f-big); }
 
 // trims text with an ellipsis
-[am-text~="trimmed"] {
+[am-text~='trimmed'] {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

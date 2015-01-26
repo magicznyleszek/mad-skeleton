@@ -1,3 +1,7 @@
+//------------------------------------------------------------------------------
+// rems for the win
+//------------------------------------------------------------------------------
+
 // strip units from value
 @function parseInt($n) {
     @return $n / ($n * 0 + 1);
@@ -9,7 +13,7 @@
     $root: parseInt($rootFontSize);
     $val: parseInt($value);
     $return: ();
-    @if unit($value) == "px" {
+    @if unit($value) == 'px' {
         $return: append($return, ($val / $root + rem));
     } @else {
         $return: append($return, ($val * $root + px));

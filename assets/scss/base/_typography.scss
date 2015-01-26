@@ -1,3 +1,7 @@
+//------------------------------------------------------------------------------
+// base typographic rules
+//------------------------------------------------------------------------------
+
 html {
     font: 400 #{$rootFontSize}/$rootLineHeight $rootFontFamily;
     @media screen and (min-width: #{$break-bigger}) {
