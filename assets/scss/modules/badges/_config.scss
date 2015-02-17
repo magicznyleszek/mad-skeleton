@@ -1,0 +1,28 @@
+/*----------------------------------------------------------------------------*\
+    badges config
+\*----------------------------------------------------------------------------*/
+
+// default
+$badge-default-txt-c: $c-white;
+$badge-default-bg-c: $c-silver;
+$badge-default-br: 0.25rem;
+
+// counter
+$badge-counter-br: 1rem;
+$badge-counter-min-w: 1rem;
+@include keyframes(badge-counter-pulse-keyframes) {
+    0% { @include scale(1); }
+    50% { @include scale(1.25); }
+    100% { @include scale(1); }
+}
+@mixin badge-counter-pulse {
+    &[class*="-add"], &.ng-enter {
+        @include animation(badge-counter-pulse-keyframes $d-fast ease-in 0 1);
+    }
+}
+
+// dot
+$badge-dot-w: 0.5rem;
+
+// crimson
+$badge-crimson-bg-c: $c-crimson;

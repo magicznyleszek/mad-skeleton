@@ -1,0 +1,85 @@
+/*----------------------------------------------------------------------------*\
+    dropdowns module
+\*----------------------------------------------------------------------------*/
+
+/*
+<div am-dropdown>
+    <ul am-dropdown-list>
+        <span am-dropdown-list-triangle></span>
+        ...
+    </ul>
+    <button am-button>TRIGGER</button>
+</div>
+*/
+
+@import "modules/dropdowns/config";
+
+[am-dropdown] {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    [am-dropdown-list] {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        z-index: $z-2;
+        top: 100%;
+        margin-top: 6px;
+        margin-bottom: $space-medium; // for end-of-screen cases
+        left: 0;
+        min-width: $dropdown-min-w;
+        max-width: $dropdown-max-w;
+        color: $dropdown-default-txt-c;
+        background: $dropdown-default-bg-c;
+        @include box-shadow($dropdown-default-sh);
+        @include transition($d-faster);
+        transition-timing-function: ease-in-out;
+        &:not(.opened) {
+            visibility: hidden;
+            opacity: 0;
+            top: 60%;
+        }
+        > li {
+            width: 100%;
+            overflow: hidden;
+            &:not(:first-of-type) {
+                border-top: 1px solid $dropdown-default-border-c;
+            }
+            [am-button] {
+                padding-left: $space-small;
+                padding-right: $space-small;
+            }
+        }
+        h2 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        [am-dropdown-list-triangle] {
+            @include box-sizing(border-box);
+            position: absolute;
+            z-index: $z-1;
+            top: -10px;
+            left: 20px;
+            width: 20px;
+            height: 10px;
+            overflow: hidden;
+            text-align: center;
+            pointer-events: none;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: $dropdown-default-bg-c;
+                @include box-shadow($dropdown-default-triangle-sh);
+                @include transform(rotate(45deg));
+                left: 50%;
+                margin-left: -10px;
+                bottom: 0;
+                margin-bottom: -16px;
+            }
+        }
+    }
+}

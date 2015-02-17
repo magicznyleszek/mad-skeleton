@@ -1,0 +1,16 @@
+/*----------------------------------------------------------------------------*\
+    hovers module
+\*----------------------------------------------------------------------------*/
+
+/*
+<div am-hoverContainer>
+    <div am-hoverItem>VISIBLE ONLY ON CONTAINER HOVER</div>
+</div>
+*/
+
+[am-hoverContainer] {
+    &:not(:hover) [am-hoverItem~="show"],
+    &:hover [am-hoverItem~="hide"] {
+        display: none;
+    }
+}

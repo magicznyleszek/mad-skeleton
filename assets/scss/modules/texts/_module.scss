@@ -11,6 +11,12 @@
 [am-text~='righted'] { text-align: right; }
 [am-text~='centered'] { text-align: center; }
 
+// weights
+[am-text~="300"] { font-weight: 300; }
+[am-text~="400"] { font-weight: 400; }
+[am-text~="700"] { font-weight: 700; }
+[am-text~="600"] { font-weight: 600; }
+
 // text transforms
 [am-text~='uppercased'] { text-transform: uppercase; }
 [am-text~='untransformed'] { text-transform: none; }
