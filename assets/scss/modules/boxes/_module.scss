@@ -3,47 +3,44 @@
 //------------------------------------------------------------------------------
 
 /*
-    <div am-box='padded black'></div>
+    <div am-box="padded black"></div>
 */
 
-@import 'modules/boxes/config';
+@import "modules/boxes/config";
 
-[am-box] {
-    @include box-sizing(border-box);
-}
+[am-box] { @include box-sizing(border-box); }
 
-[am-box~='inline'] {
+[am-box~="inline"] {
     display: inline-block;
     vertical-align: middle;
 }
 
-[am-box~='padded'] { padding: rem($space-large); }
-[am-box~="paddedH"] { padding-left: $space-large; padding-right: $space-large; }
-[am-box~="paddedV"] { padding-top: $space-large; padding-bottom: $space-large; }
-[am-box~="paddedT"] { padding-top: $space-large; }
-[am-box~="paddedR"] { padding-right: $space-large; }
-[am-box~="paddedB"] { padding-bottom: $space-large; }
-[am-box~="paddedL"] { padding-left: $space-large; }
+// for defining new padded options
+@mixin boxPadded($name, $spacing) {
+    [am-box~="padded#{$name}"] { padding: $spacing; }
+    [am-box~="padded#{$name}H"] { padding-left: $spacing; padding-right: $spacing; }
+    [am-box~="padded#{$name}V"] { padding-top: $spacing; padding-bottom: $spacing; }
+    [am-box~="padded#{$name}T"] { padding-top: $spacing; }
+    [am-box~="padded#{$name}R"] { padding-right: $spacing; }
+    [am-box~="padded#{$name}B"] { padding-bottom: $spacing; }
+    [am-box~="padded#{$name}L"] { padding-left: $spacing; }
+}
 
-[am-box~="paddedSmall"] { padding: $space-small; }
-[am-box~="paddedSmallH"] { padding-left: $space-small; padding-right: $space-small; }
-[am-box~="paddedSmallV"] { padding-top: $space-small; padding-bottom: $space-small; }
-[am-box~="paddedSmallT"] { padding-top: $space-small; }
-[am-box~="paddedSmallR"] { padding-right: $space-small; }
-[am-box~="paddedSmallB"] { padding-bottom: $space-small; }
-[am-box~="paddedSmallL"] { padding-left: $space-small; }
+@include boxPadded('Large', rem($space-large));
+@include boxPadded('', rem($space-medium)); // default padded modifier
+@include boxPadded('Small', rem($space-small));
 
-[am-box~='black'] {
+[am-box~="black"] {
     color: $box-black-txt-c;
     background-color: $box-black-bg-c;
 }
 
-[am-box~='crimson'] {
+[am-box~="crimson"] {
     color: $box-crimson-txt-c;
     background-color: $box-crimson-bg-c;
 }
 
-[am-box~='silver'] {
+[am-box~="silver"] {
     color: $box-silver-txt-c;
     background-color: $box-silver-bg-c;
 }

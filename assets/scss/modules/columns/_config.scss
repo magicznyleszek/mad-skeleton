@@ -2,4 +2,25 @@
 // columns config
 //------------------------------------------------------------------------------
 
+// default
 $column-max: 12;
+
+// set width of a column
+@mixin columnSet($n:$column-max, $of:$column-max) { width: $n * (100 / $of) * 1%; }
+
+// define all prerequisites for a column
+@mixin columnInit() {
+    @include box-sizing(border-box);
+    display: inline-block;
+    vertical-align: top;
+}
+
+// define a simple-fraction column that defaults to single column
+@mixin column($n:$column-max, $of:$column-max) {
+    @include columnInit();
+    @include columnSet($n, $of);
+}
+
+// create an empty space on the left or right
+@mixin columnBefore($n:1, $of:$column-max) { margin-left: $n * (100 / $of) * 1%; }
+@mixin columnAfter($n:1, $of:$column-max) { margin-right: $n * (100 / $of) * 1%; }

@@ -3,28 +3,28 @@
 //------------------------------------------------------------------------------
 
 /*
-    <p am-text='uppercased centered'>UPPERCASED CENTERED</p>
+    <p am-text="uppercased centered">UPPERCASED CENTERED</p>
 */
 
 // aligns
-[am-text~='lefted'] { text-align: left; }
-[am-text~='righted'] { text-align: right; }
-[am-text~='centered'] { text-align: center; }
+[am-text~="lefted"] { text-align: left; }
+[am-text~="righted"] { text-align: right; }
+[am-text~="centered"] { text-align: center; }
 
 // weights
 [am-text~="300"] { font-weight: 300; }
 [am-text~="400"] { font-weight: 400; }
-[am-text~="700"] { font-weight: 700; }
 [am-text~="600"] { font-weight: 600; }
+[am-text~="700"] { font-weight: 700; }
 
 // text transforms
-[am-text~='uppercased'] { text-transform: uppercase; }
-[am-text~='untransformed'] { text-transform: none; }
+[am-text~="uppercased"] { text-transform: uppercase; }
+[am-text~="untransformed"] { text-transform: none; }
 
-[am-text~='dimmed'] { @include opacity($f-big); }
+[am-text~="dimmed"] { @include opacity($f-big); }
 
 // trims text with an ellipsis
-[am-text~='trimmed'] {
+[am-text~="trimmed"] {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

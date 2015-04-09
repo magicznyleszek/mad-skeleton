@@ -3,18 +3,21 @@
 //------------------------------------------------------------------------------
 
 /*
-    <div am-progress='inline'>
-        <span style='width: 50%;'></span>
+    <div am-progress="inline">
+        <span style="width: 50%;"></span>
     </div>
 */
 
-@import 'modules/progresses/config';
+@import "modules/progresses/config";
 
 [am-progress] {
     width: 100%;
     height: $progress-h;
+    overflow: hidden;
     background-color: $progress-default-bg-c;
     @include border-radius($progress-br);
+    display: inline-block;
+    vertical-align: middle;
     span {
         display: block;
         height: 100%;
@@ -26,8 +29,4 @@
     }
 }
 
-[am-progress~='inline'] {
-    display: inline-block;
-    vertical-align: middle;
-    width: $progress-inline-w;
-}
+[am-progress~="inline"] { max-width: $progress-inline-w; }

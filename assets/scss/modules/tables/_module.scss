@@ -2,7 +2,7 @@
 // tables module
 //------------------------------------------------------------------------------
 
-@import 'modules/tables/config';
+@import "modules/tables/config";
 
 [am-table] {
     td, th {
@@ -11,36 +11,12 @@
         min-width: rem(80px);
         max-width: rem(400px);
     }
-    th {
-        background-color: $table-header-bg-c;
-    }
+    th { background-color: $table-header-bg-c; }
     tr {
-        &:hover {
-            background-color: $table-row-bg-hover-c;
-        }
+        &:hover { background-color: $table-row-bg-hover-c; }
     }
-    thead {
-        tr {
-            td {
-                font-weight: 700;
-            }
-        }
-    }
-    tbody {
-        tr {
-            td {
-                //
-            }
-        }
-    }
-    tfoot {
-        tr {
-            &:first-child {
-                border-top: 2px solid $table-border-c;
-            }
-            td {
-                //
-            }
-        }
+    thead tr td { font-weight: 700; }
+    tfoot tr {
+        &:first-child { border-top: 2px solid $table-border-c; }
     }
 }

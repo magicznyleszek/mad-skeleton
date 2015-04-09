@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 
 /*
-    <input am-textBox='light' type='text' id='TEXTBOXID'>
+    <input am-textBox="light" type="text" id="TEXTBOXID">
 */
 
 [am-textBox] {
@@ -18,16 +18,18 @@
     border-radius: $input-br;
     display: inline-block;
     vertical-align: middle;
-    &:not([disabled]):hover {
-        background-color: $input-bg-hover-c;
-    }
-    &:not([disabled]):focus {
-        background-color: $input-bg-focus-c;
-    }
+    line-height: 1;
+    &:not([disabled]):hover { background-color: $input-bg-hover-c; }
+    &:not([disabled]):focus { background-color: $input-bg-focus-c; }
 }
 
-[am-textBox~='naked'] {
+[am-textBox~="naked"] {
     color: inherit;
     @include box-shadow(none);
     background-color: transparent;
+}
+
+[am-textBox~="full"] {
+    width: 100%;
+    @include box-sizing(border-box);
 }

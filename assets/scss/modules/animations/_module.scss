@@ -11,9 +11,7 @@
     @include opacity(0);
     @include animation(framesFadeIn $d-medium linear $d-faster 1 forwards);
 }
-[am-animation~='fadeIn'] {
-    @include fadeIn();
-}
+[am-animation~="fadeIn"] { @include fadeIn(); }
 
 // pulse loop
 @include keyframes(framesPulse) {
@@ -25,9 +23,5 @@
     70% { @include scale(1); }
     100% { @include scale(1); }
 }
-@mixin pulse {
-    @include animation(framesPulse $d-slow ease-in 0 infinite);
-}
-[am-animation~='pulse'] {
-    @include pulse;
-}
+@mixin pulse { @include animation(framesPulse $d-slow ease-in 0 infinite); }
+[am-animation~="pulse"] { @include pulse; }

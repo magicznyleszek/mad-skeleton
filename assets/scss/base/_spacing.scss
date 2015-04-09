@@ -6,24 +6,21 @@
 h1, h2, h3, h4, h5, h6,
 p, ol, ul, blockquote, hr,
 article, section, header, footer, table, figure,
-[am-progress]:not([am-progress~='inline']),
+[am-progress]:not([am-progress~="inline"]),
 table > caption {
-    &:not(:last-child) {
-        margin-bottom: $rootLineHeight * 1rem;
-    }
+    &:not(:last-child) { margin-bottom: $rootLineHeight * 1rem; }
 }
 
 // horizontal
 label,
-[am-box~='inline'],
+[am-badge],
+[am-box~="inline"],
 [am-button],
 [am-checkbox],
 [am-radio],
 [am-icon],
 [am-image],
-[am-progress~='inline'],
+[am-progress~="inline"],
 [am-textBox] {
-    &:not(:last-child) {
-        margin-right: rem($space-little);
-    }
+    &:not(:last-child) { margin-right: rem($space-little); }
 }

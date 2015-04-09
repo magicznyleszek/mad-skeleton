@@ -2,31 +2,22 @@
 // root stuff and normalizations
 //------------------------------------------------------------------------------
 
-body {
-    overflow: auto;
+html {
+    font: $rootFontWeight #{$rootFontSize}/$rootLineHeight $rootFontFamily;
+    @media screen and (min-width: #{$break-bigger}) { font-size: $rootFontSize * 1.2; }
+    @media screen and (max-width: #{$break-smaller}) { font-size: $rootFontSize * 0.8; }
 }
+
+body { overflow: auto; }
 
 a {
     color: inherit;
     text-decoration: underline;
-    &:visited {
-        color: inherit;
-    }
+    &:visited { color: inherit; }
     &:hover {
         color: inherit;
         text-decoration: none;
     }
-}
-
-hr {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: $hr-h;
-    border: 0;
-    background-color: $hr-bg-c;
 }
 
 :focus {
@@ -35,13 +26,7 @@ hr {
     outline-width: 0.25rem;
 }
 
-::-moz-focus-inner {
-    border: 0;
-}
-
-img, svg, embed, object, video {
-    max-width: 100%;
-}
+::-moz-focus-inner { border: 0; }
 
 ::selection {
     color: $selection-txt-c;
@@ -53,10 +38,12 @@ img, svg, embed, object, video {
     background-color: $selection-bg-c;
 }
 
-*[disabled] {
+[disabled] {
     pointer-events: none;
     @include opacity($input-disabled-o);
 }
+
+img, svg, embed, object, video { max-width: 100%; }
 
 input, select, textarea, button {
     @include input-placeholder {
@@ -84,4 +71,15 @@ pre {
         @include box-sizing(border-box);
         padding: 0.5rem;
     }
+}
+
+hr {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: $hr-h;
+    border: 0;
+    background-color: $hr-bg-c;
 }

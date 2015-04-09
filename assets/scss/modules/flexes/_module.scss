@@ -3,37 +3,28 @@
 //------------------------------------------------------------------------------
 
 /*
-    <div am-flexContainer='horizontal'>
+    <div am-flexContainer="horizontal">
         <div am-flexItem>STRETCHING</div>
         <div>OTHER</div>
     </div>
 */
 
 [am-flexContainer] {
-    display: flex;
-    [am-flexItem] {
-        flex: 1;
-    }
-
+    @include display-flex();
+    [am-flexItem] { @include flex(1); }
 }
 
-[am-flexContainer~='vertical'] {
-    flex-direction: column;
-    &[am-flexContainer~='full'] {
-        width: 100%;
-    }
+[am-flexContainer~="vertical"] {
+    @include flex-direction(column);
+    &[am-flexContainer~="full"] { width: 100%; }
 }
 
-[am-flexContainer~='horizontal'] {
-    flex-direction: row;
-    &[am-flexContainer~='full'] {
-        height: 100%;
-    }
+[am-flexContainer~="horizontal"] {
+    @include flex-direction(row);
+    &[am-flexContainer~="full"] { height: 100%; }
 }
 
-[am-flexContainer~='centered'] {
-    align-items: center;
-    [am-flexItem] {
-        align-self: center;
-    }
+[am-flexContainer~="centered"] {
+    @include align-items(center);
+    [am-flexItem] { @include align-self(center); }
 }

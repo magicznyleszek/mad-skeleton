@@ -2,6 +2,18 @@
 // buttons config
 //------------------------------------------------------------------------------
 
+// common
+@mixin clearButtonDefaults() {
+    color: inherit;
+    text-transform: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    border-radius: 0;
+    @include box-shadow(none);
+    background-color: transparent;
+    background-image: none;
+}
+
 // default
 $button-default-txt-c: $c-black;
 $button-default-bg-c: $c-silver;

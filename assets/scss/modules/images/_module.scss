@@ -3,10 +3,10 @@
 //------------------------------------------------------------------------------
 
 /*
-    <figure am-image='small' style='background-image: THUMBNAILURL'></figure>
+    <figure am-image="small" style="background-image: THUMBNAILURL"></figure>
 */
 
-@import 'modules/images/config';
+@import "modules/images/config";
 
 [am-image] {
     display: inline-block;
@@ -14,13 +14,14 @@
     margin: 0;
     padding: 0;
     background-size: cover;
-    background-position: center center;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     background-color: $image-empty-bg-c;
     @include backface-visibility(hidden);
 }
 
-[am-image~='small'] {
+[am-image~="small"] {
     width: $image-small-w;
     height: $image-small-h;
+    &[am-image~="square"] { width: $image-small-h; }
 }

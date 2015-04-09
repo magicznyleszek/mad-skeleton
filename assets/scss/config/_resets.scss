@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// based on Eric Mayer's reset 2.0 http://meyerweb.com/eric/tools/css/reset/
+// based on Eric Mayer"s reset 2.0 http://meyerweb.com/eric/tools/css/reset/
 //------------------------------------------------------------------------------
 
 html, body, div, span, applet, object, iframe,
@@ -28,17 +28,7 @@ html {
     min-height: 100%;
 }
 
-ol, ul {
-    list-style: none;
-}
-
-blockquote, q {
-    quotes: none;
-    &:before, &:after {
-        content: '';
-        content: none;
-    }
-}
+// ul, ol { list-style: none; } // use [am-list] for non-textual lists
 
 table {
     border-collapse: collapse;
@@ -46,10 +36,6 @@ table {
     width: 100%;
 }
 
-input, select, textarea, button {
-    font: inherit;
-}
+input, select, textarea, button { font: inherit; }
 
-textarea {
-    resize: vertical;
-}
+textarea { resize: vertical; }

@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 
 /*
-    <ul am-list='padded'>
+    <ul am-list="padded">
         <li>ONE</li>
         <li>TWO</li>
     </ul>
@@ -15,7 +15,7 @@
     padding: 0;
 }
 
-[am-list~='inline'] {
+[am-list~="inline"] {
     display: inline-block;
     vertical-align: middle;
     & > li {
@@ -24,12 +24,8 @@
     }
 }
 
-[am-list~='spaced'] {
-    & > li {
-        padding: rem($w-small);
-    }
-}
+[am-list~="spaced"] > li { padding: rem($w-small); }
 
-[am-list~='padded'] {
-    padding: rem($w-small);
-}
+[am-list~="padded"] { padding: rem($w-small); }
+
+[am-listItem-empty]:not(:only-of-type) { display: none; }

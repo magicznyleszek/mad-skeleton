@@ -3,10 +3,10 @@
 //------------------------------------------------------------------------------
 
 /*
-    <button am-button='green wide' disabled>CANTGO</button>
+    <button am-button="green wide" disabled>CANTGO</button>
 */
 
-@import 'modules/buttons/config';
+@import "modules/buttons/config";
 
 [am-button] {
     position: relative;
@@ -30,48 +30,46 @@
     &:not([disabled]):hover {
         background-color: $button-default-bg-hover-c;
     }
-    &:not([disabled]):active, &:not([disabled]).active {
+    &:not([disabled]):active,
+    &:not([disabled]).active {
         background-color: $button-default-bg-active-c;
     }
 }
 
-[am-button~='naked'] {
-    color: inherit;
-    border-radius: 0;
-    @include box-shadow(none);
-    background-color: transparent;
-    font-weight: inherit;
+[am-button~="naked"] {
+    @include clearButtonDefaults();
     &:not([disabled]):hover {
         @include opacity(0.8);
         background-color: transparent;
     }
-    &:not([disabled]):active, &:not([disabled]).active {
+    &:not([disabled]):active,
+    &:not([disabled]).active {
         @include opacity(0.6);
         background-color: transparent;
     }
 }
 
-[am-button~='spacelessH'] {
+[am-button~="spacelessH"] {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
 
-[am-button~='wide'] {
+[am-button~="wide"] {
     padding-left: rem($space-giant);
     padding-right: rem($space-giant);
 }
 
-[am-button~='small'] {
+[am-button~="small"] {
     font-size: $p-giant;
     padding: rem($space-little + 1) rem($space-small) rem($space-little - 1);
 }
 
-[am-button~='full'] {
+[am-button~="full"] {
     width: 100%;
     text-align: left;
 }
 
-[am-button~='important'] {
+[am-button~="important"] {
     color: $button-important-txt-c;
     background-color: $button-important-bg-c;
     @include box-shadow($button-important-sh);
@@ -83,7 +81,8 @@
     &:not([disabled]):hover {
         background-color: $button-important-bg-hover-c;
     }
-    &:not([disabled]):active, &:not([disabled]).active {
+    &:not([disabled]):active,
+    &:not([disabled]).active {
         background-color: $button-important-bg-active-c;
     }
 }

@@ -20,10 +20,6 @@
     position: $position;
 }
 
-@mixin absolute($args) {
-    @include position(absolute, $args);
-}
+@mixin absolute($args) { @include position(absolute, $args); }
 
-@mixin fixed($args) {
-    @include position(fixed, $args);
-}
+@mixin fixed($args) { @include position(fixed, $args); }
