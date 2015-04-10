@@ -11,9 +11,9 @@ Features:
 
 ## Styles architecture
 
-I use the [AMCSS](http://amcss.github.io/) philosophy to build small modules and keep a variables config in single place. I hardly use any *classes*, as almost everything could be an `am`; and *id*'s for custom single-case elements.
+I follow the [AMCSS](http://amcss.github.io/) philosophy and a tested directory structure. All UI elements are build as small modules with custom cases rarely appearing (assuming the UI is properly designed). All custom variables are kept in base or module-dedicated config files. I hardly use `.classes`, as almost everything could be and should be a module; for custom single-case elements i use `#ids`.
 
-This is how the `SCSS` files are kept:
+This is how the files structure looks like:
 
 ``` SCSS
 // normalizations
