@@ -4,14 +4,14 @@ Boilerplate assets for quick start with web project.
 
 Features:
 
-- Grunt (watch, compass, coffee)
-- Compass (SCSS)
-- CoffeScript
+- [Grunt](http://gruntjs.com/) - watch, compass, coffee
+- [Compass](http://compass-style.org/)
+- [CoffeScript](http://coffeescript.org)
 
 
 ## Styles architecture
 
-I use the [AMCSS](http://amcss.github.io/) to build small modules and keep a variables config in single place. I hardly use any *classes*, as almost everything could be an `am`; and *id*'s for custom single-case elements.
+I use the [AMCSS](http://amcss.github.io/) philosophy to build small modules and keep a variables config in single place. I hardly use any *classes*, as almost everything could be an `am`; and *id*'s for custom single-case elements.
 
 This is how the `SCSS` files are kept:
 
