@@ -1,0 +1,33 @@
+{
+  "name": "boilerplate-assets",
+  "version": "1.0.0",
+  "description": "Assets for quick start with web project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smutnyleszek/boilerplate-assets.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "assets",
+    "grunt",
+    "coffescript",
+    "compass"
+  ],
+  "author": "Leszek Pietrzak",
+  "license": "CC0 1.0 Universal",
+  "bugs": {
+    "url": "https://github.com/smutnyleszek/boilerplate-assets/issues"
+  },
+  "homepage": "https://github.com/smutnyleszek/boilerplate-assets",
+  "devDependencies": {
+    "coffee-script": "^1.9.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-coffee": "^0.12.0",
+    "grunt-contrib-compass": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
