@@ -16,5 +16,8 @@
     &:not(:hover) [am-hoverItem~="reveal"],
     &:hover [am-hoverItem~="conceal"] {
         visibility: hidden;
+        @include opacity(0);
     }
 }
+
+[am-hoverItem~="animated"] { @include transition($d-faster); }
