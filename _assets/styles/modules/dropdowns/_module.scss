@@ -31,6 +31,7 @@
         left: 0;
         min-width: $dropdown-min-w;
         max-width: $dropdown-max-w;
+        width: auto;
         color: $dropdown-default-txt-c;
         background: $dropdown-default-bg-c;
         @include box-shadow($dropdown-default-sh);
@@ -44,13 +45,6 @@
         > li {
             width: 100%;
             overflow: hidden;
-            &:not(:first-of-type) {
-                border-top: 1px solid $dropdown-default-border-c;
-            }
-            [am-button] {
-                padding-left: $space-small;
-                padding-right: $space-small;
-            }
         }
         [am-dropdown-list-triangle] {
             @include box-sizing(border-box);
@@ -62,7 +56,6 @@
             height: 10px;
             overflow: hidden;
             text-align: center;
-            pointer-events: none;
             &:before {
                 content: "";
                 display: block;

@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 
 /*
-<button am-button="green wide" disabled>CANTGO</button>
+<button am-button="important wide" disabled>CANTGO</button>
 */
 
 @import "modules/buttons/config";
@@ -17,6 +17,7 @@
     border: 0;
     outline: 0;
     padding: rem($space-small) rem($space-medium);
+    margin-bottom: rem($space-tiny);
     line-height: 1;
     font-weight: 700;
     font-family: inherit;
@@ -47,11 +48,10 @@
         @include opacity(0.6);
         background-color: transparent;
     }
-}
-
-[am-button~="spacelessH"] {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    &[am-button~="naked-textual"] {
+        line-height: inherit;
+        padding: 0;
+    }
 }
 
 [am-button~="wide"] {
@@ -62,11 +62,21 @@
 [am-button~="small"] {
     font-size: $p-giant;
     padding: rem($space-little + 1) rem($space-small) rem($space-little - 1);
+    &[am-button~="wide"] {
+        padding-left: $space-large;
+        padding-right: $space-large;
+    }
 }
 
 [am-button~="full"] {
     width: 100%;
     text-align: left;
+}
+
+[am-button~="flat"] {
+    border-radius: 0;
+    @include box-shadow(none);
+    margin-bottom: 0;
 }
 
 [am-button~="important"] {

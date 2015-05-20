@@ -11,7 +11,12 @@ Features:
 
 ## Styles architecture
 
-I loosely follow the [AMCSS](http://amcss.github.io/) technique and a tested directory structure. All UI elements are build as small modules with custom cases rarely appearing (assuming the UI is properly designed). All custom variables are kept in base or module-dedicated config files. I hardly use `.classes`, as almost everything could and should be a module; for custom single-case elements i use `#ids`.
+I loosely follow the [AMCSS](http://amcss.github.io/) technique and a tested
+directory structure. All UI elements are build as small modules with custom
+cases rarely appearing (assuming the UI is properly designed). All custom
+variables are kept in base or module-dedicated config files. I hardly use
+`.classes`, as almost everything could and should be a module; for custom
+single-case elements i use `#ids`.
 
 This is how the files structure looks like:
 

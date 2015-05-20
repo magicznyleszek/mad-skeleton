@@ -2,6 +2,10 @@
 // animations module
 //------------------------------------------------------------------------------
 
+/*
+<div am-animation="pulse">HEARTBEAT</div>
+*/
+
 // fade in once
 @include keyframes(framesFadeIn) {
     0% { @include opacity(0); visibility: hidden; }
@@ -23,5 +27,5 @@
     70% { @include scale(1); }
     100% { @include scale(1); }
 }
-@mixin pulse { @include animation(framesPulse $d-slow ease-in 0 infinite); }
+@mixin pulse { @include animation(framesPulse $d-slow ease-in infinite); }
 [am-animation~="pulse"] { @include pulse; }

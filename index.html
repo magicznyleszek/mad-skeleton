@@ -35,78 +35,194 @@
     <!-- fonts -->
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic&subset=latin,latin-ext" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 
     <!-- svg icons -->
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 0; height: 0; overflow: hidden; position: fixed;">
-
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        style="width: 0; height: 0; overflow: hidden; position: fixed;"
+    >
         <symbol id="icon-check" viewBox="0 0 14 11">
             <title>check</title>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.754,10.012c-0.185,0.185-0.484,0.185-0.669,0L4.937,9.864L4.937,9.865 	L4.779,9.706L4.083,9.01C4.081,9.007,4.082,9.003,4.079,9.001L0.892,5.79c-0.185-0.185-0.185-0.484,0-0.668l1.003-1.003 	c0.185-0.185,0.484-0.185,0.669,0L5.424,7l6.013-6.013c0.184-0.185,0.484-0.185,0.668,0l1.003,1.003 c0.184,0.184,0.184,0.484,0,0.668L5.754,10.012z"/>
+            <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.754,10.012c-0.185,0.185-0.484,0.185-0.669,0L4.937,9.864L4.937,9.865 L4.779,9.706L4.083,9.01C4.081,9.007,4.082,9.003,4.079,9.001L0.892,5.79c-0.185-0.185-0.185-0.484,0-0.668l1.003-1.003 c0.185-0.185,0.484-0.185,0.669,0L5.424,7l6.013-6.013c0.184-0.185,0.484-0.185,0.668,0l1.003,1.003 c0.184,0.184,0.184,0.484,0,0.668L5.754,10.012z"
+            >
         </symbol>
-
     </svg>
 
     <header id="appHeader">
 
         <h1>Boilerplate assets</h1>
 
-        <figure am-progress="inline">
-            <span style="width: 80%;"></span>
-        </figure>
-
-        <p>The main architecture is more or less done. The modules are about 80% ready.</p>
+        <p>The main architecture and modules are ready to work with them.</p>
 
     </header>
 
     <section id="appContent" role="main">
 
+        <h2 am-box="padded silver">All modules</h2>
+
         <article>
 
-            <h2 am-box="padded silver">I loosely follow <a href="http://amcss.github.io/">AMCSS</a> technique.</h2>
+            <h3>animation</h3>
 
-            <p>
-                <button am-button>Button</button>
-                <button am-button="important">Important button</button>
-                <button am-button="important" disabled>Important disabled button</button>
-                <button am-button="small" disabled>Small disabled button</button>
-                <button am-button="naked">Naked button</button>
-                <button am-button="naked" disabled>Naked disabled button</button>
-                <button am-button am-animation="pulse">I <i class="fa fa-heart"></i> buttons</button>
-            </p>
-
-            <p>
-                <button am-button="">
-                    <span am-badge="stacked counter crimson">5</span>
-                    Counter badge
-                </button>
-            </p>
+            <span am-animation="pulse">hearbeat</span>
 
         </article>
 
         <article>
 
-            <div am-dropdown am-hoverContainer>
-                <ul am-dropdown-list class="opened" am-hoverItem="show">
-                    <span am-dropdown-list-triangle></span>
-                    <li>
-                        <button am-button="flat full">Option 1</button>
-                        <button am-button="flat full">Option 2</button>
-                        <button am-button="flat full">Some other fancy option</button>
-                    </li>
-                </ul>
-                <button am-button>Dropdown</button>
+            <h3>badge</h3>
+
+            <i am-badge>badge</i>
+            <button am-button>
+                <i am-badge="counter stacked crimson">5</i>
+                counter badge
+            </button>
+
+        </article>
+
+        <article>
+
+            <h3>box</h3>
+
+            <div am-box="silver inline paddedV">
+                silver inline box padded vertically
+            </div>
+
+            <div am-box="black paddedL">
+                black box padded on left
             </div>
 
         </article>
 
         <article>
 
-            <h2 am-box="padded silver">Scalable svg icons or super-fast Font Awesome way</h2>
+            <h3>button</h3>
+
+            <button am-button>default</button>
+
+            <button am-button disabled>default disabled</button>
+
+            <button am-button="wide">wide</button>
+
+            <button am-button="small">small</button>
+
+            <button am-button="small wide">small and wide</button>
+
+            <button am-button="naked">naked</button>
+
+            <button am-button="naked naked-textual">naked textual</button>
+
+            <button am-button="full">full width</button>
+
+            <button am-button="important">important</button>
+
+            <button am-button="important" disabled>important disabled</button>
+
+            <button am-button="flat">flat</button>
+
+        </article>
+
+        <article>
+
+            <h3>checkbox</h3>
+
+            <div>
+                <input am-checkbox id="foo" type="checkbox">
+                <label for="foo">default</label>
+            </div>
+
+            <div>
+                <input am-checkbox id="bar" type="checkbox" checked disabled>
+                <label for="bar">checked and disabled</label>
+            </div>
+
+        </article>
+
+        <article>
+
+            <h3>column</h3>
+
+            <p>
+                A smart and light column system. It only needs your help with
+                whitespace bug.
+            </p>
+
+            <div>
+                <div am-column="1/2" am-box="padded black">1/2</div><!--
+             --><div am-column="1/2" am-box="padded crimson">1/2</div>
+            </div>
+
+            <div>
+                <div am-column="1/3" am-box="padded black">1/3</div><!--
+             --><div am-column="2/3" am-box="padded crimson">2/3</div>
+            </div>
+
+            <div>
+                <div
+                    am-column="1/12"
+                    am-box="padded black"
+                ><small>1/12</small></div><!--
+             --><div am-column="1/6" am-box="padded crimson">1/6</div><!--
+             --><div am-column="1/3" am-box="padded black">1/3</div><!--
+             --><div am-column="5/12" am-box="padded crimson">5/12</div>
+            </div>
+
+            <div>
+                <div am-box="padded black">1</div><!--
+             --><div
+                    am-column="1/3"
+                    am-columnBefore="1/4"
+                    am-box="padded crimson"
+                >1/3 after 1/4</div><!--
+             --><div am-box="padded black">1</div>
+            </div>
+
+        </article>
+
+        <article>
+
+            <h3>dropdown</h3>
+
+            <div am-dropdown am-hoverContainer>
+                <ul am-dropdown-list class="opened" am-hoverItem="show">
+                    <span am-dropdown-list-triangle></span>
+                    <li>
+                        <button am-button="flat full">Option 1</button>
+                    </li>
+                    <li>
+                        <button am-button="flat full">Option 2</button>
+                    </li>
+                    <li>
+                        <button am-button="flat full">Some other fancy option</button>
+                    </li>
+                </ul>
+                <button am-button>dropdown trigger</button>
+            </div>
+
+        </article>
+
+        <article>
+
+            <h3>flex</h3>
+
+            <div am-flexContainer="horizontal">
+                <div am-flexItem am-box="crimson padded">I stretch</div>
+                <div am-box="black padded inline">I don't</div>
+            </div>
+
+        </article>
+
+        <article>
+
+            <h2 am-box="padded silver">Scalable svg icons</h2>
 
             <p>With svg:</p>
 
@@ -115,8 +231,6 @@
                 <li>small <svg am-icon="small"><use xlink:href="#icon-check"></svg></li>
                 <li>big & crimson <svg am-icon="big crimson"><use xlink:href="#icon-check"></svg></li>
             </ul>
-
-            <p>Or with <a href="http://fontawesome.io/">Font Awesome</a>: <i class="fa fa-2x fa-check"></i></p>
 
         </article>
 
@@ -225,44 +339,6 @@ enctype="multipart/form-data">
                 </section>
 
             </form>
-
-        </article>
-
-        <article>
-
-            <h2 am-box="padded silver">Wow, a smart, small columns system!</h2>
-
-            <section>
-                <div am-column="1/2" am-box="padded black">1/2</div><!--
-             --><div am-column="1/2" am-box="padded crimson">1/2</div>
-            </section>
-
-            <section>
-                <div am-column="1/3" am-box="padded black">1/3</div><!--
-             --><div am-column="2/3" am-box="padded crimson">2/3</div>
-            </section>
-
-            <section>
-                <div am-column="1/12" am-box="padded black"><small>1/12</small></div><!--
-             --><div am-column="1/6" am-box="padded crimson">1/6</div><!--
-             --><div am-column="1/3" am-box="padded black">1/3</div><!--
-             --><div am-column="5/12" am-box="padded crimson">5/12</div>
-            </section>
-
-            <section>
-                <div am-box="padded black">1</div><!--
-             --><div am-column="1/3" am-columnBefore="1/4" am-box="padded crimson">1/3 after 1/4</div><!--
-             --><div am-box="padded black">1</div>
-            </section>
-
-            <h3>Also flexbox:</h3>
-
-            <section>
-                <div am-flexContainer="horizontal">
-                    <div am-flexItem am-box="crimson padded">Stretching</div>
-                    <div am-box="black padded inline">Other</div>
-                </div>
-            </section>
 
         </article>
 
