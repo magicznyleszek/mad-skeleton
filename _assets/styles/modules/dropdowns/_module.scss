@@ -1,6 +1,6 @@
-/*----------------------------------------------------------------------------*\
-    dropdowns module
-\*----------------------------------------------------------------------------*/
+//------------------------------------------------------------------------------
+// dropdowns module
+//------------------------------------------------------------------------------
 
 /*
 <div am-dropdown>
@@ -44,7 +44,9 @@
         > li {
             width: 100%;
             overflow: hidden;
-            &:not(:first-of-type) { border-top: 1px solid $dropdown-default-border-c; }
+            &:not(:first-of-type) {
+                border-top: 1px solid $dropdown-default-border-c;
+            }
             [am-button] {
                 padding-left: $space-small;
                 padding-right: $space-small;

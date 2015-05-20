@@ -1,6 +1,6 @@
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // radio module
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 /*
 <input am-radio type="radio" checked id="SOMETHING-1" name="SOMETHING">
@@ -36,10 +36,16 @@
         background-color: transparent;
         @include transition(background-color $d-faster);
     }
-    &:not([disabled]):not(:checked):hover:after { background-color: rgba($input-txt-c, 0.2); }
-    &:not([disabled]):not(:checked):active:after { background-color: rgba($input-txt-c, 0.4); }
-    &:not([disabled]):checked:hover:after { background-color: rgba($input-txt-c, 0.8); }
-    &:not([disabled]):checked:active:after { background-color: rgba($input-txt-c, 0.6); }
+    &:not([disabled]) {
+        &:not(:checked) {
+            &:hover:after { background-color: rgba($input-txt-c, 0.2); }
+            &:active:after { background-color: rgba($input-txt-c, 0.4); }
+        }
+        &:checked {
+            &:hover:after { background-color: rgba($input-txt-c, 0.8); }
+            &:active:after { background-color: rgba($input-txt-c, 0.6); }
+        }
+    }
     &:checked:after { background-color: $input-txt-c; }
 }
 

@@ -1,12 +1,12 @@
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // columns config
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 // default
 $column-max: 12;
 
 // set width of a column
-@mixin columnSet($n:$column-max, $of:$column-max) { width: $n * (100 / $of) * 1%; }
+@mixin columnSet($n:$column-max, $of:$column-max) { width: 100% * $n / $of; }
 
 // define all prerequisites for a column
 @mixin columnInit() {
@@ -22,5 +22,5 @@ $column-max: 12;
 }
 
 // create an empty space on the left or right
-@mixin columnBefore($n:1, $of:$column-max) { margin-left: $n * (100 / $of) * 1%; }
-@mixin columnAfter($n:1, $of:$column-max) { margin-right: $n * (100 / $of) * 1%; }
+@mixin columnBefore($n:1, $of:$column-max) { margin-left: 100% * $n / $of; }
+@mixin columnAfter($n:1, $of:$column-max) { margin-right: 100% * $n / $of; }

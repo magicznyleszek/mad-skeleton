@@ -1,12 +1,10 @@
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // icons module
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 /*
 <svg am-icon="small"><use xlink:href="#icon-plus"/></svg>
 */
-
-@import "modules/icons/config";
 
 [am-icon] {
     display: inline-block;
@@ -16,7 +14,7 @@
     fill: currentColor;
     shape-rendering: geometricPrecision;
     color: inherit;
-    > * { pointer-events: none; } // JS bugfix for click target SVGElementInstance
+    > * { pointer-events: none; } // bugfix for click target SVGElementInstance
 }
 
 [am-icon~="big"] {

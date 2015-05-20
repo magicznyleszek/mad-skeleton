@@ -1,6 +1,9 @@
-/*----------------------------------------------------------------------------*\
-    dropdowns config
-\*----------------------------------------------------------------------------*/
+//------------------------------------------------------------------------------
+// dropdowns config
+//------------------------------------------------------------------------------
+
+// dropdowns should contain buttons inside, so for dropdown items configuration
+// go to html declarations and buttons module
 
 // commons
 $dropdown-min-w: 150px;
@@ -12,5 +15,3 @@ $dropdown-default-bg-c: $c-silverLight;
 $dropdown-default-border-c: rgba($c-black, $f-small);
 $dropdown-default-sh: 0 3px 5px rgba($c-black, $f-small), 0 3px 15px rgba($c-black, $f-medium);
 $dropdown-default-triangle-sh: 1px 1px 3px rgba($c-black, $f-medium);
-
-// dropdowns should containt buttons inside, so for dropdown items configuration go to html declarations and buttons module
