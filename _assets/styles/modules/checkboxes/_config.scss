@@ -1,9 +1,6 @@
 //------------------------------------------------------------------------------
-// header layout
+// checkoxes config
 //------------------------------------------------------------------------------
 
-#appHeader {
-    max-width: rem($app-content-w);
-    margin-left: auto;
-    margin-right: auto;
-}
+// common
+$checkbox-w: $w-small;

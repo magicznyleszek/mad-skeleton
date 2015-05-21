@@ -34,7 +34,7 @@
 [am-list~="ruled"] {
     > li {
         &:not(:first-of-type) {
-            border-top: 1px solid $list-ruled-border-c;
+            border-top: rem(1px) solid $list-ruled-border-c;
         }
     }
 }

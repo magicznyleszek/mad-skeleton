@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 
 #appFooter {
-    max-width: $app-content-w;
+    max-width: rem($app-content-w);
     margin-left: auto;
     margin-right: auto;
 }

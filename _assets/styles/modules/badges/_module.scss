@@ -13,30 +13,29 @@
     display: inline-block;
     color: $badge-default-txt-c;
     background-color: $badge-default-bg-c;
-    @include border-radius($badge-default-br);
+    @include border-radius(rem($badge-default-br));
     text-align: center;
-    font-size: inherit;
+    font-size: $p-giant;
     font-weight: 700;
     line-height: 1;
-    padding: $space-tiny ($space-tiny + 1);
+    padding: rem($space-tiny) rem($space-tiny + 1);
 }
 
 [am-badge~="counter"] {
-    @include border-radius($badge-counter-br);
+    @include border-radius(rem($badge-counter-br));
     @include box-sizing(border-box);
-    min-width: $badge-counter-min-w;
-    min-height: $badge-counter-min-w;
-    line-height: $badge-counter-min-w;
-    font-size: 0.666rem;
-    padding: 0 $space-tiny;
+    min-width: rem($badge-counter-min-w);
+    min-height: rem($badge-counter-min-w);
+    line-height: rem($badge-counter-min-w);
+    padding: 0 rem($space-tiny);
     @include badge-counter-pulse;
 }
 
 [am-badge~="dot"] {
     vertical-align: middle;
     @include border-radius(50%);
-    width: $badge-dot-w;
-    height: $badge-dot-w;
+    width: rem($badge-dot-w);
+    height: rem($badge-dot-w);
     padding: 0;
 }
 

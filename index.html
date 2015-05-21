@@ -66,7 +66,9 @@
 
     <section id="appContent" role="main">
 
-        <h2 am-box="padded silver">All modules</h2>
+        <h2 am-box="padded silver">
+            All <a href="http://amcss.github.io">AMCSS</a> modules
+        </h2>
 
         <article>
 
@@ -81,9 +83,12 @@
             <h3>badge</h3>
 
             <i am-badge>badge</i>
+
+            <strong>dot:</strong> <i am-badge="dot"></i>
+
             <button am-button>
                 <i am-badge="counter stacked crimson">5</i>
-                counter badge
+                counter
             </button>
 
         </article>
@@ -135,13 +140,24 @@
             <h3>checkbox</h3>
 
             <div>
-                <input am-checkbox id="foo" type="checkbox">
-                <label for="foo">default</label>
+                <input am-checkbox id="checkbox-foo" type="checkbox">
+                <label for="checkbox-foo">one</label>
             </div>
 
             <div>
-                <input am-checkbox id="bar" type="checkbox" checked disabled>
-                <label for="bar">checked and disabled</label>
+                <input am-checkbox id="checkbox-bar" type="checkbox">
+                <label for="checkbox-bar">two</label>
+            </div>
+
+            <div>
+                <input
+                    am-checkbox
+                    id="checkbox-fum"
+                    type="checkbox"
+                    checked
+                    disabled
+                >
+                <label for="checkbox-fum">checked and disabled</label>
             </div>
 
         </article>
@@ -191,20 +207,56 @@
 
             <h3>dropdown</h3>
 
-            <div am-dropdown am-hoverContainer>
-                <ul am-dropdown-list class="opened" am-hoverItem="show">
-                    <span am-dropdown-list-triangle></span>
+            <div am-box="inline">Hover over these guys:</div>
+
+            <div am-dropdown="west">
+                <ul am-dropdown-list>
+                    <span am-dropdown-list-triangle><i></i></span>
+                    <li><button am-button="flat full">An option</button></li>
+                    <li><button am-button="flat full">An option</button></li>
+                    <li><button am-button="flat full">An option</button></li>
+                </ul>
+                <button am-button>west</button>
+            </div>
+
+            <div am-dropdown="north">
+                <ul am-dropdown-list>
+                    <span am-dropdown-list-triangle><i></i></span>
                     <li>
-                        <button am-button="flat full">Option 1</button>
+                        <button am-button="flat full">An option</button>
                     </li>
                     <li>
-                        <button am-button="flat full">Option 2</button>
+                        <button am-button="flat full" am-text="trimmed">
+                            This one option is so long it will not fit in your mom
+                        </button>
                     </li>
                     <li>
-                        <button am-button="flat full">Some other fancy option</button>
+                        <button am-button="flat full" am-text="trimmed">
+                            Some other fancy option
+                        </button>
                     </li>
                 </ul>
-                <button am-button>dropdown trigger</button>
+                <button am-button>north</button>
+            </div>
+
+            <div am-dropdown="south">
+                <ul am-dropdown-list>
+                    <span am-dropdown-list-triangle><i></i></span>
+                    <li><button am-button="flat full">An option</button></li>
+                    <li><button am-button="flat full">An option</button></li>
+                    <li><button am-button="flat full">An option</button></li>
+                </ul>
+                <button am-button>south</button>
+            </div>
+
+            <div am-dropdown="east">
+                <ul am-dropdown-list>
+                    <span am-dropdown-list-triangle><i></i></span>
+                    <li><button am-button="flat full">An option</button></li>
+                    <li><button am-button="flat full">An option</button></li>
+                    <li><button am-button="flat full">An option</button></li>
+                </ul>
+                <button am-button>east</button>
             </div>
 
         </article>
@@ -215,159 +267,229 @@
 
             <div am-flexContainer="horizontal">
                 <div am-flexItem am-box="crimson padded">I stretch</div>
-                <div am-box="black padded inline">I don't</div>
+                <div am-box="black padded inline" am-hoverContainer>
+                    <span>I don't</span>
+                    <span am-hoverItem="show">stretch</span>
+                </div>
             </div>
 
         </article>
 
         <article>
 
-            <h2 am-box="padded silver">Scalable svg icons</h2>
+            <h3>hover</h3>
 
-            <p>With svg:</p>
+            <div am-box="inline">Hover over these guys:</div>
 
-            <ul>
-                <li>standard <svg am-icon><use xlink:href="#icon-check"></svg></li>
-                <li>small <svg am-icon="small"><use xlink:href="#icon-check"></svg></li>
-                <li>big & crimson <svg am-icon="big crimson"><use xlink:href="#icon-check"></svg></li>
+            <div am-hoverContainer am-box="charcoal paddedSmall inline">
+                <strong>Reveal</strong>
+                <span am-hoverItem="reveal">this</span>
+            </div>
+
+            <div am-hoverContainer am-box="charcoal paddedSmall inline">
+                <strong>Conceal</strong>
+                <span am-hoverItem="conceal">this</span>
+            </div>
+
+            <div am-hoverContainer am-box="charcoal paddedSmall inline">
+                <strong>Reveal animated</strong>
+                <span am-hoverItem="reveal animated">this</span>
+            </div>
+
+            <div am-hoverContainer am-box="charcoal paddedSmall inline">
+                <strong>Show</strong>
+                <span am-hoverItem="show">this</span>
+            </div>
+
+            <div am-hoverContainer am-box="charcoal paddedSmall inline">
+                <strong>Hide</strong>
+                <span am-hoverItem="hide">this</span>
+            </div>
+
+        </article>
+
+        <article>
+
+            <h3>icon</h2>
+
+            <p>I prefer using SVGs over fonts or images.</p>
+
+            <div am-box="inline">
+                <strong>default:</strong>
+                <svg am-icon><use xlink:href="#icon-check"></svg>
+            </div>
+
+            <div am-box="inline">
+                <strong>small:</strong>
+                <svg am-icon="small"><use xlink:href="#icon-check"></svg>
+            </div>
+
+            <div am-box="inline">
+                <strong>big:</strong>
+                <svg am-icon="big"><use xlink:href="#icon-check"></svg>
+            </div>
+
+            <div am-box="inline">
+                <strong>big & crimson:</strong>
+                <svg am-icon="big crimson"><use xlink:href="#icon-check"></svg>
+            </div>
+
+        </article>
+
+        <article>
+
+            <h3>image</h3>
+
+            <h4>small:</h4>
+
+            <figure
+                am-image="small"
+                style="background-image: url('http://placekitten.com/g/400/200')"
+            ></figure>
+
+            <h4>big:</h4>
+
+            <figure
+                am-image="big"
+                style="background-image: url('http://placekitten.com/g/800/600')"
+            ></figure>
+
+            <h4>small & empty:</h4>
+
+            <figure am-image="small"></figure>
+
+            <h4>small & square:</h4>
+
+            <figure
+                am-image="small square"
+                style="background-image: url('http://placekitten.com/g/400/200')"
+            ></figure>
+
+        </article>
+
+        <article>
+
+            <h3>list</h3>
+
+            <h4>empty:</h4>
+
+            <ul am-list="inline" am-box="silver">
+                <li am-listItem-empty>empty list message</li>
+            </ul>
+
+            <h4>inline:</h4>
+
+            <ul am-list="inline" am-box="silver inline">
+                <li am-box="charcoal">one</li>
+                <li am-box="charcoal">two</li>
+                <li am-box="charcoal">three</li>
+            </ul>
+
+            <h4>padded:</h4>
+
+            <ul am-list="padded" am-box="silver inline">
+                <li am-box="charcoal">one</li>
+                <li am-box="charcoal">two</li>
+                <li am-box="charcoal">three</li>
+            </ul>
+
+            <h4>spaced:</h4>
+
+            <ul am-list="spaced" am-box="silver inline">
+                <li am-box="charcoal">one</li>
+                <li am-box="charcoal">two</li>
+                <li am-box="charcoal">three</li>
+            </ul>
+
+            <h4>padded & spaced:</h4>
+
+            <ul am-list="spaced padded" am-box="silver inline">
+                <li am-box="charcoal">one</li>
+                <li am-box="charcoal">two</li>
+                <li am-box="charcoal">three</li>
+            </ul>
+
+            <h4>ruled:</h4>
+
+            <ul am-list="ruled" am-box="silver inline">
+                <li>one</li>
+                <li>two</li>
+                <li>three</li>
             </ul>
 
         </article>
 
         <article>
 
-            <form action="do-stuff.php" method="post" validate
-enctype="multipart/form-data">
+            <h3>progress</h3>
 
-                <h2 am-box="padded silver">There are some form resets</h2>
+            <h4>default:</h4>
 
-                <section>
-                    <label for="form-nickname">Nickname</label>
-                    <input am-textBox id="form-nickname" placeholder="Nickname" type="text" name="nickname" required>
-                </section>
+            <span>0%</span>
+            <div am-progress>
+                <span style="width: 0%;"></span>
+            </div>
 
-                <section>
-                    <label for="form-first-kill">First Kill</label>
-                    <input am-textBox id="form-first-kill" type="date" name="first-kill">
-                    <input am-textBox id="form-first-kill-time" type="time" name="first-kill-time">
-                </section>
+            <span>33%</span>
+            <div am-progress>
+                <span style="width: 33%;"></span>
+            </div>
 
-                <section>
+            <span>100%</span>
+            <div am-progress>
+                <span style="width: 100%;"></span>
+            </div>
 
-                    <h4>Species</h4>
+            <h4>inline:</h4>
 
-                    <ol am-list>
+            <span>0%</span>
+            <div am-progress="inline">
+                <span style="width: 0%;"></span>
+            </div>
 
-                        <li>
-                            <input am-radio id="form-species-1" type="radio" name="species" value="Trilobite">
-                            <label for="form-species-1">Trilobite</label>
-                        </li>
+            <span>33%</span>
+            <div am-progress="inline">
+                <span style="width: 33%;"></span>
+            </div>
 
-                        <li>
-                            <input am-radio id="form-species-2" type="radio" name="species" value="Raptor">
-                            <label for="form-species-2">Raptor</label>
-                        </li>
-
-                        <li>
-                            <input am-radio id="form-species-3" type="radio" name="species" value="Pteranodon">
-                            <label for="form-species-3">Pteranodon</label>
-                        </li>
-
-                    </ol>
-
-                </section>
-
-                <section>
-
-                    <h4>Weapons</h4>
-
-                    <ol am-list>
-
-                        <li>
-                            <input am-checkbox id="form-weapons-1" type="checkbox" name="weapons" value="Spikes">
-                            <label for="form-weapons-1">Spikes</label>
-                        </li>
-
-                        <li>
-                            <input am-checkbox id="form-weapons-2" type="checkbox" name="weapons" value="Teeth">
-                            <label for="form-weapons-2">Teeth</label>
-                        </li>
-
-                        <li>
-                            <input am-checkbox id="form-weapons-3" type="checkbox" name="weapons" value="Claws">
-                            <label for="form-weapons-3">Claws</label>
-                        </li>
-
-                    </ol>
-
-                </section>
-
-                <section>
-                    <label for="form-limbs">Limbs</label>
-                    <input id="form-limbs" placeholder="0-10" type="number" min="0" max="10" step="1" name="limbs" required>
-                </section>
-
-                <section>
-                    <label for="form-length">Length</label>
-                    <input id="form-length" type="range" min="0" max="10" step="1" name="length" required>
-                </section>
-
-                <section>
-                    <label for="form-portrait">Portrait</label>
-                    <input id="form-portrait" type="file" name="portrait">
-                </section>
-
-                <section>
-                    <label for="form-biography">Biography</label>
-                    <textarea am-textBox id="form-biography" rows="5" name="biography"></textarea>
-                </section>
-
-                <section>
-                    <label for="form-sex">Sex</label>
-                    <select id="form-sex" name="sex" required>
-                        <!-- placeholder option -->
-                        <option value="" disabled selected>Choose sex</option>
-                        <!-- real options -->
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Androgyne">Androgyne</option>
-                    </select>
-                </section>
-
-                <section>
-                    <button type="submit" am-button="important">Bang!</button>
-                </section>
-
-            </form>
+            <span>100%</span>
+            <div am-progress="inline">
+                <span style="width: 100%;"></span>
+            </div>
 
         </article>
 
         <article>
 
-            <h2 am-box="padded silver">There are some base text styles</h2>
+            <h3>radio</h3>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, eveniet, magni! Dolor, alias consectetur nostrum, modi ad, sit tempora neque doloribus reiciendis eveniet illum quos?</p>
+            <div>
+                <input am-radio id="radio-foo" type="radio" name="radio-1">
+                <label for="radio-foo">one</label>
+            </div>
 
-            <h3>Lorem h3 ipsum</h3>
+            <div>
+                <input am-radio id="radio-bar" type="radio" name="radio-1">
+                <label for="radio-bar">two</label>
+            </div>
 
-            <blockquote>
-                <p>A difficult task is a sign from the universe that you should be on the internet right now.</p>
-                <cite>&ndash; Toothpaste for Dinner</cite>
-            </blockquote>
-
-            <h4>Lorem h4 ipsum</h4>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, accusantium.</p>
-
-            <hr>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, accusantium.</p>
+            <div>
+                <input
+                    am-radio
+                    id="radio-fum"
+                    type="radio"
+                    name="radio-1"
+                    checked
+                    disabled
+                >
+                <label for="radio-fum">checked and disabled</label>
+            </div>
 
         </article>
 
         <article>
 
-            <h2 am-box="padded silver">There are some default table themes</h2>
+            <h3>table</h3>
 
             <table am-table>
                 <caption>Middle Jurassic sections</caption>
@@ -410,10 +532,123 @@ enctype="multipart/form-data">
                         <th>Total</th>
                         <td>174-163</td>
                         <td>11</td>
-                        <td>Agilisaurus, Liopleurodon, Huayangosaurus, Metriorhynchus, Teleidosaurus, Shunosaurus, Belemnites, Ophionautilus, Somalinautilus, Abbasites, Steneosaurus</td>
+                        <td>
+                            Agilisaurus, Liopleurodon, Huayangosaurus,
+                            Metriorhynchus, Teleidosaurus, Shunosaurus,
+                            Belemnites, Ophionautilus, Somalinautilus,
+                            Abbasites, Steneosaurus
+                        </td>
                     </tr>
                 </tfoot>
             </table>
+
+        </article>
+
+        <article>
+
+            <h3>textbox</h3>
+
+            <input am-textBox placeholder="default" type="text">
+
+            <input am-textBox="naked" placeholder="naked" type="text">
+
+            <input am-textBox="full" placeholder="full" type="text">
+
+        </article>
+
+        <article>
+
+            <h3>text</h3>
+
+            <p am-text="lefted">lefted</p>
+
+            <p am-text="centered">centered</p>
+
+            <p am-text="righted">righted</p>
+
+            <p am-text="uppercased">uppercased</p>
+
+            <p am-text="300">300</p>
+
+            <p am-text="400">400</p>
+
+            <p am-text="600">600</p>
+
+            <p am-text="700">700</p>
+
+            <p am-text="dimmed">dimmed</p>
+
+            <p am-text="trimmed">
+                trimmed - makes text trimmed if too long lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. impedit, eveniet, magni
+                dolor, alias consectetur nostrum, modi ad, sit tempora neque
+                doloribus reiciendis eveniet illum quos
+            </p>
+
+        </article>
+
+        <h2 am-box="padded silver">
+            Base typography resets
+        </h2>
+
+        <article>
+
+            <h1>Header 1</h1>
+
+            <h2>Header 2</h2>
+
+            <h3>Header 3</h3>
+
+            <h4>Header 4</h4>
+
+            <p>
+                Paragraph <strong>strong</strong> lorem ipsum <em>emphasis</em>
+                dolor sit <small>small</small>, consectetur adipisicing elit,
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                minim veniam, <sup>sup</sup> nostrud exercitation ullamco
+                aliquip ex ea commodo consequat. Duis aute irure <sub>sub</sub>
+                rep rehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint <code>inline.code.block();</code>
+                occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <h4>lists:</h4>
+
+            <ul>
+                <li>unordered</li>
+                <li>list</li>
+                <li>element</li>
+            </ul>
+
+            <ol>
+                <li>ordered</li>
+                <li>list</li>
+                <li>element</li>
+            </ol>
+
+            <h4>code:</h4>
+
+            <pre><code>fullWidth =
+    code: block()</code></pre>
+
+            <h4>quote:</h4>
+
+            <h4>horizontal rule:</h4>
+
+            <hr>
+
+            <hr>
+
+            <hr>
+
+            <blockquote>
+                <p>
+                    A difficult task is a sign from the universe that you
+                    should be on the internet right now.
+                </p>
+                <cite>&ndash; Toothpaste for Dinner</cite>
+            </blockquote>
 
         </article>
 

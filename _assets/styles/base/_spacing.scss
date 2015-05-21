@@ -9,9 +9,9 @@ header,
 footer {
     &:not(:last-child) { margin-bottom: $rootLineHeight * 2rem; }
 }
-h1, h2, h3, h4, h5, h6,
+h1, h2, h3, h4,
 p, ol, ul, blockquote, hr,
-table, table > caption, figure,
+table, table > caption, figure, pre,
 [am-progress]:not([am-progress~="inline"]) {
     &:not(:last-child) { margin-bottom: $rootLineHeight * 1rem; }
 }
@@ -21,6 +21,7 @@ label,
 [am-badge],
 [am-box~="inline"],
 [am-button],
+[am-dropdown],
 [am-checkbox],
 [am-radio],
 [am-icon],

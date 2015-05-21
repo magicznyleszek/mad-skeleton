@@ -6,8 +6,6 @@
 <div am-box="padded black"></div>
 */
 
-@import "modules/boxes/config";
-
 [am-box] { @include box-sizing(border-box); }
 
 [am-box~="inline"] {
@@ -31,16 +29,21 @@
 @include boxPadded('Small', rem($space-small));
 
 [am-box~="black"] {
-    color: $box-black-txt-c;
-    background-color: $box-black-bg-c;
+    color: white;
+    background-color: black;
 }
 
 [am-box~="crimson"] {
-    color: $box-crimson-txt-c;
-    background-color: $box-crimson-bg-c;
+    color: white;
+    background-color: $c-crimson;
 }
 
 [am-box~="silver"] {
-    color: $box-silver-txt-c;
-    background-color: $box-silver-bg-c;
+    color: $app-txt-c;
+    background-color: $c-silver;
+}
+
+[am-box~="charcoal"] {
+    color: white;
+    background-color: $c-charcoal;
 }

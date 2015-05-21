@@ -12,21 +12,20 @@
 
 [am-progress] {
     width: 100%;
-    height: $progress-h;
+    height: rem($progress-h);
     overflow: hidden;
     background-color: $progress-default-bg-c;
-    @include border-radius($progress-br);
+    @include border-radius(rem($progress-br));
     display: inline-block;
     vertical-align: middle;
     span {
         display: block;
         height: 100%;
-        min-width: $progress-indicator-min-w;
         width: 0%;
         background-color: $progress-default-indicator-bg-c;
-        @include border-radius($progress-br);
+        @include border-radius(rem($progress-br));
         @include transition($d-fast);
     }
 }
 
-[am-progress~="inline"] { max-width: $progress-inline-w; }
+[am-progress~="inline"] { max-width: rem($progress-inline-w); }

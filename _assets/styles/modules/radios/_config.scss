@@ -1,9 +1,6 @@
 //------------------------------------------------------------------------------
-// header layout
+// radios config
 //------------------------------------------------------------------------------
 
-#appHeader {
-    max-width: rem($app-content-w);
-    margin-left: auto;
-    margin-right: auto;
-}
+// common
+$radio-w: $w-small;

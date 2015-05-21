@@ -15,7 +15,7 @@
     color: $input-txt-c;
     @include box-shadow($input-sh);
     background-color: $input-bg-c;
-    border-radius: $input-br;
+    border-radius: rem($input-br);
     display: inline-block;
     vertical-align: middle;
     line-height: 1;
@@ -27,6 +27,8 @@
     color: inherit;
     @include box-shadow(none);
     background-color: transparent;
+    &:not([disabled]):hover { background-color: rgba($input-bg-hover-c, $f-medium); }
+    &:not([disabled]):focus { background-color: rgba($input-bg-focus-c, $f-medium); }
 }
 
 [am-textBox~="full"] {

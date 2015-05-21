@@ -3,8 +3,6 @@
 //------------------------------------------------------------------------------
 
 // colors
-$c-black: black;
-$c-white: white;
 $c-crimson: hsl(350, 90%, 50%);
 $c-crimsonLight: hsl(350, 100%, 60%);
 $c-crimsonLighter: hsl(350, 100%, 70%);
@@ -13,6 +11,9 @@ $c-silver: hsl(0, 0%, 80%);
 $c-silverLight: hsl(0, 0%, 85%);
 $c-silverLighter: hsl(0, 0%, 90%);
 $c-silverDark: hsl(0, 0%, 75%);
+$c-charcoal: hsl(0, 0%, 20%);
+$c-charcoalLight: hsl(0, 0%, 25%);
+$c-charcoalDark: hsl(0, 0%, 15%);
 
 // font families
 $family-sourceSansPro: "Source Sans Pro", sans-serif;

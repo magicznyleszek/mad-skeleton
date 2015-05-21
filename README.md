@@ -4,14 +4,14 @@ Boilerplate assets for quick start with web project.
 
 Features:
 
-- [Grunt](http://gruntjs.com/) - watch, compass, coffee
-- [Compass](http://compass-style.org/)
+- [Grunt](http://gruntjs.com) - watch, compass, coffee
+- [Compass](http://compass-style.org)
 - [CoffeScript](http://coffeescript.org)
 
 
 ## Styles architecture
 
-I loosely follow the [AMCSS](http://amcss.github.io/) technique and a tested
+I loosely follow the [AMCSS](http://amcss.github.io) technique and a tested
 directory structure. All UI elements are build as small modules with custom
 cases rarely appearing (assuming the UI is properly designed). All custom
 variables are kept in base or module-dedicated config files. I hardly use

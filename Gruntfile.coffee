@@ -32,5 +32,5 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks('grunt-contrib-watch')
 
     # register tasks
-    grunt.registerTask('default', ['watch'])
+    grunt.registerTask('default', ['compass', 'coffee', 'watch'])
     grunt.registerTask('build', ['compass', 'coffee'])

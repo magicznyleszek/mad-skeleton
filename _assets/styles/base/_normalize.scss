@@ -8,7 +8,7 @@ html {
         font-size: $rootFontSize * 1.2;
     }
     @media screen and (max-width: #{$break-smaller}) {
-        font-size: $rootFontSize * 0.8; 
+        font-size: $rootFontSize * 0.8;
     }
 }
 
@@ -78,12 +78,11 @@ pre {
 }
 
 hr {
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
     margin: 0;
     padding: 0;
     width: 100%;
-    height: $hr-h;
+    height: rem($hr-h);
     border: 0;
     background-color: $hr-bg-c;
 }

@@ -7,10 +7,14 @@
 
 // commons
 $dropdown-min-w: 150px;
-$dropdown-max-w: 400px;
+$dropdown-max-w: 300px;
+$dropdown-triangle-h: 10px;
 
 // default
-$dropdown-default-txt-c: $c-black;
+$dropdown-default-txt-c: black;
 $dropdown-default-bg-c: $c-silverLight;
-$dropdown-default-sh: 0 3px 5px rgba($c-black, $f-small), 0 3px 15px rgba($c-black, $f-medium);
-$dropdown-default-triangle-sh: 1px 1px 3px rgba($c-black, $f-medium);
+$dropdown-default-sh:
+    0 rem(3px) rem(5px) rgba(black, $f-small),
+    0 rem(3px) rem(15px) rgba(black, $f-medium)
+;
+$dropdown-default-triangle-sh: rem(1px) rem(1px) rem(3px) rgba(black, $f-medium);

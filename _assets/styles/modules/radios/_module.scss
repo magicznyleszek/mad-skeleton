@@ -7,6 +7,8 @@
 <label for="SOMETHING-1">YES</label>
 */
 
+@import "modules/radios/config";
+
 [am-radio] {
     position: relative;
     @include appearance(initial);
@@ -18,8 +20,8 @@
     padding: 0;
     @include border-radius(50%);
     @include box-sizing(border-box);
-    width: rem($w-small);
-    height: rem($w-small);
+    width: rem($radio-w);
+    height: rem($radio-w);
     @include box-shadow($input-sh);
     color: $input-txt-c;
     background-color: $input-bg-c;

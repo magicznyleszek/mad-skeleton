@@ -3,13 +3,13 @@
 //------------------------------------------------------------------------------
 
 // common
-$progress-h: rem($w-small);
-$progress-br: rem($w-small * 0.5);
+$progress-h: $w-small;
+$progress-br: $w-small * 0.5;
 $progress-indicator-min-w: $progress-h;
 
 // default
-$progress-default-bg-c: rgba($c-black, $f-medium);
-$progress-default-indicator-bg-c: $c-black;
+$progress-default-bg-c: rgba(black, $f-medium);
+$progress-default-indicator-bg-c: black;
 
 // inline
-$progress-inline-w: rem(160px);
+$progress-inline-w: 160px;

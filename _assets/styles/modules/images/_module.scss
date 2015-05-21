@@ -13,6 +13,7 @@
     vertical-align: top;
     margin: 0;
     padding: 0;
+    width: 100%;
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -21,7 +22,13 @@
 }
 
 [am-image~="small"] {
-    width: $image-small-w;
-    height: $image-small-h;
-    &[am-image~="square"] { width: $image-small-h; }
+    max-width: rem($image-small-w);
+    height: rem($image-small-h);
+    &[am-image~="square"] { max-width: rem($image-small-h); }
+}
+
+[am-image~="big"] {
+    max-width: rem($image-big-w);
+    height: rem($image-big-h);
+    &[am-image~="square"] { max-width: rem($image-big-h); }
 }

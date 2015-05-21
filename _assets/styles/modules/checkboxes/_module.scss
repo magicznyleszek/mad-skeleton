@@ -7,6 +7,8 @@
 <label for="SOMETHING-1">YES</label>
 */
 
+@import "modules/checkboxes/config";
+
 [am-checkbox] {
     position: relative;
     @include appearance(initial);
@@ -17,9 +19,9 @@
     margin: 0;
     padding: 0;
     @include box-sizing(border-box);
-    font-size: rem($w-small);
-    width: rem($w-small);
-    height: rem($w-small);
+    font-size: rem($checkbox-w);
+    width: rem($checkbox-w);
+    height: rem($checkbox-w);
     @include box-shadow($input-sh);
     color: $input-txt-c;
     background-color: $input-bg-c;

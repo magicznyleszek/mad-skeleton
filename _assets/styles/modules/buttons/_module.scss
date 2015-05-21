@@ -13,11 +13,11 @@
     display: inline-block;
     vertical-align: middle;
     @include box-sizing(border-box);
+    cursor: pointer;
     margin: 0;
     border: 0;
     outline: 0;
     padding: rem($space-small) rem($space-medium);
-    margin-bottom: rem($space-tiny);
     line-height: 1;
     font-weight: 700;
     font-family: inherit;
@@ -26,7 +26,7 @@
     color: $button-default-txt-c;
     background-color: $button-default-bg-c;
     @include box-shadow($button-default-sh);
-    @include border-radius($input-br);
+    @include border-radius(rem($input-br));
     @include transition(background-color $d-faster);
     &:not([disabled]):hover {
         background-color: $button-default-bg-hover-c;
@@ -63,8 +63,8 @@
     font-size: $p-giant;
     padding: rem($space-little + 1) rem($space-small) rem($space-little - 1);
     &[am-button~="wide"] {
-        padding-left: $space-large;
-        padding-right: $space-large;
+        padding-left: rem($space-large);
+        padding-right: rem($space-large);
     }
 }
 
@@ -76,7 +76,6 @@
 [am-button~="flat"] {
     border-radius: 0;
     @include box-shadow(none);
-    margin-bottom: 0;
 }
 
 [am-button~="important"] {

@@ -6,10 +6,10 @@
 
 [am-table] {
     td, th {
-        border: 1px solid $table-border-c;
+        border: rem(1px) solid $table-border-c;
         padding: rem($w-small);
-        min-width: rem(80px);
-        max-width: rem(400px);
+        min-width: rem($table-cell-min-w);
+        max-width: rem($table-cell-max-w);
     }
     th { background-color: $table-header-bg-c; }
     tr {
@@ -17,6 +17,6 @@
     }
     thead tr td { font-weight: 700; }
     tfoot tr {
-        &:first-child { border-top: 2px solid $table-border-c; }
+        &:first-child { border-top: rem(2px) solid $table-border-c; }
     }
 }
