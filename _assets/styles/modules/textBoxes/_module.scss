@@ -6,6 +6,8 @@
 <input am-textBox="light" type="text" id="TEXTBOXID">
 */
 
+@import "modules/textBoxes/config";
+
 [am-textBox] {
     @include appearance(initial);
     outline: 0;

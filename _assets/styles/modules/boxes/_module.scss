@@ -6,6 +6,8 @@
 <div am-box="padded black"></div>
 */
 
+@import "modules/boxes/config";
+
 [am-box] { @include box-sizing(border-box); }
 
 [am-box~="inline"] {

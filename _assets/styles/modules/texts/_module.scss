@@ -6,6 +6,8 @@
 <p am-text="uppercased centered">UPPERCASED CENTERED</p>
 */
 
+@import "modules/texts/config";
+
 // aligns
 [am-text~="lefted"] { text-align: left; }
 [am-text~="righted"] { text-align: right; }

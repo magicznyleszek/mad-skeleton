@@ -6,6 +6,8 @@
 <div am-animation="pulse">HEARTBEAT</div>
 */
 
+@import "modules/animations/config";
+
 // fade in once
 @include keyframes(framesFadeIn) {
     0% { @include opacity(0); visibility: hidden; }

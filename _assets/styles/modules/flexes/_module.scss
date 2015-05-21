@@ -9,6 +9,8 @@
 </div>
 */
 
+@import "modules/flexes/config";
+
 [am-flexContainer] {
     @include display-flex();
     [am-flexItem] { @include flex(1); }

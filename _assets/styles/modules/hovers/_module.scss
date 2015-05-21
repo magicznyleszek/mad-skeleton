@@ -8,6 +8,8 @@
 </div>
 */
 
+@import "modules/hovers/config";
+
 [am-hoverContainer] {
     &:not(:hover) [am-hoverItem~="show"],
     &:hover [am-hoverItem~="hide"] {
