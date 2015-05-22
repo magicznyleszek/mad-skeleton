@@ -5,10 +5,10 @@
 html {
     font: $rootFontWeight #{$rootFontSize}/$rootLineHeight $rootFontFamily;
     @media screen and (min-width: #{$break-bigger}) {
-        font-size: $rootFontSize * 1.2;
+        font-size: $rootFontSize * (1 + 0.125);
     }
     @media screen and (max-width: #{$break-smaller}) {
-        font-size: $rootFontSize * 0.8;
+        font-size: $rootFontSize * (1 - 0.125);
     }
 }
 
@@ -16,11 +16,13 @@ body { overflow: auto; }
 
 a {
     color: inherit;
-    text-decoration: underline;
-    &:visited { color: inherit; }
-    &:hover {
+    text-decoration: none;
+    // 0.125em = 2px @ 16px
+    @include underline(0.125em, currentColor, transparent);
+    &:visited,
+    &:hover,
+    &:active {
         color: inherit;
-        text-decoration: none;
     }
 }
 

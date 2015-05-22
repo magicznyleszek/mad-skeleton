@@ -10,13 +10,13 @@ $app-bg-c: white;
 $app-content-w: 900px;
 
 // breakpoints
-$break-bigger: 1280px;
-$break-smaller: 640px;
+$break-bigger: 1600px;
+$break-smaller: 800px;
 
 // root typography
 $rootFontWeight: 400;
 $rootLineHeight: 1.5;
-$rootFontSize: $w-medium;
+$rootFontSize: 16px;
 $rootFontFamily: $family-sourceSansPro;
 
 // for margins and paddings

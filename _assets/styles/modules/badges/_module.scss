@@ -11,6 +11,7 @@
 
 [am-badge] {
     display: inline-block;
+    vertical-align: middle;
     color: $badge-default-txt-c;
     background-color: $badge-default-bg-c;
     @include border-radius(rem($badge-default-br));
@@ -18,21 +19,20 @@
     font-size: $p-giant;
     font-weight: 700;
     line-height: 1;
-    padding: rem($space-tiny) rem($space-tiny + 1);
+    padding: rem($space-tiny) rem($space-little);
 }
 
 [am-badge~="counter"] {
     @include border-radius(rem($badge-counter-br));
     @include box-sizing(border-box);
     min-width: rem($badge-counter-min-w);
-    min-height: rem($badge-counter-min-w);
+    height: rem($badge-counter-min-w);
     line-height: rem($badge-counter-min-w);
     padding: 0 rem($space-tiny);
     @include badge-counter-pulse;
 }
 
 [am-badge~="dot"] {
-    vertical-align: middle;
     @include border-radius(50%);
     width: rem($badge-dot-w);
     height: rem($badge-dot-w);

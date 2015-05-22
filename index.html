@@ -66,8 +66,8 @@
 
     <section id="appContent" role="main">
 
-        <h2 am-box="padded silver">
-            All <a href="http://amcss.github.io">AMCSS</a> modules
+        <h2 am-box="paddedBig silver">
+            <a href="http://amcss.github.io">AMCSS</a> modules
         </h2>
 
         <article>
@@ -82,14 +82,24 @@
 
             <h3>badge</h3>
 
-            <i am-badge>badge</i>
+            <h4>default:</h4>
 
-            <strong>dot:</strong> <i am-badge="dot"></i>
+            <p>foo <span am-badge>bar</span></p>
 
-            <button am-button>
-                <i am-badge="counter stacked crimson">5</i>
-                counter
-            </button>
+            <h4>dot:</h4>
+
+            <p><span am-badge="dot"></span> foo</p>
+
+            <h4>counter:</h4>
+
+            <p>
+                <span am-badge="counter">0</span>
+                <span am-badge="counter">124</span>
+                <button am-button>
+                    <span am-badge="counter stacked crimson">5</span>
+                    counter, stacked & crimson
+                </button>
+            </p>
 
         </article>
 
@@ -141,12 +151,12 @@
 
             <div>
                 <input am-checkbox id="checkbox-foo" type="checkbox">
-                <label for="checkbox-foo">one</label>
+                <label for="checkbox-foo">foo</label>
             </div>
 
             <div>
                 <input am-checkbox id="checkbox-bar" type="checkbox">
-                <label for="checkbox-bar">two</label>
+                <label for="checkbox-bar">bar</label>
             </div>
 
             <div>
@@ -212,9 +222,12 @@
             <div am-dropdown="west">
                 <ul am-dropdown-list>
                     <span am-dropdown-list-triangle><i></i></span>
-                    <li><button am-button="flat full">An option</button></li>
-                    <li><button am-button="flat full">An option</button></li>
-                    <li><button am-button="flat full">An option</button></li>
+                    <li><button am-button="flat full">foo</button></li>
+                    <li><button am-button="flat full">bar</button></li>
+                    <li><button am-button="flat full">fum</button></li>
+                    <li><button am-button="flat full">baz</button></li>
+                    <li><button am-button="flat full">qux</button></li>
+                    <li><button am-button="flat full">zot</button></li>
                 </ul>
                 <button am-button>west</button>
             </div>
@@ -242,9 +255,12 @@
             <div am-dropdown="south">
                 <ul am-dropdown-list>
                     <span am-dropdown-list-triangle><i></i></span>
-                    <li><button am-button="flat full">An option</button></li>
-                    <li><button am-button="flat full">An option</button></li>
-                    <li><button am-button="flat full">An option</button></li>
+                    <li><button am-button="flat full">foo</button></li>
+                    <li><button am-button="flat full">bar</button></li>
+                    <li><button am-button="flat full">fum</button></li>
+                    <li><button am-button="flat full">baz</button></li>
+                    <li><button am-button="flat full">qux</button></li>
+                    <li><button am-button="flat full">zot</button></li>
                 </ul>
                 <button am-button>south</button>
             </div>
@@ -252,9 +268,12 @@
             <div am-dropdown="east">
                 <ul am-dropdown-list>
                     <span am-dropdown-list-triangle><i></i></span>
-                    <li><button am-button="flat full">An option</button></li>
-                    <li><button am-button="flat full">An option</button></li>
-                    <li><button am-button="flat full">An option</button></li>
+                    <li><button am-button="flat full">foo</button></li>
+                    <li><button am-button="flat full">bar</button></li>
+                    <li><button am-button="flat full">fum</button></li>
+                    <li><button am-button="flat full">baz</button></li>
+                    <li><button am-button="flat full">qux</button></li>
+                    <li><button am-button="flat full">zot</button></li>
                 </ul>
                 <button am-button>east</button>
             </div>
@@ -312,7 +331,12 @@
 
             <h3>icon</h2>
 
-            <p>I prefer using SVGs over fonts or images.</p>
+            <p>
+                I prefer using SVGs over fonts or images. Keep'em in one place
+                and manage with
+                <a href="https://github.com/FWeinb/grunt-svgstore">
+                grunt-svgstore</a>.
+            </p>
 
             <div am-box="inline">
                 <strong>default:</strong>
@@ -425,6 +449,11 @@
 
             <h4>default:</h4>
 
+            <span>pending at 0%</span>
+            <div am-progress="pending">
+                <span style="width: 0%;"></span>
+            </div>
+
             <span>0%</span>
             <div am-progress>
                 <span style="width: 0%;"></span>
@@ -440,7 +469,17 @@
                 <span style="width: 100%;"></span>
             </div>
 
+            <span>pending at 100%</span>
+            <div am-progress="pending">
+                <span style="width: 100%;"></span>
+            </div>
+
             <h4>inline:</h4>
+
+            <span>pending at 0%</span>
+            <div am-progress="pending inline">
+                <span style="width: 0%;"></span>
+            </div>
 
             <span>0%</span>
             <div am-progress="inline">
@@ -454,6 +493,11 @@
 
             <span>100%</span>
             <div am-progress="inline">
+                <span style="width: 100%;"></span>
+            </div>
+
+            <span>pending at 100%</span>
+            <div am-progress="pending inline">
                 <span style="width: 100%;"></span>
             </div>
 
@@ -587,7 +631,51 @@
 
         </article>
 
-        <h2 am-box="padded silver">
+        <h2 am-box="paddedBig silver">
+            Common variables
+        </h2>
+
+        <article>
+
+            <h3>colors</h3>
+
+            <div am-box="crimsonDark paddedSmall">
+                crimsonDark <small>hsl(350, 90%, 45%)</small>
+            </div>
+            <div am-box="crimson paddedSmall">
+                crimson <small>hsl(350, 90%, 50%)</small>
+            </div>
+            <div am-box="crimsonLight paddedSmall">
+                crimsonLight <small>hsl(350, 100%, 60%)</small>
+            </div>
+            <div am-box="crimsonLighter paddedSmall">
+                crimsonLighter <small>hsl(350, 100%, 70%)</small>
+            </div>
+            <div am-box="silverDark paddedSmall">
+                silverDark <small>hsl(0, 0%, 75%)</small>
+            </div>
+            <div am-box="silver paddedSmall">
+                silver <small>hsl(0, 0%, 80%)</small>
+            </div>
+            <div am-box="silverLight paddedSmall">
+                silverLight <small>hsl(0, 0%, 85%)</small>
+            </div>
+            <div am-box="silverLighter paddedSmall">
+                silverLighter <small>hsl(0, 0%, 90%)</small>
+            </div>
+            <div am-box="charcoalDark paddedSmall">
+                charcoalDark <small>hsl(0, 0%, 15%)</small>
+            </div>
+            <div am-box="charcoal paddedSmall">
+                charcoal <small>hsl(0, 0%, 20%)</small>
+            </div>
+            <div am-box="charcoalLight paddedSmall">
+                charcoalLight <small>hsl(0, 0%, 25%)</small>
+            </div>
+
+        </article>
+
+        <h2 am-box="paddedBig silver">
             Base typography resets
         </h2>
 

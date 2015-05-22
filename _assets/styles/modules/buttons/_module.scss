@@ -40,12 +40,12 @@
 [am-button~="naked"] {
     @include clearButtonDefaults();
     &:not([disabled]):hover {
-        @include opacity(0.8);
+        @include opacity($f-giant);
         background-color: transparent;
     }
     &:not([disabled]):active,
     &:not([disabled]).active {
-        @include opacity(0.6);
+        @include opacity($f-big);
         background-color: transparent;
     }
     &[am-button~="naked-textual"] {

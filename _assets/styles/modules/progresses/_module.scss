@@ -18,6 +18,7 @@
     @include border-radius(rem($progress-br));
     display: inline-block;
     vertical-align: middle;
+    position: relative;
     span {
         display: block;
         height: 100%;
@@ -29,3 +30,25 @@
 }
 
 [am-progress~="inline"] { max-width: rem($progress-inline-w); }
+
+[am-progress~="pending"] {
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: $z-1;
+        width: 100%;
+        height: rem($progress-h);
+        @include background-image($progress-pending-gr);
+        background-size:
+            rem($progress-pending-after-w)
+            rem($progress-pending-after-w)
+        ;
+        @include keyframes(framesProgressPending) {
+            0% { background-position: 0 0; }
+            100% { background-position: rem($progress-pending-after-w) 0; }
+        }
+        @include animation(framesProgressPending $d-fast linear 0s infinite);
+    }
+}

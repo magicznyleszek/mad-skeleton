@@ -26,26 +26,26 @@
     [am-box~="padded#{$name}L"] { padding-left: $spacing; }
 }
 
-@include boxPadded('Large', rem($space-large));
+@include boxPadded('Big', rem($space-big));
 @include boxPadded('', rem($space-medium)); // default padded modifier
 @include boxPadded('Small', rem($space-small));
 
-[am-box~="black"] {
-    color: white;
-    background-color: black;
+@mixin boxColored($label, $txt, $bg) {
+    [am-box~="#{$label}"] {
+        color: $txt;
+        background-color: $bg;
+    }
 }
 
-[am-box~="crimson"] {
-    color: white;
-    background-color: $c-crimson;
-}
-
-[am-box~="silver"] {
-    color: $app-txt-c;
-    background-color: $c-silver;
-}
-
-[am-box~="charcoal"] {
-    color: white;
-    background-color: $c-charcoal;
-}
+@include boxColored('black', white, black);
+@include boxColored('crimson', white, $c-crimson);
+@include boxColored('crimsonLight', white, $c-crimsonLight);
+@include boxColored('crimsonLighter', white, $c-crimsonLighter);
+@include boxColored('crimsonDark', white, $c-crimsonDark);
+@include boxColored('charcoal', white, $c-charcoal);
+@include boxColored('charcoalLight', white, $c-charcoalLight);
+@include boxColored('charcoalDark', white, $c-charcoalDark);
+@include boxColored('silver', $app-txt-c, $c-silver);
+@include boxColored('silverLight', $app-txt-c, $c-silverLight);
+@include boxColored('silverLighter', $app-txt-c, $c-silverLighter);
+@include boxColored('silverDark', $app-txt-c, $c-silverDark);

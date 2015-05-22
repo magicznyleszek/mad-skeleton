@@ -34,6 +34,7 @@ $p-small: $f-small * 100%;
 $p-tiny: $f-tiny * 100%;
 
 // durations
+$d-slowest: 2s;
 $d-slower: 1s;
 $d-slow: 0.75s;
 $d-medium: 0.5s;
@@ -41,15 +42,15 @@ $d-fast: 0.25s;
 $d-faster: 0.125s;
 
 // widths
-$w-colossal: 80px; // 5rem
-$w-huge: 64px; // 4rem
-$w-giant: 40px; // 2.5rem
-$w-big: 32px; // 2rem
-$w-large: 20px; // 1.25rem
-$w-medium: 16px; // 1rem
-$w-small: 10px; // 0.625rem
-$w-little: 8px; // 0.5rem
-$w-tiny: 5px; // 0.3125rem
+$w-colossal: 80px; // 5rem @ 16px
+$w-huge: 64px; // 4rem @ 16px
+$w-giant: 40px; // 2.5rem @ 16px
+$w-big: 32px; // 2rem @ 16px
+$w-large: 20px; // 1.25rem @ 16px
+$w-medium: 16px; // 1rem @ 16px
+$w-small: 10px; // 0.625rem @ 16px
+$w-little: 8px; // 0.5rem @ 16px
+$w-tiny: 5px; // 0.3125rem @ 16px
 
 // z-indexes
 $z-negative: -1;
