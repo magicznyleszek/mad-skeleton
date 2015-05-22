@@ -19,6 +19,7 @@
     &:hover [am-hoverItem~="conceal"] {
         visibility: hidden;
         @include opacity(0);
-        &[am-hoverItem~="animated"] { @include transition($d-faster); }
     }
 }
+
+[am-hoverItem~="animated"] { @include transition($d-faster); }
