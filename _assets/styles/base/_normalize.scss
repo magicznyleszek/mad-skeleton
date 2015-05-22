@@ -15,14 +15,16 @@ html {
 body { overflow: auto; }
 
 a {
-    color: inherit;
-    text-decoration: none;
-    // 0.125em = 2px @ 16px
-    @include underline(0.125em, currentColor, transparent);
-    &:visited,
-    &:hover,
-    &:active {
+    &:not([am-button]) {
         color: inherit;
+        text-decoration: none;
+        // 0.125em = 2px @ 16px
+        @include underline(0.125em, currentColor, transparent);
+        &:visited,
+        &:hover,
+        &:active {
+            color: inherit;
+        }
     }
 }
 
