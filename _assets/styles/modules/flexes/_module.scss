@@ -11,10 +11,9 @@
 
 @import "modules/flexes/config";
 
-[am-flexContainer] {
-    @include display-flex();
-    [am-flexItem] { @include flex(1); }
-}
+[am-flexContainer] { @include display-flex(); }
+
+[am-flexItem] { @include flex(1); }
 
 [am-flexContainer~="vertical"] {
     @include flex-direction(column);
@@ -28,5 +27,5 @@
 
 [am-flexContainer~="centered"] {
     @include align-items(center);
-    [am-flexItem] { @include align-self(center); }
+    > [am-flexItem] { @include align-self(center); }
 }
