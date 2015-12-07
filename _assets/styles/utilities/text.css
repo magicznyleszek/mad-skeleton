@@ -1,0 +1,25 @@
+/*------------------------------------------------------------------------------
+text utility
+------------------------------------------------------------------------------*/
+
+/* aligns */
+[gui-u-text~="lefted"] { text-align: left; }
+[gui-u-text~="righted"] { text-align: right; }
+[gui-u-text~="centered"] { text-align: center; }
+
+/* weights */
+[gui-u-text~="300"] { font-weight: 300; }
+[gui-u-text~="400"] { font-weight: 400; }
+[gui-u-text~="600"] { font-weight: 600; }
+[gui-u-text~="700"] { font-weight: 700; }
+
+/*text transforms */
+[gui-u-text~="uppercased"] { text-transform: uppercase; }
+[gui-u-text~="untransformed"] { text-transform: none; }
+
+/* trims text with an ellipsis */
+[gui-u-text~="trimmed"] {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

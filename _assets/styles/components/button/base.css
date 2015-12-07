@@ -1,0 +1,45 @@
+/*------------------------------------------------------------------------------
+button component
+------------------------------------------------------------------------------*/
+
+@import "config.css";
+
+[gui-c-button] {
+    display: inline-block;
+    vertical-align: middle;
+
+    border: 0;
+    outline: 0;
+
+    cursor: pointer;
+
+    padding: 0 var(--w-little);
+
+    line-height: calc(var(--rootLineHeight) * 0.8rem);
+    height: calc(var(--rootLineHeight) * 0.8rem);
+    margin: calc(var(--rootLineHeight) * 0.1rem) 0;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: inherit;
+    text-align: center;
+
+    text-decoration: none;
+    background-image: none;
+
+    color: var(--button-txt);
+    background-color: var(--button-bg);
+    box-shadow: var(--button-sh);
+
+    border-radius: var(--button-br);
+}
+
+[gui-c-button]:not([disabled]):hover {
+    box-shadow: var(--button-sh-hover);
+    background-color: var(--button-bg-hover);
+}
+
+[gui-c-button]:not([disabled]):active {
+    box-shadow: var(--button-sh-active);
+    background-color: var(--button-bg-active);
+}

@@ -1,0 +1,20 @@
+/*------------------------------------------------------------------------------
+main styles aggregation
+------------------------------------------------------------------------------*/
+
+/* settings */
+@import "settings/descriptiveVars.css";
+@import "settings/functionalVars.css";
+@import "settings/customs.css";
+
+/* basics */
+@import "basics/root.css";
+@import "basics/typography.css";
+@import "basics/states.css";
+@import "basics/layout.css";
+
+/* components */
+@import "components/button/base.css";
+
+/* utilities */
+@import "utilities/text.css";

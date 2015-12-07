@@ -1,0 +1,64 @@
+/*------------------------------------------------------------------------------
+all DESCRIPTIVE variables (colors, sizes, etc.)
+------------------------------------------------------------------------------*/
+
+:root {
+
+    /* colors */
+
+    --c-amaranth: hsl(348, 96%, 56%);
+    --c-purple: hsl(328, 72%, 44%);
+    --c-violet: hsl(276, 60%, 36%);
+    --c-blackcurrant: hsl(276, 32%, 12%);
+    --c-white: hsl(0, 0%, 100%);
+    --c-black: hsl(0, 0%, 20%);
+
+    /* font families */
+
+    --family-sourceSansPro: "Source Sans Pro", sans-serif;
+    --family-monospace: "Source Code Pro" , "Input Mono" , "Consolas" , "Fira Mono", "Inconsolata",  "Monaco" , "Lucida Console" , "Liberation Mono" , "DejaVu Sans Mono" , "Bitstream Vera Sans Mono" , "Courier New" , monospace;
+
+    /* fractions */
+
+    --f-giant: 0.75;
+    --f-big: 0.50;
+    --f-medium: 0.25;
+    --f-small: 0.125;
+    --f-tiny: 0.05;
+
+    /* percents */
+
+    --p-giant: calc(var(--f-giant) * 100%);
+    --p-big: calc(var(--f-big) * 100%);
+    --p-medium: calc(var(--f-medium) * 100%);
+    --p-small: calc(var(--f-small) * 100%);
+    --p-tiny: calc(var(--f-tiny) * 100%);
+
+    /* durations */
+
+    --d-slowest: 2s;
+    --d-slower: 1s;
+    --d-slow: 0.75s;
+    --d-medium: 0.5s;
+    --d-fast: 0.25s;
+    --d-faster: 0.125s;
+
+    /* z-indexes */
+
+    --z-negative: -1;
+    --z-1: 10; --z-2: 20; --z-3: 30; --z-4: 40; --z-5: 50;
+    --z-6: 60; --z-7: 70; --z-8: 80; --z-9: 90; --z-10: 100;
+
+    /* sizes */
+
+    --w-colossal: 5rem; /* 80px @ 16px */
+    --w-huge: 4rem; /* 64px @ 16px */
+    --w-giant: 2.5rem; /* 40px @ 16px */
+    --w-big: 2rem; /* 32px @ 16px */
+    --w-large: 1.25rem; /* 20px @ 16px */
+    --w-medium: 1rem; /* 16px @ 16px */
+    --w-small: 0.625rem; /* 10px @ 16px */
+    --w-little: 0.5rem; /* 8px @ 16px */
+    --w-tiny: 0.3125rem; /* 5px @ 16px */
+
+}

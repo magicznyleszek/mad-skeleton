@@ -1,0 +1,16 @@
+/*------------------------------------------------------------------------------
+button config
+------------------------------------------------------------------------------*/
+
+:root {
+
+    --button-txt: var(--c-white);
+    --button-sh: 0 0.125rem 0 0 var(--c-blackcurrant);
+    --button-sh-hover: 0 0.125rem 0 0 var(--c-amaranth);
+    --button-sh-active: 0 0.125rem 0 0 var(--c-purple);
+    --button-br: 0.125rem;
+    --button-bg: var(--c-blackcurrant);
+    --button-bg-hover: var(--c-amaranth);
+    --button-bg-active: var(--c-purple);
+
+}
