@@ -18,7 +18,8 @@ Normalisation and styles that target bare HTML elements (i.e. "resets").
 
 ### Components
 
-Context-specific selectors for distinct components of an interface.
+Context-specific selectors for distinct components of an interface. They are
+forbidden to mix with each other.
 
 Components use the `c-` namespace.
 
@@ -26,6 +27,8 @@ Components use the `c-` namespace.
 ### Utilities
 
 Structure- and layout-related classes that do one, generic thing extremely well.
+Can be naturally mixed with each other and with components -- as long as it
+makes sense of course.
 
 Utilities use the `u-` namespace.
 

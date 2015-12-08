@@ -4,13 +4,14 @@ button config
 
 :root {
 
-    --button-txt: var(--c-white);
-    --button-sh: 0 0.125rem 0 0 var(--c-blackcurrant);
-    --button-sh-hover: 0 0.125rem 0 0 var(--c-amaranth);
-    --button-sh-active: 0 0.125rem 0 0 var(--c-purple);
     --button-br: 0.125rem;
-    --button-bg: var(--c-blackcurrant);
-    --button-bg-hover: var(--c-amaranth);
-    --button-bg-active: var(--c-purple);
+
+    --button-txt: var(--c-charcoal);
+    --button-sh: 0 0.125rem 0 0 color( var(--c-silver) shade(15%) );
+    --button-sh-hover: 0 0.125rem 0 0 color( var(--c-silver) shade(10%) );
+    --button-sh-active: 0 0.125rem 0 0 color( var(--c-silver) shade(5%) );
+    --button-bg: var(--c-silver);
+    --button-bg-hover: color( var(--c-silver) tint(20%) );
+    --button-bg-active: color( var(--c-silver) tint(30%) );
 
 }

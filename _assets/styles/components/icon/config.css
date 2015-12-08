@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------
-sizing base layout parts
+button config
 ------------------------------------------------------------------------------*/
 
-body {
-    margin: 0;
-    width: 100%;
-    max-width: var(--app-content-w);
-    padding: calc(var(--leading-s) * 2) var(--leading-s);
+:root {
+
+    --icon-s: var(--leading-s);
+    --icon-s-big: calc( var(--leading-s) * 2 );
+
 }

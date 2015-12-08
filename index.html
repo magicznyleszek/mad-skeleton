@@ -56,29 +56,308 @@
         </symbol>
     </svg>
 
-    <header id="appHeader" gui-u-box="paddedBigV">
+    <header gui-c-section="main">
 
         <h1>
             Boilerplate assets
             <a
-                gui-c-button="important"
+                gui-c-button="middle"
                 href="https://github.com/smutnyleszek/boilerplate-assets"
             >
-                fork at github
+                github
             </a>
         </h1>
 
     </header>
 
-    <section id="appContent" role="main">
+    <section role="main">
 
-        <h2 gui-u-box="paddedBig silver">
-            <a href="http://amcss.github.io">AMCSS</a> modules
-        </h2>
+        <!-- UTILITIES -->
+
+        <article gui-c-section="main">
+
+            <h2>Utilities</h2>
+
+            <section gui-c-section>
+
+                <h3>area</h3>
+
+                <div gui-u-area="silver paddedV">
+                    silver area padded vertically
+                </div>
+
+                <div gui-u-area="charcoal padded">
+                    charcoal area padded
+                </div>
+
+            </section>
+
+            <section gui-c-section>
+
+                <h3>column</h3>
+
+                <p>
+                    A smart and light column system. It only needs your help with
+                    whitespace bug.
+                </p>
+
+                <div>
+                    <div gui-u-column="1/2" gui-u-area="charcoal">1/2</div><!--
+                 --><div gui-u-column="1/2" gui-u-area="silver">1/2</div>
+                </div>
+
+                <div>
+                    <div gui-u-column="1/3" gui-u-area>1/3</div><!--
+                 --><div gui-u-column="2/3" gui-u-area="silver">2/3</div>
+                </div>
+
+                <div>
+                    <div gui-u-area="charcoal">1</div><!--
+                 --><div
+                        gui-u-column="1/3"
+                        gui-u-columnBefore="1/4"
+                        gui-u-area="silver"
+                    >1/3 after 1/4</div><!--
+                 --><div gui-u-area="charcoal">1</div>
+                </div>
+
+            </section>
+
+            <section gui-c-section>
+
+                <h3>hover</h3>
+
+                <p>Hover over these guys:</p>
+
+                <div gui-u-hover gui-u-area="silver paddedV" gui-u-inlineblock>
+                    <strong>show</strong>
+                    <span gui-u-hover-item="show">this</span>
+                </div>
+
+                <div gui-u-hover gui-u-area="charcoal paddedV" gui-u-inlineblock>
+                    <strong>hide</strong>
+                    <span gui-u-hover-item="hide">this</span>
+                </div>
+
+                <div gui-u-hover gui-u-area="silver paddedV" gui-u-inlineblock>
+                    <strong>restore</strong>
+                    <span gui-u-hover-item="restore">this</span>
+                </div>
+
+                <div gui-u-hover gui-u-area="charcoal paddedV" gui-u-inlineblock>
+                    <strong>remove</strong>
+                    <span gui-u-hover-item="remove">this</span>
+                </div>
+
+            </section>
+
+            <section gui-c-section>
+
+                <h3>text</h3>
+
+                <table gui-c-table>
+                    <thead>
+                        <tr>
+                            <th>lefted</th>
+                            <th>centered</th>
+                            <th>righted</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p gui-u-text="lefted">makes given inline content<br>align to the left side</p>
+                            </td>
+
+                            <td>
+                                <p gui-u-text="centered">centered<br> makes given inline content<br> align to the center</p>
+                            </td>
+
+                            <td>
+                                <p gui-u-text="righted">righted<br> makes given inline content<br> align to the right side</p>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <table gui-c-table="full">
+                    <thead>
+                        <tr>
+                            <th>trimmed</th>
+                            <th>uppercased</th>
+                            <th>300</th>
+                            <th>400</th>
+                            <th>600</th>
+                            <th>700</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td>
+                                <p gui-u-text="trimmed" style="width: 100px;">makes text trimmed if there is not enough space causing said text to being too long to fit in one line of text on the page or in some other unnamed container that has a limited width</p>
+                            </td>
+
+                            <td>
+                                <p gui-u-text="uppercased">foo</p>
+                            </td>
+
+                            <td>
+                                <p gui-u-text="300">bar</p>
+                            </td>
+
+                            <td>
+                                <p gui-u-text="400">fum</p>
+                            </td>
+
+                            <td>
+                                <p gui-u-text="600">baz</p>
+                            </td>
+
+                            <td>
+                                <p gui-u-text="700">qux</p>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </article>
+
+        <!-- COMPONENTS -->
+
+        <article gui-c-section="main">
+
+            <h2>Components</h2>
+
+            <section gui-c-section>
+
+                <h3>button</h3>
+
+                <button gui-c-button>default</button>
+
+                <button gui-c-button disabled>disabled</button>
+
+                <button gui-c-button="full">full width</button>
+
+                <button gui-c-button="big">A BIG ONE</button>
+
+            </section>
+
+            <section gui-c-section>
+
+                <h3>icon</h2>
+
+                <p>
+                    I prefer using SVGs over fonts or images. Keep'em in one
+                    place and manage with
+                    <a href="https://github.com/FWeinb/grunt-svgstore">
+                    grunt-svgstore</a>.
+                </p>
+
+                <table gui-c-table>
+                    <thead>
+                        <tr>
+                            <th>default</th>
+                            <th>big</th>
+                            <th>big & silver</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <svg gui-c-icon>
+                                    <use xlink:href="#icon-check">
+                                </svg>
+                            </td>
+                            <td>
+                                <svg gui-c-icon="big">
+                                    <use xlink:href="#icon-check">
+                                </svg>
+                            </td>
+                            <td>
+                                <svg gui-c-icon="big silver">
+                                    <use xlink:href="#icon-check">
+                                </svg>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <section gui-c-section>
+
+                <h3>table</h3>
+
+                <table gui-c-table="hoverable">
+                    <caption>Middle Jurassic sections</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Period <small>[Mya]</small></th>
+                            <th>Duration <small>[My]</small></th>
+                            <th>Species</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Callovian</td>
+                            <td>166-163</td>
+                            <td>3</td>
+                            <td>Agilisaurus, Liopleurodon, Huayangosaurus</td>
+                        </tr>
+                        <tr>
+                            <td>Bathonian</td>
+                            <td>168-166</td>
+                            <td>2</td>
+                            <td>Metriorhynchus, Teleidosaurus, Shunosaurus</td>
+                        </tr>
+                        <tr>
+                            <td>Bajocian</td>
+                            <td>170-168</td>
+                            <td>2</td>
+                            <td>Belemnites, Ophionautilus, Somalinautilus</td>
+                        </tr>
+                        <tr>
+                            <td>Aalenian</td>
+                            <td>174-170</td>
+                            <td>4</td>
+                            <td>Abbasites, Belemnites, Steneosaurus</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <td>174-163</td>
+                            <td>11</td>
+                            <td>
+                                Agilisaurus, Liopleurodon, Huayangosaurus,
+                                Metriorhynchus, Teleidosaurus, Shunosaurus,
+                                Belemnites, Ophionautilus, Somalinautilus,
+                                Abbasites, Steneosaurus
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </section>
+
+        </article>
+
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
 
         <article>
 
-            <h3>animation</h3>
+            <h3>animate</h3>
 
             <span gui-u-animate="pulse">hearbeat</span>
 
@@ -111,48 +390,6 @@
 
         <article>
 
-            <h3>box</h3>
-
-            <div gui-u-box="silver inline paddedV">
-                silver inline box padded vertically
-            </div>
-
-            <div gui-u-box="black paddedL">
-                black box padded on left
-            </div>
-
-        </article>
-
-        <article>
-
-            <h3>button</h3>
-
-            <button gui-c-button>default</button>
-
-            <button gui-c-button disabled>default disabled</button>
-
-            <button gui-c-button="wide">wide</button>
-
-            <button gui-c-button="small">small</button>
-
-            <button gui-c-button="small wide">small and wide</button>
-
-            <button gui-c-button="naked">naked</button>
-
-            <button gui-c-button="naked naked-textual">naked textual</button>
-
-            <button gui-c-button="full">full width</button>
-
-            <button gui-c-button="important">important</button>
-
-            <button gui-c-button="important" disabled>important disabled</button>
-
-            <button gui-c-button="flat">flat</button>
-
-        </article>
-
-        <article>
-
             <h3>checkbox</h3>
 
             <div>
@@ -174,47 +411,6 @@
                     disabled
                 >
                 <label for="checkbox-fum">checked and disabled</label>
-            </div>
-
-        </article>
-
-        <article>
-
-            <h3>column</h3>
-
-            <p>
-                A smart and light column system. It only needs your help with
-                whitespace bug.
-            </p>
-
-            <div>
-                <div gui-u-column="1/2" gui-u-box="padded black">1/2</div><!--
-             --><div gui-u-column="1/2" gui-u-box="padded crimson">1/2</div>
-            </div>
-
-            <div>
-                <div gui-u-column="1/3" gui-u-box="padded black">1/3</div><!--
-             --><div gui-u-column="2/3" gui-u-box="padded crimson">2/3</div>
-            </div>
-
-            <div>
-                <div
-                    gui-u-column="1/12"
-                    gui-u-box="padded black"
-                ><small>1/12</small></div><!--
-             --><div gui-u-column="1/6" gui-u-box="padded crimson">1/6</div><!--
-             --><div gui-u-column="1/3" gui-u-box="padded black">1/3</div><!--
-             --><div gui-u-column="5/12" gui-u-box="padded crimson">5/12</div>
-            </div>
-
-            <div>
-                <div gui-u-box="padded black">1</div><!--
-             --><div
-                    gui-u-column="1/3"
-                    gui-u-columnBefore="1/4"
-                    gui-u-box="padded crimson"
-                >1/3 after 1/4</div><!--
-             --><div gui-u-box="padded black">1</div>
             </div>
 
         </article>
@@ -304,8 +500,6 @@
 
             <h3>hover</h3>
 
-            <div gui-u-box="inline">Hover over these guys:</div>
-
             <div gui-u-hover gui-u-box="charcoal paddedSmall inline">
                 <strong>Reveal</strong>
                 <span gui-u-hover-item="reveal">this</span>
@@ -329,39 +523,6 @@
             <div gui-u-hover gui-u-box="charcoal paddedSmall inline">
                 <strong>Hide</strong>
                 <span gui-u-hover-item="hide">this</span>
-            </div>
-
-        </article>
-
-        <article>
-
-            <h3>icon</h2>
-
-            <p>
-                I prefer using SVGs over fonts or images. Keep'em in one place
-                and manage with
-                <a href="https://github.com/FWeinb/grunt-svgstore">
-                grunt-svgstore</a>.
-            </p>
-
-            <div gui-u-box="inline">
-                <strong>default:</strong>
-                <svg gui-c-icon><use xlink:href="#icon-check"></svg>
-            </div>
-
-            <div gui-u-box="inline">
-                <strong>small:</strong>
-                <svg gui-c-icon="small"><use xlink:href="#icon-check"></svg>
-            </div>
-
-            <div gui-u-box="inline">
-                <strong>big:</strong>
-                <svg gui-c-icon="big"><use xlink:href="#icon-check"></svg>
-            </div>
-
-            <div gui-u-box="inline">
-                <strong>big & crimson:</strong>
-                <svg gui-c-icon="big crimson"><use xlink:href="#icon-check"></svg>
             </div>
 
         </article>
@@ -537,62 +698,7 @@
 
         </article>
 
-        <article>
 
-            <h3>table</h3>
-
-            <table gui-c-table>
-                <caption>Middle Jurassic sections</caption>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Period <small>[Mya]</small></th>
-                        <th>Duration <small>[My]</small></th>
-                        <th>Species</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Callovian</td>
-                        <td>166-163</td>
-                        <td>3</td>
-                        <td>Agilisaurus, Liopleurodon, Huayangosaurus</td>
-                    </tr>
-                    <tr>
-                        <td>Bathonian</td>
-                        <td>168-166</td>
-                        <td>2</td>
-                        <td>Metriorhynchus, Teleidosaurus, Shunosaurus</td>
-                    </tr>
-                    <tr>
-                        <td>Bajocian</td>
-                        <td>170-168</td>
-                        <td>2</td>
-                        <td>Belemnites, Ophionautilus, Somalinautilus</td>
-                    </tr>
-                    <tr>
-                        <td>Aalenian</td>
-                        <td>174-170</td>
-                        <td>4</td>
-                        <td>Abbasites, Belemnites, Steneosaurus</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th>Total</th>
-                        <td>174-163</td>
-                        <td>11</td>
-                        <td>
-                            Agilisaurus, Liopleurodon, Huayangosaurus,
-                            Metriorhynchus, Teleidosaurus, Shunosaurus,
-                            Belemnites, Ophionautilus, Somalinautilus,
-                            Abbasites, Steneosaurus
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
-
-        </article>
 
         <article>
 
@@ -606,36 +712,7 @@
 
         </article>
 
-        <article>
 
-            <h3>text</h3>
-
-            <p gui-u-text="lefted">lefted</p>
-
-            <p gui-u-text="centered">centered</p>
-
-            <p gui-u-text="righted">righted</p>
-
-            <p gui-u-text="uppercased">uppercased</p>
-
-            <p gui-u-text="300">300</p>
-
-            <p gui-u-text="400">400</p>
-
-            <p gui-u-text="600">600</p>
-
-            <p gui-u-text="700">700</p>
-
-            <p gui-u-text="dimmed">dimmed</p>
-
-            <p gui-u-text="trimmed">
-                trimmed - makes text trimmed if too long lorem ipsum dolor sit
-                amet, consectetur adipisicing elit. impedit, eveniet, magni
-                dolor, alias consectetur nostrum, modi ad, sit tempora neque
-                doloribus reiciendis eveniet illum quos
-            </p>
-
-        </article>
 
         <h2 gui-u-box="paddedBig silver">
             Common variables

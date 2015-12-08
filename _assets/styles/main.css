@@ -15,6 +15,13 @@ main styles aggregation
 
 /* components */
 @import "components/button/base.css";
+@import "components/icon/base.css";
+@import "components/section/base.css";
+@import "components/table/base.css";
 
 /* utilities */
+@import "utilities/area.css";
+@import "utilities/column.css";
+@import "utilities/hover.css";
+@import "utilities/inlineblock.css";
 @import "utilities/text.css";

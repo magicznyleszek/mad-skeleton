@@ -6,7 +6,7 @@ common FUNCTIONAL variables (each module has own config file)
 
     /* base */
 
-    --app-txt-c: var(--c-blackcurrant);
+    --app-txt-c: var(--c-charcoal);
     --app-bg-c: var(--c-white);
     --app-content-w: 36rem; /* 576px @ 16px */
 
@@ -37,6 +37,9 @@ common FUNCTIONAL variables (each module has own config file)
     --selection-txt-c: var(--c-white);
     --selection-bg-c: var(--c-amaranth);
 
+    /* reusable stuff */
+
     --disabled-o: var(--f-big);
+    --leading-s: calc( var(--rootLineHeight) * 1rem );
 
 }

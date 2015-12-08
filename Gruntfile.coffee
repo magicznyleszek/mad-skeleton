@@ -18,7 +18,7 @@ module.exports = (grunt) ->
         coffee:
             default:
                 options:
-                    sourceMap: true
+                    sourcemap: false
                 expand: true
                 cwd: '_assets/scripts'
                 src: ['**/*.coffee']

@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------------------
+hover utility
+------------------------------------------------------------------------------*/
+
+[gui-u-hover]:not(:hover) [gui-u-hover-item~="restore"],
+[gui-u-hover]:hover [gui-u-hover-item~="remove"] {
+    display: none;
+}
+
+[gui-u-hover]:not(:hover) [gui-u-hover-item~="show"],
+[gui-u-hover]:hover [gui-u-hover-item~="hide"] {
+    visibility: hidden;
+    opacity: 0;
+}
+
+[gui-u-hover-item~="animate"] {
+    transition-duration: var(--d-faster);
+}

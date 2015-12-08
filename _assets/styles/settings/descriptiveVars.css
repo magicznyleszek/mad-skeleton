@@ -9,9 +9,10 @@ all DESCRIPTIVE variables (colors, sizes, etc.)
     --c-amaranth: hsl(348, 96%, 56%);
     --c-purple: hsl(328, 72%, 44%);
     --c-violet: hsl(276, 60%, 36%);
-    --c-blackcurrant: hsl(276, 32%, 12%);
+    --c-whitesmoke: hsl(320, 5%, 96%);
     --c-white: hsl(0, 0%, 100%);
-    --c-black: hsl(0, 0%, 20%);
+    --c-silver: hsl(0, 0%, 80%);
+    --c-charcoal: hsl(0, 0%, 20%);
 
     /* font families */
 

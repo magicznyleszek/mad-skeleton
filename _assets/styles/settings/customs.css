@@ -6,3 +6,4 @@ custom media queries and selectors
 @custom-media --smaller (max-width: 720px);
 
 @custom-selector :--headers h1, h2, h3, h4;
+@custom-selector :--textblocks h1, h2, h3, h4, p, ul, ol, blockquote, pre;
