@@ -21,7 +21,7 @@ all DESCRIPTIVE variables (colors, sizes, etc.)
 
     /* z-indexes */
 
-    /* sizes */ /* 80px @ 16px */ /* 64px @ 16px */ /* 40px @ 16px */ /* 32px @ 16px */ /* 20px @ 16px */ /* 16px @ 16px */ /* 10px @ 16px */ /* 8px @ 16px */ /* 5px @ 16px */
+    /* sizes */ /* 80px @ 16px */ /* 64px @ 16px */ /* 40px @ 16px */ /* 32px @ 16px */ /* 20px @ 16px */ /* 16px @ 16px */ /* 10px @ 16px */ /* 8px @ 16px */ /* 4px @ 16px */
 
 }
 /*------------------------------------------------------------------------------
@@ -34,7 +34,7 @@ common FUNCTIONAL variables (each module has own config file)
 
     /* root typography with font sizes for different screens scaling */
 
-    /* specific elements */ /* 1px @ 16px */ /* 4px @ 16px */
+    /* specific elements */ /* 1px @ 16px */
 
     /* reusable stuff */
 
@@ -118,7 +118,7 @@ h4 {
 }
 
 ul, ol {
-    margin-top: 0;
+    padding: 0;
     margin-left: 27px;
     margin-left: 1.5rem;
 }
@@ -145,7 +145,21 @@ em { font-style: italic; }
 
 blockquote {
     font-style: italic;
-    cite { font-style: normal; }
+
+    margin-left: 0;
+    margin-right: 0;
+
+    padding-left: 27px;
+    padding-left: 1.5rem;
+
+    box-shadow: inset 0.25rem 0 0 0 hsl(0, 0%, 80%);
+}
+
+blockquote cite:before {
+    content: "\2014";
+    display: inline-block;
+    margin-right: 4px;
+    margin-right: 0.25rem;
 }
 
 code { font-family: "Source Code Pro" , "Input Mono" , "Consolas" , "Fira Mono", "Inconsolata",  "Monaco" , "Lucida Console" , "Liberation Mono" , "DejaVu Sans Mono" , "Bitstream Vera Sans Mono" , "Courier New" , monospace }
@@ -237,8 +251,12 @@ button config
 
     cursor: pointer;
 
-    padding: 0 9px;
-    padding: 0 0.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 9px;
+    padding-left: 0.5rem;
+    padding-right: 9px;
+    padding-right: 0.5rem;
 
     line-height: 24px;
     line-height: 1.375rem;
@@ -289,19 +307,34 @@ button config
 button sizes
 ------------------------------------------------------------------------------*/
 
-[gui-c-button~="big"] {
-    padding: 0 18px;
-    padding: 0 1rem;
+[gui-c-button~="double"] {
+    padding-left: 18px;
+    padding-left: 1rem;
+    padding-right: 18px;
+    padding-right: 1rem;
 
-    line-height: 45px;
-    line-height: 2.5rem;
-    height: 45px;
-    height: 2.5rem;
-    margin: 4px 0;
-    margin: 0.25rem 0;
+    line-height: 49px;
+    line-height: 2.75rem;
+    height: 49px;
+    height: 2.75rem;
 
     font-size: 27px;
     font-size: 1.5rem;
+}
+
+[gui-c-button~="triple"] {
+    padding-left: 27px;
+    padding-left: 1.5rem;
+    padding-right: 27px;
+    padding-right: 1.5rem;
+
+    line-height: 74px;
+    line-height: 4.125rem;
+    height: 76px;
+    height: 4.25rem;
+
+    font-size: 40px;
+    font-size: 2.25rem;
 }
 
 [gui-c-button~="full"] {
@@ -359,12 +392,12 @@ image component library
 ------------------------------------------------------------------------------*/
 
 [gui-c-image~="medievalbloodandgore"] {
-    background-image: url('/public/images/test/thumbnail/medieval-blood-and-gore.jpg');
+    background-image: url("/public/images/test/thumbnail/medieval-blood-and-gore.jpg");
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     [gui-c-image~="medievalbloodandgore"] {
-        background-image: url('/public/images/test/thumbnail-x2/medieval-blood-and-gore.jpg');
+        background-image: url("/public/images/test/thumbnail-x2/medieval-blood-and-gore.jpg");
     }
 }
 
@@ -393,6 +426,103 @@ image component library
     width: 25rem;
     height: 324px;
     height: 18rem;
+}
+/*------------------------------------------------------------------------------
+progressbar component
+------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------
+progressbar config
+------------------------------------------------------------------------------*/
+
+:root { /* 160px @ 16px */
+
+}
+
+[gui-c-progressbar] {
+    position: relative;
+    overflow: hidden;
+
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+
+    height: 18px;
+    height: 1rem;
+    margin: 4px 0;
+    margin: 0.25rem 0;
+
+    background-color: hsl(0, 0%, 80%);
+
+    border-radius: 0.125rem;
+}
+
+[gui-c-progressbar-indicator] {
+    display: block;
+    height: 100%;
+    width: 0%;
+
+    background-color: hsl(0, 0%, 20%);
+    border-radius: 0.125rem;
+
+    -webkit-transition: 0.25s;
+
+            transition: 0.25s;
+}
+
+[gui-c-progressbar~="short"] { max-width: 180px; max-width: 10rem; }
+
+@-webkit-keyframes framesProgressPending {
+    0% { background-position: -1rem 0; }
+    100% { background-position: 1rem 0; }
+}
+
+@keyframes framesProgressPending {
+    0% { background-position: -1rem 0; }
+    100% { background-position: 1rem 0; }
+}
+
+[gui-c-progressbar~="is-pending"]:after {
+    content: "";
+
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.25;
+
+    background-image: -webkit-radial-gradient(circle 0.33rem, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 100%) 50%, transparent 50%, transparent 100%);
+
+    background-image: radial-gradient(
+        circle 0.33rem,
+        hsl(0, 0%, 100%) 0%,
+        hsl(0, 0%, 100%) 50%,
+        transparent 50%,
+        transparent 100%
+    );
+    background-size: 1rem 100%;
+    background-repeat: repeat-x;
+
+    -webkit-animation-name: framesProgressPending;
+
+            animation-name: framesProgressPending;
+    -webkit-animation-duration: 0.75s;
+            animation-duration: 0.75s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: none;
+            animation-fill-mode: none;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
 }
 /*------------------------------------------------------------------------------
 section component

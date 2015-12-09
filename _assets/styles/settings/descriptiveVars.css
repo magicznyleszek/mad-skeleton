@@ -60,6 +60,6 @@ all DESCRIPTIVE variables (colors, sizes, etc.)
     --w-medium: 1rem; /* 16px @ 16px */
     --w-small: 0.625rem; /* 10px @ 16px */
     --w-little: 0.5rem; /* 8px @ 16px */
-    --w-tiny: 0.3125rem; /* 5px @ 16px */
+    --w-tiny: 0.25rem; /* 4px @ 16px */
 
 }

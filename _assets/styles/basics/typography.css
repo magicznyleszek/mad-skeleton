@@ -29,8 +29,8 @@ h4 {
 }
 
 ul, ol {
-    margin-top: 0;
-    margin-left: 1.5rem;
+    padding: 0;
+    margin-left: var(--leading-s);
 }
 
 ul { list-style-type: disc; }
@@ -55,7 +55,19 @@ em { font-style: italic; }
 
 blockquote {
     font-style: italic;
-    cite { font-style: normal; }
+
+    margin-left: 0;
+    margin-right: 0;
+
+    padding-left: var(--leading-s);
+
+    box-shadow: inset var(--w-tiny) 0 0 0 var(--c-silver);
+}
+
+blockquote cite:before {
+    content: "\2014";
+    display: inline-block;
+    margin-right: var(--w-tiny);
 }
 
 code { font-family: var(--family-monospace) }

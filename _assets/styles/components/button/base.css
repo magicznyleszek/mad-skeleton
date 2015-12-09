@@ -13,7 +13,10 @@ button component
 
     cursor: pointer;
 
-    padding: 0 var(--w-little);
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: var(--button-padding);
+    padding-right: var(--button-padding);
 
     line-height: calc(var(--leading-s) - 0.125rem);
     height: calc(var(--leading-s) - 0.25rem);
@@ -21,7 +24,7 @@ button component
 
     border-radius: var(--button-br);
 
-    font-size: 0.75rem;
+    font-size: var(--button-fontsize);
     font-weight: 700;
     font-family: inherit;
     text-align: center;
@@ -60,14 +63,24 @@ button component
 button sizes
 ------------------------------------------------------------------------------*/
 
-[gui-c-button~="big"] {
-    padding: 0 var(--w-medium);
+[gui-c-button~="double"] {
+    padding-left: calc( var(--button-padding) * 2 );
+    padding-right: calc( var(--button-padding) * 2 );
 
-    line-height: calc( (var(--leading-s) - 0.25rem) * 2 );
-    height: calc( (var(--leading-s) - 0.25rem) * 2 );
-    margin: 0.25rem 0;
+    line-height: calc( ( var(--leading-s) - 0.125rem ) * 2 );
+    height: calc( var(--leading-s) * 2 - 0.25rem );
 
-    font-size: 1.5rem;
+    font-size: calc( var(--button-fontsize) * 2 );
+}
+
+[gui-c-button~="triple"] {
+    padding-left: calc( var(--button-padding) * 3 );
+    padding-right: calc( var(--button-padding) * 3 );
+
+    line-height: calc( ( var(--leading-s) - 0.125rem ) * 3 );
+    height: calc( var(--leading-s) * 3 - 0.25rem );
+
+    font-size: calc( var(--button-fontsize) * 3 );
 }
 
 [gui-c-button~="full"] {

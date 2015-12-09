@@ -243,7 +243,9 @@
 
                 <button gui-c-button="full">full width</button>
 
-                <button gui-c-button="big">A BIG ONE</button>
+                <button gui-c-button="double">a double sized</button>
+
+                <button gui-c-button="triple">a triple sized</button>
 
             </section>
 
@@ -295,6 +297,66 @@
                 <h3>image</h3>
 
                 <figure gui-c-image="small medievalbloodandgore"></figure>
+
+            </section>
+
+            <section gui-c-section>
+
+                <h3>progress</h3>
+
+                <h4>default:</h4>
+
+                <span>pending at 0%</span>
+                <div gui-c-progressbar="is-pending">
+                    <span gui-c-progressbar-indicator style="width: 0%;"></span>
+                </div>
+
+                <span>0%</span>
+                <div gui-c-progressbar>
+                    <span gui-c-progressbar-indicator style="width: 0%;"></span>
+                </div>
+
+                <span>33%</span>
+                <div gui-c-progressbar>
+                    <span gui-c-progressbar-indicator style="width: 33%;"></span>
+                </div>
+
+                <span>100%</span>
+                <div gui-c-progressbar>
+                    <span gui-c-progressbar-indicator style="width: 100%;"></span>
+                </div>
+
+                <span>pending at 100%</span>
+                <div gui-c-progressbar="is-pending">
+                    <span gui-c-progressbar-indicator style="width: 100%;"></span>
+                </div>
+
+                <h4>short:</h4>
+
+                <span>pending at 0%</span>
+                <div gui-c-progressbar="is-pending short">
+                    <span gui-c-progressbar-indicator style="width: 0%;"></span>
+                </div>
+
+                <span>0%</span>
+                <div gui-c-progressbar="short">
+                    <span gui-c-progressbar-indicator style="width: 0%;"></span>
+                </div>
+
+                <span>33%</span>
+                <div gui-c-progressbar="short">
+                    <span gui-c-progressbar-indicator style="width: 33%;"></span>
+                </div>
+
+                <span>100%</span>
+                <div gui-c-progressbar="short">
+                    <span gui-c-progressbar-indicator style="width: 100%;"></span>
+                </div>
+
+                <span>pending at 100%</span>
+                <div gui-c-progressbar="is-pending short">
+                    <span gui-c-progressbar-indicator style="width: 100%;"></span>
+                </div>
 
             </section>
 
@@ -357,420 +419,11 @@
 
         </article>
 
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
+        <!-- COMPONENTS -->
 
-        <article>
+        <article gui-c-section="main">
 
-            <h3>animate</h3>
-
-            <span gui-u-animate="pulse">hearbeat</span>
-
-        </article>
-
-        <article>
-
-            <h3>badge</h3>
-
-            <h4>default:</h4>
-
-            <p>foo <span gui-c-badge>bar</span></p>
-
-            <h4>dot:</h4>
-
-            <p><span gui-c-badge="dot"></span> foo</p>
-
-            <h4>counter:</h4>
-
-            <p>
-                <span gui-c-badge="counter">0</span>
-                <span gui-c-badge="counter">124</span>
-                <button gui-c-button>
-                    <span gui-c-badge="counter stacked crimson">5</span>
-                    counter, stacked & crimson
-                </button>
-            </p>
-
-        </article>
-
-        <article>
-
-            <h3>checkbox</h3>
-
-            <div>
-                <input gui-c-checkbox id="checkbox-foo" type="checkbox">
-                <label for="checkbox-foo">foo</label>
-            </div>
-
-            <div>
-                <input gui-c-checkbox id="checkbox-bar" type="checkbox">
-                <label for="checkbox-bar">bar</label>
-            </div>
-
-            <div>
-                <input
-                    gui-c-checkbox
-                    id="checkbox-fum"
-                    type="checkbox"
-                    checked
-                    disabled
-                >
-                <label for="checkbox-fum">checked and disabled</label>
-            </div>
-
-        </article>
-
-        <article>
-
-            <h3>dropdown</h3>
-
-            <div gui-u-box="inline">Hover over these guys:</div>
-
-            <div gui-c-dropdown="west">
-                <ul gui-c-dropdown-list>
-                    <span gui-c-dropdown-list-triangle><i></i></span>
-                    <li><button gui-c-button="flat full">foo</button></li>
-                    <li><button gui-c-button="flat full">bar</button></li>
-                    <li><button gui-c-button="flat full">fum</button></li>
-                    <li><button gui-c-button="flat full">baz</button></li>
-                    <li><button gui-c-button="flat full">qux</button></li>
-                    <li><button gui-c-button="flat full">zot</button></li>
-                </ul>
-                <button gui-c-button>west</button>
-            </div>
-
-            <div gui-c-dropdown="north">
-                <ul gui-c-dropdown-list>
-                    <span gui-c-dropdown-list-triangle><i></i></span>
-                    <li>
-                        <button gui-c-button="flat full">An option</button>
-                    </li>
-                    <li>
-                        <button gui-c-button="flat full" gui-u-text="trimmed">
-                            This one option is so long it will not fit in your mom
-                        </button>
-                    </li>
-                    <li>
-                        <button gui-c-button="flat full" gui-u-text="trimmed">
-                            Some other fancy option
-                        </button>
-                    </li>
-                </ul>
-                <button gui-c-button>north</button>
-            </div>
-
-            <div gui-c-dropdown="south">
-                <ul gui-c-dropdown-list>
-                    <span gui-c-dropdown-list-triangle><i></i></span>
-                    <li><button gui-c-button="flat full">foo</button></li>
-                    <li><button gui-c-button="flat full">bar</button></li>
-                    <li><button gui-c-button="flat full">fum</button></li>
-                    <li><button gui-c-button="flat full">baz</button></li>
-                    <li><button gui-c-button="flat full">qux</button></li>
-                    <li><button gui-c-button="flat full">zot</button></li>
-                </ul>
-                <button gui-c-button>south</button>
-            </div>
-
-            <div gui-c-dropdown="east">
-                <ul gui-c-dropdown-list>
-                    <span gui-c-dropdown-list-triangle><i></i></span>
-                    <li><button gui-c-button="flat full">foo</button></li>
-                    <li><button gui-c-button="flat full">bar</button></li>
-                    <li><button gui-c-button="flat full">fum</button></li>
-                    <li><button gui-c-button="flat full">baz</button></li>
-                    <li><button gui-c-button="flat full">qux</button></li>
-                    <li><button gui-c-button="flat full">zot</button></li>
-                </ul>
-                <button gui-c-button>east</button>
-            </div>
-
-        </article>
-
-        <article>
-
-            <h3>flex</h3>
-
-            <div gui-u-flex="horizontal">
-                <div gui-u-flex-item gui-u-box="crimson padded">I stretch</div>
-                <div gui-u-box="black padded inline" gui-u-hover>
-                    <span>I don't</span>
-                    <span gui-u-hover-item="show">stretch</span>
-                </div>
-            </div>
-
-        </article>
-
-        <article>
-
-            <h3>hover</h3>
-
-            <div gui-u-hover gui-u-box="charcoal paddedSmall inline">
-                <strong>Reveal</strong>
-                <span gui-u-hover-item="reveal">this</span>
-            </div>
-
-            <div gui-u-hover gui-u-box="charcoal paddedSmall inline">
-                <strong>Conceal</strong>
-                <span gui-u-hover-item="conceal">this</span>
-            </div>
-
-            <div gui-u-hover gui-u-box="charcoal paddedSmall inline">
-                <strong>Reveal animated</strong>
-                <span gui-u-hover-item="reveal animated">this</span>
-            </div>
-
-            <div gui-u-hover gui-u-box="charcoal paddedSmall inline">
-                <strong>Show</strong>
-                <span gui-u-hover-item="show">this</span>
-            </div>
-
-            <div gui-u-hover gui-u-box="charcoal paddedSmall inline">
-                <strong>Hide</strong>
-                <span gui-u-hover-item="hide">this</span>
-            </div>
-
-        </article>
-
-        <article>
-
-            <h3>image</h3>
-
-            <h4>small:</h4>
-
-            <figure
-                gui-c-image="small"
-                style="background-image: url('http://placekitten.com/g/400/200')"
-            ></figure>
-
-            <h4>big:</h4>
-
-            <figure
-                gui-c-image="big"
-                style="background-image: url('http://placekitten.com/g/800/600')"
-            ></figure>
-
-            <h4>small & empty:</h4>
-
-            <figure gui-c-image="small"></figure>
-
-            <h4>small & square:</h4>
-
-            <figure
-                gui-c-image="small square"
-                style="background-image: url('http://placekitten.com/g/400/200')"
-            ></figure>
-
-        </article>
-
-        <article>
-
-            <h3>list</h3>
-
-            <h4>empty:</h4>
-
-            <ul gui-u-list="inline" gui-u-box="silver">
-                <li gui-u-list-empty>empty list message</li>
-            </ul>
-
-            <h4>inline:</h4>
-
-            <ul gui-u-list="inline" gui-u-box="silver inline">
-                <li gui-u-box="charcoal">one</li>
-                <li gui-u-box="charcoal">two</li>
-                <li gui-u-box="charcoal">three</li>
-            </ul>
-
-            <h4>padded:</h4>
-
-            <ul gui-u-list="padded" gui-u-box="silver inline">
-                <li gui-u-box="charcoal">one</li>
-                <li gui-u-box="charcoal">two</li>
-                <li gui-u-box="charcoal">three</li>
-            </ul>
-
-            <h4>spaced:</h4>
-
-            <ul gui-u-list="spaced" gui-u-box="silver inline">
-                <li gui-u-box="charcoal">one</li>
-                <li gui-u-box="charcoal">two</li>
-                <li gui-u-box="charcoal">three</li>
-            </ul>
-
-            <h4>padded & spaced:</h4>
-
-            <ul gui-u-list="spaced padded" gui-u-box="silver inline">
-                <li gui-u-box="charcoal">one</li>
-                <li gui-u-box="charcoal">two</li>
-                <li gui-u-box="charcoal">three</li>
-            </ul>
-
-            <h4>ruled:</h4>
-
-            <ul gui-u-list="ruled" gui-u-box="silver inline">
-                <li>one</li>
-                <li>two</li>
-                <li>three</li>
-            </ul>
-
-        </article>
-
-        <article>
-
-            <h3>progress</h3>
-
-            <h4>default:</h4>
-
-            <span>pending at 0%</span>
-            <div gui-c-progressbar="pending">
-                <span style="width: 0%;"></span>
-            </div>
-
-            <span>0%</span>
-            <div gui-c-progressbar>
-                <span style="width: 0%;"></span>
-            </div>
-
-            <span>33%</span>
-            <div gui-c-progressbar>
-                <span style="width: 33%;"></span>
-            </div>
-
-            <span>100%</span>
-            <div gui-c-progressbar>
-                <span style="width: 100%;"></span>
-            </div>
-
-            <span>pending at 100%</span>
-            <div gui-c-progressbar="pending">
-                <span style="width: 100%;"></span>
-            </div>
-
-            <h4>inline:</h4>
-
-            <span>pending at 0%</span>
-            <div gui-c-progressbar="pending inline">
-                <span style="width: 0%;"></span>
-            </div>
-
-            <span>0%</span>
-            <div gui-c-progressbar="inline">
-                <span style="width: 0%;"></span>
-            </div>
-
-            <span>33%</span>
-            <div gui-c-progressbar="inline">
-                <span style="width: 33%;"></span>
-            </div>
-
-            <span>100%</span>
-            <div gui-c-progressbar="inline">
-                <span style="width: 100%;"></span>
-            </div>
-
-            <span>pending at 100%</span>
-            <div gui-c-progressbar="pending inline">
-                <span style="width: 100%;"></span>
-            </div>
-
-        </article>
-
-        <article>
-
-            <h3>radio</h3>
-
-            <div>
-                <input gui-c-radio id="radio-foo" type="radio" name="radio-1">
-                <label for="radio-foo">one</label>
-            </div>
-
-            <div>
-                <input gui-c-radio id="radio-bar" type="radio" name="radio-1">
-                <label for="radio-bar">two</label>
-            </div>
-
-            <div>
-                <input
-                    gui-c-radio
-                    id="radio-fum"
-                    type="radio"
-                    name="radio-1"
-                    checked
-                    disabled
-                >
-                <label for="radio-fum">checked and disabled</label>
-            </div>
-
-        </article>
-
-
-
-        <article>
-
-            <h3>textbox</h3>
-
-            <input gui-c-textbox placeholder="default" type="text">
-
-            <input gui-c-textbox="naked" placeholder="naked" type="text">
-
-            <input gui-c-textbox="full" placeholder="full" type="text">
-
-        </article>
-
-
-
-        <h2 gui-u-box="paddedBig silver">
-            Common variables
-        </h2>
-
-        <article>
-
-            <h3>colors</h3>
-
-            <div gui-u-box="crimsonDark paddedSmall">
-                crimsonDark <small>hsl(350, 90%, 45%)</small>
-            </div>
-            <div gui-u-box="crimson paddedSmall">
-                crimson <small>hsl(350, 90%, 50%)</small>
-            </div>
-            <div gui-u-box="crimsonLight paddedSmall">
-                crimsonLight <small>hsl(350, 100%, 60%)</small>
-            </div>
-            <div gui-u-box="crimsonLighter paddedSmall">
-                crimsonLighter <small>hsl(350, 100%, 70%)</small>
-            </div>
-            <div gui-u-box="silverDark paddedSmall">
-                silverDark <small>hsl(0, 0%, 75%)</small>
-            </div>
-            <div gui-u-box="silver paddedSmall">
-                silver <small>hsl(0, 0%, 80%)</small>
-            </div>
-            <div gui-u-box="silverLight paddedSmall">
-                silverLight <small>hsl(0, 0%, 85%)</small>
-            </div>
-            <div gui-u-box="silverLighter paddedSmall">
-                silverLighter <small>hsl(0, 0%, 90%)</small>
-            </div>
-            <div gui-u-box="charcoalDark paddedSmall">
-                charcoalDark <small>hsl(0, 0%, 15%)</small>
-            </div>
-            <div gui-u-box="charcoal paddedSmall">
-                charcoal <small>hsl(0, 0%, 20%)</small>
-            </div>
-            <div gui-u-box="charcoalLight paddedSmall">
-                charcoalLight <small>hsl(0, 0%, 25%)</small>
-            </div>
-
-        </article>
-
-        <h2 gui-u-box="paddedBig silver">
-            Base typography resets
-        </h2>
-
-        <article>
+            <h2>Base typography resets</h2>
 
             <h1>Header 1</h1>
 
@@ -806,27 +459,14 @@
                 <li>element</li>
             </ol>
 
-            <h4>code:</h4>
-
-            <pre><code>fullWidth =
-    code: block()</code></pre>
-
             <h4>quote:</h4>
-
-            <h4>horizontal rule:</h4>
-
-            <hr>
-
-            <hr>
-
-            <hr>
 
             <blockquote>
                 <p>
                     A difficult task is a sign from the universe that you
                     should be on the internet right now.
                 </p>
-                <cite>&ndash; Toothpaste for Dinner</cite>
+                <cite>Toothpaste for Dinner</cite>
             </blockquote>
 
         </article>
