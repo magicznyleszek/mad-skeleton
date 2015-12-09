@@ -313,7 +313,7 @@ icon component
 ------------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------------
-button config
+icon config
 ------------------------------------------------------------------------------*/
 
 [gui-c-icon] {
@@ -344,6 +344,57 @@ button config
 
 [gui-c-icon~="silver"] { fill: hsl(0, 0%, 80%) }
 /*------------------------------------------------------------------------------
+image component
+------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------
+image config
+------------------------------------------------------------------------------*/
+
+:root { /* 400px @ 16px */ /* 288px @ 16px */
+
+}
+/*------------------------------------------------------------------------------
+image component library
+------------------------------------------------------------------------------*/
+
+[gui-c-image~="medievalbloodandgore"] {
+    background-image: url('/public/images/test/thumbnail/medieval-blood-and-gore.jpg');
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    [gui-c-image~="medievalbloodandgore"] {
+        background-image: url('/public/images/test/thumbnail-x2/medieval-blood-and-gore.jpg');
+    }
+}
+
+[gui-c-image] {
+    display: inline-block;
+    vertical-align: top;
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    background-color: hsl(0, 0%, 80%);
+
+    -webkit-backface-visibility: hidden;
+
+            backface-visibility: hidden;
+}
+
+[gui-c-image~="small"] {
+    width: 450px;
+    width: 25rem;
+    height: 324px;
+    height: 18rem;
+}
+/*------------------------------------------------------------------------------
 section component
 ------------------------------------------------------------------------------*/
 
@@ -361,7 +412,7 @@ table component
 ------------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------------
-button config
+table config
 ------------------------------------------------------------------------------*/
 
 [gui-c-table] {

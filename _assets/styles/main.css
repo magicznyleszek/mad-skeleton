@@ -16,6 +16,7 @@ main styles aggregation
 /* components */
 @import "components/button/base.css";
 @import "components/icon/base.css";
+@import "components/image/base.css";
 @import "components/section/base.css";
 @import "components/table/base.css";
 

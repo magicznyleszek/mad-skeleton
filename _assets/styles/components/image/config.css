@@ -1,10 +1,11 @@
 /*------------------------------------------------------------------------------
-icon config
+image config
 ------------------------------------------------------------------------------*/
 
 :root {
 
-    --icon-s: var(--leading-s);
-    --icon-s-big: calc( var(--leading-s) * 2 );
+    --image-bg-empty: var(--c-silver);
+    --image-small-w: 25rem; /* 400px @ 16px */
+    --image-small-h: 18rem; /* 288px @ 16px */
 
 }
