@@ -1,0 +1,33 @@
+/*------------------------------------------------------------------------------
+progressbar config
+------------------------------------------------------------------------------*/
+
+:root {
+
+    --button-br: 0.125rem;
+
+    --button-txt: var(--c-charcoal);
+    --button-sh: 0 0.125rem 0 0 color( var(--c-silver) shade(15%) );
+    --button-sh-hover: 0 0.125rem 0 0 color( var(--c-silver) shade(10%) );
+    --button-sh-active: 0 0.125rem 0 0 color( var(--c-silver) shade(5%) );
+    --button-bg: var(--c-silver);
+    --button-bg-hover: color( var(--c-silver) tint(20%) );
+    --button-bg-active: color( var(--c-silver) tint(30%) );
+
+
+    --progressbar-br: 0.125rem;
+    --progressbar-bg: var(--c-silver);
+    --progressbar-indicator-bg: var(--c-charcoal);
+
+    --progressbar-short-w: 10rem; /* 160px @ 16px */
+
+    --progressbar-pending-s: 1rem;
+    --progressbar-pending-gr: radial-gradient(
+        circle 0.33rem,
+        var(--c-white) 0%,
+        var(--c-white) 50%,
+        transparent 50%,
+        transparent 100%
+    );
+
+}

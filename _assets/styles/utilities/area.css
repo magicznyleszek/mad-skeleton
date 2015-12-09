@@ -1,0 +1,21 @@
+/*------------------------------------------------------------------------------
+area utility
+------------------------------------------------------------------------------*/
+
+[gui-u-area] {
+    background-color: var(--c-white);
+}
+
+[gui-u-area~="padded"] { padding: var(--leading-s); }
+[gui-u-area~="paddedV"] { padding: var(--leading-s) 0; }
+[gui-u-area~="paddedH"] { padding: 0 var(--leading-s); }
+
+[gui-u-area~="silver"] {
+    color: var(--c-charcoal);
+    background-color: var(--c-silver);
+}
+
+[gui-u-area~="charcoal"] {
+    color: var(--c-white);
+    background-color: var(--c-charcoal);
+}

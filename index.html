@@ -56,636 +56,374 @@
         </symbol>
     </svg>
 
-    <header id="appHeader" am-box="paddedBigV">
+    <header gui-c-section="main">
 
         <h1>
             Boilerplate assets
             <a
-                am-button="important"
+                gui-c-button="middle"
                 href="https://github.com/smutnyleszek/boilerplate-assets"
             >
-                fork at github
+                github
             </a>
         </h1>
 
     </header>
 
-    <section id="appContent" role="main">
+    <section role="main">
 
-        <h2 am-box="paddedBig silver">
-            <a href="http://amcss.github.io">AMCSS</a> modules
-        </h2>
+        <!-- UTILITIES -->
 
-        <article>
+        <article gui-c-section="main">
 
-            <h3>animation</h3>
+            <h2>Utilities</h2>
 
-            <span am-animation="pulse">hearbeat</span>
+            <section gui-c-section>
 
-        </article>
+                <h3>area</h3>
 
-        <article>
-
-            <h3>badge</h3>
-
-            <h4>default:</h4>
-
-            <p>foo <span am-badge>bar</span></p>
-
-            <h4>dot:</h4>
-
-            <p><span am-badge="dot"></span> foo</p>
-
-            <h4>counter:</h4>
-
-            <p>
-                <span am-badge="counter">0</span>
-                <span am-badge="counter">124</span>
-                <button am-button>
-                    <span am-badge="counter stacked crimson">5</span>
-                    counter, stacked & crimson
-                </button>
-            </p>
-
-        </article>
-
-        <article>
-
-            <h3>box</h3>
-
-            <div am-box="silver inline paddedV">
-                silver inline box padded vertically
-            </div>
-
-            <div am-box="black paddedL">
-                black box padded on left
-            </div>
-
-        </article>
-
-        <article>
-
-            <h3>button</h3>
-
-            <button am-button>default</button>
-
-            <button am-button disabled>default disabled</button>
-
-            <button am-button="wide">wide</button>
-
-            <button am-button="small">small</button>
-
-            <button am-button="small wide">small and wide</button>
-
-            <button am-button="naked">naked</button>
-
-            <button am-button="naked naked-textual">naked textual</button>
-
-            <button am-button="full">full width</button>
-
-            <button am-button="important">important</button>
-
-            <button am-button="important" disabled>important disabled</button>
-
-            <button am-button="flat">flat</button>
-
-        </article>
-
-        <article>
-
-            <h3>checkbox</h3>
-
-            <div>
-                <input am-checkbox id="checkbox-foo" type="checkbox">
-                <label for="checkbox-foo">foo</label>
-            </div>
-
-            <div>
-                <input am-checkbox id="checkbox-bar" type="checkbox">
-                <label for="checkbox-bar">bar</label>
-            </div>
-
-            <div>
-                <input
-                    am-checkbox
-                    id="checkbox-fum"
-                    type="checkbox"
-                    checked
-                    disabled
-                >
-                <label for="checkbox-fum">checked and disabled</label>
-            </div>
-
-        </article>
-
-        <article>
-
-            <h3>column</h3>
-
-            <p>
-                A smart and light column system. It only needs your help with
-                whitespace bug.
-            </p>
-
-            <div>
-                <div am-column="1/2" am-box="padded black">1/2</div><!--
-             --><div am-column="1/2" am-box="padded crimson">1/2</div>
-            </div>
-
-            <div>
-                <div am-column="1/3" am-box="padded black">1/3</div><!--
-             --><div am-column="2/3" am-box="padded crimson">2/3</div>
-            </div>
-
-            <div>
-                <div
-                    am-column="1/12"
-                    am-box="padded black"
-                ><small>1/12</small></div><!--
-             --><div am-column="1/6" am-box="padded crimson">1/6</div><!--
-             --><div am-column="1/3" am-box="padded black">1/3</div><!--
-             --><div am-column="5/12" am-box="padded crimson">5/12</div>
-            </div>
-
-            <div>
-                <div am-box="padded black">1</div><!--
-             --><div
-                    am-column="1/3"
-                    am-columnBefore="1/4"
-                    am-box="padded crimson"
-                >1/3 after 1/4</div><!--
-             --><div am-box="padded black">1</div>
-            </div>
-
-        </article>
-
-        <article>
-
-            <h3>dropdown</h3>
-
-            <div am-box="inline">Hover over these guys:</div>
-
-            <div am-dropdown="west">
-                <ul am-dropdown-list>
-                    <span am-dropdown-list-triangle><i></i></span>
-                    <li><button am-button="flat full">foo</button></li>
-                    <li><button am-button="flat full">bar</button></li>
-                    <li><button am-button="flat full">fum</button></li>
-                    <li><button am-button="flat full">baz</button></li>
-                    <li><button am-button="flat full">qux</button></li>
-                    <li><button am-button="flat full">zot</button></li>
-                </ul>
-                <button am-button>west</button>
-            </div>
-
-            <div am-dropdown="north">
-                <ul am-dropdown-list>
-                    <span am-dropdown-list-triangle><i></i></span>
-                    <li>
-                        <button am-button="flat full">An option</button>
-                    </li>
-                    <li>
-                        <button am-button="flat full" am-text="trimmed">
-                            This one option is so long it will not fit in your mom
-                        </button>
-                    </li>
-                    <li>
-                        <button am-button="flat full" am-text="trimmed">
-                            Some other fancy option
-                        </button>
-                    </li>
-                </ul>
-                <button am-button>north</button>
-            </div>
-
-            <div am-dropdown="south">
-                <ul am-dropdown-list>
-                    <span am-dropdown-list-triangle><i></i></span>
-                    <li><button am-button="flat full">foo</button></li>
-                    <li><button am-button="flat full">bar</button></li>
-                    <li><button am-button="flat full">fum</button></li>
-                    <li><button am-button="flat full">baz</button></li>
-                    <li><button am-button="flat full">qux</button></li>
-                    <li><button am-button="flat full">zot</button></li>
-                </ul>
-                <button am-button>south</button>
-            </div>
-
-            <div am-dropdown="east">
-                <ul am-dropdown-list>
-                    <span am-dropdown-list-triangle><i></i></span>
-                    <li><button am-button="flat full">foo</button></li>
-                    <li><button am-button="flat full">bar</button></li>
-                    <li><button am-button="flat full">fum</button></li>
-                    <li><button am-button="flat full">baz</button></li>
-                    <li><button am-button="flat full">qux</button></li>
-                    <li><button am-button="flat full">zot</button></li>
-                </ul>
-                <button am-button>east</button>
-            </div>
-
-        </article>
-
-        <article>
-
-            <h3>flex</h3>
-
-            <div am-flexContainer="horizontal">
-                <div am-flexItem am-box="crimson padded">I stretch</div>
-                <div am-box="black padded inline" am-hoverContainer>
-                    <span>I don't</span>
-                    <span am-hoverItem="show">stretch</span>
+                <div gui-u-area="silver paddedV">
+                    silver area padded vertically
                 </div>
-            </div>
+
+                <div gui-u-area="charcoal padded">
+                    charcoal area padded
+                </div>
+
+            </section>
+
+            <section gui-c-section>
+
+                <h3>column</h3>
+
+                <p>
+                    A smart and light column system. It only needs your help with
+                    whitespace bug.
+                </p>
+
+                <div>
+                    <div gui-u-column="1/2" gui-u-area="charcoal">1/2</div><!--
+                 --><div gui-u-column="1/2" gui-u-area="silver">1/2</div>
+                </div>
+
+                <div>
+                    <div gui-u-column="1/3" gui-u-area>1/3</div><!--
+                 --><div gui-u-column="2/3" gui-u-area="silver">2/3</div>
+                </div>
+
+                <div>
+                    <div gui-u-area="charcoal">1</div><!--
+                 --><div
+                        gui-u-column="1/3"
+                        gui-u-columnBefore="1/4"
+                        gui-u-area="silver"
+                    >1/3 after 1/4</div><!--
+                 --><div gui-u-area="charcoal">1</div>
+                </div>
+
+            </section>
+
+            <section gui-c-section>
+
+                <h3>hover</h3>
+
+                <p>Hover over these guys:</p>
+
+                <div gui-u-hover gui-u-area="silver paddedV" gui-u-inlineblock>
+                    <strong>show</strong>
+                    <span gui-u-hover-item="show">this</span>
+                </div>
+
+                <div gui-u-hover gui-u-area="charcoal paddedV" gui-u-inlineblock>
+                    <strong>hide</strong>
+                    <span gui-u-hover-item="hide">this</span>
+                </div>
+
+                <div gui-u-hover gui-u-area="silver paddedV" gui-u-inlineblock>
+                    <strong>restore</strong>
+                    <span gui-u-hover-item="restore">this</span>
+                </div>
+
+                <div gui-u-hover gui-u-area="charcoal paddedV" gui-u-inlineblock>
+                    <strong>remove</strong>
+                    <span gui-u-hover-item="remove">this</span>
+                </div>
+
+            </section>
+
+            <section gui-c-section>
+
+                <h3>text</h3>
+
+                <table gui-c-table>
+                    <thead>
+                        <tr>
+                            <th>lefted</th>
+                            <th>centered</th>
+                            <th>righted</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p gui-u-text="lefted">makes given inline content<br>align to the left side</p>
+                            </td>
+
+                            <td>
+                                <p gui-u-text="centered">centered<br> makes given inline content<br> align to the center</p>
+                            </td>
+
+                            <td>
+                                <p gui-u-text="righted">righted<br> makes given inline content<br> align to the right side</p>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <table gui-c-table="full">
+                    <thead>
+                        <tr>
+                            <th>trimmed</th>
+                            <th>uppercased</th>
+                            <th>300</th>
+                            <th>400</th>
+                            <th>600</th>
+                            <th>700</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td>
+                                <p gui-u-text="trimmed" style="width: 100px;">makes text trimmed if there is not enough space causing said text to being too long to fit in one line of text on the page or in some other unnamed container that has a limited width</p>
+                            </td>
+
+                            <td>
+                                <p gui-u-text="uppercased">foo</p>
+                            </td>
+
+                            <td>
+                                <p gui-u-text="300">bar</p>
+                            </td>
+
+                            <td>
+                                <p gui-u-text="400">fum</p>
+                            </td>
+
+                            <td>
+                                <p gui-u-text="600">baz</p>
+                            </td>
+
+                            <td>
+                                <p gui-u-text="700">qux</p>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </section>
 
         </article>
 
-        <article>
+        <!-- COMPONENTS -->
 
-            <h3>hover</h3>
+        <article gui-c-section="main">
 
-            <div am-box="inline">Hover over these guys:</div>
+            <h2>Components</h2>
 
-            <div am-hoverContainer am-box="charcoal paddedSmall inline">
-                <strong>Reveal</strong>
-                <span am-hoverItem="reveal">this</span>
-            </div>
+            <section gui-c-section>
 
-            <div am-hoverContainer am-box="charcoal paddedSmall inline">
-                <strong>Conceal</strong>
-                <span am-hoverItem="conceal">this</span>
-            </div>
+                <h3>button</h3>
 
-            <div am-hoverContainer am-box="charcoal paddedSmall inline">
-                <strong>Reveal animated</strong>
-                <span am-hoverItem="reveal animated">this</span>
-            </div>
+                <button gui-c-button>default</button>
 
-            <div am-hoverContainer am-box="charcoal paddedSmall inline">
-                <strong>Show</strong>
-                <span am-hoverItem="show">this</span>
-            </div>
+                <button gui-c-button disabled>disabled</button>
 
-            <div am-hoverContainer am-box="charcoal paddedSmall inline">
-                <strong>Hide</strong>
-                <span am-hoverItem="hide">this</span>
-            </div>
+                <button gui-c-button="full">full width</button>
 
-        </article>
+                <button gui-c-button="double">a double sized</button>
 
-        <article>
+                <button gui-c-button="triple">a triple sized</button>
 
-            <h3>icon</h2>
+            </section>
 
-            <p>
-                I prefer using SVGs over fonts or images. Keep'em in one place
-                and manage with
-                <a href="https://github.com/FWeinb/grunt-svgstore">
-                grunt-svgstore</a>.
-            </p>
+            <section gui-c-section>
 
-            <div am-box="inline">
-                <strong>default:</strong>
-                <svg am-icon><use xlink:href="#icon-check"></svg>
-            </div>
+                <h3>icon</h2>
 
-            <div am-box="inline">
-                <strong>small:</strong>
-                <svg am-icon="small"><use xlink:href="#icon-check"></svg>
-            </div>
+                <p>
+                    I prefer using SVGs over fonts or images. Keep'em in one
+                    place and manage with
+                    <a href="https://github.com/FWeinb/grunt-svgstore">
+                    grunt-svgstore</a>.
+                </p>
 
-            <div am-box="inline">
-                <strong>big:</strong>
-                <svg am-icon="big"><use xlink:href="#icon-check"></svg>
-            </div>
+                <table gui-c-table>
+                    <thead>
+                        <tr>
+                            <th>default</th>
+                            <th>big</th>
+                            <th>big & silver</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <svg gui-c-icon>
+                                    <use xlink:href="#icon-check">
+                                </svg>
+                            </td>
+                            <td>
+                                <svg gui-c-icon="big">
+                                    <use xlink:href="#icon-check">
+                                </svg>
+                            </td>
+                            <td>
+                                <svg gui-c-icon="big silver">
+                                    <use xlink:href="#icon-check">
+                                </svg>
+                            </td>
+                        </tr>
+                    </tbody>
 
-            <div am-box="inline">
-                <strong>big & crimson:</strong>
-                <svg am-icon="big crimson"><use xlink:href="#icon-check"></svg>
-            </div>
+                </table>
 
-        </article>
+            </section>
 
-        <article>
+            <section gui-c-section>
 
-            <h3>image</h3>
+                <h3>image</h3>
 
-            <h4>small:</h4>
+                <figure gui-c-image="small medievalbloodandgore"></figure>
 
-            <figure
-                am-image="small"
-                style="background-image: url('http://placekitten.com/g/400/200')"
-            ></figure>
+            </section>
 
-            <h4>big:</h4>
+            <section gui-c-section>
 
-            <figure
-                am-image="big"
-                style="background-image: url('http://placekitten.com/g/800/600')"
-            ></figure>
+                <h3>progress</h3>
 
-            <h4>small & empty:</h4>
+                <h4>default:</h4>
 
-            <figure am-image="small"></figure>
+                <span>pending at 0%</span>
+                <div gui-c-progressbar="is-pending">
+                    <span gui-c-progressbar-indicator style="width: 0%;"></span>
+                </div>
 
-            <h4>small & square:</h4>
+                <span>0%</span>
+                <div gui-c-progressbar>
+                    <span gui-c-progressbar-indicator style="width: 0%;"></span>
+                </div>
 
-            <figure
-                am-image="small square"
-                style="background-image: url('http://placekitten.com/g/400/200')"
-            ></figure>
+                <span>33%</span>
+                <div gui-c-progressbar>
+                    <span gui-c-progressbar-indicator style="width: 33%;"></span>
+                </div>
 
-        </article>
+                <span>100%</span>
+                <div gui-c-progressbar>
+                    <span gui-c-progressbar-indicator style="width: 100%;"></span>
+                </div>
 
-        <article>
+                <span>pending at 100%</span>
+                <div gui-c-progressbar="is-pending">
+                    <span gui-c-progressbar-indicator style="width: 100%;"></span>
+                </div>
 
-            <h3>list</h3>
+                <h4>short:</h4>
 
-            <h4>empty:</h4>
+                <span>pending at 0%</span>
+                <div gui-c-progressbar="is-pending short">
+                    <span gui-c-progressbar-indicator style="width: 0%;"></span>
+                </div>
 
-            <ul am-list="inline" am-box="silver">
-                <li am-listItem-empty>empty list message</li>
-            </ul>
+                <span>0%</span>
+                <div gui-c-progressbar="short">
+                    <span gui-c-progressbar-indicator style="width: 0%;"></span>
+                </div>
 
-            <h4>inline:</h4>
+                <span>33%</span>
+                <div gui-c-progressbar="short">
+                    <span gui-c-progressbar-indicator style="width: 33%;"></span>
+                </div>
 
-            <ul am-list="inline" am-box="silver inline">
-                <li am-box="charcoal">one</li>
-                <li am-box="charcoal">two</li>
-                <li am-box="charcoal">three</li>
-            </ul>
+                <span>100%</span>
+                <div gui-c-progressbar="short">
+                    <span gui-c-progressbar-indicator style="width: 100%;"></span>
+                </div>
 
-            <h4>padded:</h4>
+                <span>pending at 100%</span>
+                <div gui-c-progressbar="is-pending short">
+                    <span gui-c-progressbar-indicator style="width: 100%;"></span>
+                </div>
 
-            <ul am-list="padded" am-box="silver inline">
-                <li am-box="charcoal">one</li>
-                <li am-box="charcoal">two</li>
-                <li am-box="charcoal">three</li>
-            </ul>
+            </section>
 
-            <h4>spaced:</h4>
+            <section gui-c-section>
 
-            <ul am-list="spaced" am-box="silver inline">
-                <li am-box="charcoal">one</li>
-                <li am-box="charcoal">two</li>
-                <li am-box="charcoal">three</li>
-            </ul>
+                <h3>table</h3>
 
-            <h4>padded & spaced:</h4>
+                <table gui-c-table="hoverable">
+                    <caption>Middle Jurassic sections</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Period <small>[Mya]</small></th>
+                            <th>Duration <small>[My]</small></th>
+                            <th>Species</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Callovian</td>
+                            <td>166-163</td>
+                            <td>3</td>
+                            <td>Agilisaurus, Liopleurodon, Huayangosaurus</td>
+                        </tr>
+                        <tr>
+                            <td>Bathonian</td>
+                            <td>168-166</td>
+                            <td>2</td>
+                            <td>Metriorhynchus, Teleidosaurus, Shunosaurus</td>
+                        </tr>
+                        <tr>
+                            <td>Bajocian</td>
+                            <td>170-168</td>
+                            <td>2</td>
+                            <td>Belemnites, Ophionautilus, Somalinautilus</td>
+                        </tr>
+                        <tr>
+                            <td>Aalenian</td>
+                            <td>174-170</td>
+                            <td>4</td>
+                            <td>Abbasites, Belemnites, Steneosaurus</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <td>174-163</td>
+                            <td>11</td>
+                            <td>
+                                Agilisaurus, Liopleurodon, Huayangosaurus,
+                                Metriorhynchus, Teleidosaurus, Shunosaurus,
+                                Belemnites, Ophionautilus, Somalinautilus,
+                                Abbasites, Steneosaurus
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
 
-            <ul am-list="spaced padded" am-box="silver inline">
-                <li am-box="charcoal">one</li>
-                <li am-box="charcoal">two</li>
-                <li am-box="charcoal">three</li>
-            </ul>
-
-            <h4>ruled:</h4>
-
-            <ul am-list="ruled" am-box="silver inline">
-                <li>one</li>
-                <li>two</li>
-                <li>three</li>
-            </ul>
-
-        </article>
-
-        <article>
-
-            <h3>progress</h3>
-
-            <h4>default:</h4>
-
-            <span>pending at 0%</span>
-            <div am-progress="pending">
-                <span style="width: 0%;"></span>
-            </div>
-
-            <span>0%</span>
-            <div am-progress>
-                <span style="width: 0%;"></span>
-            </div>
-
-            <span>33%</span>
-            <div am-progress>
-                <span style="width: 33%;"></span>
-            </div>
-
-            <span>100%</span>
-            <div am-progress>
-                <span style="width: 100%;"></span>
-            </div>
-
-            <span>pending at 100%</span>
-            <div am-progress="pending">
-                <span style="width: 100%;"></span>
-            </div>
-
-            <h4>inline:</h4>
-
-            <span>pending at 0%</span>
-            <div am-progress="pending inline">
-                <span style="width: 0%;"></span>
-            </div>
-
-            <span>0%</span>
-            <div am-progress="inline">
-                <span style="width: 0%;"></span>
-            </div>
-
-            <span>33%</span>
-            <div am-progress="inline">
-                <span style="width: 33%;"></span>
-            </div>
-
-            <span>100%</span>
-            <div am-progress="inline">
-                <span style="width: 100%;"></span>
-            </div>
-
-            <span>pending at 100%</span>
-            <div am-progress="pending inline">
-                <span style="width: 100%;"></span>
-            </div>
+            </section>
 
         </article>
 
-        <article>
+        <!-- COMPONENTS -->
 
-            <h3>radio</h3>
+        <article gui-c-section="main">
 
-            <div>
-                <input am-radio id="radio-foo" type="radio" name="radio-1">
-                <label for="radio-foo">one</label>
-            </div>
-
-            <div>
-                <input am-radio id="radio-bar" type="radio" name="radio-1">
-                <label for="radio-bar">two</label>
-            </div>
-
-            <div>
-                <input
-                    am-radio
-                    id="radio-fum"
-                    type="radio"
-                    name="radio-1"
-                    checked
-                    disabled
-                >
-                <label for="radio-fum">checked and disabled</label>
-            </div>
-
-        </article>
-
-        <article>
-
-            <h3>table</h3>
-
-            <table am-table>
-                <caption>Middle Jurassic sections</caption>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Period <small>[Mya]</small></th>
-                        <th>Duration <small>[My]</small></th>
-                        <th>Species</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Callovian</td>
-                        <td>166-163</td>
-                        <td>3</td>
-                        <td>Agilisaurus, Liopleurodon, Huayangosaurus</td>
-                    </tr>
-                    <tr>
-                        <td>Bathonian</td>
-                        <td>168-166</td>
-                        <td>2</td>
-                        <td>Metriorhynchus, Teleidosaurus, Shunosaurus</td>
-                    </tr>
-                    <tr>
-                        <td>Bajocian</td>
-                        <td>170-168</td>
-                        <td>2</td>
-                        <td>Belemnites, Ophionautilus, Somalinautilus</td>
-                    </tr>
-                    <tr>
-                        <td>Aalenian</td>
-                        <td>174-170</td>
-                        <td>4</td>
-                        <td>Abbasites, Belemnites, Steneosaurus</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th>Total</th>
-                        <td>174-163</td>
-                        <td>11</td>
-                        <td>
-                            Agilisaurus, Liopleurodon, Huayangosaurus,
-                            Metriorhynchus, Teleidosaurus, Shunosaurus,
-                            Belemnites, Ophionautilus, Somalinautilus,
-                            Abbasites, Steneosaurus
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
-
-        </article>
-
-        <article>
-
-            <h3>textbox</h3>
-
-            <input am-textBox placeholder="default" type="text">
-
-            <input am-textBox="naked" placeholder="naked" type="text">
-
-            <input am-textBox="full" placeholder="full" type="text">
-
-        </article>
-
-        <article>
-
-            <h3>text</h3>
-
-            <p am-text="lefted">lefted</p>
-
-            <p am-text="centered">centered</p>
-
-            <p am-text="righted">righted</p>
-
-            <p am-text="uppercased">uppercased</p>
-
-            <p am-text="300">300</p>
-
-            <p am-text="400">400</p>
-
-            <p am-text="600">600</p>
-
-            <p am-text="700">700</p>
-
-            <p am-text="dimmed">dimmed</p>
-
-            <p am-text="trimmed">
-                trimmed - makes text trimmed if too long lorem ipsum dolor sit
-                amet, consectetur adipisicing elit. impedit, eveniet, magni
-                dolor, alias consectetur nostrum, modi ad, sit tempora neque
-                doloribus reiciendis eveniet illum quos
-            </p>
-
-        </article>
-
-        <h2 am-box="paddedBig silver">
-            Common variables
-        </h2>
-
-        <article>
-
-            <h3>colors</h3>
-
-            <div am-box="crimsonDark paddedSmall">
-                crimsonDark <small>hsl(350, 90%, 45%)</small>
-            </div>
-            <div am-box="crimson paddedSmall">
-                crimson <small>hsl(350, 90%, 50%)</small>
-            </div>
-            <div am-box="crimsonLight paddedSmall">
-                crimsonLight <small>hsl(350, 100%, 60%)</small>
-            </div>
-            <div am-box="crimsonLighter paddedSmall">
-                crimsonLighter <small>hsl(350, 100%, 70%)</small>
-            </div>
-            <div am-box="silverDark paddedSmall">
-                silverDark <small>hsl(0, 0%, 75%)</small>
-            </div>
-            <div am-box="silver paddedSmall">
-                silver <small>hsl(0, 0%, 80%)</small>
-            </div>
-            <div am-box="silverLight paddedSmall">
-                silverLight <small>hsl(0, 0%, 85%)</small>
-            </div>
-            <div am-box="silverLighter paddedSmall">
-                silverLighter <small>hsl(0, 0%, 90%)</small>
-            </div>
-            <div am-box="charcoalDark paddedSmall">
-                charcoalDark <small>hsl(0, 0%, 15%)</small>
-            </div>
-            <div am-box="charcoal paddedSmall">
-                charcoal <small>hsl(0, 0%, 20%)</small>
-            </div>
-            <div am-box="charcoalLight paddedSmall">
-                charcoalLight <small>hsl(0, 0%, 25%)</small>
-            </div>
-
-        </article>
-
-        <h2 am-box="paddedBig silver">
-            Base typography resets
-        </h2>
-
-        <article>
+            <h2>Base typography resets</h2>
 
             <h1>Header 1</h1>
 
@@ -721,27 +459,14 @@
                 <li>element</li>
             </ol>
 
-            <h4>code:</h4>
-
-            <pre><code>fullWidth =
-    code: block()</code></pre>
-
             <h4>quote:</h4>
-
-            <h4>horizontal rule:</h4>
-
-            <hr>
-
-            <hr>
-
-            <hr>
 
             <blockquote>
                 <p>
                     A difficult task is a sign from the universe that you
                     should be on the internet right now.
                 </p>
-                <cite>&ndash; Toothpaste for Dinner</cite>
+                <cite>Toothpaste for Dinner</cite>
             </blockquote>
 
         </article>

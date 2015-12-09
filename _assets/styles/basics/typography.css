@@ -1,0 +1,73 @@
+/*------------------------------------------------------------------------------
+base typographic rules
+------------------------------------------------------------------------------*/
+
+:--headers {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+:--textblocks:not(last-child) {
+    margin-top: 0;
+    margin-bottom: var(--leading-s);
+}
+
+h1 { font-size: 3rem; }
+
+h2 {
+    font-size: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+h3 { font-size: 1.5rem; }
+
+h4 {
+    font-size: inherit;
+    font-weight: 700;
+}
+
+ul, ol {
+    padding: 0;
+    margin-left: var(--leading-s);
+}
+
+ul { list-style-type: disc; }
+
+ol { list-style-type: decimal; }
+
+small, sub, sup { font-size: var(--p-giant); }
+
+sub, sup {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+strong { font-weight: 700; }
+
+em { font-style: italic; }
+
+blockquote {
+    font-style: italic;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    padding-left: var(--leading-s);
+
+    box-shadow: inset var(--w-tiny) 0 0 0 var(--c-silver);
+}
+
+blockquote cite:before {
+    content: "\2014";
+    display: inline-block;
+    margin-right: var(--w-tiny);
+}
+
+code { font-family: var(--family-monospace) }

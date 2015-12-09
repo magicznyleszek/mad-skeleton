@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------------------
+image component
+------------------------------------------------------------------------------*/
+
+@import "config.css";
+@import "library.css";
+
+[gui-c-image] {
+    display: inline-block;
+    vertical-align: top;
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    background-color: var(--image-bg-empty);
+
+    backface-visibility: hidden;
+}
+
+[gui-c-image~="small"] {
+    width: var(--image-small-w);
+    height: var(--image-small-h);
+}

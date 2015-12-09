@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------------------
+main styles aggregation
+------------------------------------------------------------------------------*/
+
+/* settings */
+@import "settings/descriptiveVars.css";
+@import "settings/functionalVars.css";
+@import "settings/customs.css";
+
+/* basics */
+@import "basics/root.css";
+@import "basics/typography.css";
+@import "basics/states.css";
+@import "basics/layout.css";
+
+/* components */
+@import "components/button/base.css";
+@import "components/icon/base.css";
+@import "components/image/base.css";
+@import "components/progressbar/base.css";
+@import "components/section/base.css";
+@import "components/table/base.css";
+
+/* utilities */
+@import "utilities/area.css";
+@import "utilities/column.css";
+@import "utilities/hover.css";
+@import "utilities/inlineblock.css";
+@import "utilities/text.css";
