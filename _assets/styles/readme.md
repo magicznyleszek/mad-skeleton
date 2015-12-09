@@ -33,7 +33,7 @@ makes sense of course.
 Utilities use the `u-` namespace.
 
 
-## AM naming structure
+## Attribute-modules naming structure
 
 ```
 [<globalPrefix>-<namespace>-<name>{-<childName>||~=<modifierName>}]

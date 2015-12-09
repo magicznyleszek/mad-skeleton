@@ -1,21 +1,20 @@
 ## TEAM
 
-[Your title]: [Name Surname]
-Site: [url]
-Email: [email]
-Location: [city, country]
+Everything: Leszek Pietrzak
+Site: leszekpietrzak
+Email: smutnyleszek@gmail
+Location: Warsaw, Poland
 
 
 ## THANKS
 
-Christopher Eppstein: compass-style.org
 Chirag Mehta: chir.ag/projects/name-that-color
 Glen Maddern: amcss.github.io
-[Name]: [url/email]
-
+Cole Peters: github.com/colepeters/gemma
+Maxime Thirouin: cssnext.io
 
 ## SITE
 
-Last update: YYYY/MM/DD
+Last update: 2015/12/09
 Language: English
 Software: Atom
