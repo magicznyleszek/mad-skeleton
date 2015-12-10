@@ -28,18 +28,15 @@
 <body>
 
     <!-- svg icons -->
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        style="width: 0; height: 0; overflow: hidden; position: fixed;"
-    >
-        <symbol id="icon-check" viewBox="0 0 14 11">
-            <title>check</title>
-            <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M5.754,10.012c-0.185,0.185-0.484,0.185-0.669,0L4.937,9.864L4.937,9.865 L4.779,9.706L4.083,9.01C4.081,9.007,4.082,9.003,4.079,9.001L0.892,5.79c-0.185-0.185-0.185-0.484,0-0.668l1.003-1.003 c0.185-0.185,0.484-0.185,0.669,0L5.424,7l6.013-6.013c0.184-0.185,0.484-0.185,0.668,0l1.003,1.003 c0.184,0.184,0.184,0.484,0,0.668L5.754,10.012z"
-            >
+    <svg style="width: 0; height: 0; overflow: hidden; position: fixed; visibility: hidden;">
+        <symbol viewBox="0 0 15 15" id="icon-sonar">
+            <title>sonar</title>
+            <g id="sonar-_x31_5px">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5,4.9L14.5,4.9L14.5,4.9c-0.8-2.1-2.4-3.7-4.5-4.5l0,0l0,0
+            C9.3,0.2,8.4,0,7.5,0C3.4,0,0,3.4,0,7.5C0,11.6,3.4,15,7.5,15c4.1,0,7.5-3.4,7.5-7.5C15,6.6,14.8,5.7,14.5,4.9z M10.5,7.5
+            c0,1.7-1.3,3-3,3c-1.7,0-3-1.3-3-3s1.3-3,3-3c0.4,0,0.7,0.1,1,0.2L7.7,7H7v1h1V7.3l2.3-0.8C10.4,6.8,10.5,7.1,10.5,7.5z M7.5,13.6
+            c-3.6,0-6.1-2.6-6.1-6.1c0-3.6,2.6-6.1,6.1-6.1c0.8,0,1.5,0.1,2.1,0.3L8.7,4.2C8.3,4.1,7.9,4,7.5,4C5.6,4,4,5.6,4,7.5
+            C4,9.4,5.6,11,7.5,11C9.4,11,11,9.4,11,7.5c0-0.4-0.1-0.8-0.2-1.2l2.5-0.9c0.2,0.7,0.3,1.4,0.3,2.1C13.6,11.1,11.1,13.6,7.5,13.6z" /> </g>
         </symbol>
     </svg>
 
@@ -59,88 +56,210 @@
 
     <section role="main">
 
-        <!-- UTILITIES -->
+<!-- UTILITIES -->
 
         <article gui-c-section="main">
 
             <h2>Utilities</h2>
 
+            <p>
+                Structure- and layout-related classes that do one, generic thing extremely well. Can be naturally mixed with each other and with components -- as long as it makes sense of course.
+            </p>
+
+<!-- area -->
+
             <section gui-c-section>
 
                 <h3>area</h3>
 
-                <div gui-u-area="silver paddedV">
-                    silver area padded vertically
+                <p>
+                    <code>&lt;div gui-u-area="charcoal"&gt;...&lt;/div&gt;</code>
+                </p>
+
+                <p>Area sets the colors for the area. Simple as that.</p>
+
+                <div gui-u-area="charcoal" gui-u-pad="half">
+                    charcoal area
                 </div>
 
-                <div gui-u-area="charcoal padded">
-                    charcoal area padded
+                <div gui-u-area="silver" gui-u-pad="half">
+                    silver area
+                </div>
+
+                <div gui-u-area="charcoal" gui-u-pad="half">
+                    <div gui-u-area="silver" gui-u-pad="half">
+                        <div gui-u-area="white" gui-u-pad="half">
+                            white area in silver area that is in charcoal area
+                        </div>
+                    </div>
                 </div>
 
             </section>
+
+<!-- column -->
 
             <section gui-c-section>
 
                 <h3>column</h3>
 
                 <p>
-                    A smart and light column system. It only needs your help with
-                    whitespace bug.
+                    <code>&lt;div gui-u-column="1/2"&gt;...&lt;/div&gt;</code>
+                </p>
+
+                <p>
+                    A smart and light column system. It has some columns defined and some helpful margin option too. It only needs your help with whitespace bug.
                 </p>
 
                 <div>
-                    <div gui-u-column="1/2" gui-u-area="charcoal">1/2</div><!--
-                 --><div gui-u-column="1/2" gui-u-area="silver">1/2</div>
+                    <div
+                        gui-u-column="1/2"
+                        gui-u-text="centered"
+                        gui-u-area="charcoal"
+                    >
+                        1/2
+                    </div><!--
+                 --><div
+                        gui-u-column="1/2"
+                        gui-u-text="centered"
+                        gui-u-area="silver"
+                    >
+                        1/2
+                    </div>
                 </div>
 
                 <div>
-                    <div gui-u-column="1/3" gui-u-area>1/3</div><!--
-                 --><div gui-u-column="2/3" gui-u-area="silver">2/3</div>
-                </div>
-
-                <div>
-                    <div gui-u-area="charcoal">1</div><!--
+                    <div
+                        gui-u-column="2/3"
+                        gui-u-text="centered"
+                        gui-u-area="silver"
+                    >
+                        2/3
+                    </div><!--
                  --><div
                         gui-u-column="1/3"
-                        gui-u-columnBefore="1/4"
-                        gui-u-area="silver"
-                    >1/3 after 1/4</div><!--
-                 --><div gui-u-area="charcoal">1</div>
+                        gui-u-text="centered"
+                        gui-u-area="charcoal"
+                    >
+                        1/3
+                    </div>
+                </div>
+
+                <div>
+                    <div
+                        gui-u-column="1/4"
+                        gui-u-columnbefore="1/3"
+                        gui-u-text="centered"
+                        gui-u-area="charcoal"
+                    >
+                        1/4 after 1/3
+                    </div>
+                </div>
+
+                <div gui-u-column gui-u-text="centered" gui-u-area="silver">
+                    1
                 </div>
 
             </section>
+
+<!-- hover -->
 
             <section gui-c-section>
 
                 <h3>hover</h3>
 
-                <p>Hover over these guys:</p>
+                <p>
+<pre><code>&lt;div gui-u-hover&gt;
+    &lt;div gui-u-hover-item="show"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </p>
 
-                <div gui-u-hover gui-u-area="silver paddedV" gui-u-inlineblock>
-                    <strong>show</strong>
+                <p>Hover uses a container-reference element for triggering changes on <code>gui-u-hover-item</code> element. Take caution when nesting.</p>
+
+                <div
+                    gui-u-hover
+                    gui-u-area="silver"
+                    gui-u-pad="medium-v"
+                    gui-u-inlineblock
+                >
+                    <strong>show me</strong>
                     <span gui-u-hover-item="show">this</span>
                 </div>
 
-                <div gui-u-hover gui-u-area="charcoal paddedV" gui-u-inlineblock>
-                    <strong>hide</strong>
+                <div
+                    gui-u-hover
+                    gui-u-area="charcoal"
+                    gui-u-pad="medium-v"
+                    gui-u-inlineblock
+                >
+                    <strong>hide me</strong>
                     <span gui-u-hover-item="hide">this</span>
                 </div>
 
-                <div gui-u-hover gui-u-area="silver paddedV" gui-u-inlineblock>
-                    <strong>restore</strong>
+                <div
+                    gui-u-hover
+                    gui-u-area="silver"
+                    gui-u-pad="medium-v"
+                    gui-u-inlineblock
+                >
+                    <strong>restore me</strong>
                     <span gui-u-hover-item="restore">this</span>
                 </div>
 
-                <div gui-u-hover gui-u-area="charcoal paddedV" gui-u-inlineblock>
-                    <strong>remove</strong>
+                <div
+                    gui-u-hover
+                    gui-u-area="charcoal"
+                    gui-u-pad="medium-v"
+                    gui-u-inlineblock
+                >
+                    <strong>remove me</strong>
                     <span gui-u-hover-item="remove">this</span>
                 </div>
 
             </section>
 
+<!-- pad -->
+
+            <section gui-c-section>
+
+                <h3>pad</h3>
+
+                <p>
+                    <code>&lt;div gui-u-pad="medium-h"&gt;...&lt;/div&gt;</code>
+                </p>
+
+                <p>Defines a padding for element. Uses <code>-v</code> and <code>-h</code> suffixes for setting only vertical (top & bottom) or horizontal (left & right) margins.</p>
+
+                <div gui-u-area="silver" gui-u-pad="medium">
+                    medium
+                </div>
+
+                <div gui-u-area="charcoal" gui-u-pad="medium-v">
+                    medium vertical
+                </div>
+
+                <div gui-u-area="silver" gui-u-pad="medium-h">
+                    medium horizontal
+                </div>
+
+                <div gui-u-area="charcoal" gui-u-pad="half-h double-v">
+                    half horizontal & double vertical
+                </div>
+
+            </section>
+
+<!-- text -->
+
             <section gui-c-section>
 
                 <h3>text</h3>
+
+                <p>
+                    <code>&lt;div gui-u-text="trimmed 300"&gt;...&lt;/div&gt;</code>
+                </p>
+
+                <p>
+                    Changes the appearance of the text (weights, case and alignment) and has a special <em>trimmed</em> odifier for ellipsis-trimming of long lines.
+                </p>
 
                 <table gui-c-table>
                     <thead>
@@ -214,15 +333,29 @@
 
         </article>
 
-        <!-- COMPONENTS -->
+<!-- COMPONENTS -->
 
         <article gui-c-section="main">
 
             <h2>Components</h2>
 
+            <p>
+                Context-specific selectors for distinct components of an interface. They are forbidden to mix with each other.
+            </p>
+
+<!-- button -->
+
             <section gui-c-section>
 
                 <h3>button</h3>
+
+                <p>
+                    <code>&lt;div gui-c-button&gt;...&lt;/div&gt;</code>
+                </p>
+
+                <p>
+                    A simple button component with sizes, <em>hover</em>, <em>active</em> and <em>disabled</em> states.
+                </p>
 
                 <button gui-c-button>default</button>
 
@@ -236,15 +369,18 @@
 
             </section>
 
+<!-- icon -->
+
             <section gui-c-section>
 
                 <h3>icon</h2>
 
                 <p>
-                    I prefer using SVGs over fonts or images. Keep'em in one
-                    place and manage with
-                    <a href="https://github.com/FWeinb/grunt-svgstore">
-                    grunt-svgstore</a>.
+                    <code>&lt;div gui-c-icon="big"&gt; &lt;use xlink:href="#icon-sonar"&gt; &lt;/div&gt;</code>
+                </p>
+
+                <p>
+                    Small component styling the SVG icons added with <code>&lt;use&gt;</code>. Just add them in <code>_assets/icons</code> and let <a href="https://github.com/FWeinb/grunt-svgstore">grunt-svgstore</a> do its work.
                 </p>
 
                 <table gui-c-table>
@@ -259,17 +395,17 @@
                         <tr>
                             <td>
                                 <svg gui-c-icon>
-                                    <use xlink:href="#icon-check">
+                                    <use xlink:href="#icon-sonar">
                                 </svg>
                             </td>
                             <td>
                                 <svg gui-c-icon="big">
-                                    <use xlink:href="#icon-check">
+                                    <use xlink:href="#icon-sonar">
                                 </svg>
                             </td>
                             <td>
                                 <svg gui-c-icon="big silver">
-                                    <use xlink:href="#icon-check">
+                                    <use xlink:href="#icon-sonar">
                                 </svg>
                             </td>
                         </tr>
@@ -279,77 +415,129 @@
 
             </section>
 
+<!-- image -->
+
             <section gui-c-section>
 
                 <h3>image</h3>
+
+                <p>
+                    <code>&lt;figure gui-c-image="small medievalbloodandgore"&gt;&lt;/figure&gt;</code>
+                </p>
+
+                <p>
+                    For creating a fixed-size image based on unknown-size sources. Supports retina media queries. Images resides in <code>_assets/images/namespace/file.jpg</code> and then go through <a href="https://github.com/andismith/grunt-responsive-images">grunt-responsive-images</a>. You should define them in <code>image/library.css</code> partial file.
+                </p>
 
                 <figure gui-c-image="small medievalbloodandgore"></figure>
 
             </section>
 
+<!-- progress -->
+
             <section gui-c-section>
 
-                <h3>progress</h3>
+                <h3>progressbar</h3>
+
+                <p>
+<pre><code>&lt;div gui-c-progressbar&gt;
+    &lt;span gui-u-progressbar-indicator style="width: 50%;"&gt;...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                </p>
+
+                <p>
+                    Progress bars consist of a bar and an indicator. Indicator size should be probably managed by <em>JavaScript</em> with setting percentage <code>width</code>. It fills the vertical space on default, but has a <em>short</em> modifier too. There is also a nice <em>is-pending</em> animation.
+                </p>
 
                 <h4>default:</h4>
 
-                <span>pending at 0%</span>
                 <div gui-c-progressbar="is-pending">
                     <span gui-c-progressbar-indicator style="width: 0%;"></span>
                 </div>
 
-                <span>0%</span>
                 <div gui-c-progressbar>
                     <span gui-c-progressbar-indicator style="width: 0%;"></span>
                 </div>
 
-                <span>33%</span>
                 <div gui-c-progressbar>
                     <span gui-c-progressbar-indicator style="width: 33%;"></span>
                 </div>
 
-                <span>100%</span>
                 <div gui-c-progressbar>
                     <span gui-c-progressbar-indicator style="width: 100%;"></span>
                 </div>
 
-                <span>pending at 100%</span>
                 <div gui-c-progressbar="is-pending">
                     <span gui-c-progressbar-indicator style="width: 100%;"></span>
                 </div>
 
                 <h4>short:</h4>
 
-                <span>pending at 0%</span>
                 <div gui-c-progressbar="is-pending short">
                     <span gui-c-progressbar-indicator style="width: 0%;"></span>
                 </div>
 
-                <span>0%</span>
                 <div gui-c-progressbar="short">
-                    <span gui-c-progressbar-indicator style="width: 0%;"></span>
+                    <span gui-c-progressbar-indicator style="width: 67%;"></span>
                 </div>
 
-                <span>33%</span>
-                <div gui-c-progressbar="short">
-                    <span gui-c-progressbar-indicator style="width: 33%;"></span>
-                </div>
-
-                <span>100%</span>
-                <div gui-c-progressbar="short">
-                    <span gui-c-progressbar-indicator style="width: 100%;"></span>
-                </div>
-
-                <span>pending at 100%</span>
                 <div gui-c-progressbar="is-pending short">
                     <span gui-c-progressbar-indicator style="width: 100%;"></span>
                 </div>
 
             </section>
 
+<!-- section -->
+
+            <section gui-c-section>
+
+                <h3>section</h3>
+
+                <p>
+                    Section separates content vertically. It only adds margins when necessary (none for last children).
+                </p>
+
+                <div gui-c-section gui-u-area="charcoal">
+                    <div gui-c-section gui-u-area="silver" gui-u-pad="half">
+                        <h4>A basic section</h4>
+                        <p>Lorem ipsum dear sir or madam.</p>
+                    </div>
+                    <div gui-c-section="main" gui-u-area="silver" gui-u-pad="half">
+                        <h4>The main section</h4>
+                        <p>Lorem ipsum dear sir or madam.</p>
+                    </div>
+                    <div gui-c-section gui-u-area="silver" gui-u-pad="half">
+                        <h4>A basic section</h4>
+                        <p>Lorem ipsum dear sir or madam.</p>
+                    </div>
+                    <div gui-c-section gui-u-area="silver" gui-u-pad="half">
+                        <h4>A basic section</h4>
+                        <p>Lorem ipsum dear sir or madam.</p>
+                    </div>
+                </div>
+
+            </section>
+
+<!-- table -->
+
             <section gui-c-section>
 
                 <h3>table</h3>
+<p>
+<pre><code>&lt;table gui-c-table="hoverable"&gt;
+    &lt;caption&gt;...&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;...&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;...&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</p>
 
                 <table gui-c-table="hoverable">
                     <caption>Middle Jurassic sections</caption>
@@ -406,19 +594,49 @@
 
         </article>
 
-        <!-- COMPONENTS -->
+<!-- TYPOGRAPHY -->
 
         <article gui-c-section="main">
 
-            <h2>Base typography resets</h2>
+            <h2>Base typography</h2>
 
-            <h1>Header 1</h1>
+            <h3>Headers</h3>
 
-            <h2>Header 2</h2>
+            <table gui-c-table="hoverable">
+                <tbody>
+                    <tr>
+                        <th>h1</th>
 
-            <h3>Header 3</h3>
+                        <td>
+                            <h1>header level 1</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>h2</th>
 
-            <h4>Header 4</h4>
+                        <td>
+                            <h2>header level 2</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>h3</th>
+
+                        <td>
+                            <h3>header level 3</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>h4</th>
+
+                        <td>
+                            <h4>header level 4</h4>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <h3>Paragraph and inline elements</h3>
 
             <p>
                 Paragraph <strong>strong</strong> lorem ipsum <em>emphasis</em>
@@ -432,7 +650,7 @@
                 deserunt mollit anim id est laborum.
             </p>
 
-            <h4>lists:</h4>
+            <h3>Lists</h3>
 
             <ul>
                 <li>unordered</li>
@@ -446,7 +664,7 @@
                 <li>element</li>
             </ol>
 
-            <h4>quote:</h4>
+            <h3>Quotes</h3>
 
             <blockquote>
                 <p>

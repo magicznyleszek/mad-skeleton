@@ -2,13 +2,10 @@
 area utility
 ------------------------------------------------------------------------------*/
 
-[gui-u-area] {
+[gui-u-area~="white"] {
+    color: var(--c-charcoal);
     background-color: var(--c-white);
 }
-
-[gui-u-area~="padded"] { padding: var(--leading-s); }
-[gui-u-area~="paddedV"] { padding: var(--leading-s) 0; }
-[gui-u-area~="paddedH"] { padding: 0 var(--leading-s); }
 
 [gui-u-area~="silver"] {
     color: var(--c-charcoal);

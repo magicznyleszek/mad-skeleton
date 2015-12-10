@@ -26,4 +26,5 @@ main styles aggregation
 @import "utilities/column.css";
 @import "utilities/hover.css";
 @import "utilities/inlineblock.css";
+@import "utilities/pad.css";
 @import "utilities/text.css";

@@ -8,8 +8,6 @@ progressbar component
     position: relative;
     overflow: hidden;
 
-    display: inline-block;
-    vertical-align: middle;
     width: 100%;
 
     height: calc(var(--leading-s) - 0.5rem);
@@ -19,6 +17,8 @@ progressbar component
 
     border-radius: var(--progressbar-br);
 }
+
+[gui-c-progressbar]:not(:last-child) { margin-bottom: var(--leading-s); }
 
 [gui-c-progressbar-indicator] {
     display: block;

@@ -2,7 +2,10 @@
 root stuff and normalizations
 ------------------------------------------------------------------------------*/
 
-/* clever page scaling with root font size changes */
+/* Root line height is being used in many places throughout the project.
+It is recommended to keep all vertical margins and heights of elements to match
+the leading. Use caution when adding borders or when using vertical-align middle
+as they tend to add unwanted pixels, thus braking the flow. */
 
 html {
     font-weight: var(--rootFontWeight);
@@ -18,6 +21,8 @@ html {
 
     box-sizing: border-box;
 }
+
+/* clever page scaling with root font size changes */
 
 @media (--bigger) { html { font-size: var(--rootFontSizeBigger); } }
 

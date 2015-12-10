@@ -1,0 +1,39 @@
+/*------------------------------------------------------------------------------
+pad utility
+------------------------------------------------------------------------------*/
+
+[gui-u-pad="medium"] {
+    padding: var(--leading-s);
+}
+[gui-u-pad~="medium-v"] {
+    padding-top: var(--leading-s);
+    padding-bottom: var(--leading-s);
+}
+[gui-u-pad~="medium-h"] {
+    padding-left: var(--leading-s);
+    padding-right: var(--leading-s);
+}
+
+[gui-u-pad~="half"] {
+    padding: calc( var(--leading-s) * 0.5 );
+}
+[gui-u-pad~="half-v"] {
+    padding-top: calc( var(--leading-s) * 0.5 );
+    padding-bottom: calc( var(--leading-s) * 0.5 );
+}
+[gui-u-pad~="half-h"] {
+    padding-left: calc( var(--leading-s) * 0.5 );
+    padding-right: calc( var(--leading-s) * 0.5 );
+}
+
+[gui-u-pad~="double"] {
+    padding: calc( var(--leading-s) * 2 );
+}
+[gui-u-pad~="double-v"] {
+    padding-top: calc( var(--leading-s) * 2 );
+    padding-bottom: calc( var(--leading-s) * 2 );
+}
+[gui-u-pad~="double-h"] {
+    padding-left: calc( var(--leading-s) * 2 );
+    padding-right: calc( var(--leading-s) * 2 );
+}

@@ -8,7 +8,7 @@ base typographic rules
     padding: 0;
 }
 
-:--textblocks:not(last-child) {
+:--textblocks:not(:last-child) {
     margin-top: 0;
     margin-bottom: var(--leading-s);
 }
@@ -27,6 +27,8 @@ h4 {
     font-size: inherit;
     font-weight: 700;
 }
+
+p, pre { margin: 0; }
 
 ul, ol {
     padding: 0;
@@ -70,4 +72,26 @@ blockquote cite:before {
     margin-right: var(--w-tiny);
 }
 
-code { font-family: var(--family-monospace) }
+code {
+    display: inline-block;
+    vertical-align: bottom;
+
+    padding-left: var(--w-tiny);
+    padding-right: var(--w-tiny);
+
+    font-family: var(--family-monospace);
+    font-size: 0.75rem;
+    line-height: var(--leading-s);
+
+    color: var(--c-charcoal);
+    background-color: var(--c-silver);
+    border-radius: 0.125rem;
+}
+
+/* bigger blocks */
+
+pre code {
+    display: block;
+    max-width: 100%;
+    overflow: auto;
+}

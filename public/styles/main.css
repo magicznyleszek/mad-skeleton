@@ -48,7 +48,10 @@ custom media queries and selectors
 root stuff and normalizations
 ------------------------------------------------------------------------------*/
 
-/* clever page scaling with root font size changes */
+/* Root line height is being used in many places throughout the project.
+It is recommended to keep all vertical margins and heights of elements to match
+the leading. Use caution when adding borders or when using vertical-align middle
+as they tend to add unwanted pixels, thus braking the flow. */
 
 html {
     font-weight: 400;
@@ -64,6 +67,8 @@ html {
 
     box-sizing: border-box;
 }
+
+/* clever page scaling with root font size changes */
 
 @media (min-width: 1536px) { html { font-size: 20px; } }
 
@@ -85,15 +90,15 @@ h4 {
     padding: 0;
 }
 
-h1:not(last-child),
-h2:not(last-child),
-h3:not(last-child),
-h4:not(last-child),
-p:not(last-child),
-ul:not(last-child),
-ol:not(last-child),
-blockquote:not(last-child),
-pre:not(last-child) {
+h1:not(:last-child),
+h2:not(:last-child),
+h3:not(:last-child),
+h4:not(:last-child),
+p:not(:last-child),
+ul:not(:last-child),
+ol:not(:last-child),
+blockquote:not(:last-child),
+pre:not(:last-child) {
     margin-top: 0;
     margin-bottom: 27px;
     margin-bottom: 1.5rem;
@@ -116,6 +121,8 @@ h4 {
     font-size: inherit;
     font-weight: 700;
 }
+
+p, pre { margin: 0; }
 
 ul, ol {
     padding: 0;
@@ -162,7 +169,33 @@ blockquote cite:before {
     margin-right: 0.25rem;
 }
 
-code { font-family: "Source Code Pro" , "Input Mono" , "Consolas" , "Fira Mono", "Inconsolata",  "Monaco" , "Lucida Console" , "Liberation Mono" , "DejaVu Sans Mono" , "Bitstream Vera Sans Mono" , "Courier New" , monospace }
+code {
+    display: inline-block;
+    vertical-align: bottom;
+
+    padding-left: 4px;
+    padding-left: 0.25rem;
+    padding-right: 4px;
+    padding-right: 0.25rem;
+
+    font-family: "Source Code Pro" , "Input Mono" , "Consolas" , "Fira Mono", "Inconsolata",  "Monaco" , "Lucida Console" , "Liberation Mono" , "DejaVu Sans Mono" , "Bitstream Vera Sans Mono" , "Courier New" , monospace;
+    font-size: 13px;
+    font-size: 0.75rem;
+    line-height: 27px;
+    line-height: 1.5rem;
+
+    color: hsl(0, 0%, 20%);
+    background-color: hsl(0, 0%, 80%);
+    border-radius: 0.125rem;
+}
+
+/* bigger blocks */
+
+pre code {
+    display: block;
+    max-width: 100%;
+    overflow: auto;
+}
 /*------------------------------------------------------------------------------
 user-action influenced states
 ------------------------------------------------------------------------------*/
@@ -421,6 +454,8 @@ image component library
             backface-visibility: hidden;
 }
 
+[gui-c-image]:not(:last-child) { margin-bottom: 27px; margin-bottom: 1.5rem; }
+
 [gui-c-image~="small"] {
     width: 450px;
     width: 25rem;
@@ -443,8 +478,6 @@ progressbar config
     position: relative;
     overflow: hidden;
 
-    display: inline-block;
-    vertical-align: middle;
     width: 100%;
 
     height: 18px;
@@ -456,6 +489,8 @@ progressbar config
 
     border-radius: 0.125rem;
 }
+
+[gui-c-progressbar]:not(:last-child) { margin-bottom: 27px; margin-bottom: 1.5rem; }
 
 [gui-c-progressbar-indicator] {
     display: block;
@@ -550,8 +585,9 @@ table config
     border-spacing: 0;
 }
 
-[gui-c-table]:not(:last-child) {
-    margin-bottom: 27px;
+[gui-c-table]:not(:last-child),
+[gui-c-table] caption:not(:last-child) { 
+    margin-bottom: 27px; 
     margin-bottom: 1.5rem;
 }
 
@@ -566,6 +602,11 @@ table config
 
 [gui-c-table] thead { font-weight: 700; }
 
+[gui-c-table] caption {
+    text-align: center;
+    font-style: italic;
+}
+
 [gui-c-table~="hoverable"] tr:hover td {
     background-color: rgb(230, 230, 230);
 }
@@ -577,13 +618,10 @@ table config
 area utility
 ------------------------------------------------------------------------------*/
 
-[gui-u-area] {
+[gui-u-area~="white"] {
+    color: hsl(0, 0%, 20%);
     background-color: hsl(0, 0%, 100%);
 }
-
-[gui-u-area~="padded"] { padding: 27px; padding: 1.5rem; }
-[gui-u-area~="paddedV"] { padding: 27px 0; padding: 1.5rem 0; }
-[gui-u-area~="paddedH"] { padding: 0 27px; padding: 0 1.5rem; }
 
 [gui-u-area~="silver"] {
     color: hsl(0, 0%, 20%);
@@ -652,6 +690,60 @@ inlineblock utility
 ------------------------------------------------------------------------------*/
 
 [gui-u-inlineblock] { display: inline-block; }
+/*------------------------------------------------------------------------------
+pad utility
+------------------------------------------------------------------------------*/
+
+[gui-u-pad="medium"] {
+    padding: 27px;
+    padding: 1.5rem;
+}
+[gui-u-pad~="medium-v"] {
+    padding-top: 27px;
+    padding-top: 1.5rem;
+    padding-bottom: 27px;
+    padding-bottom: 1.5rem;
+}
+[gui-u-pad~="medium-h"] {
+    padding-left: 27px;
+    padding-left: 1.5rem;
+    padding-right: 27px;
+    padding-right: 1.5rem;
+}
+
+[gui-u-pad~="half"] {
+    padding: 13px;
+    padding: 0.75rem;
+}
+[gui-u-pad~="half-v"] {
+    padding-top: 13px;
+    padding-top: 0.75rem;
+    padding-bottom: 13px;
+    padding-bottom: 0.75rem;
+}
+[gui-u-pad~="half-h"] {
+    padding-left: 13px;
+    padding-left: 0.75rem;
+    padding-right: 13px;
+    padding-right: 0.75rem;
+}
+
+[gui-u-pad~="double"] {
+    padding: 54px;
+    padding: 3rem;
+}
+[gui-u-pad~="double-v"] {
+    padding-top: 54px;
+    padding-top: 3rem;
+    padding-bottom: 54px;
+    padding-bottom: 3rem;
+}
+[gui-u-pad~="double-h"] {
+    padding-left: 54px;
+    padding-left: 3rem;
+    padding-right: 54px;
+    padding-right: 3rem;
+}
 /*------------------------------------------------------------------------------
 text utility
 ------------------------------------------------------------------------------*/
