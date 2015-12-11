@@ -62,8 +62,8 @@ html {
 
     min-height: 100%;
 
-    color: hsl(0, 0%, 20%);
-    background-color: hsl(0, 0%, 100%);
+    color: rgb(51, 51, 51);
+    background-color: rgb(255, 255, 255);
 
     box-sizing: border-box;
 }
@@ -159,7 +159,7 @@ blockquote {
     padding-left: 27px;
     padding-left: 1.5rem;
 
-    box-shadow: inset 0.25rem 0 0 0 hsl(0, 0%, 80%);
+    box-shadow: inset 0.25rem 0 0 0 rgb(204, 204, 204);
 }
 
 blockquote cite:before {
@@ -184,8 +184,8 @@ code {
     line-height: 27px;
     line-height: 1.5rem;
 
-    color: hsl(0, 0%, 20%);
-    background-color: hsl(0, 0%, 80%);
+    color: rgb(51, 51, 51);
+    background-color: rgb(204, 204, 204);
     border-radius: 0.125rem;
 }
 
@@ -221,12 +221,12 @@ a:hover {
 
 a:visited { color: inherit; }
 
-a:active { color: hsl(348, 96%, 56%); }
+a:active { color: rgb(250, 31, 74); }
 
 /* text selection */
 
 :focus {
-    outline-color: hsl(348, 96%, 56%);
+    outline-color: rgb(250, 31, 74);
     outline-style: auto;
     outline-width: 4px;
     outline-width: 0.25rem;
@@ -235,13 +235,13 @@ a:active { color: hsl(348, 96%, 56%); }
 ::-moz-focus-inner { border: 0; }
 
 ::-moz-selection {
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(348, 96%, 56%);
+    color: rgb(255, 255, 255);
+    background-color: rgb(250, 31, 74);
 }
 
 ::selection {
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(348, 96%, 56%);
+    color: rgb(255, 255, 255);
+    background-color: rgb(250, 31, 74);
 }
 
 /* disabled elements */
@@ -316,8 +316,8 @@ button config
 
 [gui-c-button],
 [gui-c-button]:visited {
-    color: hsl(0, 0%, 20%);
-    background-color: hsl(0, 0%, 80%);
+    color: rgb(51, 51, 51);
+    background-color: rgb(204, 204, 204);
     box-shadow: 0 0.125rem 0 0 rgb(173, 173, 173);
 }
 
@@ -408,7 +408,7 @@ icon config
     height: 3rem;
 }
 
-[gui-c-icon~="silver"] { fill: hsl(0, 0%, 80%) }
+[gui-c-icon~="silver"] { fill: rgb(204, 204, 204) }
 /*------------------------------------------------------------------------------
 image component
 ------------------------------------------------------------------------------*/
@@ -447,7 +447,7 @@ image component library
     background-position: 50% 50%;
     background-repeat: no-repeat;
 
-    background-color: hsl(0, 0%, 80%);
+    background-color: rgb(204, 204, 204);
 
     -webkit-backface-visibility: hidden;
 
@@ -485,7 +485,7 @@ progressbar config
     margin: 4px 0;
     margin: 0.25rem 0;
 
-    background-color: hsl(0, 0%, 80%);
+    background-color: rgb(204, 204, 204);
 
     border-radius: 0.125rem;
 }
@@ -497,7 +497,7 @@ progressbar config
     height: 100%;
     width: 0%;
 
-    background-color: hsl(0, 0%, 20%);
+    background-color: rgb(51, 51, 51);
     border-radius: 0.125rem;
 
     -webkit-transition: 0.25s;
@@ -529,12 +529,12 @@ progressbar config
 
     opacity: 0.25;
 
-    background-image: -webkit-radial-gradient(circle 0.33rem, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 100%) 50%, transparent 50%, transparent 100%);
+    background-image: -webkit-radial-gradient(circle 0.33rem, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 50%, transparent 50%, transparent 100%);
 
     background-image: radial-gradient(
         circle 0.33rem,
-        hsl(0, 0%, 100%) 0%,
-        hsl(0, 0%, 100%) 50%,
+        rgb(255, 255, 255) 0%,
+        rgb(255, 255, 255) 50%,
         transparent 50%,
         transparent 100%
     );
@@ -597,7 +597,7 @@ table config
     padding: 0.75rem;
     box-shadow: 0 0 0 0.0625rem rgb(163, 163, 163);
 
-    background-color: hsl(0, 0%, 100%);
+    background-color: rgb(255, 255, 255);
 }
 
 [gui-c-table] thead { font-weight: 700; }
@@ -618,19 +618,27 @@ table config
 area utility
 ------------------------------------------------------------------------------*/
 
-[gui-u-area~="white"] {
-    color: hsl(0, 0%, 20%);
-    background-color: hsl(0, 0%, 100%);
-}
+[gui-u-area~="amaranth"] { background-color: rgb(250, 31, 74); }
+[gui-u-area~="purple"] { background-color: rgb(194, 31, 118); }
+[gui-u-area~="violet"] { background-color: rgb(103, 36, 148); }
+[gui-u-area~="white"] { background-color: rgb(255, 255, 255); }
+[gui-u-area~="whitesmoke"] { background-color: rgb(245, 245, 245); }
+[gui-u-area~="silver"] { background-color: rgb(204, 204, 204); }
+[gui-u-area~="charcoal"] { background-color: rgb(51, 51, 51); }
 
+/* text color for light backgrounds */
+[gui-u-area~="white"],
+[gui-u-area~="whitesmoke"],
 [gui-u-area~="silver"] {
-    color: hsl(0, 0%, 20%);
-    background-color: hsl(0, 0%, 80%);
+    color: rgb(51, 51, 51);
 }
 
-[gui-u-area~="charcoal"] {
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(0, 0%, 20%);
+/* text color for dark backgrounds */
+[gui-u-area~="charcoal"],
+[gui-u-area~="amaranth"],
+[gui-u-area~="purple"],
+[gui-u-area~="violet"] {
+    color: rgb(255, 255, 255);
 }
 /*------------------------------------------------------------------------------
 column utility

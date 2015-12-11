@@ -2,17 +2,25 @@
 area utility
 ------------------------------------------------------------------------------*/
 
-[gui-u-area~="white"] {
-    color: var(--c-charcoal);
-    background-color: var(--c-white);
-}
+[gui-u-area~="amaranth"] { background-color: var(--c-amaranth); }
+[gui-u-area~="purple"] { background-color: var(--c-purple); }
+[gui-u-area~="violet"] { background-color: var(--c-violet); }
+[gui-u-area~="white"] { background-color: var(--c-white); }
+[gui-u-area~="whitesmoke"] { background-color: var(--c-whitesmoke); }
+[gui-u-area~="silver"] { background-color: var(--c-silver); }
+[gui-u-area~="charcoal"] { background-color: var(--c-charcoal); }
 
+/* text color for light backgrounds */
+[gui-u-area~="white"],
+[gui-u-area~="whitesmoke"],
 [gui-u-area~="silver"] {
     color: var(--c-charcoal);
-    background-color: var(--c-silver);
 }
 
-[gui-u-area~="charcoal"] {
+/* text color for dark backgrounds */
+[gui-u-area~="charcoal"],
+[gui-u-area~="amaranth"],
+[gui-u-area~="purple"],
+[gui-u-area~="violet"] {
     color: var(--c-white);
-    background-color: var(--c-charcoal);
 }
