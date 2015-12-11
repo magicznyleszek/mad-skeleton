@@ -622,13 +622,11 @@ area utility
 [gui-u-area~="purple"] { background-color: rgb(194, 31, 118); }
 [gui-u-area~="violet"] { background-color: rgb(103, 36, 148); }
 [gui-u-area~="white"] { background-color: rgb(255, 255, 255); }
-[gui-u-area~="whitesmoke"] { background-color: rgb(245, 245, 245); }
 [gui-u-area~="silver"] { background-color: rgb(204, 204, 204); }
 [gui-u-area~="charcoal"] { background-color: rgb(51, 51, 51); }
 
 /* text color for light backgrounds */
 [gui-u-area~="white"],
-[gui-u-area~="whitesmoke"],
 [gui-u-area~="silver"] {
     color: rgb(51, 51, 51);
 }
