@@ -63,21 +63,21 @@ blockquote {
 
     padding-left: var(--leading-s);
 
-    box-shadow: inset var(--w-tiny) 0 0 0 var(--c-silver);
+    box-shadow: inset var(--s-tiny) 0 0 0 var(--c-silver);
 }
 
 blockquote cite:before {
     content: "\2014";
     display: inline-block;
-    margin-right: var(--w-tiny);
+    margin-right: var(--s-tiny);
 }
 
 code {
     display: inline-block;
     vertical-align: bottom;
 
-    padding-left: var(--w-tiny);
-    padding-right: var(--w-tiny);
+    padding-left: var(--s-tiny);
+    padding-right: var(--s-tiny);
 
     font-family: var(--family-monospace);
     font-size: 0.75rem;

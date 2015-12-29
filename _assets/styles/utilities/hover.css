@@ -14,5 +14,5 @@ hover utility
 }
 
 [gui-u-hover-item~="animate"] {
-    transition-duration: var(--d-faster);
+    transition-duration: var(--t-faster);
 }

@@ -35,12 +35,12 @@ all DESCRIPTIVE variables (colors, sizes, etc.)
 
     /* durations */
 
-    --d-slowest: 2s;
-    --d-slower: 1s;
-    --d-slow: 0.75s;
-    --d-medium: 0.5s;
-    --d-fast: 0.25s;
-    --d-faster: 0.125s;
+    --t-slowest: 2s;
+    --t-slower: 1s;
+    --t-slow: 0.75s;
+    --t-medium: 0.5s;
+    --t-fast: 0.25s;
+    --t-faster: 0.125s;
 
     /* z-indexes */
 
@@ -50,14 +50,15 @@ all DESCRIPTIVE variables (colors, sizes, etc.)
 
     /* sizes */
 
-    --w-colossal: 5rem; /* 80px @ 16px */
-    --w-huge: 4rem; /* 64px @ 16px */
-    --w-giant: 2.5rem; /* 40px @ 16px */
-    --w-big: 2rem; /* 32px @ 16px */
-    --w-large: 1.25rem; /* 20px @ 16px */
-    --w-medium: 1rem; /* 16px @ 16px */
-    --w-small: 0.625rem; /* 10px @ 16px */
-    --w-little: 0.5rem; /* 8px @ 16px */
-    --w-tiny: 0.25rem; /* 4px @ 16px */
+    --s-infinite: 1000rem; /* extremely big */
+    --s-colossal: 5rem; /* 80px @ 16px */
+    --s-huge: 4rem; /* 64px @ 16px */
+    --s-giant: 2.5rem; /* 40px @ 16px */
+    --s-big: 2rem; /* 32px @ 16px */
+    --s-large: 1.25rem; /* 20px @ 16px */
+    --s-medium: 1rem; /* 16px @ 16px */
+    --s-small: 0.625rem; /* 10px @ 16px */
+    --s-little: 0.5rem; /* 8px @ 16px */
+    --s-tiny: 0.25rem; /* 4px @ 16px */
 
 }

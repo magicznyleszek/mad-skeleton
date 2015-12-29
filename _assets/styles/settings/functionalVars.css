@@ -32,7 +32,7 @@ common FUNCTIONAL variables (each module has own config file)
     --line-gr: linear-gradient( to left, var(--line-gr-solid-c) );
 
     --focus-outline-c: var(--c-amaranth);
-    --focus-outline-w: var(--w-tiny);
+    --focus-outline-w: var(--s-tiny);
 
     --selection-txt-c: var(--c-white);
     --selection-bg-c: var(--c-amaranth);

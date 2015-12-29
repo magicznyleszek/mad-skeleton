@@ -8,7 +8,7 @@ button config
 
     --button-txt: var(--c-charcoal);
     --button-fontsize: 0.75rem;
-    --button-padding: var(--w-little);
+    --button-padding: var(--s-little);
     --button-sh: 0 0.125rem 0 0 color( var(--c-silver) shade(15%) );
     --button-sh-hover: 0 0.125rem 0 0 color( var(--c-silver) shade(10%) );
     --button-sh-active: 0 0.125rem 0 0 color( var(--c-silver) shade(5%) );

@@ -28,7 +28,7 @@ progressbar component
     background-color: var(--progressbar-indicator-bg);
     border-radius: var(--progressbar-br);
 
-    transition: var(--d-fast);
+    transition: var(--t-fast);
 }
 
 [gui-c-progressbar~="short"] { max-width: var(--progressbar-short-w); }
@@ -55,7 +55,7 @@ progressbar component
     background-repeat: repeat-x;
 
     animation-name: framesProgressPending;
-    animation-duration: var(--d-slow);
+    animation-duration: var(--t-slow);
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-direction: normal;
