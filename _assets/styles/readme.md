@@ -1,4 +1,6 @@
-# Architecture
+# CUACSS<sup>1</sup> philosophy
+
+<sup>1</sup> Component and utility attribute-driven CSS
 
 Basic architecture of CSS. It's based on [AMCSS](https://amcss.github.io/) and
 [Gemma](https://github.com/colepeters/gemma).
@@ -6,7 +8,10 @@ Basic architecture of CSS. It's based on [AMCSS](https://amcss.github.io/) and
 The base global prefix for all attribute modules is `gui-`.
 
 
-## Settings
+## Architecture
+
+
+### Settings
 
 CSS variables, custom media and selectors.
 
