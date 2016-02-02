@@ -2,7 +2,7 @@
 pad utility
 ------------------------------------------------------------------------------*/
 
-[gui-u-pad="medium"] {
+[gui-u-pad~="medium"] {
     padding: var(--leading-s);
 }
 [gui-u-pad~="medium-v"] {
