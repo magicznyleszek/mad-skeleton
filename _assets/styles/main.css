@@ -13,18 +13,18 @@ main styles aggregation
 @import "basics/states.css";
 @import "basics/layout.css";
 
-/* components */
-@import "components/button/base.css";
-@import "components/icon/base.css";
-@import "components/image/base.css";
-@import "components/progressbar/base.css";
-@import "components/section/base.css";
-@import "components/table/base.css";
+/* organisms */
+@import "organisms/button/base.css";
+@import "organisms/icon/base.css";
+@import "organisms/image/base.css";
+@import "organisms/progressbar/base.css";
+@import "organisms/section/base.css";
+@import "organisms/table/base.css";
 
-/* utilities */
-@import "utilities/area.css";
-@import "utilities/column.css";
-@import "utilities/hover.css";
-@import "utilities/inlineblock.css";
-@import "utilities/pad.css";
-@import "utilities/text.css";
+/* molecules */
+@import "molecules/area.css";
+@import "molecules/column.css";
+@import "molecules/hover.css";
+@import "molecules/inlineblock.css";
+@import "molecules/pad.css";
+@import "molecules/text.css";

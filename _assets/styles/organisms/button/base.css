@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------
-button component
+button organism
 ------------------------------------------------------------------------------*/
 
 @import "config.css";
 
-[gui-c-button] {
+[gui-o-button] {
     display: inline-block;
     vertical-align: top;
 
@@ -37,24 +37,24 @@ button component
     text-overflow: ellipsis;
 }
 
-[gui-c-button],
-[gui-c-button]:visited {
+[gui-o-button],
+[gui-o-button]:visited {
     color: var(--button-txt);
     background-color: var(--button-bg);
     box-shadow: var(--button-sh);
 }
 
-[gui-c-button]:not([disabled]):hover {
+[gui-o-button]:not([disabled]):hover {
     background-color: var(--button-bg-hover);
     box-shadow: var(--button-sh-hover);
 }
 
-[gui-c-button]:not([disabled]):active {
+[gui-o-button]:not([disabled]):active {
     background-color: var(--button-bg-active);
     box-shadow: var(--button-sh-active);
 }
 
-[gui-c-button~="middle"] {
+[gui-o-button~="middle"] {
     vertical-align: middle;
 }
 
@@ -63,7 +63,7 @@ button component
 button sizes
 ------------------------------------------------------------------------------*/
 
-[gui-c-button~="double"] {
+[gui-o-button~="double"] {
     padding-left: calc( var(--button-padding) * 2 );
     padding-right: calc( var(--button-padding) * 2 );
 
@@ -73,7 +73,7 @@ button sizes
     font-size: calc( var(--button-fontsize) * 2 );
 }
 
-[gui-c-button~="triple"] {
+[gui-o-button~="triple"] {
     padding-left: calc( var(--button-padding) * 3 );
     padding-right: calc( var(--button-padding) * 3 );
 
@@ -83,7 +83,7 @@ button sizes
     font-size: calc( var(--button-fontsize) * 3 );
 }
 
-[gui-c-button~="full"] {
+[gui-o-button~="full"] {
     width: 100%;
     display: block;
 }

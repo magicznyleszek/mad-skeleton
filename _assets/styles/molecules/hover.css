@@ -1,18 +1,18 @@
 /*------------------------------------------------------------------------------
-hover utility
+hover molecule
 ------------------------------------------------------------------------------*/
 
-[gui-u-hover]:not(:hover) [gui-u-hover-item~="restore"],
-[gui-u-hover]:hover [gui-u-hover-item~="remove"] {
+[gui-m-hover]:not(:hover) [gui-m-hover-item~="restore"],
+[gui-m-hover]:hover [gui-m-hover-item~="remove"] {
     display: none;
 }
 
-[gui-u-hover]:not(:hover) [gui-u-hover-item~="show"],
-[gui-u-hover]:hover [gui-u-hover-item~="hide"] {
+[gui-m-hover]:not(:hover) [gui-m-hover-item~="show"],
+[gui-m-hover]:hover [gui-m-hover-item~="hide"] {
     visibility: hidden;
     opacity: 0;
 }
 
-[gui-u-hover-item~="animate"] {
+[gui-m-hover-item~="animate"] {
     transition-duration: var(--t-faster);
 }

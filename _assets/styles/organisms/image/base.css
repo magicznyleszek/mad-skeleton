@@ -1,11 +1,11 @@
 /*------------------------------------------------------------------------------
-image component
+image organism
 ------------------------------------------------------------------------------*/
 
 @import "config.css";
 @import "library.css";
 
-[gui-c-image] {
+[gui-o-image] {
     display: inline-block;
     vertical-align: top;
 
@@ -23,9 +23,9 @@ image component
     backface-visibility: hidden;
 }
 
-[gui-c-image]:not(:last-child) { margin-bottom: var(--leading-s); }
+[gui-o-image]:not(:last-child) { margin-bottom: var(--leading-s); }
 
-[gui-c-image~="small"] {
+[gui-o-image~="small"] {
     width: var(--image-small-w);
     height: var(--image-small-h);
 }

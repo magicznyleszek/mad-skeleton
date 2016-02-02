@@ -50,4 +50,4 @@ global prefix, followed by namespace and then name. If it's a child AM it
 appends a single hyphen, followed by the child name.
 
 Modifiers are a space-separated strings (you can use almost any character you
-want, i.e. `[gui-u-column~="2/3"]`).
+want, i.e. `[gui-m-column~="2/3"]`).

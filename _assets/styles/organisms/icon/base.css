@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------
-icon component
+icon organism
 ------------------------------------------------------------------------------*/
 
 @import "config.css";
 
-[gui-c-icon] {
+[gui-o-icon] {
     display: inline-block;
     vertical-align: middle;
 
@@ -19,11 +19,11 @@ icon component
 
 /* bugfix for click target SVGElementInstance */
 
-[gui-c-icon] > * { pointer-events: none; }
+[gui-o-icon] > * { pointer-events: none; }
 
-[gui-c-icon~="big"] {
+[gui-o-icon~="big"] {
     width: var(--icon-s-big);
     height: var(--icon-s-big);
 }
 
-[gui-c-icon~="silver"] { fill: var(--c-silver) }
+[gui-o-icon~="silver"] { fill: var(--c-silver) }

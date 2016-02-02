@@ -266,16 +266,16 @@ body {
     padding: 3rem 1.5rem;
 }
 
-/* components */
+/* organisms */
 /*------------------------------------------------------------------------------
-button component
+button organism
 ------------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------------
 button config
 ------------------------------------------------------------------------------*/
 
-[gui-c-button] {
+[gui-o-button] {
     display: inline-block;
     vertical-align: top;
 
@@ -314,24 +314,24 @@ button config
     text-overflow: ellipsis;
 }
 
-[gui-c-button],
-[gui-c-button]:visited {
+[gui-o-button],
+[gui-o-button]:visited {
     color: rgb(51, 51, 51);
     background-color: rgb(204, 204, 204);
     box-shadow: 0 0.125rem 0 0 rgb(173, 173, 173);
 }
 
-[gui-c-button]:not([disabled]):hover {
+[gui-o-button]:not([disabled]):hover {
     background-color: rgb(214, 214, 214);
     box-shadow: 0 0.125rem 0 0 rgb(184, 184, 184);
 }
 
-[gui-c-button]:not([disabled]):active {
+[gui-o-button]:not([disabled]):active {
     background-color: rgb(219, 219, 219);
     box-shadow: 0 0.125rem 0 0 rgb(194, 194, 194);
 }
 
-[gui-c-button~="middle"] {
+[gui-o-button~="middle"] {
     vertical-align: middle;
 }
 
@@ -340,7 +340,7 @@ button config
 button sizes
 ------------------------------------------------------------------------------*/
 
-[gui-c-button~="double"] {
+[gui-o-button~="double"] {
     padding-left: 18px;
     padding-left: 1rem;
     padding-right: 18px;
@@ -355,7 +355,7 @@ button sizes
     font-size: 1.5rem;
 }
 
-[gui-c-button~="triple"] {
+[gui-o-button~="triple"] {
     padding-left: 27px;
     padding-left: 1.5rem;
     padding-right: 27px;
@@ -370,19 +370,19 @@ button sizes
     font-size: 2.25rem;
 }
 
-[gui-c-button~="full"] {
+[gui-o-button~="full"] {
     width: 100%;
     display: block;
 }
 /*------------------------------------------------------------------------------
-icon component
+icon organism
 ------------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------------
 icon config
 ------------------------------------------------------------------------------*/
 
-[gui-c-icon] {
+[gui-o-icon] {
     display: inline-block;
     vertical-align: middle;
 
@@ -399,18 +399,18 @@ icon config
 
 /* bugfix for click target SVGElementInstance */
 
-[gui-c-icon] > * { pointer-events: none; }
+[gui-o-icon] > * { pointer-events: none; }
 
-[gui-c-icon~="big"] {
+[gui-o-icon~="big"] {
     width: 54px;
     width: 3rem;
     height: 54px;
     height: 3rem;
 }
 
-[gui-c-icon~="silver"] { fill: rgb(204, 204, 204) }
+[gui-o-icon~="silver"] { fill: rgb(204, 204, 204) }
 /*------------------------------------------------------------------------------
-image component
+image organism
 ------------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------------
@@ -421,20 +421,20 @@ image config
 
 }
 /*------------------------------------------------------------------------------
-image component library
+image organism library
 ------------------------------------------------------------------------------*/
 
-[gui-c-image~="medievalbloodandgore"] {
+[gui-o-image~="medievalbloodandgore"] {
     background-image: url("/public/images/test/thumbnail/medieval-blood-and-gore.jpg");
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-    [gui-c-image~="medievalbloodandgore"] {
+    [gui-o-image~="medievalbloodandgore"] {
         background-image: url("/public/images/test/thumbnail-x2/medieval-blood-and-gore.jpg");
     }
 }
 
-[gui-c-image] {
+[gui-o-image] {
     display: inline-block;
     vertical-align: top;
 
@@ -454,16 +454,16 @@ image component library
             backface-visibility: hidden;
 }
 
-[gui-c-image]:not(:last-child) { margin-bottom: 27px; margin-bottom: 1.5rem; }
+[gui-o-image]:not(:last-child) { margin-bottom: 27px; margin-bottom: 1.5rem; }
 
-[gui-c-image~="small"] {
+[gui-o-image~="small"] {
     width: 450px;
     width: 25rem;
     height: 324px;
     height: 18rem;
 }
 /*------------------------------------------------------------------------------
-progressbar component
+progressbar organism
 ------------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------------
@@ -474,7 +474,7 @@ progressbar config
 
 }
 
-[gui-c-progressbar] {
+[gui-o-progressbar] {
     position: relative;
     overflow: hidden;
 
@@ -490,9 +490,9 @@ progressbar config
     border-radius: 0.125rem;
 }
 
-[gui-c-progressbar]:not(:last-child) { margin-bottom: 27px; margin-bottom: 1.5rem; }
+[gui-o-progressbar]:not(:last-child) { margin-bottom: 27px; margin-bottom: 1.5rem; }
 
-[gui-c-progressbar-indicator] {
+[gui-o-progressbar-indicator] {
     display: block;
     height: 100%;
     width: 0%;
@@ -505,7 +505,7 @@ progressbar config
             transition: 0.25s;
 }
 
-[gui-c-progressbar~="short"] { max-width: 180px; max-width: 10rem; }
+[gui-o-progressbar~="short"] { max-width: 180px; max-width: 10rem; }
 
 @-webkit-keyframes framesProgressPending {
     0% { background-position: -1rem 0; }
@@ -517,7 +517,7 @@ progressbar config
     100% { background-position: 1rem 0; }
 }
 
-[gui-c-progressbar~="is-pending"]:after {
+[gui-o-progressbar~="is-pending"]:after {
     content: "";
 
     position: absolute;
@@ -560,39 +560,39 @@ progressbar config
             animation-play-state: running;
 }
 /*------------------------------------------------------------------------------
-section component
+section organism
 ------------------------------------------------------------------------------*/
 
-[gui-c-section]:not(:last-child) {
+[gui-o-section]:not(:last-child) {
     margin-bottom: 54px;
     margin-bottom: 3rem;
 }
 
-[gui-c-section~="main"]:not(:last-child) {
+[gui-o-section~="main"]:not(:last-child) {
     margin-bottom: 81px;
     margin-bottom: 4.5rem;
 }
 /*------------------------------------------------------------------------------
-table component
+table organism
 ------------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------------
 table config
 ------------------------------------------------------------------------------*/
 
-[gui-c-table] {
+[gui-o-table] {
     border-collapse: separate;
     border-spacing: 0;
 }
 
-[gui-c-table]:not(:last-child),
-[gui-c-table] caption:not(:last-child) { 
+[gui-o-table]:not(:last-child),
+[gui-o-table] caption:not(:last-child) { 
     margin-bottom: 27px; 
     margin-bottom: 1.5rem;
 }
 
-[gui-c-table] td,
-[gui-c-table] th {
+[gui-o-table] td,
+[gui-o-table] th {
     padding: 13px;
     padding: 0.75rem;
     box-shadow: 0 0 0 0.0625rem rgb(163, 163, 163);
@@ -600,177 +600,177 @@ table config
     background-color: rgb(255, 255, 255);
 }
 
-[gui-c-table] thead { font-weight: 700; }
+[gui-o-table] thead { font-weight: 700; }
 
-[gui-c-table] caption {
+[gui-o-table] caption {
     text-align: center;
     font-style: italic;
 }
 
-[gui-c-table~="hoverable"] tr:hover td {
+[gui-o-table~="hoverable"] tr:hover td {
     background-color: rgb(230, 230, 230);
 }
 
-[gui-c-table~="full"] { width: 100%; }
+[gui-o-table~="full"] { width: 100%; }
 
-/* utilities */
+/* molecules */
 /*------------------------------------------------------------------------------
-area utility
+area molecule
 ------------------------------------------------------------------------------*/
 
-[gui-u-area~="amaranth"] { background-color: rgb(250, 31, 74); }
-[gui-u-area~="purple"] { background-color: rgb(194, 31, 118); }
-[gui-u-area~="violet"] { background-color: rgb(103, 36, 148); }
-[gui-u-area~="white"] { background-color: rgb(255, 255, 255); }
-[gui-u-area~="silver"] { background-color: rgb(204, 204, 204); }
-[gui-u-area~="charcoal"] { background-color: rgb(51, 51, 51); }
+[gui-m-area~="amaranth"] { background-color: rgb(250, 31, 74); }
+[gui-m-area~="purple"] { background-color: rgb(194, 31, 118); }
+[gui-m-area~="violet"] { background-color: rgb(103, 36, 148); }
+[gui-m-area~="white"] { background-color: rgb(255, 255, 255); }
+[gui-m-area~="silver"] { background-color: rgb(204, 204, 204); }
+[gui-m-area~="charcoal"] { background-color: rgb(51, 51, 51); }
 
 /* text color for light backgrounds */
-[gui-u-area~="white"],
-[gui-u-area~="silver"] {
+[gui-m-area~="white"],
+[gui-m-area~="silver"] {
     color: rgb(51, 51, 51);
 }
 
 /* text color for dark backgrounds */
-[gui-u-area~="charcoal"],
-[gui-u-area~="amaranth"],
-[gui-u-area~="purple"],
-[gui-u-area~="violet"] {
+[gui-m-area~="charcoal"],
+[gui-m-area~="amaranth"],
+[gui-m-area~="purple"],
+[gui-m-area~="violet"] {
     color: rgb(255, 255, 255);
 }
 /*------------------------------------------------------------------------------
-column utility
+column molecule
 ------------------------------------------------------------------------------*/
 
 /* Remember to truncate the white space between columns! */
 
-[gui-u-column] {
+[gui-m-column] {
     display: inline-block;
     vertical-align: top;
 
     width: 100%;
 }
 
-[gui-u-column~="top"] { vertical-align: top; }
-[gui-u-column~="middle"] { vertical-align: middle; }
-[gui-u-column~="bottom"] { vertical-align: bottom; }
+[gui-m-column~="top"] { vertical-align: top; }
+[gui-m-column~="middle"] { vertical-align: middle; }
+[gui-m-column~="bottom"] { vertical-align: bottom; }
 
-[gui-u-column~="1/2"] { width: 50%; }
-[gui-u-column~="1/3"] { width: 33.33333%; }
-[gui-u-column~="2/3"] { width: 66.66667%; }
-[gui-u-column~="1/4"] { width: 25%; }
-[gui-u-column~="3/4"] { width: 75%; }
+[gui-m-column~="1/2"] { width: 50%; }
+[gui-m-column~="1/3"] { width: 33.33333%; }
+[gui-m-column~="2/3"] { width: 66.66667%; }
+[gui-m-column~="1/4"] { width: 25%; }
+[gui-m-column~="3/4"] { width: 75%; }
 
-[gui-u-columnbefore~="1/2"] { margin-left: 50%; }
-[gui-u-columnbefore~="1/3"] { margin-left: 33.33333%; }
-[gui-u-columnbefore~="2/3"] { margin-left: 66.66667%; }
-[gui-u-columnbefore~="1/4"] { margin-left: 25%; }
-[gui-u-columnbefore~="3/4"] { margin-left: 75%; }
+[gui-m-columnbefore~="1/2"] { margin-left: 50%; }
+[gui-m-columnbefore~="1/3"] { margin-left: 33.33333%; }
+[gui-m-columnbefore~="2/3"] { margin-left: 66.66667%; }
+[gui-m-columnbefore~="1/4"] { margin-left: 25%; }
+[gui-m-columnbefore~="3/4"] { margin-left: 75%; }
 
-[gui-u-columnafter~="1/2"] { margin-right: 50%; }
-[gui-u-columnafter~="1/3"] { margin-right: 33.33333%; }
-[gui-u-columnafter~="2/3"] { margin-right: 66.66667%; }
-[gui-u-columnafter~="1/4"] { margin-right: 25%; }
-[gui-u-columnafter~="3/4"] { margin-right: 75%; }
+[gui-m-columnafter~="1/2"] { margin-right: 50%; }
+[gui-m-columnafter~="1/3"] { margin-right: 33.33333%; }
+[gui-m-columnafter~="2/3"] { margin-right: 66.66667%; }
+[gui-m-columnafter~="1/4"] { margin-right: 25%; }
+[gui-m-columnafter~="3/4"] { margin-right: 75%; }
 /*------------------------------------------------------------------------------
-hover utility
+hover molecule
 ------------------------------------------------------------------------------*/
 
-[gui-u-hover]:not(:hover) [gui-u-hover-item~="restore"],
-[gui-u-hover]:hover [gui-u-hover-item~="remove"] {
+[gui-m-hover]:not(:hover) [gui-m-hover-item~="restore"],
+[gui-m-hover]:hover [gui-m-hover-item~="remove"] {
     display: none;
 }
 
-[gui-u-hover]:not(:hover) [gui-u-hover-item~="show"],
-[gui-u-hover]:hover [gui-u-hover-item~="hide"] {
+[gui-m-hover]:not(:hover) [gui-m-hover-item~="show"],
+[gui-m-hover]:hover [gui-m-hover-item~="hide"] {
     visibility: hidden;
     opacity: 0;
 }
 
-[gui-u-hover-item~="animate"] {
+[gui-m-hover-item~="animate"] {
     -webkit-transition-duration: 0.125s;
             transition-duration: 0.125s;
 }
 /*------------------------------------------------------------------------------
-inlineblock utility
+inlineblock molecule
 ------------------------------------------------------------------------------*/
 
-[gui-u-inlineblock] { display: inline-block; }
+[gui-m-inlineblock] { display: inline-block; }
 /*------------------------------------------------------------------------------
-pad utility
+pad molecule
 ------------------------------------------------------------------------------*/
 
-[gui-u-pad="medium"] {
+[gui-m-pad="medium"] {
     padding: 27px;
     padding: 1.5rem;
 }
-[gui-u-pad~="medium-v"] {
+[gui-m-pad~="medium-v"] {
     padding-top: 27px;
     padding-top: 1.5rem;
     padding-bottom: 27px;
     padding-bottom: 1.5rem;
 }
-[gui-u-pad~="medium-h"] {
+[gui-m-pad~="medium-h"] {
     padding-left: 27px;
     padding-left: 1.5rem;
     padding-right: 27px;
     padding-right: 1.5rem;
 }
 
-[gui-u-pad~="half"] {
+[gui-m-pad~="half"] {
     padding: 13px;
     padding: 0.75rem;
 }
-[gui-u-pad~="half-v"] {
+[gui-m-pad~="half-v"] {
     padding-top: 13px;
     padding-top: 0.75rem;
     padding-bottom: 13px;
     padding-bottom: 0.75rem;
 }
-[gui-u-pad~="half-h"] {
+[gui-m-pad~="half-h"] {
     padding-left: 13px;
     padding-left: 0.75rem;
     padding-right: 13px;
     padding-right: 0.75rem;
 }
 
-[gui-u-pad~="double"] {
+[gui-m-pad~="double"] {
     padding: 54px;
     padding: 3rem;
 }
-[gui-u-pad~="double-v"] {
+[gui-m-pad~="double-v"] {
     padding-top: 54px;
     padding-top: 3rem;
     padding-bottom: 54px;
     padding-bottom: 3rem;
 }
-[gui-u-pad~="double-h"] {
+[gui-m-pad~="double-h"] {
     padding-left: 54px;
     padding-left: 3rem;
     padding-right: 54px;
     padding-right: 3rem;
 }
 /*------------------------------------------------------------------------------
-text utility
+text molecule
 ------------------------------------------------------------------------------*/
 
 /* aligns */
-[gui-u-text~="lefted"] { text-align: left; }
-[gui-u-text~="righted"] { text-align: right; }
-[gui-u-text~="centered"] { text-align: center; }
+[gui-m-text~="lefted"] { text-align: left; }
+[gui-m-text~="righted"] { text-align: right; }
+[gui-m-text~="centered"] { text-align: center; }
 
 /* weights */
-[gui-u-text~="300"] { font-weight: 300; }
-[gui-u-text~="400"] { font-weight: 400; }
-[gui-u-text~="600"] { font-weight: 600; }
-[gui-u-text~="700"] { font-weight: 700; }
+[gui-m-text~="300"] { font-weight: 300; }
+[gui-m-text~="400"] { font-weight: 400; }
+[gui-m-text~="600"] { font-weight: 600; }
+[gui-m-text~="700"] { font-weight: 700; }
 
 /*text transforms */
-[gui-u-text~="uppercased"] { text-transform: uppercase; }
-[gui-u-text~="untransformed"] { text-transform: none; }
+[gui-m-text~="uppercased"] { text-transform: uppercase; }
+[gui-m-text~="untransformed"] { text-transform: none; }
 
 /* trims text with an ellipsis */
-[gui-u-text~="trimmed"] {
+[gui-m-text~="trimmed"] {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

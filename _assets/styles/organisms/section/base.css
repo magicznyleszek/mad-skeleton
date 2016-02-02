@@ -1,11 +1,11 @@
 /*------------------------------------------------------------------------------
-section component
+section organism
 ------------------------------------------------------------------------------*/
 
-[gui-c-section]:not(:last-child) {
+[gui-o-section]:not(:last-child) {
     margin-bottom: calc( var(--leading-s) * 2 );
 }
 
-[gui-c-section~="main"]:not(:last-child) {
+[gui-o-section~="main"]:not(:last-child) {
     margin-bottom: calc( var(--leading-s) * 3 );
 }

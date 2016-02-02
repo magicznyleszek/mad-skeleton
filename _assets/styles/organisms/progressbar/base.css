@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------
-progressbar component
+progressbar organism
 ------------------------------------------------------------------------------*/
 
 @import "config.css";
 
-[gui-c-progressbar] {
+[gui-o-progressbar] {
     position: relative;
     overflow: hidden;
 
@@ -18,9 +18,9 @@ progressbar component
     border-radius: var(--progressbar-br);
 }
 
-[gui-c-progressbar]:not(:last-child) { margin-bottom: var(--leading-s); }
+[gui-o-progressbar]:not(:last-child) { margin-bottom: var(--leading-s); }
 
-[gui-c-progressbar-indicator] {
+[gui-o-progressbar-indicator] {
     display: block;
     height: 100%;
     width: 0%;
@@ -31,14 +31,14 @@ progressbar component
     transition: var(--t-fast);
 }
 
-[gui-c-progressbar~="short"] { max-width: var(--progressbar-short-w); }
+[gui-o-progressbar~="short"] { max-width: var(--progressbar-short-w); }
 
 @keyframes framesProgressPending {
     0% { background-position: calc( var(--progressbar-pending-s) * -1 ) 0; }
     100% { background-position: var(--progressbar-pending-s) 0; }
 }
 
-[gui-c-progressbar~="is-pending"]:after {
+[gui-o-progressbar~="is-pending"]:after {
     content: "";
 
     position: absolute;

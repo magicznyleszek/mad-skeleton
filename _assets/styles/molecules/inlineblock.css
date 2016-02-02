@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------
-inlineblock utility
+inlineblock molecule
 ------------------------------------------------------------------------------*/
 
-[gui-u-inlineblock] { display: inline-block; }
+[gui-m-inlineblock] { display: inline-block; }

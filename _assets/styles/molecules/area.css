@@ -1,0 +1,24 @@
+/*------------------------------------------------------------------------------
+area molecule
+------------------------------------------------------------------------------*/
+
+[gui-m-area~="amaranth"] { background-color: var(--c-amaranth); }
+[gui-m-area~="purple"] { background-color: var(--c-purple); }
+[gui-m-area~="violet"] { background-color: var(--c-violet); }
+[gui-m-area~="white"] { background-color: var(--c-white); }
+[gui-m-area~="silver"] { background-color: var(--c-silver); }
+[gui-m-area~="charcoal"] { background-color: var(--c-charcoal); }
+
+/* text color for light backgrounds */
+[gui-m-area~="white"],
+[gui-m-area~="silver"] {
+    color: var(--c-charcoal);
+}
+
+/* text color for dark backgrounds */
+[gui-m-area~="charcoal"],
+[gui-m-area~="amaranth"],
+[gui-m-area~="purple"],
+[gui-m-area~="violet"] {
+    color: var(--c-white);
+}
