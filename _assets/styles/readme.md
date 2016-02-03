@@ -2,9 +2,12 @@
 
 <sup>1</sup> Component and utility attribute-driven CSS
 
-Basic architecture of CSS. It's based on [AMCSS](https://amcss.github.io/),
-[Gemma](https://github.com/colepeters/gemma) and a bit on
-[Atomic Design](http://demo.patternlab.io/?p=all).
+Basic architecture of CSS. It's ~~based on~~ inspired by:
+
+- [AMCSS](https://amcss.github.io/)
+- [Gemma](https://github.com/colepeters/gemma)
+- [Atomic Design](http://demo.patternlab.io)
+- [Tachyons](http://tachyons.io/)
 
 The base global prefix for all attribute modules is `gui-`.
 

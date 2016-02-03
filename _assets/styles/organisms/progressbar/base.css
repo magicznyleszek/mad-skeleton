@@ -28,7 +28,7 @@ progressbar organism
     background-color: var(--progressbar-indicator-bg);
     border-radius: var(--progressbar-br);
 
-    transition: var(--t-fast);
+    transition: var(--a-t-fast);
 }
 
 [gui-o-progressbar~="short"] { max-width: var(--progressbar-short-w); }
@@ -42,20 +42,20 @@ progressbar organism
     content: "";
 
     position: absolute;
-    z-index: var(--z-1);
+    z-index: var(--a-z-1);
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 
-    opacity: var(--f-medium);
+    opacity: var(--a-f-medium);
 
     background-image: var(--progressbar-pending-gr);
     background-size: var(--progressbar-pending-s) 100%;
     background-repeat: repeat-x;
 
     animation-name: framesProgressPending;
-    animation-duration: var(--t-slow);
+    animation-duration: var(--a-t-slow);
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-direction: normal;

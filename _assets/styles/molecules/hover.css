@@ -14,5 +14,5 @@ hover molecule
 }
 
 [gui-m-hover-item~="animate"] {
-    transition-duration: var(--t-faster);
+    transition-duration: var(--a-t-faster);
 }

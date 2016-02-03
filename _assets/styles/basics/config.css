@@ -1,20 +1,20 @@
 /*------------------------------------------------------------------------------
-common FUNCTIONAL variables (each module has own config file)
+basics configuration
 ------------------------------------------------------------------------------*/
 
 :root {
 
     /* base */
 
-    --app-txt-c: var(--c-charcoal);
-    --app-bg-c: var(--c-white);
+    --app-txt-c: var(--a-c-charcoal);
+    --app-bg-c: var(--a-c-white);
     --app-content-w: 36rem; /* 576px @ 16px */
 
     /* root typography with font sizes for different screens scaling */
 
     --rootFontWeight: 400;
     --rootLineHeight: 1.5;
-    --rootFontFamily: var(--family-sourceSansPro);
+    --rootFontFamily: var(--a-font-sourceSansPro);
     --rootFontSize: 18px;
     --rootFontSizeSmaller: 16px;
     --rootFontSizeBigger: 20px;
@@ -31,15 +31,15 @@ common FUNCTIONAL variables (each module has own config file)
     --line-gr-solid-c: currentColor 0%, currentColor 0%;
     --line-gr: linear-gradient( to left, var(--line-gr-solid-c) );
 
-    --focus-outline-c: var(--c-amaranth);
-    --focus-outline-w: var(--s-tiny);
+    --focus-outline-c: var(--a-c-amaranth);
+    --focus-outline-w: var(--a-s-tiny);
 
-    --selection-txt-c: var(--c-white);
-    --selection-bg-c: var(--c-amaranth);
+    --selection-txt-c: var(--a-c-white);
+    --selection-bg-c: var(--a-c-amaranth);
 
     /* reusable stuff */
 
-    --disabled-o: var(--f-big);
+    --disabled-o: var(--a-f-big);
     --leading-s: calc( var(--rootLineHeight) * 1rem );
 
 }

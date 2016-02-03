@@ -2,17 +2,17 @@
 area molecule
 ------------------------------------------------------------------------------*/
 
-[gui-m-area~="amaranth"] { background-color: var(--c-amaranth); }
-[gui-m-area~="purple"] { background-color: var(--c-purple); }
-[gui-m-area~="violet"] { background-color: var(--c-violet); }
-[gui-m-area~="white"] { background-color: var(--c-white); }
-[gui-m-area~="silver"] { background-color: var(--c-silver); }
-[gui-m-area~="charcoal"] { background-color: var(--c-charcoal); }
+[gui-m-area~="amaranth"] { background-color: var(--a-c-amaranth); }
+[gui-m-area~="purple"] { background-color: var(--a-c-purple); }
+[gui-m-area~="violet"] { background-color: var(--a-c-violet); }
+[gui-m-area~="white"] { background-color: var(--a-c-white); }
+[gui-m-area~="silver"] { background-color: var(--a-c-silver); }
+[gui-m-area~="charcoal"] { background-color: var(--a-c-charcoal); }
 
 /* text color for light backgrounds */
 [gui-m-area~="white"],
 [gui-m-area~="silver"] {
-    color: var(--c-charcoal);
+    color: var(--a-c-charcoal);
 }
 
 /* text color for dark backgrounds */
@@ -20,5 +20,5 @@ area molecule
 [gui-m-area~="amaranth"],
 [gui-m-area~="purple"],
 [gui-m-area~="violet"] {
-    color: var(--c-white);
+    color: var(--a-c-white);
 }

@@ -22,7 +22,7 @@ a:hover {
 
 a:visited { color: inherit; }
 
-a:active { color: var(--c-amaranth); }
+a:active { color: var(--a-c-amaranth); }
 
 /* text selection */
 

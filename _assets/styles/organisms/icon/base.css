@@ -26,4 +26,4 @@ icon organism
     height: var(--icon-s-big);
 }
 
-[gui-o-icon~="silver"] { fill: var(--c-silver) }
+[gui-o-icon~="silver"] { fill: var(--a-c-silver) }
