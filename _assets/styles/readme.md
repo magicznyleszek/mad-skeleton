@@ -6,6 +6,7 @@ Basic architecture of CSS. It's ~~based on~~ inspired by:
 
 - [AMCSS](https://amcss.github.io/)
 - [Gemma](https://github.com/colepeters/gemma)
+- [Organic CSS](http://krasimir.github.io/organic-css/)
 - [Atomic Design](http://demo.patternlab.io)
 - [Tachyons](http://tachyons.io/)
 
