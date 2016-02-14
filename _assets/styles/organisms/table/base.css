@@ -1,0 +1,36 @@
+/*------------------------------------------------------------------------------
+table organism
+------------------------------------------------------------------------------*/
+
+@import '_config.css';
+
+[gui-o-table] {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+[gui-o-table]:not(:last-child),
+[gui-o-table] caption:not(:last-child) {
+    margin-bottom: var(--leading-s);
+}
+
+[gui-o-table] td,
+[gui-o-table] th {
+    padding: calc( var(--leading-s) * 0.5 );
+    box-shadow: var(--table-cell-sh);
+
+    background-color: var(--table-cell-bg);
+}
+
+[gui-o-table] thead { font-weight: 700; }
+
+[gui-o-table] caption {
+    text-align: center;
+    font-style: italic;
+}
+
+[gui-o-table~='hoverable'] tr:hover td {
+    background-color: var(--table-cell-bg-hover);
+}
+
+[gui-o-table~='full'] { width: 100%; }

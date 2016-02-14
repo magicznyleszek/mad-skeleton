@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------------------
+icon organism
+------------------------------------------------------------------------------*/
+
+@import '_config.css';
+
+[gui-o-icon] {
+    display: inline-block;
+    vertical-align: middle;
+
+    height: var(--icon-s);
+    width: var(--icon-s);
+
+    shape-rendering: geometricPrecision;
+
+    fill: currentColor;
+    color: inherit;
+}
+
+/* bugfix for click target SVGElementInstance */
+
+[gui-o-icon] > * { pointer-events: none; }
+
+[gui-o-icon~='big'] {
+    width: var(--icon-s-big);
+    height: var(--icon-s-big);
+}
+
+[gui-o-icon~='silver'] { fill: var(--a-c-silver) }
