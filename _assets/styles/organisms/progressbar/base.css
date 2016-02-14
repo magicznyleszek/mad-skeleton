@@ -2,7 +2,7 @@
 progressbar organism
 ------------------------------------------------------------------------------*/
 
-@import "config.css";
+@import '_config.css';
 
 [gui-o-progressbar] {
     position: relative;
@@ -31,15 +31,15 @@ progressbar organism
     transition: var(--a-t-fast);
 }
 
-[gui-o-progressbar~="short"] { max-width: var(--progressbar-short-w); }
+[gui-o-progressbar~='short'] { max-width: var(--progressbar-short-w); }
 
 @keyframes framesProgressPending {
     0% { background-position: calc( var(--progressbar-pending-s) * -1 ) 0; }
     100% { background-position: var(--progressbar-pending-s) 0; }
 }
 
-[gui-o-progressbar~="is-pending"]:after {
-    content: "";
+[gui-o-progressbar~='is-pending']:after {
+    content: '';
 
     position: absolute;
     z-index: var(--a-z-1);

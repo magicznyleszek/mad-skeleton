@@ -7,6 +7,8 @@ It is recommended to keep all vertical margins and heights of elements to match
 the leading. Use caution when adding borders or when using vertical-align middle
 as they tend to add unwanted pixels, thus braking the flow. */
 
+@import '_config.css';
+
 html {
     font-weight: var(--rootFontWeight);
     font-size: var(--rootFontSize);
@@ -30,4 +32,11 @@ html {
 
 *, *:before, *:after {
     box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    max-width: var(--app-content-w);
+    padding: calc(var(--leading-s) * 2) var(--leading-s);
 }

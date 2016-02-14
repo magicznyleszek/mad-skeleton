@@ -2,8 +2,8 @@
 image organism
 ------------------------------------------------------------------------------*/
 
-@import "config.css";
-@import "library.css";
+@import '_config.css';
+@import 'library.css';
 
 [gui-o-image] {
     display: inline-block;
@@ -25,7 +25,7 @@ image organism
 
 [gui-o-image]:not(:last-child) { margin-bottom: var(--leading-s); }
 
-[gui-o-image~="small"] {
+[gui-o-image~='small'] {
     width: var(--image-small-w);
     height: var(--image-small-h);
 }

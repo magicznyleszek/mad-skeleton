@@ -67,7 +67,7 @@ blockquote {
 }
 
 blockquote cite:before {
-    content: "\2014";
+    content: '\2014';
     display: inline-block;
     margin-right: var(--a-s-tiny);
 }

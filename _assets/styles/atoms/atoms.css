@@ -14,8 +14,8 @@ atoms - a palette of all possible variables used throughout the project
 
     /* font families */
 
-    --a-font-sourceSansPro: "Source Sans Pro", sans-serif;
-    --a-font-monospace: "Input Mono", "Office Code Pro", "Source Code Pro", "Fira Mono", "Inconsolata",  "Monaco", "Consolas", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", monospace;
+    --a-font-sourceSansPro: 'Source Sans Pro', sans-serif;
+    --a-font-monospace: 'Input Mono', 'Office Code Pro', 'Source Code Pro', 'Fira Mono', 'Inconsolata',  'Monaco', 'Consolas', 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', monospace;
 
     /* fractions */
 

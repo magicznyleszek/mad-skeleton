@@ -2,29 +2,27 @@
 main styles aggregation
 ------------------------------------------------------------------------------*/
 
-/* settings */
-@import "settings/atoms.css";
-@import "settings/customs.css";
+/* atoms */
+@import 'atoms/atoms.css';
+@import 'atoms/selectors.css';
 
 /* basics */
-@import "basics/config.css";
-@import "basics/root.css";
-@import "basics/typography.css";
-@import "basics/states.css";
-@import "basics/layout.css";
-
-/* organisms */
-@import "organisms/button/base.css";
-@import "organisms/icon/base.css";
-@import "organisms/image/base.css";
-@import "organisms/progressbar/base.css";
-@import "organisms/section/base.css";
-@import "organisms/table/base.css";
+@import 'setup/root.css';
+@import 'setup/states.css';
+@import 'setup/typography.css';
 
 /* molecules */
-@import "molecules/area.css";
-@import "molecules/column.css";
-@import "molecules/hover.css";
-@import "molecules/inlineblock.css";
-@import "molecules/pad.css";
-@import "molecules/text.css";
+@import 'molecules/area.css';
+@import 'molecules/column.css';
+@import 'molecules/hover.css';
+@import 'molecules/inlineblock.css';
+@import 'molecules/pad.css';
+@import 'molecules/text.css';
+
+/* organisms */
+@import 'organisms/button/base.css';
+@import 'organisms/icon/base.css';
+@import 'organisms/image/base.css';
+@import 'organisms/progressbar/base.css';
+@import 'organisms/section/base.css';
+@import 'organisms/table/base.css';

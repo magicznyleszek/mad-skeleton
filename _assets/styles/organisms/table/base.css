@@ -2,7 +2,7 @@
 table organism
 ------------------------------------------------------------------------------*/
 
-@import "config.css";
+@import '_config.css';
 
 [gui-o-table] {
     border-collapse: separate;
@@ -29,8 +29,8 @@ table organism
     font-style: italic;
 }
 
-[gui-o-table~="hoverable"] tr:hover td {
+[gui-o-table~='hoverable'] tr:hover td {
     background-color: var(--table-cell-bg-hover);
 }
 
-[gui-o-table~="full"] { width: 100%; }
+[gui-o-table~='full'] { width: 100%; }

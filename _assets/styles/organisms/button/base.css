@@ -2,7 +2,7 @@
 button organism
 ------------------------------------------------------------------------------*/
 
-@import "config.css";
+@import '_config.css';
 
 [gui-o-button] {
     display: inline-block;
@@ -54,7 +54,7 @@ button organism
     box-shadow: var(--button-sh-active);
 }
 
-[gui-o-button~="middle"] {
+[gui-o-button~='middle'] {
     vertical-align: middle;
 }
 
@@ -63,7 +63,7 @@ button organism
 button sizes
 ------------------------------------------------------------------------------*/
 
-[gui-o-button~="double"] {
+[gui-o-button~='double'] {
     padding-left: calc( var(--button-padding) * 2 );
     padding-right: calc( var(--button-padding) * 2 );
 
@@ -73,7 +73,7 @@ button sizes
     font-size: calc( var(--button-fontsize) * 2 );
 }
 
-[gui-o-button~="triple"] {
+[gui-o-button~='triple'] {
     padding-left: calc( var(--button-padding) * 3 );
     padding-right: calc( var(--button-padding) * 3 );
 
@@ -83,7 +83,7 @@ button sizes
     font-size: calc( var(--button-fontsize) * 3 );
 }
 
-[gui-o-button~="full"] {
+[gui-o-button~='full'] {
     width: 100%;
     display: block;
 }
