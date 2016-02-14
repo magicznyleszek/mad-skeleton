@@ -1,0 +1,27 @@
+/*------------------------------------------------------------------------------
+text molecule
+------------------------------------------------------------------------------*/
+
+/* aligns */
+[gui-m-text~='lefted'] { text-align: left; }
+[gui-m-text~='righted'] { text-align: right; }
+[gui-m-text~='centered'] { text-align: center; }
+[gui-m-text~='justified'] { text-align: justify; }
+
+/* weights */
+[gui-m-text~='300'] { font-weight: 300; }
+[gui-m-text~='400'] { font-weight: 400; }
+[gui-m-text~='600'] { font-weight: 600; }
+[gui-m-text~='700'] { font-weight: 700; }
+
+/* text transforms */
+[gui-m-text~='uppercased'] { text-transform: uppercase; }
+[gui-m-text~='lowercased'] { text-transform: lowercase; }
+[gui-m-text~='untransformed'] { text-transform: none; }
+
+/* trims text with an ellipsis */
+[gui-m-text~='trimmed'] {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

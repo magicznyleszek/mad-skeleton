@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------------------
+hover molecule
+------------------------------------------------------------------------------*/
+
+[gui-m-hover]:not(:hover) [gui-m-hover-item~='restore'],
+[gui-m-hover]:hover [gui-m-hover-item~='remove'] {
+    display: none;
+}
+
+[gui-m-hover]:not(:hover) [gui-m-hover-item~='show'],
+[gui-m-hover]:hover [gui-m-hover-item~='hide'] {
+    visibility: hidden;
+    opacity: 0;
+}
+
+[gui-m-hover-item~='animate'] {
+    transition-duration: var(--a-t-faster);
+}

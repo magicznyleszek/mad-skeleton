@@ -1,0 +1,65 @@
+/*------------------------------------------------------------------------------
+progressbar organism
+------------------------------------------------------------------------------*/
+
+@import '_config.css';
+
+[gui-o-progressbar] {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+
+    height: calc(var(--leading-s) - 0.5rem);
+    margin: 0.25rem 0;
+
+    background-color: var(--progressbar-bg);
+
+    border-radius: var(--progressbar-br);
+}
+
+[gui-o-progressbar]:not(:last-child) { margin-bottom: var(--leading-s); }
+
+[gui-o-progressbar-indicator] {
+    display: block;
+    height: 100%;
+    width: 0%;
+
+    background-color: var(--progressbar-indicator-bg);
+    border-radius: var(--progressbar-br);
+
+    transition: var(--a-t-fast);
+}
+
+[gui-o-progressbar~='short'] { max-width: var(--progressbar-short-w); }
+
+@keyframes framesProgressPending {
+    0% { background-position: calc( var(--progressbar-pending-s) * -1 ) 0; }
+    100% { background-position: var(--progressbar-pending-s) 0; }
+}
+
+[gui-o-progressbar~='is-pending']:after {
+    content: '';
+
+    position: absolute;
+    z-index: var(--a-z-1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: var(--a-f-medium);
+
+    background-image: var(--progressbar-pending-gr);
+    background-size: var(--progressbar-pending-s) 100%;
+    background-repeat: repeat-x;
+
+    animation-name: framesProgressPending;
+    animation-duration: var(--a-t-slow);
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}

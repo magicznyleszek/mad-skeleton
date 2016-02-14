@@ -1,0 +1,31 @@
+/*------------------------------------------------------------------------------
+image organism
+------------------------------------------------------------------------------*/
+
+@import '_config.css';
+@import 'library.css';
+
+[gui-o-image] {
+    display: inline-block;
+    vertical-align: top;
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    background-color: var(--image-bg-empty);
+
+    backface-visibility: hidden;
+}
+
+[gui-o-image]:not(:last-child) { margin-bottom: var(--leading-s); }
+
+[gui-o-image~='small'] {
+    width: var(--image-small-w);
+    height: var(--image-small-h);
+}

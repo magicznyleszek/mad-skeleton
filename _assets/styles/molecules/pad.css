@@ -1,0 +1,39 @@
+/*------------------------------------------------------------------------------
+pad molecule
+------------------------------------------------------------------------------*/
+
+[gui-m-pad~='medium'] {
+    padding: var(--leading-s);
+}
+[gui-m-pad~='medium-v'] {
+    padding-top: var(--leading-s);
+    padding-bottom: var(--leading-s);
+}
+[gui-m-pad~='medium-h'] {
+    padding-left: var(--leading-s);
+    padding-right: var(--leading-s);
+}
+
+[gui-m-pad~='half'] {
+    padding: calc( var(--leading-s) * 0.5 );
+}
+[gui-m-pad~='half-v'] {
+    padding-top: calc( var(--leading-s) * 0.5 );
+    padding-bottom: calc( var(--leading-s) * 0.5 );
+}
+[gui-m-pad~='half-h'] {
+    padding-left: calc( var(--leading-s) * 0.5 );
+    padding-right: calc( var(--leading-s) * 0.5 );
+}
+
+[gui-m-pad~='double'] {
+    padding: calc( var(--leading-s) * 2 );
+}
+[gui-m-pad~='double-v'] {
+    padding-top: calc( var(--leading-s) * 2 );
+    padding-bottom: calc( var(--leading-s) * 2 );
+}
+[gui-m-pad~='double-h'] {
+    padding-left: calc( var(--leading-s) * 2 );
+    padding-right: calc( var(--leading-s) * 2 );
+}

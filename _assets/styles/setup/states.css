@@ -1,0 +1,50 @@
+/*------------------------------------------------------------------------------
+user-action influenced states
+------------------------------------------------------------------------------*/
+
+/* links */
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    /* custom underlines */
+    background-position: 0 100%;
+    background-size: var(--line-gr-w) var(--line-gr-w);
+    background-image: var(--line-gr);
+    background-repeat: repeat-x;
+}
+
+a:hover {
+    color: inherit;
+    background-size: calc(var(--line-gr-w) * 2) calc(var(--line-gr-w) * 2);
+}
+
+a:visited { color: inherit; }
+
+a:active { color: var(--a-c-amaranth); }
+
+/* text selection */
+
+:focus {
+    outline-color: var(--focus-outline-c);
+    outline-style: auto;
+    outline-width: var(--focus-outline-w);
+}
+
+::-moz-focus-inner { border: 0; }
+
+::selection {
+    color: var(--selection-txt-c);
+    background-color: var(--selection-bg-c);
+}
+
+/* disabled elements */
+
+[disabled] {
+    pointer-events: none;
+    opacity: var(--disabled-o);
+
+    /* avoid adding up opacity on nested disabled elements */
+    [disabled] { opacity: 1; }
+}

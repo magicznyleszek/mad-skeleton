@@ -1,0 +1,64 @@
+/*------------------------------------------------------------------------------
+atoms - a palette of all possible variables used throughout the project
+------------------------------------------------------------------------------*/
+
+:root {
+
+    /* colors */
+    --a-c-amaranth: hwb(348deg, 12%, 2%);
+    --a-c-purple: hwb(328deg, 12%, 24%);
+    --a-c-violet: hwb(276deg, 14%, 42%);
+    --a-c-white: hwb(0deg, 100%, 0%);
+    --a-c-silver: hwb(0deg, 80%, 20%);
+    --a-c-charcoal: hwb(0deg, 20%, 80%);
+
+    /* font families */
+
+    --a-font-sourceSansPro: 'Source Sans Pro', sans-serif;
+    --a-font-monospace: 'Input Mono', 'Office Code Pro', 'Source Code Pro', 'Fira Mono', 'Inconsolata',  'Monaco', 'Consolas', 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', monospace;
+
+    /* fractions */
+
+    --a-f-giant: 0.75;
+    --a-f-big: 0.50;
+    --a-f-medium: 0.25;
+    --a-f-small: 0.125;
+    --a-f-tiny: 0.05;
+
+    /* percents */
+
+    --a-p-giant: calc(var(--a-f-giant) * 100%);
+    --a-p-big: calc(var(--a-f-big) * 100%);
+    --a-p-medium: calc(var(--a-f-medium) * 100%);
+    --a-p-small: calc(var(--a-f-small) * 100%);
+    --a-p-tiny: calc(var(--a-f-tiny) * 100%);
+
+    /* time durations */
+
+    --a-t-slowest: 2s;
+    --a-t-slower: 1s;
+    --a-t-slow: 0.75s;
+    --a-t-medium: 0.5s;
+    --a-t-fast: 0.25s;
+    --a-t-faster: 0.125s;
+
+    /* z-indexes */
+
+    --a-z-negative: -1;
+    --a-z-1: 10; --a-z-2: 20; --a-z-3: 30; --a-z-4: 40; --a-z-5: 50;
+    --a-z-6: 60; --a-z-7: 70; --a-z-8: 80; --a-z-9: 90; --a-z-10: 100;
+
+    /* sizes */
+
+    --a-s-infinite: 1000rem; /* extremely big */
+    --a-s-colossal: 5rem; /* 80px @ 16px */
+    --a-s-huge: 4rem; /* 64px @ 16px */
+    --a-s-giant: 2.5rem; /* 40px @ 16px */
+    --a-s-big: 2rem; /* 32px @ 16px */
+    --a-s-large: 1.25rem; /* 20px @ 16px */
+    --a-s-medium: 1rem; /* 16px @ 16px */
+    --a-s-small: 0.625rem; /* 10px @ 16px */
+    --a-s-little: 0.5rem; /* 8px @ 16px */
+    --a-s-tiny: 0.25rem; /* 4px @ 16px */
+
+}
