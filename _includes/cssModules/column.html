@@ -7,50 +7,29 @@
     </p>
 
     <p>
-        A smart and light column system. It has some columns defined and some helpful margin option too. It only needs your help with whitespace bug.
+        A smart and light column system using fractions as modifiers. It has some columns defined and some helpful margin option too. It only needs your help with whitespace bug.
     </p>
 
     <div>
-        <div
-            i-column="1/2"
-            i-text="centered"
-            i-area="charcoal"
-        >
+        <div i-column="1/2" i-text="centered" i-area="charcoal">
             1/2
         </div><!--
-     --><div
-            i-column="1/2"
-            i-text="centered"
-            i-area="silver"
-        >
+     --><div i-column="1/2" i-text="centered" i-area="silver">
             1/2
         </div>
     </div>
 
     <div>
-        <div
-            i-column="2/3"
-            i-text="centered"
-            i-area="silver"
-        >
+        <div i-column="2/3" i-text="centered" i-area="silver">
             2/3
         </div><!--
-     --><div
-            i-column="1/3"
-            i-text="centered"
-            i-area="charcoal"
-        >
+     --><div i-column="1/3" i-text="centered" i-area="charcoal">
             1/3
         </div>
     </div>
 
     <div>
-        <div
-            i-column="1/4"
-            i-column-before="1/3"
-            i-text="centered"
-            i-area="charcoal"
-        >
+        <div i-column="1/4" i-column-before="1/3" i-text="centered" i-area="charcoal">
             1/4 with 1/3 before
         </div>
     </div>
@@ -64,9 +43,9 @@
      </p>
 
      <ul>
-         <li>bigger screens: <code>b-1/2</code></li>
-         <li>medium screens: <code>m-1/2</code></li>
-         <li>smaller screens: <code>s-1/2</code></li>
+         <li>bigger screens: <code>b-</code> prefix for fraction modifier</li>
+         <li>medium screens: <code>m-</code> prefix for fraction modifier</li>
+         <li>smaller screens: <code>s-</code> prefix for fraction modifier</li>
      </ul>
 
 </section>

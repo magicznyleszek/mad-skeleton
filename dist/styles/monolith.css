@@ -12,10 +12,6 @@ atoms - a palette of all possible variables used throughout the project
     /* colors */
 
     /* font families */
-
-    /* z-indexes */
-
-    /* sizes */ /* extremely big */ /* 80px @ 16px */ /* 64px @ 16px */ /* 40px @ 16px */ /* 32px @ 16px */ /* 20px @ 16px */ /* 16px @ 16px */ /* 10px @ 16px */ /* 8px @ 16px */ /* 4px @ 16px */
 }
 
 /*******************************************************************************
@@ -414,54 +410,140 @@ button sizes
     display: block;
 }
 
-/*******************************************************************************
-column molecule
-*******************************************************************************/
-
 /* Remember to truncate the white space between columns! */
 
 [i-column] {
     display: inline-block;
-    vertical-align: top;
-
     width: 100%;
 }
 
-[i-column~='top'] { vertical-align: top; }
+/* vertical aligning columns */
 
-[i-column~='middle'] { vertical-align: middle; }
+[i-column~="top"] {
+    vertical-align: top;
+}
 
-[i-column~='bottom'] { vertical-align: bottom; }
+[i-column~="middle"] {
+    vertical-align: middle;
+}
 
-[i-column~='1/2'] { width: 50%; }
+[i-column~="bottom"] {
+    vertical-align: bottom;
+}
 
-[i-column~='1/3'] { width: 33.33333%; }
+/*******************************************************************************
+columns themselves
+*******************************************************************************/
 
-[i-column~='2/3'] { width: 66.66667%; }
+[i-column~="1/2"] { width: 50%; }
 
-[i-column~='1/4'] { width: 25%; }
+[i-column~="1/3"] { width: 33.33333%; }
 
-[i-column~='3/4'] { width: 75%; }
+[i-column~="2/3"] { width: 66.66667%; }
 
-[i-columnbefore~='1/2'] { margin-left: 50%; }
+[i-column~="1/4"] { width: 25%; }
 
-[i-columnbefore~='1/3'] { margin-left: 33.33333%; }
+[i-column~="3/4"] { width: 75%; }
 
-[i-columnbefore~='2/3'] { margin-left: 66.66667%; }
+@media (min-width: 1536px) {
+    [i-column~="b-1/2"] { width: 50%; }
+    [i-column~="b-1/3"] { width: 33.33333%; }
+    [i-column~="b-2/3"] { width: 66.66667%; }
+    [i-column~="b-1/4"] { width: 25%; }
+    [i-column~="b-3/4"] { width: 75%; }
+}
 
-[i-columnbefore~='1/4'] { margin-left: 25%; }
+@media (min-width: 721px) and (max-width: 1535px) {
+    [i-column~="m-1/2"] { width: 50%; }
+    [i-column~="m-1/3"] { width: 33.33333%; }
+    [i-column~="m-2/3"] { width: 66.66667%; }
+    [i-column~="m-1/4"] { width: 25%; }
+    [i-column~="m-3/4"] { width: 75%; }
+}
 
-[i-columnbefore~='3/4'] { margin-left: 75%; }
+@media (max-width: 720px) {
+    [i-column~="s-1/2"] { width: 50%; }
+    [i-column~="s-1/3"] { width: 33.33333%; }
+    [i-column~="s-2/3"] { width: 66.66667%; }
+    [i-column~="s-1/4"] { width: 25%; }
+    [i-column~="s-3/4"] { width: 75%; }
+}
 
-[i-columnafter~='1/2'] { margin-right: 50%; }
+/*******************************************************************************
+space before column
+*******************************************************************************/
 
-[i-columnafter~='1/3'] { margin-right: 33.33333%; }
+[i-column-before~="1/2"] { margin-left: 50%; }
 
-[i-columnafter~='2/3'] { margin-right: 66.66667%; }
+[i-column-before~="1/3"] { margin-left: 33.33333%; }
 
-[i-columnafter~='1/4'] { margin-right: 25%; }
+[i-column-before~="2/3"] { margin-left: 66.66667%; }
 
-[i-columnafter~='3/4'] { margin-right: 75%; }
+[i-column-before~="1/4"] { margin-left: 25%; }
+
+[i-column-before~="3/4"] { margin-left: 75%; }
+
+@media (min-width: 1536px) {
+    [i-column-before~="b-1/2"] { margin-left: 50%; }
+    [i-column-before~="b-1/3"] { margin-left: 33.33333%; }
+    [i-column-before~="b-2/3"] { margin-left: 66.66667%; }
+    [i-column-before~="b-1/4"] { margin-left: 25%; }
+    [i-column-before~="b-3/4"] { margin-left: 75%; }
+}
+
+@media (min-width: 721px) and (max-width: 1535px) {
+    [i-column-before~="m-1/2"] { margin-left: 50%; }
+    [i-column-before~="m-1/3"] { margin-left: 33.33333%; }
+    [i-column-before~="m-2/3"] { margin-left: 66.66667%; }
+    [i-column-before~="m-1/4"] { margin-left: 25%; }
+    [i-column-before~="m-3/4"] { margin-left: 75%; }
+}
+
+@media (max-width: 720px) {
+    [i-column-before~="s-1/2"] { margin-left: 50%; }
+    [i-column-before~="s-1/3"] { margin-left: 33.33333%; }
+    [i-column-before~="s-2/3"] { margin-left: 66.66667%; }
+    [i-column-before~="s-1/4"] { margin-left: 25%; }
+    [i-column-before~="s-3/4"] { margin-left: 75%; }
+}
+
+/*******************************************************************************
+space after column
+*******************************************************************************/
+
+[i-column-after~="1/2"] { margin-right: 50%; }
+
+[i-column-after~="1/3"] { margin-right: 33.33333%; }
+
+[i-column-after~="2/3"] { margin-right: 66.66667%; }
+
+[i-column-after~="1/4"] { margin-right: 25%; }
+
+[i-column-after~="3/4"] { margin-right: 75%; }
+
+@media (min-width: 1536px) {
+    [i-column-after~="b-1/2"] { margin-right: 50%; }
+    [i-column-after~="b-1/3"] { margin-right: 33.33333%; }
+    [i-column-after~="b-2/3"] { margin-right: 66.66667%; }
+    [i-column-after~="b-1/4"] { margin-right: 25%; }
+    [i-column-after~="b-3/4"] { margin-right: 75%; }
+}
+
+@media (min-width: 721px) and (max-width: 1535px) {
+    [i-column-after~="m-1/2"] { margin-right: 50%; }
+    [i-column-after~="m-1/3"] { margin-right: 33.33333%; }
+    [i-column-after~="m-2/3"] { margin-right: 66.66667%; }
+    [i-column-after~="m-1/4"] { margin-right: 25%; }
+    [i-column-after~="m-3/4"] { margin-right: 75%; }
+}
+
+@media (max-width: 720px) {
+    [i-column-after~="s-1/2"] { margin-right: 50%; }
+    [i-column-after~="s-1/3"] { margin-right: 33.33333%; }
+    [i-column-after~="s-2/3"] { margin-right: 66.66667%; }
+    [i-column-after~="s-1/4"] { margin-right: 25%; }
+    [i-column-after~="s-3/4"] { margin-right: 75%; }
+}
 
 /*******************************************************************************
 hover molecule
@@ -629,7 +711,7 @@ progressbar organism
     transition: 0.25s;
 }
 
-[i-progressbar~='short'] { max-width: 180px; max-width: 10rem; }
+[i-progressbar~="short"] { max-width: 180px; max-width: 10rem; }
 
 @-webkit-keyframes framesProgressPending {
     0% { background-position: -1rem 0; }
@@ -641,11 +723,10 @@ progressbar organism
     100% { background-position: 1rem 0; }
 }
 
-[i-progressbar~='is-pending']:after {
-    content: '';
+[i-progressbar~="is-pending"]:after {
+    content: "";
 
     position: absolute;
-    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
