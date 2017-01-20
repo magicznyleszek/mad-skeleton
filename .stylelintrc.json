@@ -466,7 +466,7 @@
         "block-closing-brace-newline-after": ["always", {
             "severity": "warning"
         }],
-        "block-closing-brace-newline-before": ["always", {
+        "block-closing-brace-newline-before": ["always-multi-line", {
             "severity": "warning"
         }],
         "block-closing-brace-space-after": null,
@@ -572,12 +572,12 @@
             "severity": "warning"
         }],
 
-        "rule-nested-empty-line-before": ["always", {
+        "rule-nested-empty-line-before": ["always-multi-line", {
             "severity": "warning",
             "except": ["first-nested"],
             "ignore": ["after-comment"]
         }],
-        "rule-non-nested-empty-line-before": ["always", {
+        "rule-non-nested-empty-line-before": ["always-multi-line", {
             "severity": "warning",
             "ignore": ["after-comment"]
         }],
