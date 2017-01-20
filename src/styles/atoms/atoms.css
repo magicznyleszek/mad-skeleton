@@ -15,20 +15,6 @@ atoms - a palette of all possible variables used throughout the project
     --a-font-sourceSansPro: 'Source Sans Pro', sans-serif;
     --a-font-monospace: 'Input Mono', 'Office Code Pro', 'Source Code Pro', 'Fira Mono', 'Inconsolata',  'Monaco', 'Consolas', 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', monospace;
 
-    /* fractions */
-    --a-f-giant: 0.75;
-    --a-f-big: 0.50;
-    --a-f-medium: 0.25;
-    --a-f-small: 0.125;
-    --a-f-tiny: 0.05;
-
-    /* percents */
-    --a-p-giant: calc(var(--a-f-giant) * 100%);
-    --a-p-big: calc(var(--a-f-big) * 100%);
-    --a-p-medium: calc(var(--a-f-medium) * 100%);
-    --a-p-small: calc(var(--a-f-small) * 100%);
-    --a-p-tiny: calc(var(--a-f-tiny) * 100%);
-
     /* z-indexes */
     --a-z-negative: -1;
     --a-z-1: 10; --a-z-2: 20; --a-z-3: 30; --a-z-4: 40; --a-z-5: 50;

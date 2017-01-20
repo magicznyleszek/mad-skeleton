@@ -39,7 +39,7 @@ basics configuration
 
     /* reusable stuff */
 
-    --disabled-o: var(--a-f-big);
+    --disabled-o: 0.5;
     --leading-s: calc( var(--rootLineHeight) * 1rem );
 
 }

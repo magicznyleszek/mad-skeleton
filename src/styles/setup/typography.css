@@ -39,7 +39,7 @@ ul { list-style-type: disc; }
 
 ol { list-style-type: decimal; }
 
-small, sub, sup { font-size: var(--a-p-giant); }
+small, sub, sup { font-size: 75%; }
 
 sub, sup {
     line-height: 0;

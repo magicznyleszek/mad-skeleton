@@ -80,7 +80,7 @@ progressbar organism
     width: 100%;
     height: 100%;
 
-    opacity: var(--a-f-medium);
+    opacity: 0.25;
 
     background-image: var(--progressbar-pending-gr);
     background-size: var(--progressbar-pending-s) 100%;
