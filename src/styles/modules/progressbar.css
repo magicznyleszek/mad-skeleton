@@ -60,7 +60,7 @@ progressbar organism
     background-color: var(--progressbar-indicator-bg);
     border-radius: var(--progressbar-br);
 
-    transition: var(--a-t-fast);
+    transition: 0.25s;
 }
 
 [i-progressbar~='short'] { max-width: var(--progressbar-short-w); }
@@ -87,7 +87,7 @@ progressbar organism
     background-repeat: repeat-x;
 
     animation-name: framesProgressPending;
-    animation-duration: var(--a-t-slow);
+    animation-duration: 0.75s;
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-direction: normal;

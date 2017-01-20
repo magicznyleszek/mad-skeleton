@@ -29,14 +29,6 @@ atoms - a palette of all possible variables used throughout the project
     --a-p-small: calc(var(--a-f-small) * 100%);
     --a-p-tiny: calc(var(--a-f-tiny) * 100%);
 
-    /* time durations */
-    --a-t-slowest: 2s;
-    --a-t-slower: 1s;
-    --a-t-slow: 0.75s;
-    --a-t-medium: 0.5s;
-    --a-t-fast: 0.25s;
-    --a-t-faster: 0.125s;
-
     /* z-indexes */
     --a-z-negative: -1;
     --a-z-1: 10; --a-z-2: 20; --a-z-3: 30; --a-z-4: 40; --a-z-5: 50;
