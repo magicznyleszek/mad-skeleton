@@ -14,7 +14,6 @@ progressbar config
     --button-bg-hover: color( var(--a-c-silver) tint(20%) );
     --button-bg-active: color( var(--a-c-silver) tint(30%) );
 
-
     --progressbar-br: 0.125rem;
     --progressbar-bg: var(--a-c-silver);
     --progressbar-indicator-bg: var(--a-c-charcoal);
@@ -63,18 +62,17 @@ progressbar organism
     transition: 0.25s;
 }
 
-[i-progressbar~='short'] { max-width: var(--progressbar-short-w); }
+[i-progressbar~="short"] { max-width: var(--progressbar-short-w); }
 
 @keyframes framesProgressPending {
     0% { background-position: calc( var(--progressbar-pending-s) * -1 ) 0; }
     100% { background-position: var(--progressbar-pending-s) 0; }
 }
 
-[i-progressbar~='is-pending']:after {
-    content: '';
+[i-progressbar~="is-pending"]:after {
+    content: "";
 
     position: absolute;
-    z-index: var(--a-z-1);
     top: 0;
     left: 0;
     width: 100%;

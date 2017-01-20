@@ -3,11 +3,10 @@ button config
 ------------------------------------------------------------------------------*/
 
 :root {
-
     --button-br: 0.125rem;
     --button-txt: var(--a-c-charcoal);
     --button-fontsize: 0.75rem;
-    --button-padding: var(--a-s-little);
+    --button-padding: 0.5rem;
 
     --button-sh: 0 0.125rem 0 0 color( var(--a-c-silver) shade(15%) );
     --button-sh-hover: 0 0.125rem 0 0 color( var(--a-c-silver) shade(10%) );
@@ -16,7 +15,6 @@ button config
     --button-bg: var(--a-c-silver);
     --button-bg-hover: color( var(--a-c-silver) tint(20%) );
     --button-bg-active: color( var(--a-c-silver) tint(30%) );
-
 }
 
 /*------------------------------------------------------------------------------

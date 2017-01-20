@@ -32,7 +32,7 @@ basics configuration
     --line-gr: linear-gradient( to left, var(--line-gr-solid-c) );
 
     --focus-outline-c: var(--a-c-amaranth);
-    --focus-outline-w: var(--a-s-tiny);
+    --focus-outline-w: 0.25rem;
 
     --selection-txt-c: var(--a-c-white);
     --selection-bg-c: var(--a-c-amaranth);
