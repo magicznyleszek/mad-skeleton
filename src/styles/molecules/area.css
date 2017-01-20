@@ -1,0 +1,24 @@
+/*------------------------------------------------------------------------------
+area molecule
+------------------------------------------------------------------------------*/
+
+[i-area~='amaranth'] { background-color: var(--a-c-amaranth); }
+[i-area~='purple'] { background-color: var(--a-c-purple); }
+[i-area~='violet'] { background-color: var(--a-c-violet); }
+[i-area~='white'] { background-color: var(--a-c-white); }
+[i-area~='silver'] { background-color: var(--a-c-silver); }
+[i-area~='charcoal'] { background-color: var(--a-c-charcoal); }
+
+/* text color for light backgrounds */
+[i-area~='white'],
+[i-area~='silver'] {
+    color: var(--a-c-charcoal);
+}
+
+/* text color for dark backgrounds */
+[i-area~='charcoal'],
+[i-area~='amaranth'],
+[i-area~='purple'],
+[i-area~='violet'] {
+    color: var(--a-c-white);
+}

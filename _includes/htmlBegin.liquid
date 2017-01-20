@@ -1,0 +1,46 @@
+{% assign versionCache = site.time|date: "%Y%m%d" %}
+
+<!DOCTYPE html>
+<html class="pterodactylus crushed my algorithms" lang="en">
+
+<head>
+    <!-- stuff -->
+    <meta charset="utf-8">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- info -->
+    <title>{% include helpers/metaTitle.liquid %}</title>
+    <meta name="keywords" content="{{ site.keywords }}">
+    <meta name="description" content="{% include helpers/metaDescription.liquid %}">
+    <meta name="author" content="{{ site.author }}">
+    <link rel="author" href="humans.txt">
+    <link rel="home" href="{{ site.baseurl }}">
+
+    <!-- open graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:title" content="{% include helpers/metaTitle.liquid %}">
+    <meta property="og:description" content="{% include helpers/metaDescription.liquid %}">
+    <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.baseurl }}/public/images/smutnyleszek-logo-200.png">
+
+    <!-- style & viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/styles/monolith.css?{{ versionCache }}" media="all" rel="stylesheet">
+
+    <!-- icons -->
+    <link rel="icon" href="/favicon.ico?{{ versionCache }}">
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/public/images/smutnyleszek-logo-1440.png">
+
+    <!-- fonts -->
+    <link href="http://fonts.googleapis.com/css?{{ site.googleFontsCode }}" rel="stylesheet">
+</head>
+
+<body>
+    <div style="display:none;">
+        {% include symbols.svg %}
+    </div>
+
+    <!-- begin unmovedMover -->
+    <section id="unmovedMover">

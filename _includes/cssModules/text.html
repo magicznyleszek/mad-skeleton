@@ -1,0 +1,81 @@
+<section i-section>
+
+    <h3>text</h3>
+
+    <p>
+        <code>&lt;div i-text="trimmed 300"&gt;...&lt;/div&gt;</code>
+    </p>
+
+    <p>
+        Changes the appearance of the text (weights, case and alignment) and has a special <em>trimmed</em> odifier for ellipsis-trimming of long lines.
+    </p>
+
+    <table i-table>
+        <thead>
+            <tr>
+                <th>lefted</th>
+                <th>centered</th>
+                <th>righted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <p i-text="lefted">makes given inline content<br>align to the left side</p>
+                </td>
+
+                <td>
+                    <p i-text="centered">centered<br> makes given inline content<br> align to the center</p>
+                </td>
+
+                <td>
+                    <p i-text="righted">righted<br> makes given inline content<br> align to the right side</p>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <table i-table="full">
+        <thead>
+            <tr>
+                <th>trimmed</th>
+                <th>uppercased</th>
+                <th>300</th>
+                <th>400</th>
+                <th>600</th>
+                <th>700</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+                <td>
+                    <p i-text="trimmed" style="width: 100px;">makes text trimmed if there is not enough space causing said text to being too long to fit in one line of text on the page or in some other unnamed container that has a limited width</p>
+                </td>
+
+                <td>
+                    <p i-text="uppercased">foo</p>
+                </td>
+
+                <td>
+                    <p i-text="300">bar</p>
+                </td>
+
+                <td>
+                    <p i-text="400">fum</p>
+                </td>
+
+                <td>
+                    <p i-text="600">baz</p>
+                </td>
+
+                <td>
+                    <p i-text="700">qux</p>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</section>

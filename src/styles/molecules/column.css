@@ -1,0 +1,34 @@
+/*------------------------------------------------------------------------------
+column molecule
+------------------------------------------------------------------------------*/
+
+/* Remember to truncate the white space between columns! */
+
+[i-column] {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 100%;
+}
+
+[i-column~='top'] { vertical-align: top; }
+[i-column~='middle'] { vertical-align: middle; }
+[i-column~='bottom'] { vertical-align: bottom; }
+
+[i-column~='1/2'] { width: calc( 100% * 1 / 2 ); }
+[i-column~='1/3'] { width: calc( 100% * 1 / 3 ); }
+[i-column~='2/3'] { width: calc( 100% * 2 / 3 ); }
+[i-column~='1/4'] { width: calc( 100% * 1 / 4 ); }
+[i-column~='3/4'] { width: calc( 100% * 3 / 4 ); }
+
+[i-columnbefore~='1/2'] { margin-left: calc( 100% * 1 / 2 ); }
+[i-columnbefore~='1/3'] { margin-left: calc( 100% * 1 / 3 ); }
+[i-columnbefore~='2/3'] { margin-left: calc( 100% * 2 / 3 ); }
+[i-columnbefore~='1/4'] { margin-left: calc( 100% * 1 / 4 ); }
+[i-columnbefore~='3/4'] { margin-left: calc( 100% * 3 / 4 ); }
+
+[i-columnafter~='1/2'] { margin-right: calc( 100% * 1 / 2 ); }
+[i-columnafter~='1/3'] { margin-right: calc( 100% * 1 / 3 ); }
+[i-columnafter~='2/3'] { margin-right: calc( 100% * 2 / 3 ); }
+[i-columnafter~='1/4'] { margin-right: calc( 100% * 1 / 4 ); }
+[i-columnafter~='3/4'] { margin-right: calc( 100% * 3 / 4 ); }

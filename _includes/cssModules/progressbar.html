@@ -1,0 +1,51 @@
+<section i-section>
+
+    <h3>progressbar</h3>
+
+    <p>
+<pre><code>&lt;div i-progressbar&gt;
+&lt;span i-progressbar-indicator style="width: 50%;"&gt;...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+    </p>
+
+    <p>
+        Progress bars consist of a bar and an indicator. Indicator size should be probably managed by <em>JavaScript</em> with setting percentage <code>width</code>. It fills the vertical space on default, but has a <em>short</em> modifier too. There is also a nice <em>is-pending</em> animation.
+    </p>
+
+    <h4>default:</h4>
+
+    <div i-progressbar="is-pending">
+        <span i-progressbar-indicator style="width: 0%;"></span>
+    </div>
+
+    <div i-progressbar>
+        <span i-progressbar-indicator style="width: 0%;"></span>
+    </div>
+
+    <div i-progressbar>
+        <span i-progressbar-indicator style="width: 33%;"></span>
+    </div>
+
+    <div i-progressbar>
+        <span i-progressbar-indicator style="width: 100%;"></span>
+    </div>
+
+    <div i-progressbar="is-pending">
+        <span i-progressbar-indicator style="width: 100%;"></span>
+    </div>
+
+    <h4>short:</h4>
+
+    <div i-progressbar="is-pending short">
+        <span i-progressbar-indicator style="width: 0%;"></span>
+    </div>
+
+    <div i-progressbar="short">
+        <span i-progressbar-indicator style="width: 67%;"></span>
+    </div>
+
+    <div i-progressbar="is-pending short">
+        <span i-progressbar-indicator style="width: 100%;"></span>
+    </div>
+
+</section>

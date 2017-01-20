@@ -1,0 +1,6 @@
+{% if page.title %}
+{{ page.title }} &ndash;
+{% elsif page.layout == 'category' %}
+{% include helpers/categoryLabel.liquid category=page.slug %} &ndash;
+{% endif %}
+{{ site.name }}

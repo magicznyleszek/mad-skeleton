@@ -4,11 +4,10 @@ Boilerplate assets for quick start with web project.
 
 Features:
 
-- [Grunt](http://gruntjs.com)
-- [svg icons](https://github.com/FWeinb/grunt-svgstore)
+- pure npm-driven building
+- svg icons
 - [cssnext](http://cssnext.io/)
-- CUACSS (component and utility attribute-driven CSS)
-- [CoffeScript](http://coffeescript.org)
+- OACSS
 
 
 ## architecture thoughts-notes

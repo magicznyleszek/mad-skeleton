@@ -1,35 +1,45 @@
 {
   "name": "boilerplate-assets",
-  "version": "2.0.0",
+  "private": true,
+  "version": "3.0.0",
   "description": "Assets for quick start with web project.",
   "repository": {
     "type": "git",
     "url": "https://github.com/smutnyleszek/boilerplate-assets.git"
   },
-  "keywords": [
-    "boilerplate",
-    "assets",
-    "grunt",
-    "coffescript"
-  ],
   "author": "Leszek Pietrzak",
-  "license": "CC0 1.0 Universal",
+  "license": "CC0 4.0 BY-NC-ND",
   "bugs": {
-    "url": "https://github.com/smutnyleszek/boilerplate-assets/issues"
+    "url": "https://github.com/smutnyleszek/boilerplate-assets/issues",
+    "email": "smutnyleszek@gmail.com"
   },
   "homepage": "https://github.com/smutnyleszek/boilerplate-assets",
+  "scripts": {
+    "build": "npm-run-all dist:rebuild svg:build styles:build",
+    "watch": "npm-watch",
+    "dist:rebuild": "rm -rf dist && mkdir dist && mkdir dist/styles",
+    "styles:build": "postcss -u postcss-import -u postcss-cssnext -o dist/styles/monolith.css src/styles/main.css",
+    "svg:build": "svgo -f src/symbols/ && svgshelf -p symbol- src/symbols/\\*.svg _includes/symbols.svg",
+    "jekyll:build": "jekyll build",
+    "jekyll:serve": "jekyll serve --watch --baseurl ''"
+  },
+  "watch": {
+    "styles:build": {
+      "patterns": [
+        "src/styles"
+      ],
+      "quiet": false
+    }
+  },
   "devDependencies": {
-    "coffee-script": "^1.10.0",
-    "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-coffee": "^0.12.0",
-    "grunt-contrib-copy": "^0.8.1",
-    "grunt-contrib-imagemin": "^1.0.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-cssnext": "^1.0.0",
-    "grunt-responsive-images": "^0.1.6",
-    "grunt-svgstore": "^0.5.0",
-    "load-grunt-config": "^0.17.2",
-    "time-grunt": "^1.2.1"
+    "autoprefixer": "^6.3.3",
+    "npm-run-all": "^2.3.0",
+    "npm-watch": "^0.1.5",
+    "postcss": "^5.0.19",
+    "postcss-cli": "^2.5.1",
+    "postcss-cssnext": "^2.4.0",
+    "postcss-import": "^8.0.2",
+    "svgo": "^0.6.1",
+    "svgshelf": "^1.0.3"
   }
 }
