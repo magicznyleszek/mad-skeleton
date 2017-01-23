@@ -1,9 +1,9 @@
 /*******************************************************************************
-atoms - a palette of all possible variables used throughout the project
+variables - all global and pallete variables for project
 *******************************************************************************/
 
 :root {
-    /* colors */
+    /* colors palette */
     --a-c-amaranth: hwb(348deg, 12%, 2%);
     --a-c-purple: hwb(328deg, 12%, 24%);
     --a-c-violet: hwb(276deg, 14%, 42%);
@@ -11,7 +11,7 @@ atoms - a palette of all possible variables used throughout the project
     --a-c-silver: hwb(0deg, 80%, 20%);
     --a-c-charcoal: hwb(0deg, 20%, 80%);
 
-    /* font families */
+    /* font families palette */
     --a-font-sourceSansPro: "Source Sans Pro", sans-serif;
     --a-font-monospace:
         "Input Mono",
@@ -25,10 +25,39 @@ atoms - a palette of all possible variables used throughout the project
         "Liberation Mono",
         "DejaVu Sans Mono",
         monospace;
+
+    /* base */
+    --app-txt-c: var(--a-c-charcoal);
+    --app-bg-c: var(--a-c-white);
+    --app-content-w: 36rem; /* 576px @ 16px */
+
+    /* root typography with font sizes for different screens scaling */
+    --rootFontWeight: 400;
+    --rootLineHeight: 1.5;
+    --rootFontFamily: var(--a-font-sourceSansPro);
+    --rootFontSize: 18px;
+    --rootFontSizeSmaller: 16px;
+    --rootFontSizeBigger: 20px;
+
+    /* specific elements */
+    --line-gr-w: 0.0625rem; /* 1px @ 16px */
+    --line-gr-dotted-c: transparent 0%, transparent 50%, currentColor 50%, currentColor 100%;
+    --line-gr-solid-c: currentColor 0%, currentColor 0%;
+    --line-gr: linear-gradient(to left, var(--line-gr-solid-c));
+
+    --focus-outline-c: var(--a-c-amaranth);
+    --focus-outline-w: 0.25rem;
+
+    --selection-txt-c: var(--a-c-white);
+    --selection-bg-c: var(--a-c-amaranth);
+
+    /* reusable stuff */
+    --disabled-o: 0.5;
+    --leading-s: calc(var(--rootLineHeight) * 1rem);
 }
 
 /*******************************************************************************
-custom media queries and selectors
+custom media queries and selectors shortcuts
 *******************************************************************************/
 
 @custom-media --bigger (min-width: 1536px);

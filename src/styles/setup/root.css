@@ -7,8 +7,6 @@ It is recommended to keep all vertical margins and heights of elements to match
 the leading. Use caution when adding borders or when using vertical-align middle
 as they tend to add unwanted pixels, thus braking the flow. */
 
-@import "_config.css";
-
 html {
     box-sizing: border-box;
     min-height: 100%;
