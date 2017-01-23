@@ -1,21 +1,8 @@
-# OBSOLETE PLEASE UPDATE
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+# MADCSS<sup>1</sup> philosophy
 
-# OACSS<sup>1</sup> philosophy
+<sup>1</sup> Modular Attribute-Driven CSS
 
-<sup>1</sup> Organic attribute-driven CSS
-
-Basic architecture of CSS. It's ~~based on~~ inspired by:
+Basic architecture is ~~based on~~ inspired by:
 
 - [AMCSS](https://amcss.github.io/)
 - [Gemma](https://github.com/colepeters/gemma)
@@ -23,50 +10,28 @@ Basic architecture of CSS. It's ~~based on~~ inspired by:
 - [Atomic Design](http://demo.patternlab.io)
 - [Tachyons](http://tachyons.io/)
 
-The base global prefix for all attribute modules is `i-`. Of course you can
-alwas switch to `data-i-` if you feel uneasy and exposed to danger.
+The base global prefix for all attribute modules is `i-`.
 
+## Attribute-modules naming structure
+
+```
+[<globalPrefix>-<name>{-<childName>||~=<modifierName>}]
+```
+
+Attribute names are defined in a simple fashion. Attribute always starts with the global prefix, followed by module name. If it's a child, then it appends a single hyphen, followed by the child name. Note: you shouldn't go deeper: i.e. grandchildren are forbidden.
+
+Modifiers are a space-separated strings (you can use almost any character you want, i.e. `[i-column~='2/3 isActive ++']`).
 
 ## Architecture
 
-
 ### Atoms
 
-Atoms are CSS variables -- this should be the only place for adding new colors,
-sizes and other basic values. Treat this as a project palette.
-
+Atoms are CSS variables -- this should be the only place for adding new colors, sizes and other basic values. Treat this as a project palette.
 
 ### Setup
 
 Root styles for the whole website/app and some simple typography normalisations.
 
+### Modules
 
-### Molecules
-
-Structure- and layout-related classes that do one, generic thing extremely well.
-Can be naturally mixed with each other and with organisms -- as long as it makes
-sense of course.
-
-Molecules use the `m-` namespace.
-
-
-### Organisms
-
-Context-specific selectors for distinct components of an interface. They are
-forbidden to mix with each other, sorry.
-
-Organisms use the `o-` namespace.
-
-
-## Attribute-modules naming structure
-
-```
-[<globalPrefix>-<namespace>-<name>{-<childName>||~=<modifierName>}]
-```
-
-AMs names are defined in a simple fashion. Attribute always starts with the
-global prefix, followed by namespace and then name. If it's a child AM it
-appends a single hyphen, followed by the child name.
-
-Modifiers are a space-separated strings (you can use almost any character you
-want, i.e. `[i-column~='2/3']`).
+These can be either structure- and layout-related selectors that do one, generic thing extremely well -- or a context-specific selectors for distinct components of an interface. Can be naturally mixed with each other, as long as it makes sense of course.

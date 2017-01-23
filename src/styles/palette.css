@@ -1,0 +1,40 @@
+/*******************************************************************************
+atoms - a palette of all possible variables used throughout the project
+*******************************************************************************/
+
+:root {
+    /* colors */
+    --a-c-amaranth: hwb(348deg, 12%, 2%);
+    --a-c-purple: hwb(328deg, 12%, 24%);
+    --a-c-violet: hwb(276deg, 14%, 42%);
+    --a-c-white: hwb(0deg, 100%, 0%);
+    --a-c-silver: hwb(0deg, 80%, 20%);
+    --a-c-charcoal: hwb(0deg, 20%, 80%);
+
+    /* font families */
+    --a-font-sourceSansPro: "Source Sans Pro", sans-serif;
+    --a-font-monospace:
+        "Input Mono",
+        "Office Code Pro",
+        "Source Code Pro",
+        "Fira Mono",
+        "Inconsolata",
+        "Monaco",
+        "Consolas",
+        "Lucida Console",
+        "Liberation Mono",
+        "DejaVu Sans Mono",
+        monospace;
+}
+
+/*******************************************************************************
+custom media queries and selectors
+*******************************************************************************/
+
+@custom-media --bigger (min-width: 1536px);
+@custom-media --medium (min-width: 721px) and (max-width: 1535px);
+@custom-media --smaller (max-width: 720px);
+@custom-media --retina (min-resolution: 2dppx);
+@custom-selector :--headers h1, h2, h3, h4;
+@custom-selector :--textblocks h1, h2, h3, h4, p, ul, ol, blockquote, pre;
+@custom-selector :--formelements button, input, select, textarea;

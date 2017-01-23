@@ -7,21 +7,18 @@ It is recommended to keep all vertical margins and heights of elements to match
 the leading. Use caution when adding borders or when using vertical-align middle
 as they tend to add unwanted pixels, thus braking the flow. */
 
-@import '_config.css';
+@import "_config.css";
 
 html {
+    box-sizing: border-box;
+    min-height: 100%;
+    background-color: var(--app-bg-c);
+    color: var(--app-txt-c);
+    font-family: var(--rootFontFamily);
     font-weight: var(--rootFontWeight);
     font-size: var(--rootFontSize);
     line-height: var(--rootLineHeight);
-    font-family: var(--rootFontFamily);
     text-rendering: optimizeLegibility;
-
-    min-height: 100%;
-
-    color: var(--app-txt-c);
-    background-color: var(--app-bg-c);
-
-    box-sizing: border-box;
 }
 
 /* clever page scaling with root font size changes */
@@ -30,13 +27,15 @@ html {
 
 @media (--smaller) { html { font-size: var(--rootFontSizeSmaller); } }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
 body {
     margin: 0;
+    padding: calc(var(--leading-s) * 2) var(--leading-s);
     width: 100%;
     max-width: var(--app-content-w);
-    padding: calc(var(--leading-s) * 2) var(--leading-s);
 }

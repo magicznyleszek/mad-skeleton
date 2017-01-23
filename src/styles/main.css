@@ -3,8 +3,7 @@ main styles aggregation
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 /* atoms */
-@import "atoms/atoms.css";
-@import "atoms/selectors.css";
+@import "palette.css";
 
 /* basics */
 @import "setup/root.css";
