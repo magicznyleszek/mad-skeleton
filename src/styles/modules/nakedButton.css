@@ -1,17 +1,17 @@
 /*******************************************************************************
-nakedbutton module
+nakedButton module
 *******************************************************************************/
 
-[i-nakedbutton] {
+[i-nakedButton] {
     display: inline-block;
     cursor: pointer;
     background-image: none;
 }
 
-[i-nakedbutton]:not([disabled]):hover {
+[i-nakedButton]:not([disabled]):hover {
     opacity: 0.8;
 }
 
-[i-nakedbutton]:not([disabled]):active {
+[i-nakedButton]:not([disabled]):active {
     opacity: 0.6;
 }

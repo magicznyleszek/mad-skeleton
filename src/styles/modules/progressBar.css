@@ -1,5 +1,5 @@
 /*******************************************************************************
-progressbar config
+progressBar config
 *******************************************************************************/
 
 :root {
@@ -14,14 +14,14 @@ progressbar config
     --button-bg-hover: color( var(--c-silver) tint(20%) );
     --button-bg-active: color( var(--c-silver) tint(30%) );
 
-    --progressbar-br: 0.125rem;
-    --progressbar-bg: var(--c-silver);
-    --progressbar-indicator-bg: var(--c-charcoal);
+    --progressBar-br: 0.125rem;
+    --progressBar-bg: var(--c-silver);
+    --progressBar-indicator-bg: var(--c-charcoal);
 
-    --progressbar-short-w: 10rem; /* 160px @ 16px */
+    --progressBar-short-w: 10rem; /* 160px @ 16px */
 
-    --progressbar-pending-s: 1rem;
-    --progressbar-pending-gr: radial-gradient(
+    --progressBar-pending-s: 1rem;
+    --progressBar-pending-gr: radial-gradient(
         circle 0.33rem,
         var(--c-white) 0%,
         var(--c-white) 50%,
@@ -32,10 +32,10 @@ progressbar config
 }
 
 /*******************************************************************************
-progressbar module
+progressBar module
 *******************************************************************************/
 
-[i-progressbar] {
+[i-progressBar] {
     position: relative;
     overflow: hidden;
 
@@ -44,32 +44,32 @@ progressbar module
     height: calc(var(--s-leading) - 0.5rem);
     margin: 0.25rem 0;
 
-    background-color: var(--progressbar-bg);
+    background-color: var(--progressBar-bg);
 
-    border-radius: var(--progressbar-br);
+    border-radius: var(--progressBar-br);
 }
 
-[i-progressbar]:not(:last-child) { margin-bottom: var(--s-leading); }
+[i-progressBar]:not(:last-child) { margin-bottom: var(--s-leading); }
 
-[i-progressbar-indicator] {
+[i-progressBar-indicator] {
     display: block;
     height: 100%;
     width: 0%;
 
-    background-color: var(--progressbar-indicator-bg);
-    border-radius: var(--progressbar-br);
+    background-color: var(--progressBar-indicator-bg);
+    border-radius: var(--progressBar-br);
 
     transition: 0.25s;
 }
 
-[i-progressbar~="short"] { max-width: var(--progressbar-short-w); }
+[i-progressBar~="short"] { max-width: var(--progressBar-short-w); }
 
 @keyframes framesProgressPending {
-    0% { background-position: calc( var(--progressbar-pending-s) * -1 ) 0; }
-    100% { background-position: var(--progressbar-pending-s) 0; }
+    0% { background-position: calc( var(--progressBar-pending-s) * -1 ) 0; }
+    100% { background-position: var(--progressBar-pending-s) 0; }
 }
 
-[i-progressbar~="is-pending"]:after {
+[i-progressBar~="is-pending"]:after {
     content: "";
 
     position: absolute;
@@ -80,8 +80,8 @@ progressbar module
 
     opacity: 0.25;
 
-    background-image: var(--progressbar-pending-gr);
-    background-size: var(--progressbar-pending-s) 100%;
+    background-image: var(--progressBar-pending-gr);
+    background-size: var(--progressBar-pending-s) 100%;
     background-repeat: repeat-x;
 
     animation-name: framesProgressPending;

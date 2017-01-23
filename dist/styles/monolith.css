@@ -614,66 +614,78 @@ icon module
 [i-icon~='silver'] { fill: rgb(204, 204, 204) }
 
 /*******************************************************************************
-inlineblock module
+inlineBlock module
 *******************************************************************************/
 
-[i-inlineblock] { display: inline-block; }
+[i-inlineBlock] { display: inline-block; }
+
+/*******************************************************************************
+nakedButton module
+*******************************************************************************/
+
+[i-nakedButton] {
+    display: inline-block;
+    cursor: pointer;
+    background-image: none;
+}
+
+[i-nakedButton]:not([disabled]):hover {
+    opacity: 0.8;
+}
+
+[i-nakedButton]:not([disabled]):active {
+    opacity: 0.6;
+}
 
 /*******************************************************************************
 pad module
 *******************************************************************************/
 
-[i-pad~='medium'] {
-    padding: 27px;
-    padding: 1.5rem;
-}
+[i-pad~="medium"] { padding: 27px; padding: 1.5rem; }
 
-[i-pad~='medium-v'] {
+[i-pad~="medium-v"] {
     padding-top: 27px;
     padding-top: 1.5rem;
     padding-bottom: 27px;
     padding-bottom: 1.5rem;
 }
 
-[i-pad~='medium-h'] {
+[i-pad~="medium-h"] {
     padding-left: 27px;
     padding-left: 1.5rem;
     padding-right: 27px;
     padding-right: 1.5rem;
 }
 
-[i-pad~='half'] {
-    padding: 13.5px;
-    padding: 0.75rem;
-}
+[i-pad~="half"] { padding: 13.5px; padding: 0.75rem; }
 
-[i-pad~='half-v'] {
+[i-pad~="half-v"] {
     padding-top: 13.5px;
     padding-top: 0.75rem;
     padding-bottom: 13.5px;
     padding-bottom: 0.75rem;
 }
 
-[i-pad~='half-h'] {
+[i-pad~="half-h"] {
     padding-left: 13.5px;
     padding-left: 0.75rem;
     padding-right: 13.5px;
     padding-right: 0.75rem;
 }
 
-[i-pad~='double'] {
+[i-pad~="double"] {
     padding: 54px;
     padding: 3rem;
 }
 
-[i-pad~='double-v'] {
+[i-pad~="double-v"] {
     padding-top: 54px;
     padding-top: 3rem;
     padding-bottom: 54px;
     padding-bottom: 3rem;
 }
 
-[i-pad~='double-h'] {
+[i-pad~="double-h"] {
     padding-left: 54px;
     padding-left: 3rem;
     padding-right: 54px;
@@ -681,7 +693,7 @@ pad module
 }
 
 /*******************************************************************************
-progressbar config
+progressBar config
 *******************************************************************************/
 
 :root { /* 160px @ 16px */
@@ -689,10 +701,10 @@ progressbar config
 }
 
 /*******************************************************************************
-progressbar module
+progressBar module
 *******************************************************************************/
 
-[i-progressbar] {
+[i-progressBar] {
     position: relative;
     overflow: hidden;
 
@@ -708,9 +720,9 @@ progressbar module
     border-radius: 0.125rem;
 }
 
-[i-progressbar]:not(:last-child) { margin-bottom: 27px; margin-bottom: 1.5rem; }
+[i-progressBar]:not(:last-child) { margin-bottom: 27px; margin-bottom: 1.5rem; }
 
-[i-progressbar-indicator] {
+[i-progressBar-indicator] {
     display: block;
     height: 100%;
     width: 0%;
@@ -723,7 +735,7 @@ progressbar module
     transition: 0.25s;
 }
 
-[i-progressbar~="short"] { max-width: 180px; max-width: 10rem; }
+[i-progressBar~="short"] { max-width: 180px; max-width: 10rem; }
 
 @-webkit-keyframes framesProgressPending {
     0% { background-position: -1rem 0; }
@@ -735,7 +747,7 @@ progressbar module
     100% { background-position: 1rem 0; }
 }
 
-[i-progressbar~="is-pending"]:after {
+[i-progressBar~="is-pending"]:after {
     content: "";
 
     position: absolute;
