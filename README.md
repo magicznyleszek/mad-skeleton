@@ -5,13 +5,13 @@ Boilerplate assets for quick start with web project.
 Features:
 
 - pure npm-scripts-driven building
-- svg icons
+- MADCSS<sup>1</sup>
 - [cssnext](http://cssnext.io/)
-- MADCSS[^madcss]
+- svg icons
 
-## MADCSS[^madcss] philosophy
+## MADCSS<sup>1</sup> philosophy
 
-[^madcss]: Modular Attribute-Driven CSS
+<sup>1</sup> Modular Attribute-Driven CSS
 
 Basic architecture is ~~based on~~ inspired by:
 
