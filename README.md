@@ -1,4 +1,4 @@
-# Boilerplate assets
+# Boilerplate assets v4
 
 Boilerplate assets for quick start with web project.
 
