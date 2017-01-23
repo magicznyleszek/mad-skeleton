@@ -1,0 +1,63 @@
+/*******************************************************************************
+user-action influenced states
+*******************************************************************************/
+
+:root {
+    --line-gr-w: 0.0625rem; /* 1px @ 16px */
+    --line-gr-solid-c: currentColor 0%, currentColor 0%;
+    --line-gr: linear-gradient(to left, var(--line-gr-solid-c));
+
+    --focus-outline-c: var(--c-amaranth);
+    --focus-outline-w: 0.25rem;
+
+    --selection-txt-c: var(--c-white);
+    --selection-bg-c: var(--c-amaranth);
+
+    --disabled-o: 0.5;
+}
+
+/* links */
+
+a {
+    /* custom underlines */
+    background-position: 0 100%;
+    background-size: var(--line-gr-w) var(--line-gr-w);
+    background-image: var(--line-gr);
+    background-repeat: repeat-x;
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    background-size: calc(var(--line-gr-w) * 2) calc(var(--line-gr-w) * 2);
+    color: inherit;
+}
+
+a:visited { color: inherit; }
+
+a:active { color: var(--c-amaranth); }
+
+/* text selection */
+
+:focus {
+    outline-color: var(--focus-outline-c);
+    outline-style: auto;
+    outline-width: var(--focus-outline-w);
+}
+
+::-moz-focus-inner { border: 0; }
+
+::selection {
+    background-color: var(--selection-bg-c);
+    color: var(--selection-txt-c);
+}
+
+/* disabled elements */
+
+[disabled] {
+    pointer-events: none;
+    opacity: var(--disabled-o);
+
+    /* avoid adding up opacity on nested disabled elements */
+    [disabled] { opacity: 1; }
+}

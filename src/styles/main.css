@@ -1,0 +1,24 @@
+/*******************************************************************************
+main styles aggregation
+*******************************************************************************/
+
+/* variables palette */
+@import "variables.css";
+
+/* basics */
+@import "setup/root.css";
+@import "setup/states.css";
+@import "setup/typography.css";
+
+/* modules */
+@import "modules/area.css";
+@import "modules/button.css";
+@import "modules/column.css";
+@import "modules/hover.css";
+@import "modules/icon.css";
+@import "modules/inlineblock.css";
+@import "modules/pad.css";
+@import "modules/progressbar.css";
+@import "modules/section.css";
+@import "modules/table.css";
+@import "modules/text.css";

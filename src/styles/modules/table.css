@@ -1,0 +1,46 @@
+/*******************************************************************************
+table config
+*******************************************************************************/
+
+:root {
+
+    --table-cell-sh: 0 0 0 0.0625rem color( var(--c-silver) shade(20%) );
+    --table-cell-bg: var(--c-white);
+    --table-cell-bg-hover: color( var(--c-silver) tint(50%) );
+
+}
+
+/*******************************************************************************
+table organism
+*******************************************************************************/
+
+[i-table] {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+[i-table]:not(:last-child),
+[i-table] caption:not(:last-child) {
+    margin-bottom: var(--s-leading);
+}
+
+[i-table] td,
+[i-table] th {
+    padding: calc( var(--s-leading) * 0.5 );
+    box-shadow: var(--table-cell-sh);
+
+    background-color: var(--table-cell-bg);
+}
+
+[i-table] thead { font-weight: 700; }
+
+[i-table] caption {
+    text-align: center;
+    font-style: italic;
+}
+
+[i-table~='hoverable'] tr:hover td {
+    background-color: var(--table-cell-bg-hover);
+}
+
+[i-table~='full'] { width: 100%; }

@@ -1,7 +1,11 @@
-# assets
+# Jekyll site is built by gh-pages
+_site
+.jekyll-metadata
+
+# NPM
 node_modules
+npm-debug.log
 
 # OS generated
 .DS_Store
-ehthumbs.db
 Thumbs.db

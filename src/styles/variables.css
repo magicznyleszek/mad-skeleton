@@ -1,0 +1,63 @@
+/*******************************************************************************
+variables - all global and pallete variables for project
+*******************************************************************************/
+
+:root {
+    /* colors palette */
+    --c-amaranth: hwb(348deg, 12%, 2%);
+    --c-purple: hwb(328deg, 12%, 24%);
+    --c-violet: hwb(276deg, 14%, 42%);
+    --c-white: hwb(0deg, 100%, 0%);
+    --c-silver: hwb(0deg, 80%, 20%);
+    --c-charcoal: hwb(0deg, 20%, 80%);
+
+    /* font families palette */
+    --font-sourceSansPro: "Source Sans Pro", sans-serif;
+    --font-monospace:
+        "Input Mono",
+        "Office Code Pro",
+        "Source Code Pro",
+        "Fira Mono",
+        "Inconsolata",
+        "Monaco",
+        "Consolas",
+        "Lucida Console",
+        "Liberation Mono",
+        "DejaVu Sans Mono",
+        monospace;
+
+    /* base */
+    --c-root-txt: var(--c-charcoal);
+    --c-root-bg: var(--c-white);
+    --s-root-content: 36rem; /* 576px @ 16px */
+
+    /* root typography */
+    --root-fontWeight: 400;
+    --root-lineHeight: 1.5;
+    --root-fontFamily: var(--font-sourceSansPro);
+
+    /* font sizes with respect to user browser default sizes */
+    --root-fontSize-medium: 112.5%; /* probably 18px */
+    --root-fontSize-smaller: 100%; /* probably 16px */
+    --root-fontSize-bigger: 125%; /* probably 20px */
+
+    /* leading size for all spacing between elements to be pretty */
+    --s-leading: calc(var(--root-lineHeight) * 1rem);
+}
+
+/*******************************************************************************
+custom media queries and selectors shortcuts
+*******************************************************************************/
+
+/* media queries for scaling everything */
+@custom-media --bigger (min-width: 1536px);
+@custom-media --medium (min-width: 721px) and (max-width: 1535px);
+@custom-media --smaller (max-width: 720px);
+
+/* retina media query */
+@custom-media --retina (min-resolution: 2dppx);
+
+/* groups selectors */
+@custom-selector :--headers h1, h2, h3, h4;
+@custom-selector :--textblocks h1, h2, h3, h4, p, ul, ol, blockquote, pre;
+@custom-selector :--formelements button, input, select, textarea;

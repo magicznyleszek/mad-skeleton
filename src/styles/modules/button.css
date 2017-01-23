@@ -1,0 +1,106 @@
+/*******************************************************************************
+button config
+*******************************************************************************/
+
+:root {
+    --button-br: 0.125rem;
+    --button-txt: var(--c-charcoal);
+    --button-fontsize: 0.75rem;
+    --button-padding: 0.5rem;
+
+    --button-sh: 0 0.125rem 0 0 color( var(--c-silver) shade(15%) );
+    --button-sh-hover: 0 0.125rem 0 0 color( var(--c-silver) shade(10%) );
+    --button-sh-active: 0 0.125rem 0 0 color( var(--c-silver) shade(5%) );
+
+    --button-bg: var(--c-silver);
+    --button-bg-hover: color( var(--c-silver) tint(20%) );
+    --button-bg-active: color( var(--c-silver) tint(30%) );
+}
+
+/*******************************************************************************
+button organism
+*******************************************************************************/
+
+[i-button] {
+    display: inline-block;
+    vertical-align: top;
+
+    border: 0;
+    outline: 0;
+
+    cursor: pointer;
+
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: var(--button-padding);
+    padding-right: var(--button-padding);
+
+    line-height: calc(var(--s-leading) - 0.125rem);
+    height: calc(var(--s-leading) - 0.25rem);
+    margin: 0.125rem 0;
+
+    border-radius: var(--button-br);
+
+    font-size: var(--button-fontsize);
+    font-weight: 700;
+    font-family: inherit;
+    text-align: center;
+
+    text-decoration: none;
+    background-image: none;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+[i-button],
+[i-button]:visited {
+    color: var(--button-txt);
+    background-color: var(--button-bg);
+    box-shadow: var(--button-sh);
+}
+
+[i-button]:not([disabled]):hover {
+    background-color: var(--button-bg-hover);
+    box-shadow: var(--button-sh-hover);
+}
+
+[i-button]:not([disabled]):active {
+    background-color: var(--button-bg-active);
+    box-shadow: var(--button-sh-active);
+}
+
+[i-button~='middle'] {
+    vertical-align: middle;
+}
+
+
+/*******************************************************************************
+button sizes
+*******************************************************************************/
+
+[i-button~='double'] {
+    padding-left: calc( var(--button-padding) * 2 );
+    padding-right: calc( var(--button-padding) * 2 );
+
+    line-height: calc( ( var(--s-leading) - 0.125rem ) * 2 );
+    height: calc( var(--s-leading) * 2 - 0.25rem );
+
+    font-size: calc( var(--button-fontsize) * 2 );
+}
+
+[i-button~='triple'] {
+    padding-left: calc( var(--button-padding) * 3 );
+    padding-right: calc( var(--button-padding) * 3 );
+
+    line-height: calc( ( var(--s-leading) - 0.125rem ) * 3 );
+    height: calc( var(--s-leading) * 3 - 0.25rem );
+
+    font-size: calc( var(--button-fontsize) * 3 );
+}
+
+[i-button~='full'] {
+    width: 100%;
+    display: block;
+}
