@@ -854,12 +854,16 @@ text molecule
 
 /* weights */
 
+[i-text~="light"],
 [i-text~="300"] { font-weight: 300; }
 
+[i-text~="regular"],
 [i-text~="400"] { font-weight: 400; }
 
+[i-text~="semibold"],
 [i-text~="600"] { font-weight: 600; }
 
+[i-text~="bold"],
 [i-text~="700"] { font-weight: 700; }
 
 /* sizes */
