@@ -17,6 +17,7 @@ main styles aggregation
 @import "modules/hover.css";
 @import "modules/icon.css";
 @import "modules/inlineblock.css";
+@import "modules/nakedbutton.css";
 @import "modules/pad.css";
 @import "modules/progressbar.css";
 @import "modules/section.css";
