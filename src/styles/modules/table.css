@@ -4,9 +4,9 @@ table config
 
 :root {
 
-    --table-cell-sh: 0 0 0 0.0625rem color( var(--a-c-silver) shade(20%) );
-    --table-cell-bg: var(--a-c-white);
-    --table-cell-bg-hover: color( var(--a-c-silver) tint(50%) );
+    --table-cell-sh: 0 0 0 0.0625rem color( var(--c-silver) shade(20%) );
+    --table-cell-bg: var(--c-white);
+    --table-cell-bg-hover: color( var(--c-silver) tint(50%) );
 
 }
 
@@ -21,12 +21,12 @@ table organism
 
 [i-table]:not(:last-child),
 [i-table] caption:not(:last-child) {
-    margin-bottom: var(--leading-s);
+    margin-bottom: var(--s-leading);
 }
 
 [i-table] td,
 [i-table] th {
-    padding: calc( var(--leading-s) * 0.5 );
+    padding: calc( var(--s-leading) * 0.5 );
     box-shadow: var(--table-cell-sh);
 
     background-color: var(--table-cell-bg);

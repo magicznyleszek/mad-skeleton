@@ -24,9 +24,9 @@ Modifiers are a space-separated strings (you can use almost any character you wa
 
 ## Architecture
 
-### Atoms
+### Variables
 
-Atoms are CSS variables -- this should be the only place for adding new colors, sizes and other basic values. Treat this as a project palette.
+All global variables. Note that this should be **the only place** for adding new colors.
 
 ### Setup
 
@@ -34,4 +34,4 @@ Root styles for the whole website/app and some simple typography normalisations.
 
 ### Modules
 
-These can be either structure- and layout-related selectors that do one, generic thing extremely well -- or a context-specific selectors for distinct components of an interface. Can be naturally mixed with each other, as long as it makes sense of course.
+These can be either structure- and layout-related selectors that do one, generic thing extremely well -- or a context-specific selectors for distinct components of an interface. Can be naturally mixed with each other -- as long as it makes sense of course.

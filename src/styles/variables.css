@@ -4,16 +4,16 @@ variables - all global and pallete variables for project
 
 :root {
     /* colors palette */
-    --a-c-amaranth: hwb(348deg, 12%, 2%);
-    --a-c-purple: hwb(328deg, 12%, 24%);
-    --a-c-violet: hwb(276deg, 14%, 42%);
-    --a-c-white: hwb(0deg, 100%, 0%);
-    --a-c-silver: hwb(0deg, 80%, 20%);
-    --a-c-charcoal: hwb(0deg, 20%, 80%);
+    --c-amaranth: hwb(348deg, 12%, 2%);
+    --c-purple: hwb(328deg, 12%, 24%);
+    --c-violet: hwb(276deg, 14%, 42%);
+    --c-white: hwb(0deg, 100%, 0%);
+    --c-silver: hwb(0deg, 80%, 20%);
+    --c-charcoal: hwb(0deg, 20%, 80%);
 
     /* font families palette */
-    --a-font-sourceSansPro: "Source Sans Pro", sans-serif;
-    --a-font-monospace:
+    --font-sourceSansPro: "Source Sans Pro", sans-serif;
+    --font-monospace:
         "Input Mono",
         "Office Code Pro",
         "Source Code Pro",
@@ -27,43 +27,37 @@ variables - all global and pallete variables for project
         monospace;
 
     /* base */
-    --app-txt-c: var(--a-c-charcoal);
-    --app-bg-c: var(--a-c-white);
-    --app-content-w: 36rem; /* 576px @ 16px */
+    --c-root-txt: var(--c-charcoal);
+    --c-root-bg: var(--c-white);
+    --s-root-content: 36rem; /* 576px @ 16px */
 
-    /* root typography with font sizes for different screens scaling */
-    --rootFontWeight: 400;
-    --rootLineHeight: 1.5;
-    --rootFontFamily: var(--a-font-sourceSansPro);
-    --rootFontSize: 18px;
-    --rootFontSizeSmaller: 16px;
-    --rootFontSizeBigger: 20px;
+    /* root typography */
+    --root-fontWeight: 400;
+    --root-lineHeight: 1.5;
+    --root-fontFamily: var(--font-sourceSansPro);
 
-    /* specific elements */
-    --line-gr-w: 0.0625rem; /* 1px @ 16px */
-    --line-gr-dotted-c: transparent 0%, transparent 50%, currentColor 50%, currentColor 100%;
-    --line-gr-solid-c: currentColor 0%, currentColor 0%;
-    --line-gr: linear-gradient(to left, var(--line-gr-solid-c));
+    /* font sizes with respect to user browser default sizes */
+    --root-fontSize-medium: 112.5%; /* probably 18px */
+    --root-fontSize-smaller: 100%; /* probably 16px */
+    --root-fontSize-bigger: 125%; /* probably 20px */
 
-    --focus-outline-c: var(--a-c-amaranth);
-    --focus-outline-w: 0.25rem;
-
-    --selection-txt-c: var(--a-c-white);
-    --selection-bg-c: var(--a-c-amaranth);
-
-    /* reusable stuff */
-    --disabled-o: 0.5;
-    --leading-s: calc(var(--rootLineHeight) * 1rem);
+    /* leading size for all spacing between elements to be pretty */
+    --s-leading: calc(var(--root-lineHeight) * 1rem);
 }
 
 /*******************************************************************************
 custom media queries and selectors shortcuts
 *******************************************************************************/
 
+/* media queries for scaling everything */
 @custom-media --bigger (min-width: 1536px);
 @custom-media --medium (min-width: 721px) and (max-width: 1535px);
 @custom-media --smaller (max-width: 720px);
+
+/* retina media query */
 @custom-media --retina (min-resolution: 2dppx);
+
+/* groups selectors */
 @custom-selector :--headers h1, h2, h3, h4;
 @custom-selector :--textblocks h1, h2, h3, h4, p, ul, ol, blockquote, pre;
 @custom-selector :--formelements button, input, select, textarea;

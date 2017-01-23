@@ -10,20 +10,20 @@ as they tend to add unwanted pixels, thus braking the flow. */
 html {
     box-sizing: border-box;
     min-height: 100%;
-    background-color: var(--app-bg-c);
-    color: var(--app-txt-c);
-    font-family: var(--rootFontFamily);
-    font-weight: var(--rootFontWeight);
-    font-size: var(--rootFontSize);
-    line-height: var(--rootLineHeight);
+    background-color: var(--c-root-bg);
+    color: var(--c-root-txt);
+    font-family: var(--root-fontFamily);
+    font-weight: var(--root-fontWeight);
+    font-size: var(--root-fontSize-medium);
+    line-height: var(--root-lineHeight);
     text-rendering: optimizeLegibility;
 }
 
 /* clever page scaling with root font size changes */
 
-@media (--bigger) { html { font-size: var(--rootFontSizeBigger); } }
+@media (--bigger) { html { font-size: var(--root-fontSize-bigger); } }
 
-@media (--smaller) { html { font-size: var(--rootFontSizeSmaller); } }
+@media (--smaller) { html { font-size: var(--root-fontSize-smaller); } }
 
 *,
 *::before,
@@ -33,7 +33,7 @@ html {
 
 body {
     margin: 0;
-    padding: calc(var(--leading-s) * 2) var(--leading-s);
+    padding: calc(var(--s-leading) * 2) var(--s-leading);
     width: 100%;
-    max-width: var(--app-content-w);
+    max-width: var(--s-root-content);
 }

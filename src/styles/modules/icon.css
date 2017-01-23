@@ -4,8 +4,8 @@ icon config
 
 :root {
 
-    --icon-s: var(--leading-s);
-    --icon-s-big: calc( var(--leading-s) * 2 );
+    --icon-s: var(--s-leading);
+    --icon-s-big: calc( var(--s-leading) * 2 );
 
 }
 
@@ -35,4 +35,4 @@ icon organism
     height: var(--icon-s-big);
 }
 
-[i-icon~='silver'] { fill: var(--a-c-silver) }
+[i-icon~='silver'] { fill: var(--c-silver) }

@@ -2,6 +2,20 @@
 user-action influenced states
 *******************************************************************************/
 
+:root {
+    --line-gr-w: 0.0625rem; /* 1px @ 16px */
+    --line-gr-solid-c: currentColor 0%, currentColor 0%;
+    --line-gr: linear-gradient(to left, var(--line-gr-solid-c));
+
+    --focus-outline-c: var(--c-amaranth);
+    --focus-outline-w: 0.25rem;
+
+    --selection-txt-c: var(--c-white);
+    --selection-bg-c: var(--c-amaranth);
+
+    --disabled-o: 0.5;
+}
+
 /* links */
 
 a {
@@ -21,7 +35,7 @@ a:hover {
 
 a:visited { color: inherit; }
 
-a:active { color: var(--a-c-amaranth); }
+a:active { color: var(--c-amaranth); }
 
 /* text selection */
 

@@ -4,17 +4,17 @@ button config
 
 :root {
     --button-br: 0.125rem;
-    --button-txt: var(--a-c-charcoal);
+    --button-txt: var(--c-charcoal);
     --button-fontsize: 0.75rem;
     --button-padding: 0.5rem;
 
-    --button-sh: 0 0.125rem 0 0 color( var(--a-c-silver) shade(15%) );
-    --button-sh-hover: 0 0.125rem 0 0 color( var(--a-c-silver) shade(10%) );
-    --button-sh-active: 0 0.125rem 0 0 color( var(--a-c-silver) shade(5%) );
+    --button-sh: 0 0.125rem 0 0 color( var(--c-silver) shade(15%) );
+    --button-sh-hover: 0 0.125rem 0 0 color( var(--c-silver) shade(10%) );
+    --button-sh-active: 0 0.125rem 0 0 color( var(--c-silver) shade(5%) );
 
-    --button-bg: var(--a-c-silver);
-    --button-bg-hover: color( var(--a-c-silver) tint(20%) );
-    --button-bg-active: color( var(--a-c-silver) tint(30%) );
+    --button-bg: var(--c-silver);
+    --button-bg-hover: color( var(--c-silver) tint(20%) );
+    --button-bg-active: color( var(--c-silver) tint(30%) );
 }
 
 /*******************************************************************************
@@ -35,8 +35,8 @@ button organism
     padding-left: var(--button-padding);
     padding-right: var(--button-padding);
 
-    line-height: calc(var(--leading-s) - 0.125rem);
-    height: calc(var(--leading-s) - 0.25rem);
+    line-height: calc(var(--s-leading) - 0.125rem);
+    height: calc(var(--s-leading) - 0.25rem);
     margin: 0.125rem 0;
 
     border-radius: var(--button-br);
@@ -84,8 +84,8 @@ button sizes
     padding-left: calc( var(--button-padding) * 2 );
     padding-right: calc( var(--button-padding) * 2 );
 
-    line-height: calc( ( var(--leading-s) - 0.125rem ) * 2 );
-    height: calc( var(--leading-s) * 2 - 0.25rem );
+    line-height: calc( ( var(--s-leading) - 0.125rem ) * 2 );
+    height: calc( var(--s-leading) * 2 - 0.25rem );
 
     font-size: calc( var(--button-fontsize) * 2 );
 }
@@ -94,8 +94,8 @@ button sizes
     padding-left: calc( var(--button-padding) * 3 );
     padding-right: calc( var(--button-padding) * 3 );
 
-    line-height: calc( ( var(--leading-s) - 0.125rem ) * 3 );
-    height: calc( var(--leading-s) * 3 - 0.25rem );
+    line-height: calc( ( var(--s-leading) - 0.125rem ) * 3 );
+    height: calc( var(--s-leading) * 3 - 0.25rem );
 
     font-size: calc( var(--button-fontsize) * 3 );
 }

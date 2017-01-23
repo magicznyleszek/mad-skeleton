@@ -6,25 +6,25 @@ progressbar config
 
     --button-br: 0.125rem;
 
-    --button-txt: var(--a-c-charcoal);
-    --button-sh: 0 0.125rem 0 0 color( var(--a-c-silver) shade(15%) );
-    --button-sh-hover: 0 0.125rem 0 0 color( var(--a-c-silver) shade(10%) );
-    --button-sh-active: 0 0.125rem 0 0 color( var(--a-c-silver) shade(5%) );
-    --button-bg: var(--a-c-silver);
-    --button-bg-hover: color( var(--a-c-silver) tint(20%) );
-    --button-bg-active: color( var(--a-c-silver) tint(30%) );
+    --button-txt: var(--c-charcoal);
+    --button-sh: 0 0.125rem 0 0 color( var(--c-silver) shade(15%) );
+    --button-sh-hover: 0 0.125rem 0 0 color( var(--c-silver) shade(10%) );
+    --button-sh-active: 0 0.125rem 0 0 color( var(--c-silver) shade(5%) );
+    --button-bg: var(--c-silver);
+    --button-bg-hover: color( var(--c-silver) tint(20%) );
+    --button-bg-active: color( var(--c-silver) tint(30%) );
 
     --progressbar-br: 0.125rem;
-    --progressbar-bg: var(--a-c-silver);
-    --progressbar-indicator-bg: var(--a-c-charcoal);
+    --progressbar-bg: var(--c-silver);
+    --progressbar-indicator-bg: var(--c-charcoal);
 
     --progressbar-short-w: 10rem; /* 160px @ 16px */
 
     --progressbar-pending-s: 1rem;
     --progressbar-pending-gr: radial-gradient(
         circle 0.33rem,
-        var(--a-c-white) 0%,
-        var(--a-c-white) 50%,
+        var(--c-white) 0%,
+        var(--c-white) 50%,
         transparent 50%,
         transparent 100%
     );
@@ -41,7 +41,7 @@ progressbar organism
 
     width: 100%;
 
-    height: calc(var(--leading-s) - 0.5rem);
+    height: calc(var(--s-leading) - 0.5rem);
     margin: 0.25rem 0;
 
     background-color: var(--progressbar-bg);
@@ -49,7 +49,7 @@ progressbar organism
     border-radius: var(--progressbar-br);
 }
 
-[i-progressbar]:not(:last-child) { margin-bottom: var(--leading-s); }
+[i-progressbar]:not(:last-child) { margin-bottom: var(--s-leading); }
 
 [i-progressbar-indicator] {
     display: block;
