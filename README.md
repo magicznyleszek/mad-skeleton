@@ -7,11 +7,11 @@ Features:
 - pure npm-scripts-driven building
 - svg icons
 - [cssnext](http://cssnext.io/)
-- [MADCSS][^madcss]
+- MADCSS[^madcss]
 
-## [^madcss]: MADCSS<sup>1</sup> philosophy
+## MADCSS[^madcss] philosophy
 
-<sup>1</sup> Modular Attribute-Driven CSS
+[^madcss]: Modular Attribute-Driven CSS
 
 Basic architecture is ~~based on~~ inspired by:
 
