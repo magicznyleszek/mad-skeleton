@@ -3,25 +3,31 @@ text molecule
 *******************************************************************************/
 
 /* aligns */
-[i-text~='lefted'] { text-align: left; }
-[i-text~='righted'] { text-align: right; }
-[i-text~='centered'] { text-align: center; }
-[i-text~='justified'] { text-align: justify; }
+[i-text~="lefted"] { text-align: left; }
+[i-text~="righted"] { text-align: right; }
+[i-text~="centered"] { text-align: center; }
+[i-text~="justified"] { text-align: justify; }
 
 /* weights */
-[i-text~='300'] { font-weight: 300; }
-[i-text~='400'] { font-weight: 400; }
-[i-text~='600'] { font-weight: 600; }
-[i-text~='700'] { font-weight: 700; }
+[i-text~="300"] { font-weight: 300; }
+[i-text~="400"] { font-weight: 400; }
+[i-text~="600"] { font-weight: 600; }
+[i-text~="700"] { font-weight: 700; }
+
+/* sizes */
+[i-text~="75%"] { font-size: 75%; }
+[i-text~="150%"] { font-size: 150%; }
+[i-text~="200%"] { font-size: 200%; }
+[i-text~="300%"] { font-size: 300%; }
 
 /* text transforms */
-[i-text~='uppercased'] { text-transform: uppercase; }
-[i-text~='lowercased'] { text-transform: lowercase; }
-[i-text~='untransformed'] { text-transform: none; }
+[i-text~="uppercased"] { text-transform: uppercase; }
+[i-text~="lowercased"] { text-transform: lowercase; }
+[i-text~="untransformed"] { text-transform: none; }
 
 /* trims text with an ellipsis */
-[i-text~='trimmed'] {
+[i-text~="trimmed"] {
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }

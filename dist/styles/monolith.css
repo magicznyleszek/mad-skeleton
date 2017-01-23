@@ -15,16 +15,22 @@ variables - all global and pallete variables for project
 
     /* base */ /* 576px @ 16px */
 
-    /* root typography with font sizes for different screens scaling */
+    /* root typography */
 
-    /* specific elements */ /* 1px @ 16px */
+    /* font sizes with respect to user browser default sizes */ /* probably 18px */ /* probably 16px */ /* probably 20px */
 
-    /* reusable stuff */
+    /* leading size for all spacing between elements to be pretty */
 }
 
 /*******************************************************************************
 custom media queries and selectors shortcuts
 *******************************************************************************/
+
+/* media queries for scaling everything */
+
+/* retina media query */
+
+/* groups selectors */
 
 /* basics */
 
@@ -44,16 +50,16 @@ html {
     color: rgb(51, 51, 51);
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 112.5%;
     line-height: 1.5;
     text-rendering: optimizeLegibility;
 }
 
 /* clever page scaling with root font size changes */
 
-@media (min-width: 1536px) { html { font-size: 20px; } }
+@media (min-width: 1536px) { html { font-size: 125%; } }
 
-@media (max-width: 720px) { html { font-size: 16px; } }
+@media (max-width: 720px) { html { font-size: 100%; } }
 
 *,
 *::before,
@@ -73,6 +79,9 @@ body {
 /*******************************************************************************
 user-action influenced states
 *******************************************************************************/
+
+:root { /* 1px @ 16px */
+}
 
 /* links */
 
@@ -835,36 +844,46 @@ text molecule
 
 /* aligns */
 
-[i-text~='lefted'] { text-align: left; }
+[i-text~="lefted"] { text-align: left; }
 
-[i-text~='righted'] { text-align: right; }
+[i-text~="righted"] { text-align: right; }
 
-[i-text~='centered'] { text-align: center; }
+[i-text~="centered"] { text-align: center; }
 
-[i-text~='justified'] { text-align: justify; }
+[i-text~="justified"] { text-align: justify; }
 
 /* weights */
 
-[i-text~='300'] { font-weight: 300; }
+[i-text~="300"] { font-weight: 300; }
 
-[i-text~='400'] { font-weight: 400; }
+[i-text~="400"] { font-weight: 400; }
 
-[i-text~='600'] { font-weight: 600; }
+[i-text~="600"] { font-weight: 600; }
 
-[i-text~='700'] { font-weight: 700; }
+[i-text~="700"] { font-weight: 700; }
+
+/* sizes */
+
+[i-text~="75%"] { font-size: 75%; }
+
+[i-text~="150%"] { font-size: 150%; }
+
+[i-text~="200%"] { font-size: 200%; }
+
+[i-text~="300%"] { font-size: 300%; }
 
 /* text transforms */
 
-[i-text~='uppercased'] { text-transform: uppercase; }
+[i-text~="uppercased"] { text-transform: uppercase; }
 
-[i-text~='lowercased'] { text-transform: lowercase; }
+[i-text~="lowercased"] { text-transform: lowercase; }
 
-[i-text~='untransformed'] { text-transform: none; }
+[i-text~="untransformed"] { text-transform: none; }
 
 /* trims text with an ellipsis */
 
-[i-text~='trimmed'] {
+[i-text~="trimmed"] {
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
