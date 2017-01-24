@@ -1,25 +1,29 @@
-<article i-pad="double-v">
-    <h2><a name="toc-complexExamples"></a>Complex examples</h2>
+<section i-pad="medium-v">
+    <header i-pad="medium-v">
+        <h2><a name="toc-complexExamples"></a>Complex examples</h2>
+    </header>
 
-    <div i-inlineBlock i-pad="medium" i-area="silver">
-        <div i-text="bold 200%" i-pad="half-v">
-            <a href="/">Project title</a>
+    <article i-pad="medium-v">
+        <div i-inlineBlock i-pad="medium" i-area="silver">
+            <div i-text="bold 200%" i-pad="half-v">
+                <a href="/">Project title</a>
+            </div>
+
+            <a i-nakedButton i-pad="half-v" href="/">
+                <svg i-icon><use xlink:href="#symbol-sonar"></svg>
+            </a>
+
+            <section i-pad="half-v" i-text="75%">
+                <span>First category</span>
+                &bull;
+                <span>2nd category</span>
+                &bull;
+                <span>Third category</span>
+            </section>
+
+            <div i-pad="half-v" i-text="75% light">{{ site.time }}</div>
+
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
-
-        <a i-nakedButton i-pad="half-v" href="/">
-            <svg i-icon><use xlink:href="#symbol-sonar"></svg>
-        </a>
-
-        <section i-pad="half-v" i-text="75%">
-            <span>First category</span>
-            &bull;
-            <span>2nd category</span>
-            &bull;
-            <span>Third category</span>
-        </section>
-
-        <div i-pad="half-v" i-text="75% light">{{ site.time }}</div>
-
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-    </div>
-</article>
+    </article>
+</section>
