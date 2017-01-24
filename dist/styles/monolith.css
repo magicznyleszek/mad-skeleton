@@ -232,16 +232,8 @@ blockquote cite::before {
     margin-right: 0.25rem;
 }
 
-code {
-    display: inline-block;
-    vertical-align: bottom;
-    border-radius: 0.125rem;
-    padding-left: 4.5px;
-    padding-left: 0.25rem;
-    padding-right: 4.5px;
-    padding-right: 0.25rem;
-    background-color: rgb(204, 204, 204);
-    color: rgb(51, 51, 51);
+code,
+pre {
     font-family: "Input Mono",
         "Office Code Pro",
         "Source Code Pro",
@@ -253,6 +245,18 @@ code {
         "Liberation Mono",
         "DejaVu Sans Mono",
         monospace;
+}
+
+code {
+    display: inline-block;
+    vertical-align: bottom;
+    border-radius: 0.125rem;
+    padding-left: 4.5px;
+    padding-left: 0.25rem;
+    padding-right: 4.5px;
+    padding-right: 0.25rem;
+    background-color: rgb(204, 204, 204);
+    color: rgb(51, 51, 51);
     font-size: 13.5px;
     font-size: 0.75rem;
     line-height: 27px;

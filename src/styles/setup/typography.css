@@ -78,6 +78,11 @@ blockquote cite::before {
     margin-right: 0.25rem;
 }
 
+code,
+pre {
+    font-family: var(--font-monospace);
+}
+
 code {
     display: inline-block;
     vertical-align: bottom;
@@ -86,7 +91,6 @@ code {
     padding-right: 0.25rem;
     background-color: var(--c-silver);
     color: var(--c-charcoal);
-    font-family: var(--font-monospace);
     font-size: 0.75rem;
     line-height: var(--s-leading);
 }
