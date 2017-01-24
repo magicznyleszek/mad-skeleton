@@ -46,7 +46,7 @@
         "number-leading-zero": ["always", {
             "severity": "warning"
         }],
-        "number-max-precision": [3, {
+        "number-max-precision": [4, {
             "severity": "warning"
         }],
         "number-no-trailing-zeros": null,
