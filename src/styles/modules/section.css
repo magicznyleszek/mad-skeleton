@@ -3,9 +3,9 @@ section module
 *******************************************************************************/
 
 [i-section]:not(:last-child) {
-    margin-bottom: calc( var(--s-leading) * 2 );
+    margin-bottom: calc(var(--s-leading) * 2);
 }
 
-[i-section~='main']:not(:last-child) {
-    margin-bottom: calc( var(--s-leading) * 3 );
+[i-section~="main"]:not(:last-child) {
+    margin-bottom: calc(var(--s-leading) * 3);
 }

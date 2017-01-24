@@ -287,37 +287,33 @@ textarea {
 area module
 *******************************************************************************/
 
-[i-area~='amaranth'] { background-color: rgb(250, 31, 74); }
+[i-area~="amaranth"] { background-color: rgb(250, 31, 74); }
 
-[i-area~='purple'] { background-color: rgb(194, 31, 118); }
+[i-area~="purple"] { background-color: rgb(194, 31, 118); }
 
-[i-area~='violet'] { background-color: rgb(103, 36, 148); }
+[i-area~="violet"] { background-color: rgb(103, 36, 148); }
 
-[i-area~='white'] { background-color: rgb(255, 255, 255); }
+[i-area~="white"] { background-color: rgb(255, 255, 255); }
 
-[i-area~='silver'] { background-color: rgb(204, 204, 204); }
+[i-area~="silver"] { background-color: rgb(204, 204, 204); }
 
-[i-area~='charcoal'] { background-color: rgb(51, 51, 51); }
+[i-area~="charcoal"] { background-color: rgb(51, 51, 51); }
 
 /* text color for light backgrounds */
 
-[i-area~='white'],
-[i-area~='silver'] {
+[i-area~="white"],
+[i-area~="silver"] {
     color: rgb(51, 51, 51);
 }
 
 /* text color for dark backgrounds */
 
-[i-area~='charcoal'],
-[i-area~='amaranth'],
-[i-area~='purple'],
-[i-area~='violet'] {
+[i-area~="charcoal"],
+[i-area~="amaranth"],
+[i-area~="purple"],
+[i-area~="violet"] {
     color: rgb(255, 255, 255);
 }
-
-/*******************************************************************************
-button config
-*******************************************************************************/
 
 /*******************************************************************************
 button module
@@ -326,60 +322,49 @@ button module
 [i-button] {
     display: inline-block;
     vertical-align: top;
-
+    margin: 2.25px 0;
+    margin: 0.125rem 0;
     border: 0;
-    outline: 0;
-
-    cursor: pointer;
-
+    border-radius: 0.125rem;
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 9px;
     padding-left: 0.5rem;
     padding-right: 9px;
     padding-right: 0.5rem;
-
-    line-height: 24.75px;
-    line-height: 1.375rem;
     height: 22.5px;
     height: 1.25rem;
-    margin: 2.25px 0;
-    margin: 0.125rem 0;
-
-    border-radius: 0.125rem;
-
+    outline: 0;
+    cursor: pointer;
+    background-image: none;
     font-size: 13.5px;
     font-size: 0.75rem;
     font-weight: 700;
     font-family: inherit;
+    line-height: 24.75px;
+    line-height: 1.375rem;
     text-align: center;
-
     text-decoration: none;
-    background-image: none;
-
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }
 
 [i-button],
 [i-button]:visited {
-    color: rgb(51, 51, 51);
-    background-color: rgb(204, 204, 204);
     box-shadow: 0 0.125rem 0 0 rgb(173, 173, 173);
+    background-color: rgb(204, 204, 204);
+    color: rgb(51, 51, 51);
 }
 
 [i-button]:not([disabled]):hover {
-    background-color: rgb(214, 214, 214);
     box-shadow: 0 0.125rem 0 0 rgb(184, 184, 184);
+    background-color: rgb(214, 214, 214);
 }
 
 [i-button]:not([disabled]):active {
-    background-color: rgb(219, 219, 219);
     box-shadow: 0 0.125rem 0 0 rgb(194, 194, 194);
+    background-color: rgb(219, 219, 219);
 }
 
-[i-button~='middle'] {
+[i-button~="middle"] {
     vertical-align: middle;
 }
 
@@ -387,64 +372,57 @@ button module
 button sizes
 *******************************************************************************/
 
-[i-button~='double'] {
+[i-button~="double"] {
     padding-left: 18px;
     padding-left: 1rem;
     padding-right: 18px;
     padding-right: 1rem;
-
-    line-height: 49.5px;
-    line-height: 2.75rem;
     height: 49.5px;
     height: 2.75rem;
-
     font-size: 27px;
     font-size: 1.5rem;
+    line-height: 49.5px;
+    line-height: 2.75rem;
 }
 
-[i-button~='triple'] {
+[i-button~="triple"] {
     padding-left: 27px;
     padding-left: 1.5rem;
     padding-right: 27px;
     padding-right: 1.5rem;
-
-    line-height: 74.25px;
-    line-height: 4.125rem;
     height: 76.5px;
     height: 4.25rem;
-
     font-size: 40.5px;
     font-size: 2.25rem;
+    line-height: 74.25px;
+    line-height: 4.125rem;
 }
 
-[i-button~='full'] {
-    width: 100%;
+[i-button~="full"] {
     display: block;
+    width: 100%;
 }
 
-/* Remember to truncate the white space between columns! */
+/*******************************************************************************
+column module
+
+NOTE: you need to truncate the whitespace between columns, because these are
+inline-blocks!
+*******************************************************************************/
 
 [i-column] {
     display: inline-block;
     width: 100%;
 }
 
-/* vertical aligning columns */
+[i-column~="top"] { vertical-align: top; }
 
-[i-column~="top"] {
-    vertical-align: top;
-}
+[i-column~="middle"] { vertical-align: middle; }
 
-[i-column~="middle"] {
-    vertical-align: middle;
-}
-
-[i-column~="bottom"] {
-    vertical-align: bottom;
-}
+[i-column~="bottom"] { vertical-align: bottom; }
 
 /*******************************************************************************
-columns themselves
+column sizes (as fractions)
 *******************************************************************************/
 
 [i-column~="1/2"] { width: 50%; }
@@ -581,37 +559,30 @@ hover module
 icon config
 *******************************************************************************/
 
-/*******************************************************************************
-icon module
-*******************************************************************************/
-
 [i-icon] {
     display: inline-block;
     vertical-align: middle;
-
-    height: 27px;
-    height: 1.5rem;
     width: 27px;
     width: 1.5rem;
-
-    shape-rendering: geometricPrecision;
-
-    fill: currentColor;
+    height: 27px;
+    height: 1.5rem;
     color: inherit;
+    shape-rendering: geometricPrecision;
+    fill: currentColor;
 }
 
 /* bugfix for click target SVGElementInstance */
 
 [i-icon] > * { pointer-events: none; }
 
-[i-icon~='big'] {
+[i-icon~="big"] {
     width: 54px;
     width: 3rem;
     height: 54px;
     height: 3rem;
 }
 
-[i-icon~='silver'] { fill: rgb(204, 204, 204) }
+[i-icon~="silver"] { fill: rgb(204, 204, 204); }
 
 /*******************************************************************************
 inlineBlock module
@@ -639,6 +610,9 @@ nakedButton module
 
 /*******************************************************************************
 pad module
+
+NOTE: there are no top, bottom, left and right modifiers, as we want to keep the
+leading flow of the document
 *******************************************************************************/
 
 [i-pad~="medium"] { padding: 27px; padding: 1.5rem; }
@@ -697,7 +671,6 @@ progressBar config
 *******************************************************************************/
 
 :root { /* 160px @ 16px */
-
 }
 
 /*******************************************************************************
@@ -707,31 +680,24 @@ progressBar module
 [i-progressBar] {
     position: relative;
     overflow: hidden;
-
-    width: 100%;
-
-    height: 18px;
-    height: 1rem;
     margin: 4.5px 0;
     margin: 0.25rem 0;
-
-    background-color: rgb(204, 204, 204);
-
     border-radius: 0.125rem;
+    width: 100%;
+    height: 18px;
+    height: 1rem;
+    background-color: rgb(204, 204, 204);
 }
 
 [i-progressBar]:not(:last-child) { margin-bottom: 27px; margin-bottom: 1.5rem; }
 
 [i-progressBar-indicator] {
     display: block;
-    height: 100%;
-    width: 0%;
-
-    background-color: rgb(51, 51, 51);
     border-radius: 0.125rem;
-
+    width: 0%;
+    height: 100%;
+    background-color: rgb(51, 51, 51);
     -webkit-transition: 0.25s;
-
     transition: 0.25s;
 }
 
@@ -747,17 +713,14 @@ progressBar module
     100% { background-position: 1rem 0; }
 }
 
-[i-progressBar~="is-pending"]:after {
+[i-progressBar~="is-pending"]::after {
     content: "";
-
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
     opacity: 0.25;
-
     background-image: -webkit-radial-gradient(
         circle 0.33rem,
         rgb(255, 255, 255) 0%,
@@ -765,7 +728,6 @@ progressBar module
         transparent 50%,
         transparent 100%
     );
-
     background-image: radial-gradient(
         circle 0.33rem,
         rgb(255, 255, 255) 0%,
@@ -775,16 +737,14 @@ progressBar module
     );
     background-size: 1rem 100%;
     background-repeat: repeat-x;
-
     -webkit-animation-name: framesProgressPending;
-
             animation-name: framesProgressPending;
     -webkit-animation-duration: 0.75s;
             animation-duration: 0.75s;
     -webkit-animation-timing-function: linear;
             animation-timing-function: linear;
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
     -webkit-animation-direction: normal;
             animation-direction: normal;
     -webkit-animation-iteration-count: infinite;
@@ -804,14 +764,10 @@ section module
     margin-bottom: 3rem;
 }
 
-[i-section~='main']:not(:last-child) {
+[i-section~="main"]:not(:last-child) {
     margin-bottom: 81px;
     margin-bottom: 4.5rem;
 }
-
-/*******************************************************************************
-table config
-*******************************************************************************/
 
 /*******************************************************************************
 table module
@@ -840,15 +796,15 @@ table module
 [i-table] thead { font-weight: 700; }
 
 [i-table] caption {
-    text-align: center;
     font-style: italic;
+    text-align: center;
 }
 
-[i-table~='hoverable'] tr:hover td {
+[i-table~="hoverable"] tr:hover td {
     background-color: rgb(230, 230, 230);
 }
 
-[i-table~='full'] { width: 100%; }
+[i-table~="full"] { width: 100%; }
 
 /*******************************************************************************
 text module

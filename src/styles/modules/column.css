@@ -1,26 +1,21 @@
-/* Remember to truncate the white space between columns! */
+/*******************************************************************************
+column module
+
+NOTE: you need to truncate the whitespace between columns, because these are
+inline-blocks!
+*******************************************************************************/
 
 [i-column] {
     display: inline-block;
     width: 100%;
 }
 
-/* vertical aligning columns */
-
-[i-column~="top"] {
-    vertical-align: top;
-}
-
-[i-column~="middle"] {
-    vertical-align: middle;
-}
-
-[i-column~="bottom"] {
-    vertical-align: bottom;
-}
+[i-column~="top"] { vertical-align: top; }
+[i-column~="middle"] { vertical-align: middle; }
+[i-column~="bottom"] { vertical-align: bottom; }
 
 /*******************************************************************************
-columns themselves
+column sizes (as fractions)
 *******************************************************************************/
 
 [i-column~="1/2"] { width: calc(100% * 1 / 2); }

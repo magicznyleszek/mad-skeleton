@@ -28,6 +28,7 @@
       "patterns": [
         "src/styles"
       ],
+      "extensions": "css",
       "quiet": false
     }
   },

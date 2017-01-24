@@ -3,17 +3,6 @@ progressBar config
 *******************************************************************************/
 
 :root {
-
-    --button-br: 0.125rem;
-
-    --button-txt: var(--c-charcoal);
-    --button-sh: 0 0.125rem 0 0 color( var(--c-silver) shade(15%) );
-    --button-sh-hover: 0 0.125rem 0 0 color( var(--c-silver) shade(10%) );
-    --button-sh-active: 0 0.125rem 0 0 color( var(--c-silver) shade(5%) );
-    --button-bg: var(--c-silver);
-    --button-bg-hover: color( var(--c-silver) tint(20%) );
-    --button-bg-active: color( var(--c-silver) tint(30%) );
-
     --progressBar-br: 0.125rem;
     --progressBar-bg: var(--c-silver);
     --progressBar-indicator-bg: var(--c-charcoal);
@@ -28,7 +17,6 @@ progressBar config
         transparent 50%,
         transparent 100%
     );
-
 }
 
 /*******************************************************************************
@@ -38,56 +26,46 @@ progressBar module
 [i-progressBar] {
     position: relative;
     overflow: hidden;
-
-    width: 100%;
-
-    height: calc(var(--s-leading) - 0.5rem);
     margin: 0.25rem 0;
-
-    background-color: var(--progressBar-bg);
-
     border-radius: var(--progressBar-br);
+    width: 100%;
+    height: calc(var(--s-leading) - 0.5rem);
+    background-color: var(--progressBar-bg);
 }
 
 [i-progressBar]:not(:last-child) { margin-bottom: var(--s-leading); }
 
 [i-progressBar-indicator] {
     display: block;
-    height: 100%;
-    width: 0%;
-
-    background-color: var(--progressBar-indicator-bg);
     border-radius: var(--progressBar-br);
-
+    width: 0%;
+    height: 100%;
+    background-color: var(--progressBar-indicator-bg);
     transition: 0.25s;
 }
 
 [i-progressBar~="short"] { max-width: var(--progressBar-short-w); }
 
 @keyframes framesProgressPending {
-    0% { background-position: calc( var(--progressBar-pending-s) * -1 ) 0; }
+    0% { background-position: calc(var(--progressBar-pending-s) * -1) 0; }
     100% { background-position: var(--progressBar-pending-s) 0; }
 }
 
-[i-progressBar~="is-pending"]:after {
+[i-progressBar~="is-pending"]::after {
     content: "";
-
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
     opacity: 0.25;
-
     background-image: var(--progressBar-pending-gr);
     background-size: var(--progressBar-pending-s) 100%;
     background-repeat: repeat-x;
-
     animation-name: framesProgressPending;
     animation-duration: 0.75s;
     animation-timing-function: linear;
-    animation-delay: 0s;
+    animation-delay: 0;
     animation-direction: normal;
     animation-iteration-count: infinite;
     animation-fill-mode: none;

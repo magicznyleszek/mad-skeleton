@@ -1,18 +1,12 @@
 /*******************************************************************************
-table config
+table module
 *******************************************************************************/
 
 :root {
-
-    --table-cell-sh: 0 0 0 0.0625rem color( var(--c-silver) shade(20%) );
+    --table-cell-sh: 0 0 0 0.0625rem color(var(--c-silver) shade(20%));
     --table-cell-bg: var(--c-white);
-    --table-cell-bg-hover: color( var(--c-silver) tint(50%) );
-
+    --table-cell-bg-hover: color(var(--c-silver) tint(50%));
 }
-
-/*******************************************************************************
-table module
-*******************************************************************************/
 
 [i-table] {
     border-collapse: separate;
@@ -26,7 +20,7 @@ table module
 
 [i-table] td,
 [i-table] th {
-    padding: calc( var(--s-leading) * 0.5 );
+    padding: calc(var(--s-leading) * 0.5);
     box-shadow: var(--table-cell-sh);
 
     background-color: var(--table-cell-bg);
@@ -35,12 +29,12 @@ table module
 [i-table] thead { font-weight: 700; }
 
 [i-table] caption {
-    text-align: center;
     font-style: italic;
+    text-align: center;
 }
 
-[i-table~='hoverable'] tr:hover td {
+[i-table~="hoverable"] tr:hover td {
     background-color: var(--table-cell-bg-hover);
 }
 
-[i-table~='full'] { width: 100%; }
+[i-table~="full"] { width: 100%; }
