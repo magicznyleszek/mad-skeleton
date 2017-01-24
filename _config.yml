@@ -6,6 +6,7 @@ author: "Leszek Pietrzak"
 
 # address settings
 baseurl: "http://boilerplate-assets.smutnyleszek.com"
+sourceurl: "https://github.com/smutnyleszek/boilerplate-assets"
 imagesPath: "/dist/images/"
 
 # urls

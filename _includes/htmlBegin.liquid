@@ -1,7 +1,7 @@
 {% assign versionCache = site.time|date: "%Y-%m-%d_%H-%M-%S" %}
 
 <!DOCTYPE html>
-<html class="pterodactylus crushed my algorithms" lang="en">
+<html id="pterosaurDestroyedAlgorithms" lang="en">
 
 <head>
     <!-- stuff -->
@@ -33,14 +33,10 @@
     <link rel="icon" href="/favicon.ico?{{ versionCache }}">
     <link rel="apple-touch-icon" href="{{ site.baseurl }}/public/images/smutnyleszek-logo-1440.png">
 
-    <!-- fonts -->
+    <!-- google fonts -->
     <link href="http://fonts.googleapis.com/css?{{ site.googleFontsCode }}" rel="stylesheet">
 </head>
 
-<body>
-    <div style="display:none;">
-        {% include symbols.svg %}
-    </div>
-
-    <!-- begin unmovedMover -->
-    <section id="unmovedMover">
+<body i-pad="double-v medium-h">
+    <!-- SVG symbols for <use> tags -->
+    <div style="display:none;">{% include symbols.svg %}</div>
