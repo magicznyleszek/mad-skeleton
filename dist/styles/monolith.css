@@ -13,7 +13,7 @@ variables - all global and pallete variables for project
 
     /* font families palette */
 
-    /* base */ /* 576px @ 16px */
+    /* base */ /* 640px @ 16px */
 
     /* root typography */
 
@@ -76,8 +76,8 @@ html {
 body {
     margin: 0;
     width: 100%;
-    max-width: 648px;
-    max-width: 36rem;
+    max-width: 720px;
+    max-width: 40rem;
 }
 
 /*******************************************************************************
@@ -340,8 +340,9 @@ button module
     padding-right: 9px;
     padding-right: 0.5rem;
     /* we want the button to fit into leading size with breathing space */
-    height: 22.5px;
-    height: 1.25rem;
+    height: auto;
+    min-height: 22.5px;
+    min-height: 1.25rem;
     outline: 0;
     cursor: pointer;
     background-image: none;
@@ -403,8 +404,8 @@ button sizes
     padding-left: 1rem;
     padding-right: 18px;
     padding-right: 1rem;
-    height: 49.5px;
-    height: 2.75rem;
+    min-height: 49.5px;
+    min-height: 2.75rem;
     font-size: 27px;
     font-size: 1.5rem;
     line-height: 49.5px;
@@ -416,8 +417,8 @@ button sizes
     padding-left: 1.5rem;
     padding-right: 27px;
     padding-right: 1.5rem;
-    height: 76.5px;
-    height: 4.25rem;
+    min-height: 76.5px;
+    min-height: 4.25rem;
     font-size: 40.5px;
     font-size: 2.25rem;
     line-height: 74.25px;
@@ -429,8 +430,8 @@ button sizes
     padding-left: 2rem;
     padding-right: 36px;
     padding-right: 2rem;
-    height: 103.5px;
-    height: 5.75rem;
+    min-height: 103.5px;
+    min-height: 5.75rem;
     font-size: 54px;
     font-size: 3rem;
     line-height: 99px;
@@ -614,16 +615,39 @@ icon config
 
 [i-icon] > * { pointer-events: none; }
 
-[i-icon~="big"] {
+[i-icon~="middle"] { vertical-align: middle; }
+
+/*******************************************************************************
+icon sizes
+*******************************************************************************/
+
+[i-icon~="double"] {
     width: 54px;
     width: 3rem;
     height: 54px;
     height: 3rem;
 }
 
-[i-icon~="silver"] { fill: rgb(204, 204, 204); }
+[i-icon~="triple"] {
+    width: 81px;
+    width: 4.5rem;
+    height: 81px;
+    height: 4.5rem;
+}
 
-[i-icon~="middle"] { vertical-align: middle; }
+/*******************************************************************************
+icon colors
+*******************************************************************************/
+
+[i-icon~="amaranth"] { fill: rgb(250, 31, 74); }
+
+[i-icon~="purple"] { fill: rgb(194, 31, 118); }
+
+[i-icon~="violet"] { fill: rgb(103, 36, 148); }
+
+[i-icon~="white"] { fill: rgb(255, 255, 255); }
+
+[i-icon~="silver"] { fill: rgb(204, 204, 204); }
 
 /*******************************************************************************
 inlineBlock module

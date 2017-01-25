@@ -29,7 +29,7 @@ variables - all global and pallete variables for project
     /* base */
     --c-root-txt: var(--c-charcoal);
     --c-root-bg: var(--c-white);
-    --s-root-content: 36rem; /* 576px @ 16px */
+    --s-root-content: 40rem; /* 640px @ 16px */
 
     /* root typography */
     --root-fontWeight: 400;

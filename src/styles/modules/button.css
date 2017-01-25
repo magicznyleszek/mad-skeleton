@@ -27,7 +27,8 @@ button module
     padding-left: var(--s-button-padding);
     padding-right: var(--s-button-padding);
     /* we want the button to fit into leading size with breathing space */
-    height: calc(var(--s-leading) - calc(var(--s-button-verticalMargin) * 2));
+    height: auto;
+    min-height: calc(var(--s-leading) - calc(var(--s-button-verticalMargin) * 2));
     outline: 0;
     cursor: pointer;
     background-image: none;
@@ -79,7 +80,7 @@ button sizes
 [i-button~="double"] {
     padding-left: calc(var(--s-button-padding) * 2);
     padding-right: calc(var(--s-button-padding) * 2);
-    height: calc(var(--s-leading) * 2 - calc(var(--s-button-verticalMargin) * 2));
+    min-height: calc(var(--s-leading) * 2 - calc(var(--s-button-verticalMargin) * 2));
     font-size: calc(var(--s-button-fontsize) * 2);
     line-height: calc((var(--s-leading) - var(--s-button-verticalMargin)) * 2);
 }
@@ -87,7 +88,7 @@ button sizes
 [i-button~="triple"] {
     padding-left: calc(var(--s-button-padding) * 3);
     padding-right: calc(var(--s-button-padding) * 3);
-    height: calc(var(--s-leading) * 3 - calc(var(--s-button-verticalMargin) * 2));
+    min-height: calc(var(--s-leading) * 3 - calc(var(--s-button-verticalMargin) * 2));
     font-size: calc(var(--s-button-fontsize) * 3);
     line-height: calc((var(--s-leading) - var(--s-button-verticalMargin)) * 3);
 }
@@ -95,7 +96,7 @@ button sizes
 [i-button~="quadruple"] {
     padding-left: calc(var(--s-button-padding) * 4);
     padding-right: calc(var(--s-button-padding) * 4);
-    height: calc(var(--s-leading) * 4 - calc(var(--s-button-verticalMargin) * 2));
+    min-height: calc(var(--s-leading) * 4 - calc(var(--s-button-verticalMargin) * 2));
     font-size: calc(var(--s-button-fontsize) * 4);
     line-height: calc((var(--s-leading) - var(--s-button-verticalMargin)) * 4);
 }
