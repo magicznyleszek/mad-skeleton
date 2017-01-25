@@ -20,6 +20,8 @@ variables - all global and pallete variables for project
     /* font sizes with respect to user browser default sizes */ /* probably 18px */ /* probably 16px */ /* probably 20px */
 
     /* leading size for all spacing between elements to be pretty */
+
+    /* globals */
 }
 
 /*******************************************************************************
@@ -65,6 +67,10 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 body {
@@ -324,8 +330,7 @@ button module
 [i-button] {
     display: inline-block;
     vertical-align: top;
-    margin: 2.25px 0;
-    margin: 0.125rem 0;
+    margin: 0;
     border: 0;
     border-radius: 0.125rem;
     padding-top: 0;
@@ -334,6 +339,7 @@ button module
     padding-left: 0.5rem;
     padding-right: 9px;
     padding-right: 0.5rem;
+    /* we want the button to fit into leading size with breathing space */
     height: 22.5px;
     height: 1.25rem;
     outline: 0;
@@ -343,26 +349,44 @@ button module
     font-size: 0.75rem;
     font-weight: 700;
     font-family: inherit;
+    /* adjust line-height to adjusted height */
     line-height: 24.75px;
     line-height: 1.375rem;
     text-align: center;
     text-decoration: none;
 }
 
+/* default button state */
+
 [i-button],
 [i-button]:visited {
+    margin-top: 2.25px;
+    margin-top: 0.125rem;
+    margin-bottom: 2.25px;
+    margin-bottom: 0.125rem;
     box-shadow: 0 0.125rem 0 0 rgb(173, 173, 173);
     background-color: rgb(204, 204, 204);
     color: rgb(51, 51, 51);
 }
 
-[i-button]:not([disabled]):hover {
+[i-button]:not([disabled]):hover,
+[i-button~="hover"]:not([disabled]) {
+    margin-top: 2.25px;
+    margin-top: 0.125rem;
+    margin-bottom: 2.25px;
+    margin-bottom: 0.125rem;
     box-shadow: 0 0.125rem 0 0 rgb(184, 184, 184);
     background-color: rgb(214, 214, 214);
 }
 
-[i-button]:not([disabled]):active {
-    box-shadow: 0 0.125rem 0 0 rgb(194, 194, 194);
+[i-button]:not([disabled]):active,
+[i-button~="active"]:not([disabled]) {
+    /* swap margins to make the button look pressed-in */
+    margin-top: 4.5px;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+    /* remove shadow to make the button look pressed-in */
+    box-shadow: none;
     background-color: rgb(219, 219, 219);
 }
 
@@ -398,6 +422,19 @@ button sizes
     font-size: 2.25rem;
     line-height: 74.25px;
     line-height: 4.125rem;
+}
+
+[i-button~="quadruple"] {
+    padding-left: 36px;
+    padding-left: 2rem;
+    padding-right: 36px;
+    padding-right: 2rem;
+    height: 103.5px;
+    height: 5.75rem;
+    font-size: 54px;
+    font-size: 3rem;
+    line-height: 99px;
+    line-height: 5.5rem;
 }
 
 [i-button~="full"] {
@@ -563,7 +600,7 @@ icon config
 
 [i-icon] {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: bottom;
     width: 27px;
     width: 1.5rem;
     height: 27px;
@@ -585,6 +622,8 @@ icon config
 }
 
 [i-icon~="silver"] { fill: rgb(204, 204, 204); }
+
+[i-icon~="middle"] { vertical-align: middle; }
 
 /*******************************************************************************
 inlineBlock module
@@ -682,8 +721,8 @@ progressBar module
 [i-progressBar] {
     position: relative;
     overflow: hidden;
-    margin: 4.5px 0;
-    margin: 0.25rem 0;
+    margin-top: 4.5px;
+    margin-top: 0.25rem;
     border-radius: 0.125rem;
     width: 100%;
     height: 18px;
@@ -715,7 +754,7 @@ progressBar module
     100% { background-position: 1rem 0; }
 }
 
-[i-progressBar~="is-pending"]::after {
+[i-progressBar~="pending"]::after {
     content: "";
     position: absolute;
     top: 0;

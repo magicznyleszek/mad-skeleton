@@ -637,11 +637,7 @@
 
         "stylelint-disable-reason": null,
 
-        "comment-empty-line-before": ["always", {
-            "severity": "warning",
-            "except": ["first-nested"],
-            "ignore": ["stylelint-commands"]
-        }],
+        "comment-empty-line-before": null,
         "comment-whitespace-inside": ["always", {
             "severity": "warning"
         }],

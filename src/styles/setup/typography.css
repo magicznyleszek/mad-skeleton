@@ -86,7 +86,7 @@ pre {
 code {
     display: inline-block;
     vertical-align: bottom;
-    border-radius: 0.125rem;
+    border-radius: var(--s-global-br);
     padding-left: 0.25rem;
     padding-right: 0.25rem;
     background-color: var(--c-silver);

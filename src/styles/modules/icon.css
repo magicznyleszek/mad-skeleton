@@ -9,7 +9,7 @@ icon config
 
 [i-icon] {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: bottom;
     width: var(--icon-s);
     height: var(--icon-s);
     color: inherit;
@@ -26,3 +26,5 @@ icon config
 }
 
 [i-icon~="silver"] { fill: var(--c-silver); }
+
+[i-icon~="middle"] { vertical-align: middle; }

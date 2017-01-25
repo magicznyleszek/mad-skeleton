@@ -43,6 +43,9 @@ variables - all global and pallete variables for project
 
     /* leading size for all spacing between elements to be pretty */
     --s-leading: calc(var(--root-lineHeight) * 1rem);
+
+    /* globals */
+    --s-global-br: 0.125rem;
 }
 
 /*******************************************************************************

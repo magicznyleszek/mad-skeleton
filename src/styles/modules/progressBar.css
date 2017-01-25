@@ -3,7 +3,6 @@ progressBar config
 *******************************************************************************/
 
 :root {
-    --progressBar-br: 0.125rem;
     --progressBar-bg: var(--c-silver);
     --progressBar-indicator-bg: var(--c-charcoal);
 
@@ -26,8 +25,8 @@ progressBar module
 [i-progressBar] {
     position: relative;
     overflow: hidden;
-    margin: 0.25rem 0;
-    border-radius: var(--progressBar-br);
+    margin-top: 0.25rem;
+    border-radius: var(--s-global-br);
     width: 100%;
     height: calc(var(--s-leading) - 0.5rem);
     background-color: var(--progressBar-bg);
@@ -37,7 +36,7 @@ progressBar module
 
 [i-progressBar-indicator] {
     display: block;
-    border-radius: var(--progressBar-br);
+    border-radius: var(--s-global-br);
     width: 0%;
     height: 100%;
     background-color: var(--progressBar-indicator-bg);
@@ -51,7 +50,7 @@ progressBar module
     100% { background-position: var(--progressBar-pending-s) 0; }
 }
 
-[i-progressBar~="is-pending"]::after {
+[i-progressBar~="pending"]::after {
     content: "";
     position: absolute;
     top: 0;
