@@ -667,10 +667,12 @@ nakedButton module
 
 [i-nakedButton]:not([disabled]):hover {
     opacity: 0.8;
+    color: inherit;
 }
 
 [i-nakedButton]:not([disabled]):active {
     opacity: 0.6;
+    color: inherit;
 }
 
 /*******************************************************************************
@@ -854,11 +856,13 @@ table module
     padding: 13.5px;
     padding: 0.75rem;
     box-shadow: 0 0 0 0.0625rem rgb(163, 163, 163);
-
     background-color: rgb(255, 255, 255);
+    word-wrap: break-word;
 }
 
-[i-table] thead { font-weight: 700; }
+[i-table] thead {
+    font-weight: 700;
+}
 
 [i-table] caption {
     font-style: italic;
@@ -869,7 +873,14 @@ table module
     background-color: rgb(230, 230, 230);
 }
 
-[i-table~="full"] { width: 100%; }
+/*******************************************************************************
+fullwidth modifier
+*******************************************************************************/
+
+[i-table~="fullwidth"] {
+    table-layout: fixed;
+    width: 100%;
+}
 
 /*******************************************************************************
 text module

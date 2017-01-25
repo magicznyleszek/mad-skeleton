@@ -22,11 +22,13 @@ table module
 [i-table] th {
     padding: calc(var(--s-leading) * 0.5);
     box-shadow: var(--table-cell-sh);
-
     background-color: var(--table-cell-bg);
+    word-wrap: break-word;
 }
 
-[i-table] thead { font-weight: 700; }
+[i-table] thead {
+    font-weight: 700;
+}
 
 [i-table] caption {
     font-style: italic;
@@ -37,4 +39,11 @@ table module
     background-color: var(--table-cell-bg-hover);
 }
 
-[i-table~="full"] { width: 100%; }
+/*******************************************************************************
+fullwidth modifier
+*******************************************************************************/
+
+[i-table~="fullwidth"] {
+    table-layout: fixed;
+    width: 100%;
+}

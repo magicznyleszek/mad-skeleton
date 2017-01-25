@@ -10,8 +10,10 @@ nakedButton module
 
 [i-nakedButton]:not([disabled]):hover {
     opacity: 0.8;
+    color: inherit;
 }
 
 [i-nakedButton]:not([disabled]):active {
     opacity: 0.6;
+    color: inherit;
 }
