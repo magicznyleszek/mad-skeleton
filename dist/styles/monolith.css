@@ -917,6 +917,10 @@ text module
 
 [i-text~="untransformed"] { text-transform: none; }
 
+/* makes text not wrap :-D */
+
+[i-text~="nowrap"] { white-space: nowrap; }
+
 /* trims text with an ellipsis */
 
 [i-text~="trimmed"] {
