@@ -1,13 +1,16 @@
-# Boilerplate assets v4
+# Mad Skeleton
 
-Boilerplate assets for quick start with web project.
+4th generation of my CSS boilerplate/wireframe for quick start with web project.
 
 Features:
 
-- pure npm-scripts-driven building
+- pure [npm-scripts](https://docs.npmjs.com/cli/run-script)-driven build
 - MADCSS<sup>1</sup>
+- [Jekyll](https://jekyllrb.com/)
 - [cssnext](http://cssnext.io/)
-- svg icons
+- SVG icons
+- linting
+- no JS yet
 
 ## MADCSS<sup>1</sup> philosophy
 
