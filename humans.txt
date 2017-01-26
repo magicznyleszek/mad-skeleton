@@ -1,20 +1,19 @@
 ## TEAM
 
 Everything: Leszek Pietrzak
-Site: leszekpietrzak
-Email: smutnyleszek@gmail
+Site: leszekpietrzak.com
+Email: smutnyleszek@gmail.com
 Location: Warsaw, Poland
 
 
 ## THANKS
 
-Chirag Mehta: chir.ag/projects/name-that-color
 Glen Maddern: amcss.github.io
 Cole Peters: github.com/colepeters/gemma
 Maxime Thirouin: cssnext.io
 
 ## SITE
 
-Last update: 2015/12/09
+Last update: 2017/01
 Language: English
 Software: Atom

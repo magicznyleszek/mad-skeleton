@@ -1,12 +1,12 @@
 # description
-name: "boilerplate-assets"
-description: "Assets for quick start with web project."
-keywords: "code, boilerplate, assets, css, oacss"
+name: "mad-skeleton"
+description: "A small CSS boilerplate/wireframe based on MADCSS philosophy."
+keywords: "code, boilerplate, wireframe, assets, css, madcss"
 author: "Leszek Pietrzak"
 
 # address settings
-baseurl: "http://boilerplate-assets.smutnyleszek.com"
-sourceurl: "https://github.com/smutnyleszek/boilerplate-assets"
+baseurl: "http://mad-skeleton.smutnyleszek.com"
+sourceurl: "https://github.com/smutnyleszek/mad-skeleton"
 imagesPath: "/dist/images/"
 
 # urls

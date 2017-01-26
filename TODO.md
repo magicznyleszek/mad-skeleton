@@ -1,5 +1,4 @@
 - add simple script file and tests wireframe and linter?
-- try to apply the LEGO idea to spacing: http://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design
 - create some complex examples (separate url for full-page example?) and remove unnecessary modules
 	- Project summary: clickable and repeatable; image, title, categories, date
 	- App header: logo, menu
