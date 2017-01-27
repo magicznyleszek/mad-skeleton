@@ -38,12 +38,12 @@ custom media queries and selectors shortcuts
 
 /*******************************************************************************
 root stuff and normalizations
-*******************************************************************************/
 
-/* Root line height is being used in many places throughout the project.
+NOTE: Root line height is being used in many places throughout the project.
 It is recommended to keep all vertical margins and heights of elements to match
 the leading. Use caution when adding borders or when using vertical-align middle
-as they tend to add unwanted pixels, thus braking the flow. */
+as they tend to add unwanted pixels, thus braking the flow.
+*******************************************************************************/
 
 html {
     box-sizing: border-box;
@@ -677,12 +677,6 @@ nakedButton module
 
 /*******************************************************************************
 pad module
-
-There are no single-side modifiers (top, bottom, left and right), as we want to
-keep the leading flow of the document pristine.
-
-We also try to follow The LEGO Way of handling spacing of stuff:
-http://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design
 *******************************************************************************/
 
 [i-pad~="medium"] { padding: 27px; padding: 1.5rem; }
