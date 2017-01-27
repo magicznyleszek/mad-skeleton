@@ -1,5 +1,5 @@
 /*******************************************************************************
-area module
+area module - colors
 *******************************************************************************/
 
 [i-area~="amaranth"] { background-color: var(--c-amaranth); }
@@ -21,4 +21,46 @@ area module
 [i-area~="purple"],
 [i-area~="violet"] {
     color: var(--c-white);
+}
+
+/*******************************************************************************
+area module - spacing
+*******************************************************************************/
+
+[i-area~="pad-medium"] { padding: var(--s-leading); }
+
+[i-area~="pad-medium-v"] {
+    padding-top: var(--s-leading);
+    padding-bottom: var(--s-leading);
+}
+
+[i-area~="pad-medium-h"] {
+    padding-left: var(--s-leading);
+    padding-right: var(--s-leading);
+}
+
+[i-area~="pad-half"] { padding: calc(var(--s-leading) * 0.5); }
+
+[i-area~="pad-half-v"] {
+    padding-top: calc(var(--s-leading) * 0.5);
+    padding-bottom: calc(var(--s-leading) * 0.5);
+}
+
+[i-area~="pad-half-h"] {
+    padding-left: calc(var(--s-leading) * 0.5);
+    padding-right: calc(var(--s-leading) * 0.5);
+}
+
+[i-area~="pad-double"] {
+    padding: calc(var(--s-leading) * 2);
+}
+
+[i-area~="pad-double-v"] {
+    padding-top: calc(var(--s-leading) * 2);
+    padding-bottom: calc(var(--s-leading) * 2);
+}
+
+[i-area~="pad-double-h"] {
+    padding-left: calc(var(--s-leading) * 2);
+    padding-right: calc(var(--s-leading) * 2);
 }

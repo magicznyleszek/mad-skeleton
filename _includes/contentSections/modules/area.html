@@ -1,22 +1,28 @@
-<section i-pad="medium-v">
+<section i-area="pad-medium-v">
     <h3><a name="toc-modules-area"></a>area</h3>
 
-    <p><code>&lt;div i-area="charcoal"&gt;&hellip;&lt;/div&gt;</code></p>
+    <p><code>&lt;div i-area="charcoal pad-medium-v"&gt;&hellip;&lt;/div&gt;</code></p>
 
-    <p>Area sets the colors for the area. Simple as that.</p>
+    <p>Area has two functions: setting the colors (background & text) and paddings.</p>
 
-    <div i-area="charcoal" i-pad="half">
-        charcoal area
+    <p>While defining paddings use <code>-v</code> and <code>-h</code> suffixes for setting only vertical (top & bottom) or horizontal (left & right) spacing.</p>
+
+    <p>There are no single-side modifiers (top, bottom, left and right), as we want to keep the leading flow of the document pristine and we also try to follow <a href="http://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design">The LEGO Way</a> of handling spacing of stuff.</p>
+
+    <div i-area="charcoal pad-half">
+        charcoal area, padded half size
     </div>
 
-    <div i-area="silver" i-pad="half">
-        silver area
+    <div i-area="silver pad-medium">
+        silver area, padded medium size
     </div>
 
-    <div i-area="charcoal" i-pad="half">
-        <div i-area="silver" i-pad="half">
-            <div i-area="white" i-pad="half">
-                white area in silver area that is in charcoal area
+    <div i-area="amaranth pad-half-v pad-double-h">
+        <div i-area="purple pad-medium">
+            <div i-area="silver pad-half">
+                <div i-area="violet pad-half-v pad-double-h">
+                    violet area in silver area, that is in purple area that is in amaranth area, whilst all of them padded in some random way
+                </div>
             </div>
         </div>
     </div>

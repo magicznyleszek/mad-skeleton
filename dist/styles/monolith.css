@@ -292,7 +292,7 @@ textarea {
 /* modules */
 
 /*******************************************************************************
-area module
+area module - colors
 *******************************************************************************/
 
 [i-area~="amaranth"] { background-color: rgb(250, 31, 74); }
@@ -321,6 +321,61 @@ area module
 [i-area~="purple"],
 [i-area~="violet"] {
     color: rgb(255, 255, 255);
+}
+
+/*******************************************************************************
+area module - spacing
+*******************************************************************************/
+
+[i-area~="pad-medium"] { padding: 27px; padding: 1.5rem; }
+
+[i-area~="pad-medium-v"] {
+    padding-top: 27px;
+    padding-top: 1.5rem;
+    padding-bottom: 27px;
+    padding-bottom: 1.5rem;
+}
+
+[i-area~="pad-medium-h"] {
+    padding-left: 27px;
+    padding-left: 1.5rem;
+    padding-right: 27px;
+    padding-right: 1.5rem;
+}
+
+[i-area~="pad-half"] { padding: 13.5px; padding: 0.75rem; }
+
+[i-area~="pad-half-v"] {
+    padding-top: 13.5px;
+    padding-top: 0.75rem;
+    padding-bottom: 13.5px;
+    padding-bottom: 0.75rem;
+}
+
+[i-area~="pad-half-h"] {
+    padding-left: 13.5px;
+    padding-left: 0.75rem;
+    padding-right: 13.5px;
+    padding-right: 0.75rem;
+}
+
+[i-area~="pad-double"] {
+    padding: 54px;
+    padding: 3rem;
+}
+
+[i-area~="pad-double-v"] {
+    padding-top: 54px;
+    padding-top: 3rem;
+    padding-bottom: 54px;
+    padding-bottom: 3rem;
+}
+
+[i-area~="pad-double-h"] {
+    padding-left: 54px;
+    padding-left: 3rem;
+    padding-right: 54px;
+    padding-right: 3rem;
 }
 
 /*******************************************************************************
@@ -673,61 +728,6 @@ nakedButton module
 [i-nakedButton]:not([disabled]):active {
     opacity: 0.6;
     color: inherit;
-}
-
-/*******************************************************************************
-pad module
-*******************************************************************************/
-
-[i-pad~="medium"] { padding: 27px; padding: 1.5rem; }
-
-[i-pad~="medium-v"] {
-    padding-top: 27px;
-    padding-top: 1.5rem;
-    padding-bottom: 27px;
-    padding-bottom: 1.5rem;
-}
-
-[i-pad~="medium-h"] {
-    padding-left: 27px;
-    padding-left: 1.5rem;
-    padding-right: 27px;
-    padding-right: 1.5rem;
-}
-
-[i-pad~="half"] { padding: 13.5px; padding: 0.75rem; }
-
-[i-pad~="half-v"] {
-    padding-top: 13.5px;
-    padding-top: 0.75rem;
-    padding-bottom: 13.5px;
-    padding-bottom: 0.75rem;
-}
-
-[i-pad~="half-h"] {
-    padding-left: 13.5px;
-    padding-left: 0.75rem;
-    padding-right: 13.5px;
-    padding-right: 0.75rem;
-}
-
-[i-pad~="double"] {
-    padding: 54px;
-    padding: 3rem;
-}
-
-[i-pad~="double-v"] {
-    padding-top: 54px;
-    padding-top: 3rem;
-    padding-bottom: 54px;
-    padding-bottom: 3rem;
-}
-
-[i-pad~="double-h"] {
-    padding-left: 54px;
-    padding-left: 3rem;
-    padding-right: 54px;
-    padding-right: 3rem;
 }
 
 /*******************************************************************************
