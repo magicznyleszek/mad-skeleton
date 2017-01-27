@@ -1,8 +1,11 @@
 /*******************************************************************************
 pad module
 
-NOTE: there are no top, bottom, left and right modifiers, as we want to keep the
-leading flow of the document
+There are no single-side modifiers (top, bottom, left and right), as we want to
+keep the leading flow of the document pristine.
+
+We also try to follow The LEGO Way of handling spacing of stuff:
+http://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design
 *******************************************************************************/
 
 [i-pad~="medium"] { padding: var(--s-leading); }
