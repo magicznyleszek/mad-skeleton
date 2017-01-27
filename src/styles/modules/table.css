@@ -3,13 +3,13 @@ table module
 *******************************************************************************/
 
 :root {
-    --table-cell-sh: 0 0 0 0.0625rem color(var(--c-silver) shade(20%));
-    --table-cell-bg: var(--c-white);
-    --table-cell-bg-hover: color(var(--c-silver) tint(50%));
+    --c-table-border: var(--c-silver);
+    --table-bg: var(--c-white);
+    --table-bg-hover: color(var(--c-table-border) alpha(0.2));
 }
 
 [i-table] {
-    border-collapse: separate;
+    border-collapse: collapse;
     border-spacing: 0;
 }
 
@@ -20,9 +20,8 @@ table module
 
 [i-table] td,
 [i-table] th {
+    border: 0.0625rem solid var(--c-table-border);
     padding: calc(var(--s-leading) * 0.5);
-    box-shadow: var(--table-cell-sh);
-    background-color: var(--table-cell-bg);
     word-wrap: break-word;
 }
 
@@ -39,9 +38,8 @@ table module
 additional modifiers
 *******************************************************************************/
 
-[i-table~="hoverable"] tr:hover td {
-    background-color: var(--table-cell-bg-hover);
-    color: inherit;
+[i-table~="hoverable"] tr:hover {
+    background-color: var(--table-bg-hover);
 }
 
 [i-table~="fullwidth"] {

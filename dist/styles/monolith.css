@@ -799,7 +799,7 @@ table module
 *******************************************************************************/
 
 [i-table] {
-    border-collapse: separate;
+    border-collapse: collapse;
     border-spacing: 0;
 }
 
@@ -811,10 +811,10 @@ table module
 
 [i-table] td,
 [i-table] th {
+    border: 1.125px solid rgb(204, 204, 204);
+    border: 0.0625rem solid rgb(204, 204, 204);
     padding: 13.5px;
     padding: 0.75rem;
-    box-shadow: 0 0 0 0.0625rem rgb(163, 163, 163);
-    background-color: rgb(255, 255, 255);
     word-wrap: break-word;
 }
 
@@ -831,9 +831,8 @@ table module
 additional modifiers
 *******************************************************************************/
 
-[i-table~="hoverable"] tr:hover td {
-    background-color: rgb(230, 230, 230);
-    color: inherit;
+[i-table~="hoverable"] tr:hover {
+    background-color: rgba(204, 204, 204, 0.2);
 }
 
 [i-table~="fullwidth"] {
