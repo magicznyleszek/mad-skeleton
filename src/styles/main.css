@@ -14,10 +14,8 @@ main styles aggregation
 @import "modules/area.css";
 @import "modules/button.css";
 @import "modules/column.css";
-@import "modules/hover.css";
 @import "modules/icon.css";
-@import "modules/inlineBlock.css";
-@import "modules/nakedButton.css";
+@import "modules/nakedLink.css";
 @import "modules/progressBar.css";
 @import "modules/table.css";
 @import "modules/text.css";

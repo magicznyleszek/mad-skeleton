@@ -1,19 +1,19 @@
 /*******************************************************************************
-nakedButton module
+nakedLink module
 *******************************************************************************/
 
-[i-nakedButton] {
+[i-nakedLink] {
     display: inline-block;
     cursor: pointer;
     background-image: none;
 }
 
-[i-nakedButton]:not([disabled]):hover {
+[i-nakedLink]:not([disabled]):hover {
     opacity: 0.8;
     color: inherit;
 }
 
-[i-nakedButton]:not([disabled]):active {
+[i-nakedLink]:not([disabled]):active {
     opacity: 0.6;
     color: inherit;
 }

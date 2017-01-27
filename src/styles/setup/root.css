@@ -31,6 +31,7 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
+    color: inherit;
     font-size: inherit;
     font-family: inherit;
 }

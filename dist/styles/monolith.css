@@ -69,6 +69,7 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
+    color: inherit;
     font-size: inherit;
     font-family: inherit;
 }
@@ -631,26 +632,6 @@ space after column
 }
 
 /*******************************************************************************
-hover module
-*******************************************************************************/
-
-[i-hover]:not(:hover) [i-hover-item~="restore"],
-[i-hover]:hover [i-hover-item~="remove"] {
-    display: none;
-}
-
-[i-hover]:not(:hover) [i-hover-item~="show"],
-[i-hover]:hover [i-hover-item~="hide"] {
-    visibility: hidden;
-    opacity: 0;
-}
-
-[i-hover-item~="animate"] {
-    -webkit-transition-duration: 0.25s;
-            transition-duration: 0.25s;
-}
-
-/*******************************************************************************
 icon config
 *******************************************************************************/
 
@@ -705,27 +686,21 @@ icon colors
 [i-icon~="silver"] { fill: rgb(204, 204, 204); }
 
 /*******************************************************************************
-inlineBlock module
+nakedLink module
 *******************************************************************************/
 
-[i-inlineBlock] { display: inline-block; }
-
-/*******************************************************************************
-nakedButton module
-*******************************************************************************/
-
-[i-nakedButton] {
+[i-nakedLink] {
     display: inline-block;
     cursor: pointer;
     background-image: none;
 }
 
-[i-nakedButton]:not([disabled]):hover {
+[i-nakedLink]:not([disabled]):hover {
     opacity: 0.8;
     color: inherit;
 }
 
-[i-nakedButton]:not([disabled]):active {
+[i-nakedLink]:not([disabled]):active {
     opacity: 0.6;
     color: inherit;
 }
