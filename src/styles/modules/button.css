@@ -26,8 +26,8 @@ button module
     padding-bottom: 0;
     padding-left: var(--s-button-padding);
     padding-right: var(--s-button-padding);
-    /* we want the button to fit into leading size with breathing space */
     height: auto;
+    /* we want the button to fit into leading size with breathing space */
     min-height: calc(var(--s-leading) - calc(var(--s-button-verticalMargin) * 2));
     outline: 0;
     cursor: pointer;
@@ -57,6 +57,7 @@ button module
     margin-bottom: var(--s-button-verticalMargin);
     box-shadow: var(--button-sh-hover);
     background-color: var(--c-button-bg-hover);
+    color: var(--c-button-txt);
 }
 
 [i-button]:not([disabled]):active,
@@ -67,6 +68,7 @@ button module
     /* remove shadow to make the button look pressed-in */
     box-shadow: none;
     background-color: var(--c-button-bg-active);
+    color: var(--c-button-txt);
 }
 
 [i-button~="middle"] {

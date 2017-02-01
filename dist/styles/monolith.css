@@ -395,8 +395,8 @@ button module
     padding-left: 0.5rem;
     padding-right: 9px;
     padding-right: 0.5rem;
-    /* we want the button to fit into leading size with breathing space */
     height: auto;
+    /* we want the button to fit into leading size with breathing space */
     min-height: 22.5px;
     min-height: 1.25rem;
     outline: 0;
@@ -434,6 +434,7 @@ button module
     margin-bottom: 0.125rem;
     box-shadow: 0 0.125rem 0 0 rgb(184, 184, 184);
     background-color: rgb(214, 214, 214);
+    color: rgb(51, 51, 51);
 }
 
 [i-button]:not([disabled]):active,
@@ -445,6 +446,7 @@ button module
     /* remove shadow to make the button look pressed-in */
     box-shadow: none;
     background-color: rgb(219, 219, 219);
+    color: rgb(51, 51, 51);
 }
 
 [i-button~="middle"] {
