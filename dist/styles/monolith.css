@@ -328,51 +328,51 @@ area module - colors
 area module - spacing
 *******************************************************************************/
 
-[i-area~="pad-medium"] { padding: 27px; padding: 1.5rem; }
+[i-area~="medium"] { padding: 27px; padding: 1.5rem; }
 
-[i-area~="pad-medium-v"] {
+[i-area~="medium-v"] {
     padding-top: 27px;
     padding-top: 1.5rem;
     padding-bottom: 27px;
     padding-bottom: 1.5rem;
 }
 
-[i-area~="pad-medium-h"] {
+[i-area~="medium-h"] {
     padding-left: 27px;
     padding-left: 1.5rem;
     padding-right: 27px;
     padding-right: 1.5rem;
 }
 
-[i-area~="pad-half"] { padding: 13.5px; padding: 0.75rem; }
+[i-area~="half"] { padding: 13.5px; padding: 0.75rem; }
 
-[i-area~="pad-half-v"] {
+[i-area~="half-v"] {
     padding-top: 13.5px;
     padding-top: 0.75rem;
     padding-bottom: 13.5px;
     padding-bottom: 0.75rem;
 }
 
-[i-area~="pad-half-h"] {
+[i-area~="half-h"] {
     padding-left: 13.5px;
     padding-left: 0.75rem;
     padding-right: 13.5px;
     padding-right: 0.75rem;
 }
 
-[i-area~="pad-double"] {
+[i-area~="double"] {
     padding: 54px;
     padding: 3rem;
 }
 
-[i-area~="pad-double-v"] {
+[i-area~="double-v"] {
     padding-top: 54px;
     padding-top: 3rem;
     padding-bottom: 54px;
     padding-bottom: 3rem;
 }
 
-[i-area~="pad-double-h"] {
+[i-area~="double-h"] {
     padding-left: 54px;
     padding-left: 3rem;
     padding-right: 54px;

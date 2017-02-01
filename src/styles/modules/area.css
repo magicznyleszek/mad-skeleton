@@ -27,40 +27,40 @@ area module - colors
 area module - spacing
 *******************************************************************************/
 
-[i-area~="pad-medium"] { padding: var(--s-leading); }
+[i-area~="medium"] { padding: var(--s-leading); }
 
-[i-area~="pad-medium-v"] {
+[i-area~="medium-v"] {
     padding-top: var(--s-leading);
     padding-bottom: var(--s-leading);
 }
 
-[i-area~="pad-medium-h"] {
+[i-area~="medium-h"] {
     padding-left: var(--s-leading);
     padding-right: var(--s-leading);
 }
 
-[i-area~="pad-half"] { padding: calc(var(--s-leading) * 0.5); }
+[i-area~="half"] { padding: calc(var(--s-leading) * 0.5); }
 
-[i-area~="pad-half-v"] {
+[i-area~="half-v"] {
     padding-top: calc(var(--s-leading) * 0.5);
     padding-bottom: calc(var(--s-leading) * 0.5);
 }
 
-[i-area~="pad-half-h"] {
+[i-area~="half-h"] {
     padding-left: calc(var(--s-leading) * 0.5);
     padding-right: calc(var(--s-leading) * 0.5);
 }
 
-[i-area~="pad-double"] {
+[i-area~="double"] {
     padding: calc(var(--s-leading) * 2);
 }
 
-[i-area~="pad-double-v"] {
+[i-area~="double-v"] {
     padding-top: calc(var(--s-leading) * 2);
     padding-bottom: calc(var(--s-leading) * 2);
 }
 
-[i-area~="pad-double-h"] {
+[i-area~="double-h"] {
     padding-left: calc(var(--s-leading) * 2);
     padding-right: calc(var(--s-leading) * 2);
 }
