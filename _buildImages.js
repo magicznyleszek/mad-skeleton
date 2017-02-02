@@ -19,29 +19,15 @@ const createDir = (dir) => {
     }, '');
 };
 
-createDir('./dist/images/test');
-
-gm('src/images/test/medieval-blood-and-gore.jpg')
-.resize(240, 240)
-.write('dist/images/test/medieval-blood-and-gore-small.jpg', (err) => {
-    if (err) {
-        console.error(err);
-    } else {
-        console.log('done');
-    }
-});
-
-fs.readdir('src/images', (err, files) => {
-    if (err) {
-        console.error(err);
-        process.exit(1);
-    }
-
-    console.log('files from directory:');
-    files.forEach((file, index) => {
-        console.log(file, index);
-    });
-});
+// gm('src/images/test/medieval-blood-and-gore.jpg')
+// .resize(240, 240)
+// .write('dist/images/test/medieval-blood-and-gore-small.jpg', (err) => {
+//     if (err) {
+//         console.error(err);
+//     } else {
+//         console.log('done');
+//     }
+// });
 
 const walkDir = (dir, filelist) => {
     if (dir[dir.length - 1] !== '/') {
