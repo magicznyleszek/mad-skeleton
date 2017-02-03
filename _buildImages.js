@@ -1,8 +1,16 @@
+/*******************************************************************************
+node script for building a nice responsive images from the source directory
+*******************************************************************************/
+
 const fs = require('fs');
 const gm = require('gm');
 const process = require('process');
 
-// This will create a dir given a path such as './folder/subfolder'
+/*******************************************************************************
+helper functions
+*******************************************************************************/
+
+// creates a nested structure of directories given a path "./folder/subfolder"
 const createDir = (dir) => {
     const splitPath = dir.split('/');
     splitPath.reduce((path, subPath) => {
@@ -19,16 +27,7 @@ const createDir = (dir) => {
     }, '');
 };
 
-// gm('src/images/test/medieval-blood-and-gore.jpg')
-// .resize(240, 240)
-// .write('dist/images/test/medieval-blood-and-gore-small.jpg', (err) => {
-//     if (err) {
-//         console.error(err);
-//     } else {
-//         console.log('done');
-//     }
-// });
-
+// returns all files found in directory (subdirectories included)
 const walkDir = (dir, filelist) => {
     if (dir[dir.length - 1] !== '/') {
         dir = dir.concat('/');
@@ -47,4 +46,26 @@ const walkDir = (dir, filelist) => {
     return filelist;
 };
 
-console.log(walkDir('src/images'));
+/*******************************************************************************
+generating images
+*******************************************************************************/
+
+const allImages = walkDir('src/images');
+console.log('All found images:');
+allImages.forEach((image) => {
+    console.log(image);
+});
+
+allImages.forEach((image) => {
+    console.log(image);
+});
+
+// gm('src/images/test/medieval-blood-and-gore.jpg')
+// .resize(240, 240)
+// .write('dist/images/test/medieval-blood-and-gore-small.jpg', (err) => {
+//     if (err) {
+//         console.error(err);
+//     } else {
+//         console.log('done');
+//     }
+// });
