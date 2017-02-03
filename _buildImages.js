@@ -5,6 +5,7 @@ node script for building a nice responsive images from the source directory
 const fs = require('fs');
 const gm = require('gm');
 const process = require('process');
+const imageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
 
 /*******************************************************************************
 helper functions
@@ -91,8 +92,21 @@ allImages.forEach((image) => {
     gm(image).resize(240, 240).write(finalPath, (err) => {
         if (err) {
             console.error(err);
+            process.exit(1);
         } else {
             console.log('done:', image);
         }
     });
 });
+
+/*
+todo:
+- create global function with source and dest directories as arguments? or at least put those in consts
+- define separate function for each image size:
+    - thumbnail
+    - thumbnail @2x
+    - original (should just copy)
+- image size function should rename with prefix
+- write function that adds prefix for image path
+- filter files list by image extensions array
+*/
