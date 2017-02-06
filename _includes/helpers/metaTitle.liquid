@@ -1,3 +1,7 @@
+{% comment %}
+This template renders the tile for given HTML document:
+pageTitle - categoryName - siteName - siteDescription
+{% endcomment %}
 {% if page.title %}
 {{ page.title }} &ndash;
 {% elsif page.layout == 'category' %}
