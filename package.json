@@ -18,7 +18,7 @@
     "build": "npm-run-all dist:rebuild svg:build styles:build",
     "watch": "npm-watch",
     "dist:rebuild": "rm -rf dist && mkdir dist && mkdir dist/styles",
-    "images:build": "node _buildImages.js",
+    "images:build": "node bin/buildImages.js",
     "styles:build": "postcss -u postcss-import -u postcss-cssnext -o dist/styles/monolith.css src/styles/main.css",
     "svg:build": "svgo -f src/symbols/ && svgshelf -p symbol- src/symbols/\\*.svg _includes/symbols.svg",
     "jekyll:build": "jekyll build",

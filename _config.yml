@@ -25,6 +25,7 @@ timezone: Europe/Warsaw
 # excludes
 exclude:
     - src
+    - bin
     - node_modules
     - LICENSE
     - README.md
