@@ -2,6 +2,9 @@
 node script for building a nice responsive images from the source directory
 
 NOTE: it can and will overwrite existing files in destinationDir
+NOTE: this can fail when doing stuff over multiple images, see:
+https://github.com/aheckmann/gm/issues/502
+https://github.com/aheckmann/gm/issues/488
 *******************************************************************************/
 
 const fs = require('fs');
@@ -172,6 +175,8 @@ const buildImages = () => {
     // STEP 3: create predefined image sizes for each image found
     console.log('Building images…');
     allImages.forEach((imagePath) => {
+        // NOTE: if graphicsmagick fails when working over large number of files
+        // try commenting out one of these convertImage calls
         convertImage(
             imagePath,
             imageSizes.small.width,
