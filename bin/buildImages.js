@@ -118,13 +118,10 @@ const convertImage = (imagePath, width, height, jpgQuality, suffix) => {
     const gmImage = gm(imagePath);
 
     if (imagePath.endsWith('jpg') || imagePath.endsWith('jpeg')) {
-        gmImage.resize(width, height);
-        gmImage.quality(jpgQuality);
+        gmImage.resize(width, height).quality(jpgQuality);
     } else {
         // sample resizes image without increasing the number of colors
-        gmImage.sample(width, height);
-        gmImage.bitdepth(8);
-        gmImage.dither(true).colors(16);
+        gmImage.sample(width, height).bitdepth(8).dither(true).colors(32);
     }
 
     gmImage.write(finalPath, (err) => {
