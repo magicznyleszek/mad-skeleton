@@ -85,15 +85,17 @@ const getDirsFromDir = (dir, dirlist) => {
 generating images
 *******************************************************************************/
 
-const addSuffixToFile = (file, string) => {
+// adds suffix to file!
+const addSuffixToFile = (file, suffix) => {
     const dotIndex = file.lastIndexOf('.');
     if (dotIndex === -1) {
-        return file + string;
+        return file + suffix;
     } else {
-        return file.substring(0, dotIndex) + string + file.substring(dotIndex);
+        return file.substring(0, dotIndex) + suffix + file.substring(dotIndex);
     }
 };
 
+// returns true for files with proper extensions
 const isImage = (file) => {
     for (const extension of allowedImageExtensions) {
         if (file.endsWith(extension)) {
@@ -103,18 +105,24 @@ const isImage = (file) => {
     return false;
 };
 
-const convertImage = (imagePath, properties) => {
+// creates a graphicsmagick-converted image in destinationDir
+// @param {string} imagePath - source image path
+// @param {integer} width
+// @param {integer} height
+// @param {integer} jpgQuality - 0 to 100 percent value
+// @param {string} suffix - will be added just before extension
+const convertImage = (imagePath, width, height, jpgQuality, suffix) => {
     let finalPath = imagePath.replace(sourceDir, destinationDir);
-    finalPath = addSuffixToFile(finalPath, properties.suffix);
+    finalPath = addSuffixToFile(finalPath, suffix);
 
     const gmImage = gm(imagePath);
 
     if (imagePath.endsWith('jpg') || imagePath.endsWith('jpeg')) {
-        gmImage.resize(properties.width, properties.height);
-        gmImage.quality(properties.jpgQuality);
+        gmImage.resize(width, height);
+        gmImage.quality(jpgQuality);
     } else {
         // sample resizes image without increasing the number of colors
-        gmImage.sample(properties.width, properties.height);
+        gmImage.sample(width, height);
         gmImage.bitdepth(8);
         gmImage.dither(true).colors(16);
     }
@@ -167,13 +175,20 @@ const buildImages = () => {
     // STEP 3: create predefined image sizes for each image found
     console.log('Building images…');
     allImages.forEach((imagePath) => {
-        convertImage(imagePath, imageSizes.small, true);
-        convertImage(imagePath, {
-            width: imageSizes.small.width * 2,
-            height: imageSizes.small.height * 2,
-            jpgQuality: imageSizes.small.quality,
-            suffix: imageSizes.small.suffix + '@2x'
-        });
+        convertImage(
+            imagePath,
+            imageSizes.small.width,
+            imageSizes.small.height,
+            imageSizes.small.jpgQuality,
+            imageSizes.small.suffix
+        );
+        convertImage(
+            imagePath,
+            imageSizes.small.width * 2,
+            imageSizes.small.height * 2,
+            imageSizes.small.jpgQuality,
+            imageSizes.small.suffix + '@2x'
+        );
         copyFile(imagePath);
     });
 };
