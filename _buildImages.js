@@ -1,27 +1,21 @@
 /*******************************************************************************
 node script for building a nice responsive images from the source directory
 
-NOTE: it can and will overwrite existing files in destinationDirectory
+NOTE: it can and will overwrite existing files in destinationDir
 *******************************************************************************/
 
 const fs = require('fs');
 const gm = require('gm');
 const process = require('process');
-const imageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-const sourceDirectory = './src/images';
-const destinationDirectory = './dist/images';
+const allowedImageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+const sourceDir = './src/images';
+const destinationDir = './dist/images';
 const imageSizes = {
     small: {
         width: 400,
         height: 400,
         quality: 80,
         suffix: '_small'
-    },
-    small_2x: {
-        width: 800,
-        height: 800,
-        quality: 80,
-        suffix: '_small_2x'
     }
 };
 
@@ -91,7 +85,7 @@ const getDirsFromDir = (dir, dirlist) => {
 generating images
 *******************************************************************************/
 
-const suffixize = (file, string) => {
+const addSuffixToFile = (file, string) => {
     const dotIndex = file.lastIndexOf('.');
     if (dotIndex === -1) {
         return file + string;
@@ -100,9 +94,18 @@ const suffixize = (file, string) => {
     }
 };
 
-const convertImage = (fromDir, toDir, imagePath, properties) => {
-    let finalPath = imagePath.replace(fromDir, toDir);
-    finalPath = suffixize(finalPath, properties.suffix);
+const isImage = (file) => {
+    for (const extension of allowedImageExtensions) {
+        if (file.endsWith(extension)) {
+            return true;
+        }
+    }
+    return false;
+};
+
+const convertImage = (imagePath, properties, doRetina) => {
+    let finalPath = imagePath.replace(sourceDir, destinationDir);
+    finalPath = addSuffixToFile(finalPath, properties.suffix);
 
     gm(imagePath)
     .resize(properties.width, properties.height)
@@ -115,40 +118,59 @@ const convertImage = (fromDir, toDir, imagePath, properties) => {
             console.log('Done:', finalPath);
         }
     });
+
+    if (doRetina) {
+        const retinaProperties = {
+            width: properties.width * 2,
+            height: properties.height * 2,
+            quality: properties.quality,
+            suffix: properties.suffix + '@2x'
+        };
+        convertImage(imagePath, retinaProperties, false);
+    }
 };
 
-const buildImages = (fromDir, toDir) => {
+const copyFile = (file) => {
+    const finalPath = file.replace(sourceDir, destinationDir);
+    fs.writeFileSync(finalPath, fs.readFileSync(file));
+    console.log('Done:', finalPath);
+};
+
+/*******************************************************************************
+final do-all function
+*******************************************************************************/
+
+const buildImages = () => {
     // STEP 1: scan source directory for directories structure and recreate it
     // in destination directory to avoid nonexist-dir errors
-    const allDirs = getDirsFromDir(fromDir);
-    console.log('\nFound dirs:\n');
+    const allDirs = getDirsFromDir(sourceDir);
     allDirs.forEach((directory) => {
-        console.log(directory);
-    });
-    allDirs.forEach((directory) => {
-        const finalPath = directory.replace(fromDir, toDir);
+        const finalPath = directory.replace(sourceDir, destinationDir);
         createDir(finalPath);
     });
+    console.log('Recreated directories structure');
 
     // STEP 2: scan source directory for all files
-    const allImages = getFilesFromDir(fromDir);
-    console.log('\nFound images:\n');
-    allImages.forEach((image) => {
-        console.log(image);
+    const allImages = [];
+    getFilesFromDir(sourceDir).forEach((file) => {
+        if (isImage(file)) {
+            allImages.push(file);
+        }
     });
+    console.log('Found images: ' + allImages.length);
+
+    // exit with error if no images found
+    if (allImages.length === 0) {
+        console.error('No images to convert! WTF?');
+        process.exit(1);
+    }
 
     // STEP 3: create predefined image sizes for each image found
-    console.log('\nStarting working on images\n');
+    console.log('Building images…');
     allImages.forEach((imagePath) => {
-        console.log(imagePath);
-        convertImage(fromDir, toDir, imagePath, imageSizes.small);
-        convertImage(fromDir, toDir, imagePath, imageSizes.small_2x);
+        convertImage(imagePath, imageSizes.small, true);
+        copyFile(imagePath);
     });
 };
 
-buildImages(sourceDirectory, destinationDirectory);
-
-/*
-todo:
-- filter files list by image extensions array
-*/
+buildImages();
