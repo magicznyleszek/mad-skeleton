@@ -14,7 +14,7 @@ const imageSizes = {
     small: {
         width: 400,
         height: 400,
-        quality: 80,
+        jpgQuality: 80,
         suffix: '_small'
     }
 };
@@ -103,14 +103,23 @@ const isImage = (file) => {
     return false;
 };
 
-const convertImage = (imagePath, properties, doRetina) => {
+const convertImage = (imagePath, properties) => {
     let finalPath = imagePath.replace(sourceDir, destinationDir);
     finalPath = addSuffixToFile(finalPath, properties.suffix);
 
-    gm(imagePath)
-    .resize(properties.width, properties.height)
-    .quality(properties.quality)
-    .write(finalPath, (err) => {
+    const gmImage = gm(imagePath);
+
+    if (imagePath.endsWith('jpg') || imagePath.endsWith('jpeg')) {
+        gmImage.resize(properties.width, properties.height);
+        gmImage.quality(properties.jpgQuality);
+    } else {
+        // sample resizes image without increasing the number of colors
+        gmImage.sample(properties.width, properties.height);
+        gmImage.bitdepth(8);
+        gmImage.dither(true).colors(16);
+    }
+
+    gmImage.write(finalPath, (err) => {
         if (err) {
             console.error(err);
             process.exit(1);
@@ -118,16 +127,6 @@ const convertImage = (imagePath, properties, doRetina) => {
             console.log('Done:', finalPath);
         }
     });
-
-    if (doRetina) {
-        const retinaProperties = {
-            width: properties.width * 2,
-            height: properties.height * 2,
-            quality: properties.quality,
-            suffix: properties.suffix + '@2x'
-        };
-        convertImage(imagePath, retinaProperties, false);
-    }
 };
 
 const copyFile = (file) => {
@@ -169,6 +168,12 @@ const buildImages = () => {
     console.log('Building images…');
     allImages.forEach((imagePath) => {
         convertImage(imagePath, imageSizes.small, true);
+        convertImage(imagePath, {
+            width: imageSizes.small.width * 2,
+            height: imageSizes.small.height * 2,
+            jpgQuality: imageSizes.small.quality,
+            suffix: imageSizes.small.suffix + '@2x'
+        });
         copyFile(imagePath);
     });
 };
