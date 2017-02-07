@@ -21,9 +21,10 @@ const imageSizes = {
         suffix: '_small'
     }
 };
+const checkmarkString = '\u2713';
 
 /*******************************************************************************
-helper functions
+filesystem-oriented helpers
 *******************************************************************************/
 
 // creates a nested structure of directories given a path "./folder/subfolder"
@@ -84,12 +85,8 @@ const getDirsFromDir = (dir, dirlist) => {
     return dirlist;
 };
 
-/*******************************************************************************
-generating images
-*******************************************************************************/
-
-// adds suffix to file!
-const addSuffixToFile = (file, suffix) => {
+// adds suffix to filename!
+const addSuffixToFilename = (file, suffix) => {
     const dotIndex = file.lastIndexOf('.');
     if (dotIndex === -1) {
         return file + suffix;
@@ -97,6 +94,16 @@ const addSuffixToFile = (file, suffix) => {
         return file.substring(0, dotIndex) + suffix + file.substring(dotIndex);
     }
 };
+
+const copyFileToDest = (file) => {
+    const finalPath = file.replace(sourceDir, destinationDir);
+    fs.writeFileSync(finalPath, fs.readFileSync(file));
+    console.log(checkmarkString, finalPath);
+};
+
+/*******************************************************************************
+generating images
+*******************************************************************************/
 
 // returns true for files with proper extensions
 const isImage = (file) => {
@@ -114,9 +121,10 @@ const isImage = (file) => {
 // @param {integer} height
 // @param {integer} jpgQuality - 0 to 100 percent value
 // @param {string} suffix - will be added just before extension
-const convertImage = (imagePath, width, height, jpgQuality, suffix) => {
+// @param {function} callback - will be called after successful conversion
+const convertImage = (imagePath, width, height, jpgQuality, suffix, callback) => {
     let finalPath = imagePath.replace(sourceDir, destinationDir);
-    finalPath = addSuffixToFile(finalPath, suffix);
+    finalPath = addSuffixToFilename(finalPath, suffix);
 
     const gmImage = gm(imagePath);
 
@@ -134,66 +142,89 @@ const convertImage = (imagePath, width, height, jpgQuality, suffix) => {
             console.error(err);
             process.exit(1);
         } else {
-            console.log('Done:', finalPath);
+            console.log(checkmarkString, finalPath);
+            callback();
         }
     });
-};
-
-const copyFile = (file) => {
-    const finalPath = file.replace(sourceDir, destinationDir);
-    fs.writeFileSync(finalPath, fs.readFileSync(file));
-    console.log('Done:', finalPath);
 };
 
 /*******************************************************************************
 final do-all function
 *******************************************************************************/
 
-const buildImages = () => {
-    // STEP 1: scan source directory for directories structure and recreate it
-    // in destination directory to avoid nonexist-dir errors
+// recursive function
+// @param {array} imagesArray - will be reduced until nothing is left
+const startImagesChain = (imagesArray, finishedCallback) => {
+    if (imagesArray.length === 0) {
+        finishedCallback();
+        return;
+    }
+    copyFileToDest(imagesArray[0]);
+    convertImage(
+        imagesArray[0],
+        imageSizes.small.width,
+        imageSizes.small.height,
+        imageSizes.small.jpgQuality,
+        imageSizes.small.suffix,
+        () => {
+            convertImage(
+                imagesArray[0],
+                imageSizes.small.width * 2,
+                imageSizes.small.height * 2,
+                imageSizes.small.jpgQuality,
+                imageSizes.small.suffix + '@2x',
+                () => {
+                    imagesArray.shift();
+                    startImagesChain(imagesArray, finishedCallback);
+                }
+            );
+        }
+    );
+};
+
+const recreateSourceDirsInDest = () => {
     const allDirs = getDirsFromDir(sourceDir);
     allDirs.forEach((directory) => {
         const finalPath = directory.replace(sourceDir, destinationDir);
         createDir(finalPath);
     });
-    console.log('Recreated directories structure');
+    console.log(checkmarkString, 'Recreated directories structure');
+};
 
-    // STEP 2: scan source directory for all files
-    const allImages = [];
+const getImagesFromSourceDir = () => {
+    const images = [];
     getFilesFromDir(sourceDir).forEach((file) => {
         if (isImage(file)) {
-            allImages.push(file);
+            images.push(file);
         }
     });
-    console.log('Found images: ' + allImages.length);
+    return images;
+};
 
+const buildImagesTimeLabel = 'Finished';
+const buildImages = () => {
+    console.time(buildImagesTimeLabel);
+    console.log('Building images…');
+
+    // STEP 1: scan source directory for directories structure and recreate it
+    // in destination directory to avoid nonexist-dir errors
+    recreateSourceDirsInDest();
+
+    // STEP 2: scan source directory for all files
     // exit with error if no images found
+    const allImages = getImagesFromSourceDir();
     if (allImages.length === 0) {
         console.error('No images to convert! WTF?');
         process.exit(1);
+    } else {
+        console.log('Found images: ' + allImages.length);
     }
 
     // STEP 3: create predefined image sizes for each image found
-    console.log('Building images…');
-    allImages.forEach((imagePath) => {
-        // NOTE: if graphicsmagick fails when working over large number of files
-        // try commenting out one of these convertImage calls
-        convertImage(
-            imagePath,
-            imageSizes.small.width,
-            imageSizes.small.height,
-            imageSizes.small.jpgQuality,
-            imageSizes.small.suffix
-        );
-        convertImage(
-            imagePath,
-            imageSizes.small.width * 2,
-            imageSizes.small.height * 2,
-            imageSizes.small.jpgQuality,
-            imageSizes.small.suffix + '@2x'
-        );
-        copyFile(imagePath);
+    // we do it by creating a chain of callbacks, because graphicsmagick fails
+    // when doing too many files (n * 100) at once
+    startImagesChain(allImages, () => {
+        console.timeEnd(buildImagesTimeLabel);
     });
 };
 
