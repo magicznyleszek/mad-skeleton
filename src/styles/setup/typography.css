@@ -3,7 +3,7 @@ base typographic rules
 *******************************************************************************/
 
 :root {
-    --s-code-verticalMargin: 0.125rem;
+    --s-code-safeSpace: 0.125rem;
 }
 
 :--headers {
@@ -91,15 +91,15 @@ pre {
 code {
     display: inline-block;
     vertical-align: bottom;
-    margin-top: var(--s-code-verticalMargin);
-    margin-bottom: var(--s-code-verticalMargin);
+    margin-top: var(--s-code-safeSpace);
+    margin-bottom: var(--s-code-safeSpace);
     border-radius: var(--s-global-br);
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
+    padding-left: var(--s-code-safeSpace);
+    padding-right: var(--s-code-safeSpace);
     background-color: var(--c-silver);
     color: var(--c-charcoal);
     font-size: 0.75rem;
-    line-height: calc(var(--s-leading) - calc(var(--s-code-verticalMargin) * 2));
+    line-height: calc(var(--s-leading) - calc(var(--s-code-safeSpace) * 2));
 }
 
 /* bigger blocks - reset line-height-margin trick for multiline */

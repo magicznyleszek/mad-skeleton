@@ -254,28 +254,38 @@ pre {
         monospace;
 }
 
+/* line-height-margin trick for when two of those meet on neighbour lines */
+
 code {
     display: inline-block;
     vertical-align: bottom;
+    margin-top: 2.25px;
+    margin-top: 0.125rem;
+    margin-bottom: 2.25px;
+    margin-bottom: 0.125rem;
     border-radius: 0.125rem;
-    padding-left: 4.5px;
-    padding-left: 0.25rem;
-    padding-right: 4.5px;
-    padding-right: 0.25rem;
+    padding-left: 2.25px;
+    padding-left: 0.125rem;
+    padding-right: 2.25px;
+    padding-right: 0.125rem;
     background-color: rgb(204, 204, 204);
     color: rgb(51, 51, 51);
     font-size: 13.5px;
     font-size: 0.75rem;
-    line-height: 27px;
-    line-height: 1.5rem;
+    line-height: 22.5px;
+    line-height: 1.25rem;
 }
 
-/* bigger blocks */
+/* bigger blocks - reset line-height-margin trick for multiline */
 
 pre code {
     display: block;
     overflow: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     max-width: 100%;
+    line-height: 27px;
+    line-height: 1.5rem;
 }
 
 /* form elements */
