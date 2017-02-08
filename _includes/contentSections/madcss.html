@@ -5,19 +5,19 @@
 
     <p><strong>MADCSS</strong> stands for <strong>M</strong>odular <strong>A</strong>ttribute-<strong>D</strong>riven <strong>CSS</strong>. Yeah, sooo clever. Basic architecture is <del>based on</del> inspired by: <a href="https://amcss.github.io/">AMCSS</a>, <a href="https://github.com/colepeters/gemma">Gemma</a>, <a href="http://krasimir.github.io/organic-css/">Organic CSS</a>, <a href="http://demo.patternlab.io">Atomic Design</a> and <a href="http://tachyons.io/">Tachyons</a>.</p>
 
-    <p>The base global prefix for all attribute modules is <code>i-</code> as in "interface".</p>
+    <p>The base global prefix for all attribute modules is <code>i-</code>, as in "interface".</p>
 
     <h3><a name="toc-madcss-naming"></a>Naming things</h3>
 
-    <p>Attribute names are defined in a simple fashion: attribute always starts with the global prefix, followed by module name. If it's a child, then it appends a single hyphen, followed by the child name. Note: you shouldn't go deeper than 2 levels: i.e. grandchildren and further are forbidden.</p>
+    <p>Attribute names are defined in a simple fashion: attribute always starts with the global prefix, followed by module name. If it's a child, then it appends a single hyphen, followed by the child name. And try not going deeper than 2 levels with that: i.e. grandchildren and further are forbidden.</p>
 
     <pre><code>{{ "<globalPrefix>-<name>[-<childName>]" | escape }}</code></pre>
 
-    <p>Modifiers are a space-separated strings, so basically you can use any character you want:</p>
+    <p>Modifiers are a space-separated strings, so basically you can use any character you want (except space of course):</p>
 
     <pre><code>{{ '<div i-nietzsche="2/3 isDead +_- żółć 鸡汤">…</div>' | escape }}</code></pre>
 
-    <p>And the you would write this in your <code>.css</code> file:</p>
+    <p>And then you would write something like this in your <code>.(s)css</code> file:</p>
 
 <pre><code>/* nietzsche module */
 [i-nietzsche] { &hellip; }
@@ -30,10 +30,14 @@
 
     <h3><a name="toc-madcss-architecture"></a>Architecture</h3>
 
-    <p>There are not a lot of files. You will basically create new things in <code>modules/</code> directory and some global variables in -- wait for it -- <code>variables.css</code>!</p>
+    <p>There are literally five mandatory files you need -- the rest are custom modules (you can delete existing ones, just don't tell me about it). Building new things happens in <code>modules/</code> directory and you will define global variables in -- wait for it -- <code>variables.css</code>! GASP!</p>
 
 <pre><code>modules/
     nietzsche.css
+    complex/
+        complex.css
+        complexPart.css
+        complexConfig.css
 setup/
     root.css
     states.css
@@ -42,11 +46,11 @@ main.css
 variables.css
 </code></pre>
 
-    <p>As for variables, make sure that you define module own vars in the <code>:root {}</code> block on top of the file. If multiple modules use a variable, you should put in in global file.</p>
+    <p>As for variables, make sure that you define module private ones in the <code>:root {}</code> block on top of the file. If multiple modules use a variable, you should put in in global file.</p>
 
     <p>The <code>setup/</code> dir contains some resets for the whole project and simple typography normalisations.</p>
 
-    <p>Modules can be either structure- and layout-related selectors that do one, generic thing extremely well -- or a context-specific selectors for distinct components of an interface. Can be naturally mixed with each other -- as long as it makes sense of course.</p>
+    <p>Modules can be either structure- and layout-related selectors that do one, generic thing extremely well -- or a context-specific selectors for distinct components of an interface. They can be naturally mixed with each other -- as long as it makes sense of course. And if you need a humongous module, create a separate <code>modules/moduleName/</code> directory with same name as module and include all partials in <code>modules/moduleName/moduleName.css</code> file.</p>
 
     <h3><a name="toc-madcss-quirks"></a>Quirks and rules</h3>
 
