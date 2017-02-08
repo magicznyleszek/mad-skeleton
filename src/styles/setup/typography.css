@@ -2,6 +2,10 @@
 base typographic rules
 *******************************************************************************/
 
+:root {
+    --s-code-verticalMargin: 0.125rem;
+}
+
 :--headers {
     margin: 0;
     padding: 0;
@@ -83,23 +87,29 @@ pre {
     font-family: var(--font-monospace);
 }
 
+/* line-height-margin trick for when two of those meet on neighbour lines */
 code {
     display: inline-block;
     vertical-align: bottom;
+    margin-top: var(--s-code-verticalMargin);
+    margin-bottom: var(--s-code-verticalMargin);
     border-radius: var(--s-global-br);
     padding-left: 0.25rem;
     padding-right: 0.25rem;
     background-color: var(--c-silver);
     color: var(--c-charcoal);
     font-size: 0.75rem;
-    line-height: var(--s-leading);
+    line-height: calc(var(--s-leading) - calc(var(--s-code-verticalMargin) * 2));
 }
 
-/* bigger blocks */
+/* bigger blocks - reset line-height-margin trick for multiline */
 pre code {
     display: block;
     overflow: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     max-width: 100%;
+    line-height: var(--s-leading);
 }
 
 /* form elements */
