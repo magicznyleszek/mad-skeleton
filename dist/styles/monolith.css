@@ -75,7 +75,7 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     width: 100%;
     max-width: 720px;
     max-width: 40rem;
@@ -421,9 +421,6 @@ button module
     margin-top: 0.125rem;
     margin-bottom: 2.25px;
     margin-bottom: 0.125rem;
-    box-shadow: 0 0.125rem 0 0 rgb(173, 173, 173);
-    background-color: rgb(204, 204, 204);
-    color: rgb(51, 51, 51);
 }
 
 [i-button]:not([disabled]):hover,
@@ -432,9 +429,6 @@ button module
     margin-top: 0.125rem;
     margin-bottom: 2.25px;
     margin-bottom: 0.125rem;
-    box-shadow: 0 0.125rem 0 0 rgb(184, 184, 184);
-    background-color: rgb(214, 214, 214);
-    color: rgb(51, 51, 51);
 }
 
 [i-button]:not([disabled]):active,
@@ -444,13 +438,57 @@ button module
     margin-top: 0.25rem;
     margin-bottom: 0;
     /* remove shadow to make the button look pressed-in */
-    box-shadow: none;
-    background-color: rgb(219, 219, 219);
-    color: rgb(51, 51, 51);
+    box-shadow: none !important;
 }
 
 [i-button~="middle"] {
     vertical-align: middle;
+}
+
+/*******************************************************************************
+button colors
+*******************************************************************************/
+
+/* default */
+
+[i-button],
+[i-button]:visited {
+    box-shadow: 0 0.125rem 0 0 rgb(173, 173, 173);
+    background-color: rgb(204, 204, 204);
+    color: rgb(51, 51, 51);
+}
+
+[i-button]:not([disabled]):hover,
+[i-button~="hover"]:not([disabled]) {
+    box-shadow: 0 0.125rem 0 0 rgb(184, 184, 184);
+    background-color: rgb(214, 214, 214);
+    color: rgb(51, 51, 51);
+}
+
+[i-button]:not([disabled]):active,
+[i-button~="active"]:not([disabled]) {
+    background-color: rgb(214, 214, 214);
+    color: rgb(51, 51, 51);
+}
+
+/* amaranth */
+
+[i-button~="amaranth"],
+[i-button~="amaranth"]:visited {
+    box-shadow: 0 0.125rem 0 0 rgb(213, 26, 63);
+    background-color: rgb(250, 31, 74);
+    color: rgb(255, 255, 255);
+}
+
+[i-button~="amaranth"]:not([disabled]):hover {
+    box-shadow: 0 0.125rem 0 0 rgb(225, 28, 67);
+    background-color: rgb(251, 76, 110);
+    color: rgb(255, 255, 255);
+}
+
+[i-button~="amaranth"]:not([disabled]):active {
+    background-color: rgb(251, 76, 110);
+    color: rgb(255, 255, 255);
 }
 
 /*******************************************************************************
@@ -637,6 +675,9 @@ space after column
 icon config
 *******************************************************************************/
 
+:root { /* 360px */ /* 240px */
+}
+
 [i-icon] {
     display: inline-block;
     vertical-align: bottom;
@@ -673,6 +714,13 @@ icon sizes
     height: 4.5rem;
 }
 
+[i-icon~="madSkeletonLogo"] {
+    width: 405px;
+    width: 22.5rem;
+    height: 270px;
+    height: 15rem;
+}
+
 /*******************************************************************************
 icon colors
 *******************************************************************************/
@@ -686,6 +734,65 @@ icon colors
 [i-icon~="white"] { fill: rgb(255, 255, 255); }
 
 [i-icon~="silver"] { fill: rgb(204, 204, 204); }
+
+@-webkit-keyframes crazyPulseAnimation {
+    0% {
+        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="0" /></filter></svg>#filter');
+        -webkit-filter: blur(0);
+                filter: blur(0);
+        fill: rgb(103, 36, 148);
+    }
+
+    50% {
+        fill: rgb(194, 31, 118);
+    }
+
+    100% {
+        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="12" /></filter></svg>#filter');
+        -webkit-filter: blur(0.75rem);
+                filter: blur(0.75rem);
+        fill: rgb(250, 31, 74);
+    }
+}
+
+@keyframes crazyPulseAnimation {
+    0% {
+        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="0" /></filter></svg>#filter');
+        -webkit-filter: blur(0);
+                filter: blur(0);
+        fill: rgb(103, 36, 148);
+    }
+
+    50% {
+        fill: rgb(194, 31, 118);
+    }
+
+    100% {
+        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="12" /></filter></svg>#filter');
+        -webkit-filter: blur(0.75rem);
+                filter: blur(0.75rem);
+        fill: rgb(250, 31, 74);
+    }
+}
+
+[i-icon~="crazyPulseAnimatedOnHover"]:hover {
+    -webkit-animation-name: crazyPulseAnimation;
+            animation-name: crazyPulseAnimation;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: none;
+            animation-fill-mode: none;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+}
 
 /*******************************************************************************
 nakedLink module

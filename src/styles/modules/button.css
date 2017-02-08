@@ -3,17 +3,21 @@ button module
 *******************************************************************************/
 
 :root {
-    --c-button-txt: var(--c-charcoal);
     --s-button-fontsize: 0.75rem;
     --s-button-padding: 0.5rem;
     --s-button-verticalMargin: 0.125rem;
 
-    --c-button-bg: var(--c-silver);
-    --c-button-bg-hover: color(var(--c-silver) tint(20%));
-    --c-button-bg-active: color(var(--c-silver) tint(30%));
+    --c-button-default-txt: var(--c-charcoal);
+    --c-button-default-bg: var(--c-silver);
+    --c-button-default-bg-hover: color(var(--c-button-default-bg) tint(20%));
+    --button-default-sh: 0 0.125rem 0 0 color(var(--c-button-default-bg) shade(15%));
+    --button-default-sh-hover: 0 0.125rem 0 0 color(var(--c-button-default-bg) shade(10%));
 
-    --button-sh: 0 0.125rem 0 0 color(var(--c-button-bg) shade(15%));
-    --button-sh-hover: 0 0.125rem 0 0 color(var(--c-button-bg) shade(10%));
+    --c-button-amaranth-txt: var(--c-white);
+    --c-button-amaranth-bg: var(--c-amaranth);
+    --c-button-amaranth-bg-hover: color(var(--c-button-amaranth-bg) tint(20%));
+    --button-amaranth-sh: 0 0.125rem 0 0 color(var(--c-button-amaranth-bg) shade(15%));
+    --button-amaranth-sh-hover: 0 0.125rem 0 0 color(var(--c-button-amaranth-bg) shade(10%));
 }
 
 [i-button] {
@@ -46,18 +50,12 @@ button module
 [i-button]:visited {
     margin-top: var(--s-button-verticalMargin);
     margin-bottom: var(--s-button-verticalMargin);
-    box-shadow: var(--button-sh);
-    background-color: var(--c-button-bg);
-    color: var(--c-button-txt);
 }
 
 [i-button]:not([disabled]):hover,
 [i-button~="hover"]:not([disabled]) {
     margin-top: var(--s-button-verticalMargin);
     margin-bottom: var(--s-button-verticalMargin);
-    box-shadow: var(--button-sh-hover);
-    background-color: var(--c-button-bg-hover);
-    color: var(--c-button-txt);
 }
 
 [i-button]:not([disabled]):active,
@@ -66,13 +64,57 @@ button module
     margin-top: calc(var(--s-button-verticalMargin) * 2);
     margin-bottom: 0;
     /* remove shadow to make the button look pressed-in */
-    box-shadow: none;
-    background-color: var(--c-button-bg-active);
-    color: var(--c-button-txt);
+    box-shadow: none !important;
 }
 
 [i-button~="middle"] {
     vertical-align: middle;
+}
+
+/*******************************************************************************
+button colors
+*******************************************************************************/
+
+/* default */
+
+[i-button],
+[i-button]:visited {
+    box-shadow: var(--button-default-sh);
+    background-color: var(--c-button-default-bg);
+    color: var(--c-button-default-txt);
+}
+
+[i-button]:not([disabled]):hover,
+[i-button~="hover"]:not([disabled]) {
+    box-shadow: var(--button-default-sh-hover);
+    background-color: var(--c-button-default-bg-hover);
+    color: var(--c-button-default-txt);
+}
+
+[i-button]:not([disabled]):active,
+[i-button~="active"]:not([disabled]) {
+    background-color: var(--c-button-default-bg-hover);
+    color: var(--c-button-default-txt);
+}
+
+/* amaranth */
+
+[i-button~="amaranth"],
+[i-button~="amaranth"]:visited {
+    box-shadow: var(--button-amaranth-sh);
+    background-color: var(--c-button-amaranth-bg);
+    color: var(--c-button-amaranth-txt);
+}
+
+[i-button~="amaranth"]:not([disabled]):hover {
+    box-shadow: var(--button-amaranth-sh-hover);
+    background-color: var(--c-button-amaranth-bg-hover);
+    color: var(--c-button-amaranth-txt);
+}
+
+[i-button~="amaranth"]:not([disabled]):active {
+    background-color: var(--c-button-amaranth-bg-hover);
+    color: var(--c-button-amaranth-txt);
 }
 
 /*******************************************************************************
