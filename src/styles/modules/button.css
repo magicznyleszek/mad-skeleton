@@ -40,7 +40,7 @@ button module
     font-weight: 700;
     font-family: inherit;
     /* adjust line-height to adjusted height */
-    line-height: calc(var(--s-leading) - var(--s-button-verticalMargin));
+    line-height: calc(var(--s-leading) - calc(var(--s-button-verticalMargin) * 2));
     text-align: center;
     text-decoration: none;
 }
