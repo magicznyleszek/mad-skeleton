@@ -1,0 +1,11 @@
+{
+    "use": [
+        "postcss-import",
+        "postcss-cssnext"
+    ],
+    "input": "src/styles/main.css",
+    "output": "dist/styles/monolith.css",
+    "postcss-cssnext": {
+        "browsers": "last 2 versions"
+    }
+}
