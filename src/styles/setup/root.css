@@ -25,17 +25,6 @@ html {
 
 @media (--smaller) { html { font-size: var(--root-fontSize-smaller); } }
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-    color: inherit;
-    font-size: inherit;
-    font-family: inherit;
-}
-
 body {
     margin: 0 auto;
     width: 100%;

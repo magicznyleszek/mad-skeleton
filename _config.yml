@@ -9,9 +9,6 @@ baseurl: "http://mad-skeleton.smutnyleszek.com"
 sourceurl: "https://github.com/smutnyleszek/mad-skeleton"
 imagesPath: "/dist/images/"
 
-# urls
-googleFontsCode: family=Source+Sans+Pro:400,700,400italic,700italic&subset=latin,latin-ext
-
 # site configuration
 safe: true
 quiet: false

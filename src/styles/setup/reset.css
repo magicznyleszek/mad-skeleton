@@ -1,0 +1,16 @@
+/*******************************************************************************
+a simple reset
+*******************************************************************************/
+
+*,
+*::before,
+*::after {
+    vertical-align: baseline;
+    box-sizing: inherit;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
