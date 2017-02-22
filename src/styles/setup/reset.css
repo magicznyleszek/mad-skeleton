@@ -11,6 +11,8 @@ a simple reset
     border: 0;
     padding: 0;
     color: inherit;
-    font-size: inherit;
     font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
 }
