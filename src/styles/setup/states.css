@@ -70,15 +70,17 @@ img {
 }
 
 img::after {
-    content: "\2639" "\a" "image" "\a" "broken";
+    content: "image broken";
     display: block;
     position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
-    padding-top: var(--s-leading);
+    padding: var(--s-leading);
     width: 100%;
     height: 100%;
-    background-color: var(--c-silver);
-    white-space: pre;
+    background-color: var(--c-amaranth);
+    color: var(--c-white);
+    font-size: 200%;
+    font-weight: 100;
 }
