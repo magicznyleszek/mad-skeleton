@@ -17,9 +17,10 @@
   "scripts": {
     "build": "npm-run-all dist:rebuild svg:build styles:build images:build",
     "watch": "npm-watch",
+    "serve": "npm-run-all build jekyll:serve",
     "dist:rebuild": "rm -rf dist && mkdir dist && mkdir dist/styles",
     "images:build": "node bin/buildImages.js",
-    "styles:build": "postcss --config .postcss.config.json",
+    "styles:build": "postcss src/styles/main.css -o dist/styles/monolith.css",
     "svg:build": "svgo -f src/symbols/ && svgshelf -p symbol- src/symbols/\\*.svg _includes/symbols.svg",
     "jekyll:build": "jekyll build",
     "jekyll:serve": "jekyll serve --watch --baseurl ''"
@@ -34,13 +35,13 @@
     }
   },
   "devDependencies": {
-    "autoprefixer": "^6.7.2",
+    "autoprefixer": "^6.7.7",
     "cssnano": "^3.10.0",
     "gm": "^1.23.0",
-    "npm-run-all": "^4.0.1",
+    "npm-run-all": "^4.0.2",
     "npm-watch": "^0.1.8",
-    "postcss": "^5.2.12",
-    "postcss-cli": "^2.6.0",
+    "postcss": "^5.2.16",
+    "postcss-cli": "^3.0.0-beta",
     "postcss-cssnext": "^2.9.0",
     "postcss-import": "^9.1.0",
     "svgo": "^0.7.2",
