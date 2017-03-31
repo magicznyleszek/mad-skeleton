@@ -1,11 +1,15 @@
 {
     "rules": {
         "color-hex-case": "lower",
-        "color-hex-length": null,
+        "color-hex-length": ["long", {
+            "severity": "warning"
+        }],
         "color-named": ["never", {
             "severity": "warning"
         }],
-        "color-no-hex": null,
+        "color-no-hex": [true, {
+            "severity": "warning"
+        }],
         "color-no-invalid-hex": [true, {
             "severity": "error"
         }],
@@ -21,7 +25,7 @@
         }],
         "function-comma-newline-after": null,
         "function-comma-newline-before": null,
-        "function-comma-space-after": ["always", {
+        "function-comma-space-after": ["always-single-line", {
             "severity": "warning"
         }],
         "function-comma-space-before": ["never", {
@@ -60,10 +64,6 @@
 
         "length-zero-no-unit": null,
 
-        "time-no-imperceptible": [true, {
-            "severity": "warning"
-        }],
-
         "unit-case": ["lower", {
             "severity": "warning"
         }],
@@ -91,9 +91,6 @@
             "severity": "warning"
         }],
 
-        "custom-property-no-outside-root": [true, {
-            "severity": "error"
-        }],
         "custom-property-pattern": null,
 
         "shorthand-property-no-redundant-values": [true, {
@@ -131,9 +128,6 @@
 
         "declaration-block-no-duplicate-properties": [true, {
             "severity": "error"
-        }],
-        "declaration-block-no-ignored-properties": [true, {
-            "severity": "warning"
         }],
         "declaration-block-no-shorthand-property-overrides": [true, {
             "severity": "warning"
@@ -476,7 +470,6 @@
         "block-no-empty": [true, {
             "severity": "warning"
         }],
-        "block-no-single-line": null,
         "block-opening-brace-newline-after": ["always-multi-line", {
             "severity": "warning"
         }],
@@ -542,9 +535,6 @@
         "selector-pseudo-element-colon-notation": ["double", {
             "severity": "warning"
         }],
-        "selector-root-no-composition": [true, {
-            "severity": "warning"
-        }],
         "selector-type-case": ["lower", {
             "severity": "warning"
         }],
@@ -568,17 +558,9 @@
             "severity": "warning"
         }],
 
-        "root-no-standard-properties": [true, {
-            "severity": "warning"
-        }],
-
-        "rule-nested-empty-line-before": ["always-multi-line", {
+        "rule-empty-line-before": ["always-multi-line", {
             "severity": "warning",
             "except": ["first-nested"],
-            "ignore": ["after-comment"]
-        }],
-        "rule-non-nested-empty-line-before": ["always-multi-line", {
-            "severity": "warning",
             "ignore": ["after-comment"]
         }],
 
@@ -589,9 +571,6 @@
             "severity": "warning"
         }],
         "media-feature-name-no-vendor-prefix": [true, {
-            "severity": "warning"
-        }],
-        "media-feature-no-missing-punctuation": [true, {
             "severity": "warning"
         }],
         "media-feature-range-operator-space-after": ["always", {
@@ -618,7 +597,7 @@
 
         "at-rule-empty-line-before": ["always", {
             "severity": "warning",
-            "except": ["blockless-group", "first-nested"],
+            "except": ["blockless-after-blockless", "first-nested"],
             "ignore": ["after-comment"]
         }],
         "at-rule-name-case": ["lower", {
@@ -654,7 +633,6 @@
         "max-nesting-depth": [3, {
             "severity": "warning"
         }],
-        "no-browser-hacks": null,
         "no-descending-specificity": null,
         "no-duplicate-selectors": null,
         "no-empty-source": [true, {
@@ -666,19 +644,12 @@
         "no-extra-semicolons": [true, {
             "severity": "warning"
         }],
-        "no-indistinguishable-colors": [true, {
-            "severity": "warning"
-        }],
         "no-invalid-double-slash-comments": null,
         "no-missing-end-of-source-newline": [true, {
             "severity": "warning"
         }],
         "no-unknown-animations": [true, {
             "severity": "error"
-        }],
-        "no-unsupported-browser-features": [null, {
-            "severity": "warning",
-            "browsers": "last 2 versions"
         }]
     }
 }
