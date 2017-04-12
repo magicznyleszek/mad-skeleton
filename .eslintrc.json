@@ -5,7 +5,8 @@
         "jasmine": true
     },
     "globals": {
-        "require": true
+        "require": true,
+        "module": true
     },
     "parserOptions": {
         "ecmaVersion": 6,
@@ -177,7 +178,7 @@
         "one-var": [2, "never"],
         "one-var-declaration-per-line": [2, "always"],
         "operator-assignment": 0,
-        "operator-linebreak": [1, "none"],
+        "operator-linebreak": [1, "after"],
         "padded-blocks": [1, "never"],
         "quote-props": [1, "as-needed"],
         "quotes": [2, "single"],
