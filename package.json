@@ -47,6 +47,7 @@
     "postcss-cssnext": "^2.9.0",
     "postcss-import": "^9.1.0",
     "stylelint": "^7.9.0",
+    "stylelint-order": "^0.4.4",
     "svgo": "^0.7.2",
     "svgshelf": "^1.0.3"
   }

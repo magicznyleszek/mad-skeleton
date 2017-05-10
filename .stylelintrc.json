@@ -1,4 +1,5 @@
 {
+    "plugins": ["stylelint-order"],
     "rules": {
         "color-hex-case": null,
         "color-hex-length": null,
@@ -82,7 +83,137 @@
         "declaration-block-no-duplicate-properties": [true, {"severity": "error"}],
         "declaration-block-no-redundant-longhand-properties": [true, {"severity": "warning"}],
         "declaration-block-no-shorthand-property-overrides": [true, {"severity": "warning"}],
-        "declaration-block-properties-order": [
+        "declaration-block-semicolon-newline-after": ["always-multi-line", {"severity": "warning"}],
+        "declaration-block-semicolon-newline-before": null,
+        "declaration-block-semicolon-space-after": ["always-single-line", {"severity": "warning"}],
+        "declaration-block-semicolon-space-before": ["never", {"severity": "warning"}],
+        "declaration-block-single-line-max-declarations": [1, {"severity": "warning"}],
+        "declaration-block-trailing-semicolon": ["always", {"severity": "warning"}],
+
+        "block-closing-brace-empty-line-before": ["never", {"severity": "warning"}],
+        "block-closing-brace-newline-after": ["always", {"severity": "warning"}],
+        "block-closing-brace-newline-before": ["always-multi-line", {"severity": "warning"}],
+        "block-closing-brace-space-after": null,
+        "block-closing-brace-space-before": ["always-single-line", {"severity": "warning"}],
+        "block-no-empty": [true, {"severity": "warning"}],
+        "block-opening-brace-newline-after": ["always-multi-line", {"severity": "warning"}],
+        "block-opening-brace-newline-before": null,
+        "block-opening-brace-space-after": ["always-single-line", {"severity": "warning"}],
+        "block-opening-brace-space-before": ["always", {"severity": "warning"}],
+
+        "selector-attribute-brackets-space-inside": ["never", {"severity": "warning"}],
+        "selector-attribute-operator-blacklist": null,
+        "selector-attribute-operator-space-after": ["never", {"severity": "warning"}],
+        "selector-attribute-operator-space-before": ["never", {"severity": "warning"}],
+        "selector-attribute-operator-whitelist": null,
+        "selector-attribute-quotes": ["always", {"severity": "warning"}],
+        "selector-class-pattern": null,
+        "selector-combinator-space-after": ["always", {"severity": "warning"}],
+        "selector-combinator-space-before": ["always", {"severity": "warning"}],
+        "selector-descendant-combinator-no-non-space": [true, {"severity": "warning"}],
+        "selector-id-pattern": null,
+        "selector-max-compound-selectors": [3, {"severity": "warning"}],
+        "selector-max-specificity": ["0,5,0", {"severity": "warning"}],
+        "selector-nested-pattern": null,
+        "selector-no-attribute": null,
+        "selector-no-combinator": null,
+        "selector-no-id": [true, {"severity": "warning"}],
+        "selector-no-qualifying-type": [true, {"severity": "warning"}],
+        "selector-no-type": null,
+        "selector-no-universal": null,
+        "selector-no-vendor-prefix": [true, {"severity": "warning"}],
+        "selector-pseudo-class-blacklist": null,
+        "selector-pseudo-class-case": ["lower", {"severity": "warning"}],
+        "selector-pseudo-class-no-unknown": [true, {"severity": "error"}],
+        "selector-pseudo-class-parentheses-space-inside": ["never", {"severity": "warning"}],
+        "selector-pseudo-class-whitelist": null,
+        "selector-pseudo-element-case": ["lower", {"severity": "warning"}],
+        "selector-pseudo-element-colon-notation": ["double", {"severity": "warning"}],
+        "selector-pseudo-element-no-unknown": [true, {"severity": "warning"}],
+        "selector-type-case": ["lower", {"severity": "warning"}],
+        "selector-type-no-unknown": [true, {"severity": "error"}],
+        "selector-max-empty-lines": [0, {"severity": "warning"}],
+
+        "selector-list-comma-newline-after": ["always", {"severity": "warning"}],
+        "selector-list-comma-newline-before": ["never-multi-line", {"severity": "warning"}],
+        "selector-list-comma-space-after": ["always-single-line", {"severity": "warning"}],
+        "selector-list-comma-space-before": ["never", {"severity": "warning"}],
+
+        "rule-empty-line-before": [
+            "always-multi-line",
+            {
+                "severity": "warning",
+                "except": ["first-nested"],
+                "ignore": ["after-comment"]
+            }
+        ],
+
+        "media-feature-colon-space-after": ["always", {"severity": "warning"}],
+        "media-feature-colon-space-before": ["never", {"severity": "warning"}],
+        "media-feature-name-blacklist": null,
+        "media-feature-name-case": ["lower", {"severity": "warning"}],
+        "media-feature-name-no-unknown": [true, {"severity": "warning"}],
+        "media-feature-name-no-vendor-prefix": [true, {"severity": "warning"}],
+        "media-feature-name-whitelist": null,
+        "media-feature-parentheses-space-inside": ["never", {"severity": "warning"}],
+        "media-feature-range-operator-space-after": ["always", {"severity": "warning"}],
+        "media-feature-range-operator-space-before": ["always", {"severity": "warning"}],
+
+        "custom-media-pattern": null,
+
+        "media-query-list-comma-newline-after": ["never-multi-line", {"severity": "warning"}],
+        "media-query-list-comma-newline-before": ["never-multi-line", {"severity": "warning"}],
+        "media-query-list-comma-space-after": ["always-single-line", {"severity": "warning"}],
+        "media-query-list-comma-space-before": ["never", {"severity": "warning"}],
+
+        "at-rule-blacklist": null,
+        "at-rule-empty-line-before": ["always",
+            {
+                "severity": "warning",
+                "except": ["blockless-after-same-name-blockless", "first-nested"],
+                "ignore": ["after-comment"]
+            }
+        ],
+        "at-rule-name-case": ["lower", {"severity": "warning"}],
+        "at-rule-name-newline-after": null,
+        "at-rule-name-space-after": ["always", {"severity": "warning"}],
+        "at-rule-no-unknown": [true, {"severity": "warning"}],
+        "at-rule-no-vendor-prefix": [true, {"severity": "warning"}],
+        "at-rule-semicolon-newline-after": ["always", {"severity": "warning"}],
+        "at-rule-semicolon-space-before": ["never", {"severity": "warning"}],
+        "at-rule-whitelist": null,
+
+        "comment-empty-line-before": null,
+        "comment-no-empty": [true, {"severity": "warning"}],
+        "comment-whitespace-inside": ["always", {"severity": "warning"}],
+        "comment-word-blacklist": [["TODO"], {"severity": "warning"}],
+
+        "indentation": [4, {"severity": "error"}],
+        "max-empty-lines": [1, {"severity": "warning"}],
+        "max-line-length": [120, {"severity": "warning"}],
+        "max-nesting-depth": [3, {"severity": "warning"}],
+        "no-descending-specificity": null,
+        "no-duplicate-selectors": null,
+        "no-empty-source": [true, {"severity": "warning"}],
+        "no-eol-whitespace": [true, {"severity": "warning"}],
+        "no-extra-semicolons": [true, {"severity": "warning"}],
+        "no-invalid-double-slash-comments": null,
+        "no-missing-end-of-source-newline": [true, {"severity": "warning"}],
+        "no-unknown-animations": [true, {"severity": "error"}],
+
+        "order/order": [
+            [
+                "custom-properties",
+                "dollar-variables",
+                "at-variables",
+                "declarations",
+                "rules",
+                "at-rules",
+                "less-mixins"
+            ],
+            {"severity": "warning"}
+        ],
+        "order/properties-order": [
             [
                 "content",
                 "pointer-events",
@@ -381,122 +512,6 @@
                 "unspecified": "bottom"
             }
         ],
-        "declaration-block-semicolon-newline-after": ["always-multi-line", {"severity": "warning"}],
-        "declaration-block-semicolon-newline-before": null,
-        "declaration-block-semicolon-space-after": ["always-single-line", {"severity": "warning"}],
-        "declaration-block-semicolon-space-before": ["never", {"severity": "warning"}],
-        "declaration-block-single-line-max-declarations": [1, {"severity": "warning"}],
-        "declaration-block-trailing-semicolon": ["always", {"severity": "warning"}],
-
-        "block-closing-brace-empty-line-before": ["never", {"severity": "warning"}],
-        "block-closing-brace-newline-after": ["always", {"severity": "warning"}],
-        "block-closing-brace-newline-before": ["always-multi-line", {"severity": "warning"}],
-        "block-closing-brace-space-after": null,
-        "block-closing-brace-space-before": ["always-single-line", {"severity": "warning"}],
-        "block-no-empty": [true, {"severity": "warning"}],
-        "block-opening-brace-newline-after": ["always-multi-line", {"severity": "warning"}],
-        "block-opening-brace-newline-before": null,
-        "block-opening-brace-space-after": ["always-single-line", {"severity": "warning"}],
-        "block-opening-brace-space-before": ["always", {"severity": "warning"}],
-
-        "selector-attribute-brackets-space-inside": ["never", {"severity": "warning"}],
-        "selector-attribute-operator-blacklist": null,
-        "selector-attribute-operator-space-after": ["never", {"severity": "warning"}],
-        "selector-attribute-operator-space-before": ["never", {"severity": "warning"}],
-        "selector-attribute-operator-whitelist": null,
-        "selector-attribute-quotes": ["always", {"severity": "warning"}],
-        "selector-class-pattern": null,
-        "selector-combinator-space-after": ["always", {"severity": "warning"}],
-        "selector-combinator-space-before": ["always", {"severity": "warning"}],
-        "selector-descendant-combinator-no-non-space": [true, {"severity": "warning"}],
-        "selector-id-pattern": null,
-        "selector-max-compound-selectors": [3, {"severity": "warning"}],
-        "selector-max-specificity": ["0,5,0", {"severity": "warning"}],
-        "selector-nested-pattern": null,
-        "selector-no-attribute": null,
-        "selector-no-combinator": null,
-        "selector-no-id": [true, {"severity": "warning"}],
-        "selector-no-qualifying-type": [true, {"severity": "warning"}],
-        "selector-no-type": null,
-        "selector-no-universal": null,
-        "selector-no-vendor-prefix": [true, {"severity": "warning"}],
-        "selector-pseudo-class-blacklist": null,
-        "selector-pseudo-class-case": ["lower", {"severity": "warning"}],
-        "selector-pseudo-class-no-unknown": [true, {"severity": "error"}],
-        "selector-pseudo-class-parentheses-space-inside": ["never", {"severity": "warning"}],
-        "selector-pseudo-class-whitelist": null,
-        "selector-pseudo-element-case": ["lower", {"severity": "warning"}],
-        "selector-pseudo-element-colon-notation": ["double", {"severity": "warning"}],
-        "selector-pseudo-element-no-unknown": [true, {"severity": "warning"}],
-        "selector-type-case": ["lower", {"severity": "warning"}],
-        "selector-type-no-unknown": [true, {"severity": "error"}],
-        "selector-max-empty-lines": [0, {"severity": "warning"}],
-
-        "selector-list-comma-newline-after": ["always", {"severity": "warning"}],
-        "selector-list-comma-newline-before": ["never-multi-line", {"severity": "warning"}],
-        "selector-list-comma-space-after": ["always-single-line", {"severity": "warning"}],
-        "selector-list-comma-space-before": ["never", {"severity": "warning"}],
-
-        "rule-empty-line-before": [
-            "always-multi-line",
-            {
-                "severity": "warning",
-                "except": ["first-nested"],
-                "ignore": ["after-comment"]
-            }
-        ],
-
-        "media-feature-colon-space-after": ["always", {"severity": "warning"}],
-        "media-feature-colon-space-before": ["never", {"severity": "warning"}],
-        "media-feature-name-blacklist": null,
-        "media-feature-name-case": ["lower", {"severity": "warning"}],
-        "media-feature-name-no-unknown": [true, {"severity": "warning"}],
-        "media-feature-name-no-vendor-prefix": [true, {"severity": "warning"}],
-        "media-feature-name-whitelist": null,
-        "media-feature-parentheses-space-inside": ["never", {"severity": "warning"}],
-        "media-feature-range-operator-space-after": ["always", {"severity": "warning"}],
-        "media-feature-range-operator-space-before": ["always", {"severity": "warning"}],
-
-        "custom-media-pattern": null,
-
-        "media-query-list-comma-newline-after": ["never-multi-line", {"severity": "warning"}],
-        "media-query-list-comma-newline-before": ["never-multi-line", {"severity": "warning"}],
-        "media-query-list-comma-space-after": ["always-single-line", {"severity": "warning"}],
-        "media-query-list-comma-space-before": ["never", {"severity": "warning"}],
-
-        "at-rule-blacklist": null,
-        "at-rule-empty-line-before": ["always",
-            {
-                "severity": "warning",
-                "except": ["blockless-after-same-name-blockless", "first-nested"],
-                "ignore": ["after-comment"]
-            }
-        ],
-        "at-rule-name-case": ["lower", {"severity": "warning"}],
-        "at-rule-name-newline-after": null,
-        "at-rule-name-space-after": ["always", {"severity": "warning"}],
-        "at-rule-no-unknown": [true, {"severity": "warning"}],
-        "at-rule-no-vendor-prefix": [true, {"severity": "warning"}],
-        "at-rule-semicolon-newline-after": ["always", {"severity": "warning"}],
-        "at-rule-semicolon-space-before": ["never", {"severity": "warning"}],
-        "at-rule-whitelist": null,
-
-        "comment-empty-line-before": null,
-        "comment-no-empty": [true, {"severity": "warning"}],
-        "comment-whitespace-inside": ["always", {"severity": "warning"}],
-        "comment-word-blacklist": [["TODO"], {"severity": "warning"}],
-
-        "indentation": [4, {"severity": "error"}],
-        "max-empty-lines": [1, {"severity": "warning"}],
-        "max-line-length": [120, {"severity": "warning"}],
-        "max-nesting-depth": [3, {"severity": "warning"}],
-        "no-descending-specificity": null,
-        "no-duplicate-selectors": null,
-        "no-empty-source": [true, {"severity": "warning"}],
-        "no-eol-whitespace": [true, {"severity": "warning"}],
-        "no-extra-semicolons": [true, {"severity": "warning"}],
-        "no-invalid-double-slash-comments": null,
-        "no-missing-end-of-source-newline": [true, {"severity": "warning"}],
-        "no-unknown-animations": [true, {"severity": "error"}]
+        "order/properties-alphabetical-order": null
     }
 }
