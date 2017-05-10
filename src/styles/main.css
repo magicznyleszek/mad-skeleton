@@ -10,6 +10,7 @@ main styles aggregation
 @import "setup/root.css";
 @import "setup/states.css";
 @import "setup/typography.css";
+@import "setup/print.css";
 
 /* modules */
 @import "modules/area.css";

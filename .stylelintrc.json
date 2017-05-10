@@ -118,7 +118,13 @@
         "selector-no-attribute": null,
         "selector-no-combinator": null,
         "selector-no-id": [true, {"severity": "warning"}],
-        "selector-no-qualifying-type": [true, {"severity": "warning"}],
+        "selector-no-qualifying-type": [
+            true,
+            {
+                "severity": "warning",
+                "ignore": ["attribute"]
+            }
+        ],
         "selector-no-type": null,
         "selector-no-universal": null,
         "selector-no-vendor-prefix": [true, {"severity": "warning"}],
