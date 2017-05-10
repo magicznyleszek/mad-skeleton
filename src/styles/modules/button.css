@@ -55,13 +55,15 @@ button module
     margin-bottom: var(--s-button-verticalMargin);
 }
 
+/* also includes :hover combined selectors to ensure no box-shadow */
 [i-button]:not([disabled]):active,
+[i-button]:not([disabled]):active:hover,
 [i-button~="active"]:not([disabled]) {
     /* swap margins to make the button look pressed-in */
     margin-top: calc(var(--s-button-verticalMargin) * 2);
     margin-bottom: 0;
     /* remove shadow to make the button look pressed-in */
-    box-shadow: none !important;
+    box-shadow: none;
 }
 
 [i-button~="middle"] {
@@ -143,6 +145,5 @@ button sizes
 }
 
 [i-button~="full"] {
-    display: block;
     width: 100%;
 }
