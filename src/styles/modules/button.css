@@ -26,10 +26,7 @@ button module
     margin: 0;
     border: 0;
     border-radius: var(--s-global-br);
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: var(--s-button-padding);
-    padding-right: var(--s-button-padding);
+    padding: 0 var(--s-button-padding);
     height: auto;
     /* we want the button to fit into leading size with breathing space */
     min-height: calc(var(--s-leading) - calc(var(--s-button-verticalMargin) * 2));
