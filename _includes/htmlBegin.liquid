@@ -4,12 +4,16 @@
 <html id="pterosaurDestroyedAlgorithms" lang="en">
 
 <head>
-    <!-- stuff that needs to be first -->
+    {% comment %}
+        stuff that needs to be first
+    {% endcomment %}
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- site info -->
+    {% comment %}
+        site information
+    {% endcomment %}
     <title>{% include helpers/metaTitle.liquid %}</title>
     <meta name="description" content="{% include helpers/metaDescription.liquid %}">
     <base href="{{ site.baseurl }}">
@@ -17,11 +21,15 @@
     <link rel="author" href="humans.txt">
     <link rel="copyright" href="LICENSE">
 
-    <!-- robots -->
+    {% comment %}
+        stuff for robots
+    {% endcomment %}
     <meta name="robots" content="index,follow,noodp">
     <meta name="googlebot" content="index,follow">
 
-    <!-- open graph -->
+    {% comment %}
+        open graph
+    {% endcomment %}
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ site.name }}">
     <meta property="og:title" content="{% include helpers/metaTitle.liquid %}">
@@ -29,12 +37,16 @@
     <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}">
     <meta property="og:image" content="{{ site.baseurl }}/favicon.png">
 
-    <!-- style & icons -->
+    {% comment %}
+        style and icons
+    {% endcomment %}
     <link href="/dist/styles/monolith.css?{{ versionCache }}" media="all" rel="stylesheet">
     <link rel="icon" href="/favicon.ico?{{ versionCache }}">
     <link rel="apple-touch-icon" href="{{ site.baseurl }}/favicon.png">
 </head>
 
 <body i-area="double-v medium-h">
-    <!-- SVG symbols for <use> tags -->
+    {% comment %}
+        SVG symbols for <use> tags
+    {% endcomment %}
     <div style="display:none;">{% include symbols.svg %}</div>

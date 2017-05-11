@@ -1,8 +1,9 @@
 {% comment %}
-This template adds an image to page. It should be used together with images:build npm script
-@param dir - directory in imagesPath
-@param filename - image filename with extension
-@param title - optional title that will be added as figcaption
+    This template adds an image to page. It should be used together with
+    images:build npm script
+    @param dir - directory in imagesPath
+    @param filename - image filename with extension
+    @param title - optional title that will be added as figcaption
 {% endcomment %}
 {% capture dirFullPath %}{{ site.imagesPath }}{{ include.dir | url_escape }}{% endcapture %}
 {% capture originalImage %}{{ dirFullPath }}/{{ include.filename | url_escape }}{% endcapture %}
