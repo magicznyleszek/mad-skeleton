@@ -6,13 +6,6 @@ user-action influenced states
     --line-gr-w: 0.0625rem; /* 1px @ 16px */
     --line-gr-solid-c: currentColor 0%, currentColor 0%;
     --line-gr: linear-gradient(to left, var(--line-gr-solid-c));
-
-    --focus-outline-c: var(--c-amaranth);
-    --focus-outline-w: 0.25rem;
-
-    --selection-txt-c: var(--c-white);
-    --selection-bg-c: var(--c-amaranth);
-
     --disabled-o: 0.5;
 }
 
@@ -40,16 +33,17 @@ a:active { color: var(--c-amaranth); }
 /* text selection */
 
 :focus {
-    outline-color: var(--focus-outline-c);
-    outline-style: auto;
-    outline-width: var(--focus-outline-w);
+    outline-color: var(--c-root-focus);
+    outline-style: solid;
+    outline-width: 0.125rem;
+    background-color: var(--c-root-focus);
 }
 
 ::-moz-focus-inner { border: 0; }
 
 ::selection {
-    background-color: var(--selection-bg-c);
-    color: var(--selection-txt-c);
+    background-color: var(--c-amaranth);
+    color: var(--c-white);
 }
 
 /* disabled elements */

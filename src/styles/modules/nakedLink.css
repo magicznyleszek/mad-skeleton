@@ -6,6 +6,8 @@ nakedLink module
     display: inline-block;
     cursor: pointer;
     background-image: none;
+    /* HACK makes the element take enough space (fixes focus outline size) */
+    line-height: 0;
 }
 
 [i-nakedLink]:not([disabled]):hover {

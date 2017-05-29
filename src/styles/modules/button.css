@@ -7,6 +7,10 @@ button module
     --s-button-padding: 0.5rem;
     --s-button-verticalMargin: 0.125rem;
 
+    --c-button-focus-bg: var(--c-root-focus);
+    --c-button-focus-txt: color(var(--c-button-focus-bg) shade(70%));
+    --button-focus-sh: 0 0.125rem 0 0 color(var(--c-button-focus-bg) shade(10%));
+
     --c-button-default-txt: var(--c-charcoal);
     --c-button-default-bg: var(--c-silver);
     --c-button-default-bg-hover: color(var(--c-button-default-bg) tint(20%));
@@ -30,6 +34,7 @@ button module
     height: auto;
     /* we want the button to fit into leading size with breathing space */
     min-height: calc(var(--s-leading) - calc(var(--s-button-verticalMargin) * 2));
+    /* don't display outline in active state (because ugly), we use custom style to indicate focus */
     outline: 0;
     cursor: pointer;
     background-image: none;
@@ -64,6 +69,13 @@ button module
     margin-bottom: 0;
     /* remove shadow to make the button look pressed-in */
     box-shadow: none;
+}
+
+[i-button]:not([disabled]):focus:not(:active),
+[i-button~="focus"]:not([disabled]) {
+    box-shadow: var(--button-focus-sh);
+    background-color: var(--c-button-focus-bg);
+    color: var(--c-button-focus-txt);
 }
 
 [i-button~="middle"] {

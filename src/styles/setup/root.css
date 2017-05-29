@@ -12,21 +12,20 @@ html {
     min-height: 100%;
     background-color: var(--c-root-bg);
     color: var(--c-root-txt);
-    font-family: var(--root-fontFamily);
-    font-weight: var(--root-fontWeight);
-    font-size: var(--root-fontSize-medium);
+    font-family: var(--font-sansSerif);
+    font-weight: 400;
+    font-size: 100%;
     line-height: var(--root-lineHeight);
     text-rendering: optimizeLegibility;
 }
 
 /* clever page scaling with root font size changes */
-
-@media (--bigger) { html { font-size: var(--root-fontSize-bigger); } }
-
-@media (--smaller) { html { font-size: var(--root-fontSize-smaller); } }
+html {
+    font-size: calc(1rem + (2 - 1) * (100vw - 40rem) / (120 - 40));
+}
 
 body {
     margin: 0 auto;
     width: 100%;
-    max-width: var(--s-root-content);
+    max-width: 40rem; /* 640px @ 16px */
 }
