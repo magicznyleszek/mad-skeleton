@@ -1,13 +1,13 @@
 <section i-area="medium-v">
     <header i-area="medium-v">
-        <h2><a name="toc-madcss"></a>MADCSS philosophy</h2>
+        <h2><a name="toc-madcss" href="#toc-toc">&uarr;</a> MADCSS philosophy</h2>
     </header>
 
     <p><strong>MADCSS</strong> stands for <strong>M</strong>odular <strong>A</strong>ttribute-<strong>D</strong>riven <strong>CSS</strong>. Yeah, sooo clever. Basic architecture is <del>based on</del> inspired by: <a href="https://amcss.github.io/">AMCSS</a>, <a href="https://github.com/colepeters/gemma">Gemma</a>, <a href="http://krasimir.github.io/organic-css/">Organic CSS</a>, <a href="http://demo.patternlab.io">Atomic Design</a> and <a href="http://tachyons.io/">Tachyons</a>.</p>
 
     <p>The base global prefix for all attribute modules is <code>i-</code>, as in "interface".</p>
 
-    <h3><a name="toc-madcss-naming"></a>Naming things</h3>
+    <h3><a name="toc-madcss-naming" href="#toc-toc">&uarr;</a> Naming things</h3>
 
     <p>Attribute names are defined in a simple fashion: attribute always starts with the global prefix, followed by module name. If it's a child, then it appends a single hyphen, followed by the child name. And try not going deeper than 2 levels with that: i.e. grandchildren and further are forbidden.</p>
 
@@ -28,7 +28,7 @@
 [i-nietzsche~="鸡汤"] { &hellip; }
 </code></pre>
 
-    <h3><a name="toc-madcss-architecture"></a>Architecture</h3>
+    <h3><a name="toc-madcss-architecture" href="#toc-toc">&uarr;</a> Architecture</h3>
 
     <p>There are literally five mandatory files you need -- the rest are custom modules (you can delete existing ones, just don't tell me about it). Building new things happens in <code>modules/</code> directory and you will define global variables in -- wait for it -- <code>variables.css</code>! GASP!</p>
 
@@ -52,7 +52,7 @@ variables.css
 
     <p>Modules can be either structure- and layout-related selectors that do one, generic thing extremely well -- or a context-specific selectors for distinct components of an interface. They can be naturally mixed with each other -- as long as it makes sense of course. And if you need a humongous module, create a separate <code>modules/moduleName/</code> directory with same name as module and include all partials in <code>modules/moduleName/moduleName.css</code> file.</p>
 
-    <h3><a name="toc-madcss-quirks"></a>Quirks and rules</h3>
+    <h3><a name="toc-madcss-quirks" href="#toc-toc">&uarr;</a> Quirks and rules</h3>
 
     <ol>
         <li><strong>Colors Purity</strong> -- the thing I am passionately crazy about: define new colors <em>only</em> inside <code>variables.css</code> to assure your design is not "50 shades of gray". Also try learning some proper words for naming them: like "amaranth" is much better than "redLight2".</li>
