@@ -1,0 +1,18 @@
+{
+  "name": "Mad Skeleton",
+  "short_name": "Mad",
+  "description": "A small MADCSS-based web boilerplate",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#333333",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png"
+    }
+  ],
+  "prefer_related_applications": false
+}

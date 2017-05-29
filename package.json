@@ -2,7 +2,7 @@
   "name": "mad-skeleton",
   "private": true,
   "version": "0.0.0",
-  "description": "Assets for quick start with web project.",
+  "description": "A small MADCSS-based web boilerplate",
   "repository": {
     "type": "git",
     "url": "https://github.com/smutnyleszek/mad-skeleton.git"
