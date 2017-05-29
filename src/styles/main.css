@@ -15,7 +15,6 @@ main styles aggregation
 /* modules */
 @import "modules/area.css";
 @import "modules/button.css";
-@import "modules/column.css";
 @import "modules/icon.css";
 @import "modules/nakedLink.css";
 @import "modules/progressBar.css";
