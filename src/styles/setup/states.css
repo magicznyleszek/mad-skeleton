@@ -2,33 +2,18 @@
 user-action influenced states
 *******************************************************************************/
 
-:root {
-    --line-gr-w: 0.0625rem; /* 1px @ 16px */
-    --line-gr-solid-c: currentColor 0%, currentColor 0%;
-    --line-gr: linear-gradient(to left, var(--line-gr-solid-c));
-    --disabled-o: 0.5;
-}
-
 /* links */
 
 a {
-    /* custom underlines */
-    background-position: 0 100%;
-    background-size: var(--line-gr-w) var(--line-gr-w);
-    background-image: var(--line-gr);
-    background-repeat: repeat-x;
     color: inherit;
-    text-decoration: none;
-}
-
-a:hover {
-    background-size: calc(var(--line-gr-w) * 2) calc(var(--line-gr-w) * 2);
-    color: inherit;
+    text-decoration: underline;
 }
 
 a:visited { color: inherit; }
 
-a:active { color: var(--c-amaranth); }
+a:hover { color: var(--c-amaranth); }
+
+a:active { color: var(--c-purple); }
 
 /* text selection */
 
@@ -36,6 +21,10 @@ a:active { color: var(--c-amaranth); }
     outline-color: var(--c-root-focus);
     outline-style: solid;
     outline-width: 0.125rem;
+    background-color: var(--c-root-focus);
+}
+
+:focus svg {
     background-color: var(--c-root-focus);
 }
 
@@ -50,7 +39,7 @@ a:active { color: var(--c-amaranth); }
 
 [disabled] {
     pointer-events: none;
-    opacity: var(--disabled-o);
+    opacity: 0.5;
 
     /* avoid adding up opacity on nested disabled elements */
     [disabled] { opacity: 1; }

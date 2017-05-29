@@ -5,11 +5,13 @@ area module - colors
 [i-area~="amaranth"] { background-color: var(--c-amaranth); }
 [i-area~="purple"] { background-color: var(--c-purple); }
 [i-area~="violet"] { background-color: var(--c-violet); }
+[i-area~="gold"] { background-color: var(--c-gold); }
 [i-area~="white"] { background-color: var(--c-white); }
 [i-area~="silver"] { background-color: var(--c-silver); }
 [i-area~="charcoal"] { background-color: var(--c-charcoal); }
 
 /* text color for light backgrounds */
+[i-area~="gold"],
 [i-area~="white"],
 [i-area~="silver"] {
     color: var(--c-charcoal);

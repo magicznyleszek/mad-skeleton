@@ -5,7 +5,7 @@ nakedLink module
 [i-nakedLink] {
     display: inline-block;
     cursor: pointer;
-    background-image: none;
+    text-decoration: none;
     /* HACK makes the element take enough space (fixes focus outline size) */
     line-height: 0;
 }
