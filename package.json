@@ -37,17 +37,17 @@
     }
   },
   "devDependencies": {
-    "autoprefixer": "^7.0.1",
+    "autoprefixer": "^7.1.1",
     "cssnano": "^3.10.0",
     "gm": "^1.23.0",
     "npm-run-all": "^4.0.2",
-    "npm-watch": "^0.1.8",
-    "postcss": "^6.0.1",
-    "postcss-cli": "^4.0.0",
-    "postcss-cssnext": "^2.9.0",
-    "postcss-import": "^9.1.0",
-    "stylelint": "^7.9.0",
-    "stylelint-order": "^0.4.4",
+    "npm-watch": "^0.1.9",
+    "postcss": "^6.0.2",
+    "postcss-cli": "^4.1.0",
+    "postcss-cssnext": "^2.11.0",
+    "postcss-import": "^10.0.0",
+    "stylelint": "^7.11.1",
+    "stylelint-order": "^0.5.0",
     "svgo": "^0.7.2",
     "svgshelf": "^1.0.3"
   }
