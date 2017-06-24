@@ -2,9 +2,7 @@
 a simple reset
 *******************************************************************************/
 
-*,
-*::before,
-*::after {
+* {
     vertical-align: baseline;
     box-sizing: inherit;
     margin: 0;
@@ -17,4 +15,19 @@ a simple reset
     font-style: inherit;
     font-weight: inherit;
     line-height: inherit;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+svg {
+    color: inherit;
+    shape-rendering: geometricPrecision;
+    fill: currentColor;
 }
