@@ -1,39 +1,58 @@
 /*******************************************************************************
 button module
+
+Every button is constructed in a way to allow for nice pressed-in look.
+
+|                    |                    |
+|     normal:        |     pressed-in:    |
+|                    |                    |
+|     mmmmmmmmmm     |     mmmmmmmmmm     |
+|     mmmmmmmmmm     |     mmmmmmmmmm     |     m: margin
+|     cccccccccc     |     mmmmmmmmmm     |
+|     bbbbbbbbbb     |     cccccccccc     |     c: content
+|     bbbbbbbbbb     |     bbbbbbbbbb     |     b: border
+|                    |                    |
+
+We have a faux shadow underneath the button and top + bottom margins and the
+margins + content height sum never changes. When button is pressed (:active),
+then we substract some height from bottom shadow and bottom margin and add
+exact same value to top margin - so button vertical space doesn't change, only
+the appearance.
+
 *******************************************************************************/
 
 :root {
     --s-button-fontsize: 0.75rem;
     --s-button-padding: 0.5rem;
-    --s-button-verticalMargin: 0.125rem;
+    --s-button-ySpace: 0.125rem;
 
     --c-button-focus-bg: var(--c-root-focus);
     --c-button-focus-txt: color(var(--c-button-focus-bg) shade(70%));
-    --button-focus-sh: 0 0.125rem 0 0 color(var(--c-button-focus-bg) shade(10%));
+    --c-button-focus-border: color(var(--c-button-focus-bg) shade(10%));
 
     --c-button-default-txt: var(--c-charcoal);
     --c-button-default-bg: var(--c-silver);
     --c-button-default-bg-hover: color(var(--c-button-default-bg) tint(20%));
-    --button-default-sh: 0 0.125rem 0 0 color(var(--c-button-default-bg) shade(15%));
-    --button-default-sh-hover: 0 0.125rem 0 0 color(var(--c-button-default-bg) shade(10%));
+    --c-button-default-border: color(var(--c-button-default-bg) shade(15%));
+    --c-button-default-border-hover: color(var(--c-button-default-bg) shade(10%));
 
     --c-button-amaranth-txt: var(--c-white);
     --c-button-amaranth-bg: var(--c-amaranth);
     --c-button-amaranth-bg-hover: color(var(--c-button-amaranth-bg) tint(20%));
-    --button-amaranth-sh: 0 0.125rem 0 0 color(var(--c-button-amaranth-bg) shade(15%));
-    --button-amaranth-sh-hover: 0 0.125rem 0 0 color(var(--c-button-amaranth-bg) shade(10%));
+    --c-button-amaranth-border: color(var(--c-button-amaranth-bg) shade(15%));
+    --c-button-amaranth-border-hover: color(var(--c-button-amaranth-bg) shade(10%));
 }
 
 [i-button] {
     display: inline-block;
     vertical-align: top;
-    margin: 0;
-    border: 0;
+    border-bottom-width: var(--s-button-ySpace);
+    border-bottom-style: solid;
     border-radius: var(--s-global-br);
     padding: 0 var(--s-button-padding);
     height: auto;
     /* we want the button to fit into leading size with breathing space */
-    min-height: calc(var(--s-leading) - calc(var(--s-button-verticalMargin) * 2));
+    min-height: calc(var(--s-leading) - calc(var(--s-button-ySpace) * 2));
     /* don't display outline in active state (because ugly), we use custom style to indicate focus */
     outline: 0;
     cursor: pointer;
@@ -42,22 +61,18 @@ button module
     font-weight: 700;
     font-family: inherit;
     /* adjust line-height to adjusted height */
-    line-height: calc(var(--s-leading) - calc(var(--s-button-verticalMargin) * 2));
+    line-height: calc(var(--s-leading) - calc(var(--s-button-ySpace) * 2));
     text-align: center;
     text-decoration: none;
 }
 
 /* default button state */
 [i-button],
-[i-button]:visited {
-    margin-top: var(--s-button-verticalMargin);
-    margin-bottom: var(--s-button-verticalMargin);
-}
-
+[i-button]:visited,
 [i-button]:not([disabled]):hover,
 [i-button~="hover"]:not([disabled]) {
-    margin-top: var(--s-button-verticalMargin);
-    margin-bottom: var(--s-button-verticalMargin);
+    margin-top: var(--s-button-ySpace);
+    border-bottom-width: var(--s-button-ySpace);
 }
 
 /* also includes :hover combined selectors to ensure no box-shadow */
@@ -65,15 +80,13 @@ button module
 [i-button]:not([disabled]):active:hover,
 [i-button~="active"]:not([disabled]) {
     /* swap margins to make the button look pressed-in */
-    margin-top: calc(var(--s-button-verticalMargin) * 2);
-    margin-bottom: 0;
-    /* remove shadow to make the button look pressed-in */
-    box-shadow: none;
+    margin-top: calc(var(--s-button-ySpace) * 1.5);
+    border-bottom-width: calc(var(--s-button-ySpace) * 0.5);
 }
 
 [i-button]:not([disabled]):focus:not(:active),
 [i-button~="focus"]:not([disabled]) {
-    box-shadow: var(--button-focus-sh);
+    border-bottom-color: var(--c-button-focus-border);
     background-color: var(--c-button-focus-bg);
     color: var(--c-button-focus-txt);
 }
@@ -90,14 +103,14 @@ button colors
 
 [i-button],
 [i-button]:visited {
-    box-shadow: var(--button-default-sh);
+    border-bottom-color: var(--c-button-default-border);
     background-color: var(--c-button-default-bg);
     color: var(--c-button-default-txt);
 }
 
 [i-button]:not([disabled]):hover,
 [i-button~="hover"]:not([disabled]) {
-    box-shadow: var(--button-default-sh-hover);
+    border-bottom-color: var(--c-button-default-border-hover);
     background-color: var(--c-button-default-bg-hover);
     color: var(--c-button-default-txt);
 }
@@ -112,13 +125,13 @@ button colors
 
 [i-button~="amaranth"],
 [i-button~="amaranth"]:visited {
-    box-shadow: var(--button-amaranth-sh);
+    border-bottom-color: var(--c-button-amaranth-border);
     background-color: var(--c-button-amaranth-bg);
     color: var(--c-button-amaranth-txt);
 }
 
 [i-button~="amaranth"]:not([disabled]):hover {
-    box-shadow: var(--button-amaranth-sh-hover);
+    border-bottom-color: var(--c-button-amaranth-border-hover);
     background-color: var(--c-button-amaranth-bg-hover);
     color: var(--c-button-amaranth-txt);
 }
@@ -135,25 +148,25 @@ button sizes
 [i-button~="double"] {
     padding-left: calc(var(--s-button-padding) * 2);
     padding-right: calc(var(--s-button-padding) * 2);
-    min-height: calc(var(--s-leading) * 2 - calc(var(--s-button-verticalMargin) * 2));
+    min-height: calc(var(--s-leading) * 2 - calc(var(--s-button-ySpace) * 2));
     font-size: calc(var(--s-button-fontsize) * 2);
-    line-height: calc((var(--s-leading) - var(--s-button-verticalMargin)) * 2);
+    line-height: calc((var(--s-leading) - var(--s-button-ySpace)) * 2);
 }
 
 [i-button~="triple"] {
     padding-left: calc(var(--s-button-padding) * 3);
     padding-right: calc(var(--s-button-padding) * 3);
-    min-height: calc(var(--s-leading) * 3 - calc(var(--s-button-verticalMargin) * 2));
+    min-height: calc(var(--s-leading) * 3 - calc(var(--s-button-ySpace) * 2));
     font-size: calc(var(--s-button-fontsize) * 3);
-    line-height: calc((var(--s-leading) - var(--s-button-verticalMargin)) * 3);
+    line-height: calc((var(--s-leading) - var(--s-button-ySpace)) * 3);
 }
 
 [i-button~="quadruple"] {
     padding-left: calc(var(--s-button-padding) * 4);
     padding-right: calc(var(--s-button-padding) * 4);
-    min-height: calc(var(--s-leading) * 4 - calc(var(--s-button-verticalMargin) * 2));
+    min-height: calc(var(--s-leading) * 4 - calc(var(--s-button-ySpace) * 2));
     font-size: calc(var(--s-button-fontsize) * 4);
-    line-height: calc((var(--s-leading) - var(--s-button-verticalMargin)) * 4);
+    line-height: calc((var(--s-leading) - var(--s-button-ySpace)) * 4);
 }
 
 [i-button~="full"] {
