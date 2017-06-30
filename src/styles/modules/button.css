@@ -41,6 +41,15 @@ the appearance.
     --c-button-amaranth-bg-hover: color(var(--c-button-amaranth-bg) tint(20%));
     --c-button-amaranth-border: color(var(--c-button-amaranth-bg) shade(15%));
     --c-button-amaranth-border-hover: color(var(--c-button-amaranth-bg) shade(10%));
+
+    /*
+        height of the button takes into account top margin and bottom border
+        but we want to not break the Leading Principle
+    */
+    --s-button-x1: calc(var(--s-leading) - calc(var(--s-button-ySpace) * 2));
+    --s-button-x2: calc((var(--s-leading) * 2) - calc(var(--s-button-ySpace) * 2));
+    --s-button-x3: calc((var(--s-leading) * 3) - calc(var(--s-button-ySpace) * 2));
+    --s-button-x4: calc((var(--s-leading) * 4) - calc(var(--s-button-ySpace) * 2));
 }
 
 [i-button] {
@@ -52,8 +61,11 @@ the appearance.
     padding: 0 var(--s-button-padding);
     height: auto;
     /* we want the button to fit into leading size with breathing space */
-    min-height: calc(var(--s-leading) - calc(var(--s-button-ySpace) * 2));
-    /* don't display outline in active state (because ugly), we use custom style to indicate focus */
+    min-height: var(--s-button-x1);
+    /*
+        don't display outline in active state (because ugly),
+        we use custom style to indicate focus
+    */
     outline: 0;
     cursor: pointer;
     background-image: none;
@@ -61,34 +73,33 @@ the appearance.
     font-weight: 700;
     font-family: inherit;
     /* adjust line-height to adjusted height */
-    line-height: calc(var(--s-leading) - calc(var(--s-button-ySpace) * 2));
+    line-height: var(--s-button-x1);
     text-align: center;
     text-decoration: none;
 }
 
-/* default button state */
+/* normal margin and border state */
 [i-button],
 [i-button]:visited,
-[i-button]:not([disabled]):hover,
-[i-button~="hover"]:not([disabled]) {
+[i-button]:hover,
+[i-button~="hover"] {
     margin-top: var(--s-button-ySpace);
     border-bottom-width: var(--s-button-ySpace);
 }
 
-/* also includes :hover combined selectors to ensure no box-shadow */
-[i-button]:not([disabled]):active,
-[i-button]:not([disabled]):active:hover,
-[i-button~="active"]:not([disabled]) {
-    /* swap margins to make the button look pressed-in */
+/* pressed-in margin and border state */
+[i-button]:active,
+[i-button~="active"] {
     margin-top: calc(var(--s-button-ySpace) * 1.5);
     border-bottom-width: calc(var(--s-button-ySpace) * 0.5);
 }
 
-[i-button]:not([disabled]):focus:not(:active),
-[i-button~="focus"]:not([disabled]) {
-    border-bottom-color: var(--c-button-focus-border);
-    background-color: var(--c-button-focus-bg);
-    color: var(--c-button-focus-txt);
+/* special colored version on focus */
+[i-button]:focus,
+[i-button~="focus"] {
+    border-bottom-color: var(--c-button-focus-border) !important;
+    background-color: var(--c-button-focus-bg) !important;
+    color: var(--c-button-focus-txt) !important;
 }
 
 [i-button~="middle"] {
@@ -108,15 +119,15 @@ button colors
     color: var(--c-button-default-txt);
 }
 
-[i-button]:not([disabled]):hover,
-[i-button~="hover"]:not([disabled]) {
+[i-button]:hover,
+[i-button~="hover"] {
     border-bottom-color: var(--c-button-default-border-hover);
     background-color: var(--c-button-default-bg-hover);
     color: var(--c-button-default-txt);
 }
 
-[i-button]:not([disabled]):active,
-[i-button~="active"]:not([disabled]) {
+[i-button]:active,
+[i-button~="active"] {
     background-color: var(--c-button-default-bg-hover);
     color: var(--c-button-default-txt);
 }
@@ -130,13 +141,13 @@ button colors
     color: var(--c-button-amaranth-txt);
 }
 
-[i-button~="amaranth"]:not([disabled]):hover {
+[i-button~="amaranth"]:hover {
     border-bottom-color: var(--c-button-amaranth-border-hover);
     background-color: var(--c-button-amaranth-bg-hover);
     color: var(--c-button-amaranth-txt);
 }
 
-[i-button~="amaranth"]:not([disabled]):active {
+[i-button~="amaranth"]:active {
     background-color: var(--c-button-amaranth-bg-hover);
     color: var(--c-button-amaranth-txt);
 }
@@ -148,25 +159,25 @@ button sizes
 [i-button~="double"] {
     padding-left: calc(var(--s-button-padding) * 2);
     padding-right: calc(var(--s-button-padding) * 2);
-    min-height: calc(var(--s-leading) * 2 - calc(var(--s-button-ySpace) * 2));
+    min-height: var(--s-button-x2);
     font-size: calc(var(--s-button-fontsize) * 2);
-    line-height: calc((var(--s-leading) - var(--s-button-ySpace)) * 2);
+    line-height: var(--s-button-x2);
 }
 
 [i-button~="triple"] {
     padding-left: calc(var(--s-button-padding) * 3);
     padding-right: calc(var(--s-button-padding) * 3);
-    min-height: calc(var(--s-leading) * 3 - calc(var(--s-button-ySpace) * 2));
+    min-height: var(--s-button-x3);
     font-size: calc(var(--s-button-fontsize) * 3);
-    line-height: calc((var(--s-leading) - var(--s-button-ySpace)) * 3);
+    line-height: var(--s-button-x3);
 }
 
 [i-button~="quadruple"] {
     padding-left: calc(var(--s-button-padding) * 4);
     padding-right: calc(var(--s-button-padding) * 4);
-    min-height: calc(var(--s-leading) * 4 - calc(var(--s-button-ySpace) * 2));
+    min-height: var(--s-button-x4);
     font-size: calc(var(--s-button-fontsize) * 4);
-    line-height: calc((var(--s-leading) - var(--s-button-ySpace)) * 4);
+    line-height: var(--s-button-x4);
 }
 
 [i-button~="full"] {
