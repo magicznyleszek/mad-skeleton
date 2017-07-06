@@ -24,7 +24,6 @@ includes_dir: src
 exclude:
     # disabled src, as it breaks --watch (see includes_dir)
     # - src
-    - src
     - bin
     - node_modules
     - LICENSE

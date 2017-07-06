@@ -22,7 +22,7 @@
     "lint": "stylelint \"src/**/*.css\"",
     "dist:rebuild": "rm -rf dist && mkdirp dist && mkdirp dist/styles",
     "images:build": "node bin/buildImages.js",
-    "styles:build": "postcss src/styles/main.css -o dist/styles/monolith.css",
+    "styles:build": "postcss src/main.css -o dist/monolith.css",
     "svg:build": "svgo -f src/symbols/ && svgshelf -p symbol- src/symbols/\\*.svg src/_symbolsMerged.svg",
     "jekyll:build": "jekyll build",
     "jekyll:serve": "jekyll serve --watch --baseurl ''"
@@ -30,7 +30,7 @@
   "watch": {
     "styles:build": {
       "patterns": [
-        "src/styles"
+        "src"
       ],
       "extensions": "css",
       "quiet": false

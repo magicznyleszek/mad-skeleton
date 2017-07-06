@@ -17,7 +17,7 @@ main styles aggregation
 @import "modules/button.css";
 @import "modules/icon.css";
 @import "modules/nakedLink.css";
-@import "modules/picture.css";
+@import "modules/picture/picture.css";
 @import "modules/progressBar.css";
 @import "modules/table.css";
 @import "modules/text.css";
