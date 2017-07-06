@@ -23,7 +23,7 @@
     "dist:rebuild": "rm -rf dist && mkdirp dist && mkdirp dist/styles",
     "images:build": "node bin/buildImages.js",
     "styles:build": "postcss src/styles/main.css -o dist/styles/monolith.css",
-    "svg:build": "svgo -f src/symbols/ && svgshelf -p symbol- src/symbols/\\*.svg _includes/symbols.svg",
+    "svg:build": "svgo -f src/symbols/ && svgshelf -p symbol- src/symbols/\\*.svg src/_symbolsMerged.svg",
     "jekyll:build": "jekyll build",
     "jekyll:serve": "jekyll serve --watch --baseurl ''"
   },
