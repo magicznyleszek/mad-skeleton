@@ -19,8 +19,11 @@ kramdown:
     auto_ids: false
 timezone: Europe/Warsaw
 
-# excludes
+# pull includes from other directory
+includes_dir: src
 exclude:
+    # disabled src, as it breaks --watch (see includes_dir)
+    # - src
     - src
     - bin
     - node_modules
