@@ -3,19 +3,16 @@ nakedLink module
 *******************************************************************************/
 
 [i-nakedLink] {
-    display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    /* HACK makes the element take enough space (fixes focus outline size) */
-    line-height: 0;
 }
 
-[i-nakedLink]:not([disabled]):hover {
+[i-nakedLink]:hover {
     opacity: 0.8;
     color: inherit;
 }
 
-[i-nakedLink]:not([disabled]):active {
+[i-nakedLink]:active {
     opacity: 0.6;
     color: inherit;
 }

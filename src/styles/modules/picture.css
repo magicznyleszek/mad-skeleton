@@ -1,0 +1,63 @@
+/*******************************************************************************
+picture module
+*******************************************************************************/
+
+[i-picture] {
+    display: block;
+}
+
+[i-picture-caption] {
+    font-style: italic;
+}
+
+[i-picture-link]:hover {
+    opacity: 0.9;
+}
+
+[i-picture-link]:active {
+    opacity: 0.8;
+}
+
+[i-picture-link],
+[i-picture-image] {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+[i-picture-image] {
+    position: relative;
+    min-height: var(--s-leading);
+    min-width: var(--s-leading);
+    /* HACK fix weird height of broken images */
+    line-height: 0;
+}
+
+/*******************************************************************************
+style broken images
+*******************************************************************************/
+
+[i-picture-image]::before,
+[i-picture-image]::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+[i-picture-image]::before {
+    content: "(x_x;)";
+    z-index: 2;
+    top: 50%;
+    text-align: center;
+    color: var(--c-charcoal);
+    font-family: var(--font-monospace);
+    font-weight: 300;
+}
+
+[i-picture-image]::after {
+    content: "";
+    z-index: 1;
+    top: 0;
+    height: 100%;
+    background-color: var(--c-silver);
+}

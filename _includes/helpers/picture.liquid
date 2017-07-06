@@ -3,19 +3,24 @@
     images:build npm script
     @param dir - directory in imagesPath
     @param filename - image filename with extension
-    @param title - optional title that will be added as figcaption
+    @param width - image x dimension
+    @param height - image y dimension
+    @param caption - optional caption that will be added as figcaption
 {% endcomment %}
 {% capture dirFullPath %}{{ site.imagesPath }}{{ include.dir | url_escape }}{% endcapture %}
 {% capture originalImage %}{{ dirFullPath }}/{{ include.filename | url_escape }}{% endcapture %}
 {% capture smallImage %}{{ originalImage | replace: '.jpg', '_small.jpg' | replace: '.jpeg', '_small.jpeg' | replace: '.png', '_small.png' | replace: '.gif', '_small.gif' }}{% endcapture %}
 {% capture smallRetinaImage %}{{ smallImage | replace: '_small.', '_small@2x.' }}{% endcapture %}
-<figure>
-    <a i-nakedLink href="{{ originalImage }}">
+<figure i-picture>
+    <a i-picture-link href="{{ originalImage }}">
         <img
+            i-picture-image
             src="{{ smallImage }}"
             srcset="{{ smallImage }} 1x, {{ smallRetinaImage }} 2x"
             alt="{{ include.filename }}"
+            {% if include.width %}width="{{ include.width }}"{% endif %}
+            {% if include.height %}height="{{ include.height }}"{% endif %}
         >
     </a>
-    {% if include.title %}<figcaption>{{ include.title }}</figcaption>{% endif %}
+    {% if include.caption %}<figcaption i-picture-caption>{{ include.caption }}</figcaption>{% endif %}
 </figure>

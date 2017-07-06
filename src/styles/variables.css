@@ -63,5 +63,5 @@ custom media queries and selectors shortcuts
 
 /* groups selectors */
 @custom-selector :--headers h1, h2, h3, h4;
-@custom-selector :--textblocks h1, h2, h3, h4, p, ul, ol, blockquote, pre;
+@custom-selector :--textblocks h1, h2, h3, h4, p, ul, ol, blockquote, pre, figure;
 @custom-selector :--formelements button, input, select, textarea;

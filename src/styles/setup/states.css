@@ -44,26 +44,3 @@ a:active { color: var(--c-purple); }
     /* avoid adding up opacity on nested disabled elements */
     [disabled] { opacity: 1; }
 }
-
-/* style broken images */
-
-img {
-    position: relative;
-    text-align: center;
-}
-
-img::after {
-    content: "image broken";
-    display: block;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    padding: var(--s-leading);
-    width: 100%;
-    height: 100%;
-    background-color: var(--c-amaranth);
-    color: var(--c-white);
-    font-size: 200%;
-    font-weight: 100;
-}
