@@ -4,6 +4,8 @@ picture module
 
 [i-picture] {
     display: block;
+    /* trim if doesn't fit the scren */
+    overflow-x: hidden;
 }
 
 [i-picture-caption] {
