@@ -11,40 +11,23 @@
 
     <p>Attribute names are defined in a simple fashion: attribute always starts with the global prefix, followed by module name. If it's a child, then it appends a single hyphen, followed by the child name. And try not going deeper than 2 levels with that: i.e. grandchildren and further are forbidden.</p>
 
-    <pre><code>{{ "<globalPrefix>-<name>[-<childName>]" | escape }}</code></pre>
+    <pre><code>{{ '<globalPrefix>-<name>[-<childName>]' | xml_escape }}</code></pre>
 
     <p>Modifiers are a space-separated strings, so basically you can use any character you want (except space of course):</p>
 
-    <pre><code>{{ '<div i-nietzsche="2/3 isDead +_- żółć 鸡汤">…</div>' | escape }}</code></pre>
+    <pre><code>{{ '<div i-nietzsche="2/3 isDead +_- żółć 鸡汤">…</div>' | xml_escape }}</code></pre>
 
     <p>And then you would write something like this in your <code>.(s)css</code> file:</p>
 
-<pre><code>/* nietzsche module */
-[i-nietzsche] { &hellip; }
-[i-nietzsche~="2/3"] { &hellip; }
-[i-nietzsche~="isDead"] { &hellip; }
-[i-nietzsche~="+_-"] { &hellip; }
-[i-nietzsche~="żółć"] { &hellip; }
-[i-nietzsche~="鸡汤"] { &hellip; }
-</code></pre>
+    {% capture example1 %}{% include docs/madcss/madcssCssExample.css %}{% endcapture %}
+    <pre><code>{{ example1 | xml_escape }}</code></pre>
 
     <h3><a name="toc-madcss-architecture" href="#toc-toc">&uarr;</a> Architecture</h3>
 
     <p>There are literally five mandatory files you need -- the rest are custom modules (you can delete existing ones, just don't tell me about it). Building new things happens in <code>modules/</code> directory and you will define global variables in -- wait for it -- <code>variables.css</code>! GASP!</p>
 
-<pre><code>modules/
-    nietzsche.css
-    complex/
-        complex.css
-        complexPart.css
-        complexConfig.css
-setup/
-    root.css
-    states.css
-    typography.css
-main.css
-variables.css
-</code></pre>
+    {% capture example2 %}{% include docs/madcss/madcssArchitectureExample.txt %}{% endcapture %}
+    <pre><code>{{ example2 | xml_escape }}</code></pre>
 
     <p>As for variables, make sure that you define module private ones in the <code>:root {}</code> block on top of the file. If multiple modules use a variable, you should put in in global file.</p>
 

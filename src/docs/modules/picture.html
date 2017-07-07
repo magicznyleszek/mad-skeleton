@@ -4,7 +4,7 @@
     {% capture example %}{% include modules/picture/pictureExample.html %}{% endcapture %}
     <pre><code>{{ example | xml_escape }}</code></pre>
 
-    <p>A picture module with thumbnail link opening original-sized image. It has optional caption and styles for broken images.</p>
+    <p>A picture module with thumbnail link opening original-sized image in new tab/window. It has optional caption and styles for broken images.</p>
 
     <p>For including thumbnail-with–link-images there is a Node script that goes through <code>src/images</code>, copies original images and creates resized <code>_small</code> and <code>_small@2x</code> thumbnails. But the only thing you really need to know is:</p>
 

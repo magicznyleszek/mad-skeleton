@@ -1,19 +1,8 @@
 <section i-area="medium-v">
     <h3><a name="toc-modules-table" href="#toc-toc">&uarr;</a> table</h3>
 
-<pre><code>&lt;table i-table="hoverable"&gt;
-    &lt;caption&gt;&hellip;&lt;/caption&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;&hellip;&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;&hellip;&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
+    {% capture example %}{% include modules/table/tableExample.html %}{% endcapture %}
+    <pre><code>{{ example | xml_escape }}</code></pre>
 
     <table i-table="hoverable">
         <caption>Middle Jurassic sections</caption>

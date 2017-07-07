@@ -13,11 +13,11 @@ main styles aggregation
 @import "setup/print.css";
 
 /* modules */
-@import "modules/area.css";
-@import "modules/button.css";
-@import "modules/icon.css";
-@import "modules/nakedLink.css";
+@import "modules/area/area.css";
+@import "modules/button/button.css";
+@import "modules/icon/icon.css";
+@import "modules/nakedLink/nakedLink.css";
 @import "modules/picture/picture.css";
-@import "modules/progressBar.css";
-@import "modules/table.css";
-@import "modules/text.css";
+@import "modules/progressBar/progressBar.css";
+@import "modules/table/table.css";
+@import "modules/text/text.css";

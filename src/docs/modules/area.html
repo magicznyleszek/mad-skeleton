@@ -1,7 +1,8 @@
 <section i-area="medium-v">
     <h3><a name="toc-modules-area" href="#toc-toc">&uarr;</a> area</h3>
 
-    <p><code>&lt;div i-area="charcoal medium-v"&gt;&hellip;&lt;/div&gt;</code></p>
+    {% capture example %}{% include modules/area/areaExample.html %}{% endcapture %}
+    <pre><code>{{ example | xml_escape }}</code></pre>
 
     <p>Area has two functions: setting the colors (background & text) and paddings.</p>
 
