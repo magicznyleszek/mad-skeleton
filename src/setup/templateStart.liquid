@@ -1,0 +1,53 @@
+{% assign versionCache = site.time|date: "%Y-%m-%d_%H-%M-%S" %}
+
+<!DOCTYPE html>
+<html id="pterosaurDestroyedAlgorithms" lang="en">
+
+<head>
+    {% comment %}
+        stuff that needs to be first
+    {% endcomment %}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% comment %}
+        site information
+    {% endcomment %}
+    <title>{% include modules/metaTitle.liquid %}</title>
+    <meta name="description" content="{% include modules/metaDescription.liquid %}">
+    <base href="{{ site.baseurl }}">
+    <link rel="home" href="{{ site.baseurl }}">
+    <link rel="author" href="humans.txt">
+    <link rel="copyright" href="LICENSE">
+    <link rel="manifest" href="/manifest.json">
+
+    {% comment %}
+        stuff for robots
+    {% endcomment %}
+    <meta name="robots" content="index,follow,noodp">
+    <meta name="googlebot" content="index,follow">
+
+    {% comment %}
+        open graph
+    {% endcomment %}
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:title" content="{% include modules/metaTitle.liquid %}">
+    <meta property="og:description" content="{% include modules/metaDescription.liquid %}">
+    <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.baseurl }}/favicon.png">
+
+    {% comment %}
+        style and icons
+    {% endcomment %}
+    <link href="/dist/mad.css?{{ versionCache }}" media="all" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico?{{ versionCache }}">
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/favicon.png">
+</head>
+
+<body i-area="double-v medium-h">
+    {% comment %}
+        SVG symbols for <use> tags
+    {% endcomment %}
+    <div style="display:none;">{% include _symbolsMerged.svg %}</div>

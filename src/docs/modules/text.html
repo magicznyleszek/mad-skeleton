@@ -1,0 +1,85 @@
+<section i-area="medium-v">
+    <h3><a name="toc-modules-text" href="#toc-toc">&uarr;</a> text</h3>
+
+    {% capture example %}{% include modules/text/textExample.html %}{% endcapture %}
+    <pre><code>{{ example | xml_escape }}</code></pre>
+
+    <p>Changes the appearance of the text (weights, case and alignment) and has a special <em>trimmed</em> modifier for ellipsis-trimming of long lines.</p>
+
+    <table i-table>
+        <tr>
+            <td><code>lefted</code></td>
+            <td><p i-text="lefted">makes given<br>inline content<br>align to the left side</p></td>
+        </tr>
+
+        <tr>
+            <td><code>centered</code></td>
+            <td><p i-text="centered">makes given<br>inline content<br>align to the center</p></td>
+        </tr>
+
+        <tr>
+            <td><code>righted</code></td>
+            <td><p i-text="righted">makes given<br>inline content<br>align to the right side</p></td>
+        </tr>
+
+        <tr>
+            <td><code>trimmed</code></td>
+            <td><p i-text="trimmed" style="width: 200px;">makes text trimmed if there is not enough space causing said text to being too long to fit in one line of text on the page or in some other unnamed container that has a limited width</p></td>
+        </tr>
+
+        <tr>
+            <td><code>uppercased</code></td>
+            <td><p i-text="uppercased">This is uppercased sentence.</p></td>
+        </tr>
+
+        <tr>
+            <td><code>lowercased</code></td>
+            <td><p i-text="lowercased">This is lowercased sentence.</p></td>
+        </tr>
+
+        <tr>
+            <td><code>nowrap</code></td>
+            <td><p i-text="nowrap">This text will not wrap.</p></td>
+        </tr>
+
+        <tr>
+            <td><code>300</code> or <code>light</code></td>
+            <td><p i-text="300">Genesis</p></td>
+        </tr>
+
+        <tr>
+            <td><code>400</code> or <code>regular</code></td>
+            <td><p i-text="400">John</p></td>
+        </tr>
+
+        <tr>
+            <td><code>600</code> or <code>semibold</code></td>
+            <td><p i-text="600">Tough cookie</p></td>
+        </tr>
+
+        <tr>
+            <td><code>700</code> or <code>bold</code></td>
+            <td><p i-text="700">Avant-garde</p></td>
+        </tr>
+
+        <tr>
+            <td><code>75%</code></td>
+            <td><p i-text="75%">75% size</p></td>
+        </tr>
+
+        <tr>
+            <td><code>150%</code></td>
+            <td><p i-text="150%">150% size</p></td>
+        </tr>
+
+        <tr>
+            <td><code>200%</code></td>
+            <td><p i-text="200%">200% size</p></td>
+        </tr>
+
+        <tr>
+            <td><code>300%</code></td>
+            <td><p i-text="300%">300% size</p></td>
+        </tr>
+    </table>
+</section>

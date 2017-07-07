@@ -1,0 +1,21 @@
+<section i-area="medium-v">
+    <h3><a name="toc-modules-picture" href="#toc-toc">&uarr;</a> picture</h3>
+
+    {% capture example %}{% include modules/picture/pictureExample.html %}{% endcapture %}
+    <pre><code>{{ example | xml_escape }}</code></pre>
+
+    <p>A picture module with thumbnail link opening original-sized image in new tab/window. It has optional caption and styles for broken images.</p>
+
+    <p>For including thumbnail-with–link-images there is a Node script that goes through <code>src/images</code>, copies original images and creates resized <code>_small</code> and <code>_small@2x</code> thumbnails. But the only thing you really need to know is:</p>
+
+    <ol>
+        <li>Run <code>npm run images:build</code></li>
+        <li>Include <code>modules/picture.liquid</code> liquid template</li>
+    </ol>
+
+    {% include modules/picture/picture.liquid dir="aleksandra-waliszewska" filename="Untitled_1.jpg" width="285" height="400" %}
+    {% include modules/picture/picture.liquid dir="aleksandra-waliszewska" filename="Untitled_2.jpg" width="400" height="288" %}
+    {% include modules/picture/picture.liquid dir="dogs-of-titanic" filename="tree-of-david.png" width="255" height="400" caption="Tree of David from Dogs of Titanic by KW" %}
+    {% include modules/picture/picture.liquid dir="nope" filename="bez_tytulu.jpg" %}
+    {% include modules/picture/picture.liquid dir="nope" filename="bez_tytulu.jpg" width="255" height="400" caption="Bez tytułu" %}
+</section>

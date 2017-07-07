@@ -1,0 +1,23 @@
+/*******************************************************************************
+main styles aggregation
+*******************************************************************************/
+
+/* variables palette */
+@import "variables.css";
+
+/* basics */
+@import "setup/reset.css";
+@import "setup/root.css";
+@import "setup/states.css";
+@import "setup/typography.css";
+@import "setup/print.css";
+
+/* modules */
+@import "modules/area/area.css";
+@import "modules/button/button.css";
+@import "modules/icon/icon.css";
+@import "modules/nakedLink/nakedLink.css";
+@import "modules/picture/picture.css";
+@import "modules/progressBar/progressBar.css";
+@import "modules/table/table.css";
+@import "modules/text/text.css";

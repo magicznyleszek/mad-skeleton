@@ -1,0 +1,76 @@
+<section i-area="medium-v">
+    <h3><a name="toc-modules-table" href="#toc-toc">&uarr;</a> table</h3>
+
+    {% capture example %}{% include modules/table/tableExample.html %}{% endcapture %}
+    <pre><code>{{ example | xml_escape }}</code></pre>
+
+    <table i-table="hoverable">
+        <caption>Middle Jurassic sections</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Period <small>[Mya]</small></th>
+                <th>Duration <small>[My]</small></th>
+                <th>Species</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Callovian</td>
+                <td i-text="nowrap">166-163</td>
+                <td>3</td>
+                <td>Agilisaurus, Liopleurodon, Huayangosaurus</td>
+            </tr>
+            <tr>
+                <td>Bathonian</td>
+                <td i-text="nowrap">168-166</td>
+                <td>2</td>
+                <td>Metriorhynchus, Teleidosaurus, Shunosaurus</td>
+            </tr>
+            <tr>
+                <td>Bajocian</td>
+                <td i-text="nowrap">170-168</td>
+                <td>2</td>
+                <td i-area="amaranth">Belemnites, Ophionautilus, Somalinautilus</td>
+            </tr>
+            <tr>
+                <td>Aalenian</td>
+                <td i-text="nowrap">174-170</td>
+                <td>4</td>
+                <td>Abbasites, Belemnites, Steneosaurus</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <td i-text="nowrap">174-163</td>
+                <td>11</td>
+                <td>
+                    Agilisaurus, Liopleurodon, Huayangosaurus,
+                    Metriorhynchus, Teleidosaurus, Shunosaurus,
+                    Belemnites, Ophionautilus, Somalinautilus,
+                    Abbasites, Steneosaurus
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <p>In the situation you need the table to fit in the container, makie it <code>fullwidth</code> and the text will wrap on single characters instead (ugly, I know). Useful if you don't control the content, or the content is raw urls &hearts;</p>
+
+    <table i-table="fullwidth">
+        <tr>
+            <th>Bigges dinos evah</th>
+            <td>Agilisaurusliopleurodonhuayangosaurusmetriorhynchusteleidosaurusshunosaurusbelemnitesophionautilussomalinautilusabbasitessteneosaurus</td>
+        </tr>
+    </table>
+
+    <table i-table="fullwidth">
+        <thead>
+            <tr><th>Bigges dinos evah</th></tr>
+        </thead>
+
+        <tbody>
+            <tr><td>Agilisaurusliopleurodonhuayangosaurusmetriorhynchusteleidosaurusshunosaurusbelemnitesophionautilussomalinautilusabbasitessteneosaurus</td></tr>
+        </tbody>
+    </table>
+</section>

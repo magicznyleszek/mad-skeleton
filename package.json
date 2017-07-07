@@ -20,32 +20,32 @@
     "watch": "npm-watch",
     "serve": "npm-run-all build jekyll:serve",
     "lint": "stylelint \"src/**/*.css\"",
-    "dist:rebuild": "rm -rf dist && mkdirp dist && mkdirp dist/styles",
+    "dist:rebuild": "rm -rf dist && mkdirp dist",
     "images:build": "node bin/buildImages.js",
-    "styles:build": "postcss src/styles/main.css -o dist/styles/monolith.css",
-    "svg:build": "svgo -f src/symbols/ && svgshelf -p symbol- src/symbols/\\*.svg _includes/symbols.svg",
+    "styles:build": "postcss src/aggregate.css -o dist/mad.css",
+    "svg:build": "svgo -f src/symbols/ && svgshelf -p symbol- src/symbols/\\*.svg src/_symbolsMerged.svg",
     "jekyll:build": "jekyll build",
     "jekyll:serve": "jekyll serve --watch --baseurl ''"
   },
   "watch": {
     "styles:build": {
       "patterns": [
-        "src/styles"
+        "src"
       ],
       "extensions": "css",
       "quiet": false
     }
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.1",
+    "autoprefixer": "^7.1.2",
     "cssnano": "^3.10.0",
     "gm": "^1.23.0",
     "mkdirp": "^0.5.1",
     "npm-run-all": "^4.0.2",
     "npm-watch": "^0.2.0",
-    "postcss": "^6.0.4",
+    "postcss": "^6.0.6",
     "postcss-cli": "^4.1.0",
-    "postcss-cssnext": "^2.11.0",
+    "postcss-cssnext": "^3.0.0",
     "postcss-import": "^10.0.0",
     "stylelint": "^7.12.0",
     "stylelint-order": "^0.5.0",
