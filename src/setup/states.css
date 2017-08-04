@@ -18,9 +18,7 @@ a:active { color: var(--c-purple); }
 /* text selection */
 
 :focus {
-    outline-color: var(--c-root-focus);
-    outline-style: solid;
-    outline-width: 0.125rem;
+    outline: var(--c-root-focus) solid 0.125rem;
     background-color: var(--c-root-focus);
 }
 

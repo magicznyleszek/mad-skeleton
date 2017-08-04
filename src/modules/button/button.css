@@ -94,7 +94,10 @@ the appearance.
     border-bottom-width: calc(var(--s-button-ySpace) * 0.5);
 }
 
-/* special colored version on focus */
+/*
+    special colored version on focus,
+    uses !important and I don't feel bad about it
+*/
 [i-button]:focus,
 [i-button~="focus"] {
     border-bottom-color: var(--c-button-focus-border) !important;
