@@ -2,8 +2,8 @@ modules/
     nietzsche.css
     complex/
         complex.css
-        complexPart.css
-        complexConfig.css
+        complex-part.css
+        complex-config.css
 setup/
     root.css
     states.css

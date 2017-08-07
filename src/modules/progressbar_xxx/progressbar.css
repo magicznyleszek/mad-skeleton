@@ -22,7 +22,7 @@ progressBar config
 progressBar module
 *******************************************************************************/
 
-[i-progressBar] {
+[i-progressbar] {
     position: relative;
     overflow: hidden;
     margin-top: 0.25rem;
@@ -32,9 +32,9 @@ progressBar module
     background-color: var(--progressBar-bg);
 }
 
-[i-progressBar]:not(:last-child) { margin-bottom: var(--s-leading); }
+[i-progressbar]:not(:last-child) { margin-bottom: var(--s-leading); }
 
-[i-progressBar-indicator] {
+[i-progressbar-indicator] {
     display: block;
     border-radius: var(--s-global-br);
     width: 0%;
@@ -43,14 +43,14 @@ progressBar module
     transition: 0.25s;
 }
 
-[i-progressBar~="short"] { max-width: var(--progressBar-short-w); }
+[i-progressbar~="short"] { max-width: var(--progressBar-short-w); }
 
 @keyframes framesProgressPending {
     0% { background-position: calc(var(--progressBar-pending-s) * -1) 0; }
     100% { background-position: var(--progressBar-pending-s) 0; }
 }
 
-[i-progressBar~="pending"]::after {
+[i-progressbar~="pending"]::after {
     content: "";
     position: absolute;
     top: 0;

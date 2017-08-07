@@ -2,17 +2,17 @@
 nakedLink module
 *******************************************************************************/
 
-[i-nakedLink] {
+[i-nakedlink] {
     cursor: pointer;
     text-decoration: none;
 }
 
-[i-nakedLink]:hover {
+[i-nakedlink]:hover {
     opacity: 0.8;
     color: inherit;
 }
 
-[i-nakedLink]:active {
+[i-nakedlink]:active {
     opacity: 0.6;
     color: inherit;
 }

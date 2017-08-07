@@ -11,7 +11,9 @@
 
     <p>Attribute names are defined in a simple fashion: attribute always starts with the global prefix, followed by module name. If it's a child, then it appends a single hyphen, followed by the child name. And try not going deeper than 2 levels with that: i.e. grandchildren and further are forbidden.</p>
 
-    <pre><code>{{ '<globalPrefix>-<name>[-<childName>]' | xml_escape }}</code></pre>
+    <pre><code>{{ 'prefix-name[-childname]' | xml_escape }}</code></pre>
+
+    <p><strong>Warning:</strong> uppercase letters in attribute names are invalid HTML and can cause bugs in some browsers (as most browsers tend to auto-fix that problem in your code).</p>
 
     <p>Modifiers are a space-separated strings, so basically you can use any character you want (except space of course):</p>
 
