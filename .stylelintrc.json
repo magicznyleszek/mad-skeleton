@@ -1,5 +1,8 @@
 {
-    "plugins": ["stylelint-order"],
+    "plugins": [
+        "stylelint-order",
+        "stylelint-selector-pattern"
+    ],
     "rules": {
         "color-hex-case": null,
         "color-hex-length": null,
@@ -200,6 +203,12 @@
         "no-invalid-double-slash-comments": null,
         "no-missing-end-of-source-newline": [true, {"severity": "warning"}],
         "no-unknown-animations": [true, {"severity": "error"}],
+
+        "xi/selector-pattern": [
+            "^[^A-Z.]+(\"{1}.+\"{1})*[^A-Z]*$",
+            {"severity": "warning"},
+            "CUSTOM COMMENT: Disallow uppercase letters (unless inside attribute modifier) and disallow classes"
+        ],
 
         "order/order": [
             [
