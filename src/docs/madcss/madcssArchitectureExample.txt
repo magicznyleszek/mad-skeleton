@@ -8,5 +8,5 @@ setup/
     root.css
     states.css
     typography.css
-main.css
+aggregate.css
 variables.css
