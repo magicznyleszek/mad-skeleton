@@ -8,25 +8,25 @@ picture module
     overflow-x: hidden;
 }
 
-[i-picture-caption] {
+[i-picture--caption] {
     font-style: italic;
 }
 
-[i-picture-link]:hover {
+[i-picture--link]:hover {
     opacity: 0.9;
 }
 
-[i-picture-link]:active {
+[i-picture--link]:active {
     opacity: 0.8;
 }
 
-[i-picture-link],
-[i-picture-image] {
+[i-picture--link],
+[i-picture--image] {
     display: inline-block;
     vertical-align: bottom;
 }
 
-[i-picture-image] {
+[i-picture--image] {
     position: relative;
     min-height: var(--s-leading);
     min-width: var(--s-leading);
@@ -38,15 +38,15 @@ picture module
 style broken images
 *******************************************************************************/
 
-[i-picture-image]::before,
-[i-picture-image]::after {
+[i-picture--image]::before,
+[i-picture--image]::after {
     display: block;
     position: absolute;
     left: 0;
     width: 100%;
 }
 
-[i-picture-image]::before {
+[i-picture--image]::before {
     content: "(x_x;)";
     z-index: 2;
     top: 50%;
@@ -56,7 +56,7 @@ style broken images
     font-weight: 300;
 }
 
-[i-picture-image]::after {
+[i-picture--image]::after {
     content: "";
     z-index: 1;
     top: 0;

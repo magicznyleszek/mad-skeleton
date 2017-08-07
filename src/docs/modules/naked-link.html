@@ -1,7 +1,7 @@
 <section i-area="medium-v">
-    <h3><a name="toc-modules-nakedlink" href="#toc-toc">&uarr;</a> nakedlink</h2>
+    <h3><a name="toc-modules-naked-link" href="#toc-toc">&uarr;</a> naked-link</h2>
 
-    {% capture example %}{% include modules/nakedlink/nakedlinkExample.html %}{% endcapture %}
+    {% capture example %}{% include modules/naked-link/naked-link-example.html %}{% endcapture %}
     <pre><code>{{ example | xml_escape }}</code></pre>
 
     <p>For when you need to wrap <code>&lt;a&gt;</code> tag around something big, and don't want to have this silly underline styles. It relies on slighty changing opacity for <code>:href</code> and <code>:active</code> states.</p>
@@ -10,7 +10,7 @@
         <tr>
             <td>ugh</td>
             <td>
-                <a href="#toc-modules-nakedlink">
+                <a href="#toc-modules-naked-link">
                     <svg i-icon="double middle"><use xlink:href="#symbol-skull"></svg>
                     <span i-text="150%">I feel ugly :-(</span>
                 </a>
@@ -20,7 +20,7 @@
         <tr>
             <td>me likes</td>
             <td>
-                <a href="#toc-modules-nakedlink" i-nakedlink>
+                <a href="#toc-modules-naked-link" i-naked-link>
                     <svg i-icon="double middle"><use xlink:href="#symbol-face"></svg>
                     <span i-text="150%">I am complete &#2384;</span>
                 </a>

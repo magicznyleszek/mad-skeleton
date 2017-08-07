@@ -14,8 +14,8 @@
     {% comment %}
         site information
     {% endcomment %}
-    <title>{% include modules/metaTitle.liquid %}</title>
-    <meta name="description" content="{% include modules/metaDescription.liquid %}">
+    <title>{% include modules/meta-title.liquid %}</title>
+    <meta name="description" content="{% include modules/meta-description.liquid %}">
     <base href="{{ site.baseurl }}">
     <link rel="home" href="{{ site.baseurl }}">
     <link rel="author" href="humans.txt">
@@ -33,8 +33,8 @@
     {% endcomment %}
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ site.name }}">
-    <meta property="og:title" content="{% include modules/metaTitle.liquid %}">
-    <meta property="og:description" content="{% include modules/metaDescription.liquid %}">
+    <meta property="og:title" content="{% include modules/meta-title.liquid %}">
+    <meta property="og:description" content="{% include modules/meta-description.liquid %}">
     <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}">
     <meta property="og:image" content="{{ site.baseurl }}/favicon.png">
 
@@ -50,4 +50,4 @@
     {% comment %}
         SVG symbols for <use> tags
     {% endcomment %}
-    <div style="display:none;">{% include _symbolsMerged.svg %}</div>
+    <div style="display:none;">{% include .symbols-merged.svg %}</div>

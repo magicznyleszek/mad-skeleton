@@ -9,26 +9,26 @@
 
     <h3><a name="toc-madcss-naming" href="#toc-toc">&uarr;</a> Naming things</h3>
 
-    <p>Attribute names are defined in a simple fashion: attribute always starts with the global prefix, followed by module name. If it's a child, then it appends a single hyphen, followed by the child name. And try not going deeper than 2 levels with that: i.e. grandchildren and further are forbidden.</p>
+    <p>Attribute names are defined in a simple fashion: attribute always starts with the global prefix, followed by module name. If it's a child, then it appends a double hyphen, followed by the child name. Both parent and child names are written with <code>catepillar-case</code> And try not going deeper than 2 levels with that: i.e. grandchildren and further are forbidden.</p>
 
-    <pre><code>{{ 'prefix-name[-childname]' | xml_escape }}</code></pre>
+    <pre><code>{{ '<prefix>-<parent-name>[--<child-name>]' | xml_escape }}</code></pre>
 
     <p><strong>Warning:</strong> uppercase letters in attribute names are invalid HTML and can cause bugs in some browsers (as most browsers tend to auto-fix that problem in your code).</p>
 
     <p>Modifiers are a space-separated strings, so basically you can use any character you want (except space of course):</p>
 
-    <pre><code>{{ '<div i-nietzsche="2/3 isDead +_- żółć 鸡汤">…</div>' | xml_escape }}</code></pre>
+    <pre><code>{{ '<div i-void--friedrich-nietzsche="2/3 isDead +_- żółć 鸡汤">…</div>' | xml_escape }}</code></pre>
 
     <p>And then you would write something like this in your <code>.(s)css</code> file:</p>
 
-    {% capture example1 %}{% include docs/madcss/madcssCssExample.css %}{% endcapture %}
+    {% capture example1 %}{% include docs/madcss/madcss-css-example.css %}{% endcapture %}
     <pre><code>{{ example1 | xml_escape }}</code></pre>
 
     <h3><a name="toc-madcss-architecture" href="#toc-toc">&uarr;</a> Architecture</h3>
 
     <p>There are literally five mandatory files you need -- the rest are custom modules (you can delete existing ones, just don't tell me about it). Building new things happens in <code>modules/</code> directory and you will define global variables in -- wait for it -- <code>variables.css</code>! GASP!</p>
 
-    {% capture example2 %}{% include docs/madcss/madcssArchitectureExample.txt %}{% endcapture %}
+    {% capture example2 %}{% include docs/madcss/madcss-architecture-example.txt %}{% endcapture %}
     <pre><code>{{ example2 | xml_escape }}</code></pre>
 
     <p>As for variables, make sure that you define module private ones in the <code>:root {}</code> block on top of the file. If multiple modules use a variable, you should put in in global file.</p>

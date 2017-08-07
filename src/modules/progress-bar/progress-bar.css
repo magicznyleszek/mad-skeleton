@@ -1,15 +1,15 @@
 /*******************************************************************************
-progressbar config
+progress-bar config
 *******************************************************************************/
 
 :root {
-    --progressbar-bg: var(--c-silver);
-    --progressbar-indicator-bg: var(--c-charcoal);
+    --progress-bar-bg: var(--c-silver);
+    --progress-bar-indicator-bg: var(--c-charcoal);
 
-    --progressbar-short-w: 10rem; /* 160px @ 16px */
+    --progress-bar-short-w: 10rem; /* 160px @ 16px */
 
-    --progressbar-pending-s: 1rem;
-    --progressbar-pending-gr: radial-gradient(
+    --progress-bar-pending-s: 1rem;
+    --progress-bar-pending-gr: radial-gradient(
         circle 0.33rem,
         var(--c-white) 0%,
         var(--c-white) 50%,
@@ -19,38 +19,38 @@ progressbar config
 }
 
 /*******************************************************************************
-progressbar module
+progress-bar module
 *******************************************************************************/
 
-[i-progressbar] {
+[i-progress-bar] {
     position: relative;
     overflow: hidden;
     margin-top: 0.25rem;
     border-radius: var(--s-global-br);
     width: 100%;
     height: calc(var(--s-leading) - 0.5rem);
-    background-color: var(--progressbar-bg);
+    background-color: var(--progress-bar-bg);
 }
 
-[i-progressbar]:not(:last-child) { margin-bottom: var(--s-leading); }
+[i-progress-bar]:not(:last-child) { margin-bottom: var(--s-leading); }
 
-[i-progressbar-indicator] {
+[i-progress-bar--indicator] {
     display: block;
     border-radius: var(--s-global-br);
     width: 0%;
     height: 100%;
-    background-color: var(--progressbar-indicator-bg);
+    background-color: var(--progress-bar-indicator-bg);
     transition: 0.25s;
 }
 
-[i-progressbar~="short"] { max-width: var(--progressbar-short-w); }
+[i-progress-bar~="short"] { max-width: var(--progress-bar-short-w); }
 
 @keyframes framesProgressPending {
-    0% { background-position: calc(var(--progressbar-pending-s) * -1) 0; }
-    100% { background-position: var(--progressbar-pending-s) 0; }
+    0% { background-position: calc(var(--progress-bar-pending-s) * -1) 0; }
+    100% { background-position: var(--progress-bar-pending-s) 0; }
 }
 
-[i-progressbar~="pending"]::after {
+[i-progress-bar~="pending"]::after {
     content: "";
     position: absolute;
     top: 0;
@@ -58,8 +58,8 @@ progressbar module
     width: 100%;
     height: 100%;
     opacity: 0.25;
-    background-image: var(--progressbar-pending-gr);
-    background-size: var(--progressbar-pending-s) 100%;
+    background-image: var(--progress-bar-pending-gr);
+    background-size: var(--progress-bar-pending-s) 100%;
     background-repeat: repeat-x;
     animation-name: framesProgressPending;
     animation-duration: 0.75s;

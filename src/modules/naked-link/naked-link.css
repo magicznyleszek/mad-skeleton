@@ -1,18 +1,18 @@
 /*******************************************************************************
-nakedlink module
+naked-link module
 *******************************************************************************/
 
-[i-nakedlink] {
+[i-naked-link] {
     cursor: pointer;
     text-decoration: none;
 }
 
-[i-nakedlink]:hover {
+[i-naked-link]:hover {
     opacity: 0.8;
     color: inherit;
 }
 
-[i-nakedlink]:active {
+[i-naked-link]:active {
     opacity: 0.6;
     color: inherit;
 }

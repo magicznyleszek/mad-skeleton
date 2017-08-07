@@ -1,0 +1,7 @@
+/* nietzsche module */
+[i-void--friedrich-nietzsche] { all: unset; }
+[i-void--friedrich-nietzsche~="2/3"] { all: unset; }
+[i-void--friedrich-nietzsche~="isDead"] { all: unset; }
+[i-void--friedrich-nietzsche~="+_-"] { all: unset; }
+[i-void--friedrich-nietzsche~="żółć"] { all: unset; }
+[i-void--friedrich-nietzsche~="鸡汤"] { all: unset; }

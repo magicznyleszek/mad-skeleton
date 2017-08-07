@@ -1,7 +1,0 @@
-/* nietzsche module */
-[i-nietzsche] { all: unset; }
-[i-nietzsche~="2/3"] { all: unset; }
-[i-nietzsche~="isDead"] { all: unset; }
-[i-nietzsche~="+_-"] { all: unset; }
-[i-nietzsche~="żółć"] { all: unset; }
-[i-nietzsche~="鸡汤"] { all: unset; }
