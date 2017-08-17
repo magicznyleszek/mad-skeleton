@@ -38,7 +38,7 @@ style broken images
 [i-picture--image] {
     /* for alt text being too long */
     overflow-wrap: break-word;
-    color: var(--c-charcoal);
+    color: var(--c-root-bg);
     font-family: var(--font-monospace);
     font-weight: 300;
 }
@@ -58,5 +58,5 @@ style broken images
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--c-silver);
+    background-color: var(--c-root-txt);
 }
