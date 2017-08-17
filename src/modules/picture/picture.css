@@ -3,9 +3,8 @@ picture module
 *******************************************************************************/
 
 [i-picture] {
-    display: block;
-    /* trim if doesn't fit the screen */
-    overflow-x: hidden;
+    display: inline-block;
+    vertical-align: top;
 }
 
 [i-picture--caption] {
@@ -28,38 +27,36 @@ picture module
 
 [i-picture--image] {
     position: relative;
-    min-height: var(--s-leading);
-    min-width: var(--s-leading);
-    /* HACK fix weird height of broken images */
-    line-height: 0;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /*******************************************************************************
 style broken images
 *******************************************************************************/
 
-[i-picture--image]::before,
-[i-picture--image]::after {
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 100%;
-}
-
-[i-picture--image]::before {
-    content: "(x_x;)";
-    z-index: 2;
-    top: 50%;
-    text-align: center;
+[i-picture--image] {
+    /* for alt text being too long */
+    overflow-wrap: break-word;
     color: var(--c-charcoal);
     font-family: var(--font-monospace);
     font-weight: 300;
 }
 
+[i-picture--image]::before {
+    content: "(x_x;)";
+    float: right;
+    margin-left: 0.5rem;
+}
+
 [i-picture--image]::after {
     content: "";
-    z-index: 1;
+    display: block;
+    position: absolute;
+    z-index: -1;
     top: 0;
+    left: 0;
     height: 100%;
+    width: 100%;
     background-color: var(--c-silver);
 }

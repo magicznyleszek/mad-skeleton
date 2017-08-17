@@ -22,7 +22,7 @@
     "serve": "npm-run-all build jekyll:serve",
     "lint": "stylelint \"src/**/*.css\"",
     "dist:rebuild": "rm -rf dist && mkdirp dist",
-    "images:build": "node bin/buildImages.js",
+    "images:build": "node bin/build-images.js",
     "styles:build": "postcss src/aggregate.css -o dist/mad.css",
     "svg:build": "svgo -f src/symbols/ && svgshelf -p symbol- src/symbols/\\*.svg src/.symbols-merged.svg",
     "jekyll:build": "jekyll build",
