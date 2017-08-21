@@ -6,7 +6,8 @@
     },
     "globals": {
         "require": true,
-        "module": true
+        "module": true,
+        "process": true
     },
     "parserOptions": {
         "ecmaVersion": 6,
@@ -125,7 +126,7 @@
         "array-bracket-spacing": [1, "never"],
         "block-spacing": [1, "never"],
         "brace-style": [1, "1tbs", {"allowSingleLine": true}],
-        "camelcase": 0,
+        "camelcase": [1, {"properties": "always"}],
         "comma-spacing": [1, {"before": false, "after": true}],
         "comma-style": [1, "last"],
         "computed-property-spacing": [1, "never"],
@@ -146,7 +147,10 @@
             "code": 80,
             "tabWidth": 4,
             "ignoreUrls": true,
-            "ignoreComments": false
+            "ignoreComments": false,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreRegExpLiterals": true
         }],
         "max-nested-callbacks": [1, 3],
         "max-params": 0,
@@ -218,7 +222,7 @@
         "object-shorthand": 0,
         "prefer-arrow-callback": 1,
         "prefer-const": 1,
-        "prefer-reflect": 1,
+        "prefer-reflect": 0,
         "prefer-rest-params": 1,
         "prefer-spread": 1,
         "require-yield": 1,
