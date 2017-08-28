@@ -15,21 +15,21 @@
   },
   "homepage": "https://github.com/smutnyleszek/mad-skeleton",
   "scripts": {
-    "start": "npm-run-all watch",
+    "start": "npm-run-all styles-build watch",
     "test": "npm-run-all lint",
-    "build": "npm-run-all dist:rebuild svg:build styles:build images:build",
+    "build": "npm-run-all dist-rebuild svg-build styles-build images-build",
     "watch": "npm-watch",
-    "serve": "npm-run-all build jekyll:serve",
+    "serve": "npm-run-all jekyll-serve",
     "lint": "stylelint \"src/**/*.css\"",
-    "dist:rebuild": "rm -rf dist && mkdirp dist",
-    "images:build": "node bin/build-images.js",
-    "styles:build": "postcss src/aggregate.css -o dist/mad.css",
-    "svg:build": "svgo -f src/symbols/ && svgshelf -p symbol- src/symbols/\\*.svg src/.symbols-merged.svg",
-    "jekyll:build": "jekyll build",
-    "jekyll:serve": "jekyll serve --watch --baseurl ''"
+    "dist-rebuild": "rm -rf dist && mkdirp dist",
+    "styles-build": "postcss src/aggregate.css -o dist/mad.css",
+    "svg-build": "svgo -f src/symbols/ && svgshelf -p symbol- src/symbols/\\*.svg src/.symbols-merged.svg",
+    "images-build": "node bin/build-images.js",
+    "jekyll-build": "jekyll build",
+    "jekyll-serve": "jekyll serve --watch --baseurl ''"
   },
   "watch": {
-    "styles:build": {
+    "styles-build": {
       "patterns": [
         "src"
       ],
