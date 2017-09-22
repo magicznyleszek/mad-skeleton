@@ -18,6 +18,8 @@ markdown: kramdown
 kramdown:
     auto_ids: false
 timezone: Europe/Warsaw
+# 0 to 65535
+port: 2038
 
 # pull includes from other directory
 includes_dir: src

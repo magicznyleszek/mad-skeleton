@@ -15,7 +15,7 @@ a:hover { color: var(--c-amaranth); }
 
 a:active { color: var(--c-purple); }
 
-/* text selection */
+/* selection */
 
 :focus {
     outline: var(--c-root-focus) solid 0.125rem;

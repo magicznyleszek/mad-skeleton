@@ -1,2 +1,31 @@
+---
+layout: null
+badrobots:
+    - BackDoorBot/1.0
+    - Black Hole
+    - CopyRightCheck
+    - EmailCollector
+    - EmailSiphon
+    - EmailWolf
+    - NPBot
+    - SlySearch
+    - The Intraformant
+    - TurnitinBot
+    - Xenu's
+    - Xenu's Link Sleuth 1.1c
+    - Zeus
+    - Zeus 32297 Webster Pro V2.9 Win32
+---
+
 User-agent: *
-Allow: /
+Allow: *
+Crawl-delay: 1
+Sitemap: {{ site.baseurl }}/sitemap.xml
+
+# One day the AIs are going to look back on us the same way
+# we look at fossil skeletons on the plains of Africa.
+# -- Nathan, Ex Machina (2014)
+{% for badrobot in page.badrobots %}
+User-agent: {{ badrobot }}
+Disallow:/
+{% endfor %}
