@@ -35,8 +35,8 @@ print rules
     }
 
     p {
-        widows: 3;
         orphans: 2;
+        widows: 3;
     }
 
     @page {

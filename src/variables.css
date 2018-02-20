@@ -13,33 +13,10 @@ variables - all global and pallete variables for project
     --c-charcoal: hwb(0, 20%, 80%);
 
     /* font families palette */
-    --font-sansSerif:
-        "Source Sans Pro",
-        "Roboto",
-        "PT Sans",
-        "Droid Sans",
-        "Fira Sans",
-        "Work Sans",
-        "Open Sans",
-        "Noto Sans",
-        "Hind",
-        "Dosis",
-        "Cabin",
-        "Verdana",
-        "Tahoma",
-        sans-serif;
-    --font-monospace:
-        "Input Mono",
-        "Office Code Pro",
-        "Source Code Pro",
-        "Fira Mono",
-        "Inconsolata",
-        "Monaco",
-        "Consolas",
-        "Lucida Console",
-        "Liberation Mono",
-        "DejaVu Sans Mono",
-        monospace;
+    --font-sansSerif: "Source Sans Pro", "Roboto", "PT Sans", "Droid Sans", "Fira Sans", "Work Sans", "Open Sans",
+        "Noto Sans", "Hind", "Dosis", "Cabin", "Verdana", "Tahoma", sans-serif;
+    --font-monospace: "Input", "Office Code Pro", "Source Code Pro", "Fira Mono", "Inconsolata", "Monaco", "Consolas",
+        "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", monospace;
 
     /* base */
     --c-root-txt: var(--c-charcoal);

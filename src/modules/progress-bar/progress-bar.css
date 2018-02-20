@@ -32,7 +32,9 @@ progress-bar module
     background-color: var(--progress-bar-bg);
 }
 
-[i-progress-bar]:not(:last-child) { margin-bottom: var(--s-leading); }
+[i-progress-bar]:not(:last-child) {
+    margin-bottom: var(--s-leading);
+}
 
 [i-progress-bar--indicator] {
     display: block;
@@ -43,11 +45,18 @@ progress-bar module
     transition: 0.25s;
 }
 
-[i-progress-bar~="short"] { max-width: var(--progress-bar-short-w); }
+[i-progress-bar~="short"] {
+    max-width: var(--progress-bar-short-w);
+}
 
 @keyframes framesProgressPending {
-    0% { background-position: calc(var(--progress-bar-pending-s) * -1) 0; }
-    100% { background-position: var(--progress-bar-pending-s) 0; }
+    0% {
+        background-position: calc(var(--progress-bar-pending-s) * -1) 0;
+    }
+
+    100% {
+        background-position: var(--progress-bar-pending-s) 0;
+    }
 }
 
 [i-progress-bar~="pending"]::after {
@@ -59,14 +68,14 @@ progress-bar module
     height: 100%;
     opacity: 0.25;
     background-image: var(--progress-bar-pending-gr);
-    background-size: var(--progress-bar-pending-s) 100%;
     background-repeat: repeat-x;
+    background-size: var(--progress-bar-pending-s) 100%;
     animation-name: framesProgressPending;
     animation-duration: 0.75s;
-    animation-timing-function: linear;
     animation-delay: 0;
     animation-direction: normal;
-    animation-iteration-count: infinite;
     animation-fill-mode: none;
+    animation-iteration-count: infinite;
     animation-play-state: running;
+    animation-timing-function: linear;
 }

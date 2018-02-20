@@ -9,7 +9,7 @@ https://github.com/aheckmann/gm/issues/488
 
 const fs = require('fs');
 const gm = require('gm');
-const process = require('process');
+const thisProcess = require('process');
 const allowedImageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
 const sourceDir = './src/images';
 const destinationDir = './dist/images';
@@ -122,7 +122,14 @@ const isImage = (file) => {
 // @param {integer} jpgQuality - 0 to 100 percent value
 // @param {string} suffix - will be added just before extension
 // @param {function} callback - will be called after successful conversion
-const convertImage = (imagePath, width, height, jpgQuality, suffix, callback) => {
+const convertImage = (
+    imagePath,
+    width,
+    height,
+    jpgQuality,
+    suffix,
+    callback
+) => {
     let finalPath = imagePath.replace(sourceDir, destinationDir);
     finalPath = addSuffixToFilename(finalPath, suffix);
 
@@ -140,7 +147,7 @@ const convertImage = (imagePath, width, height, jpgQuality, suffix, callback) =>
     gmImage.write(finalPath, (err) => {
         if (err) {
             console.error(err);
-            process.exit(1);
+            thisProcess.exit(1);
         } else {
             console.log(checkmarkString, finalPath);
             callback();
@@ -215,7 +222,7 @@ const buildImages = () => {
     const allImages = getImagesFromSourceDir();
     if (allImages.length === 0) {
         console.error('No images to convert! WTF?');
-        process.exit(1);
+        thisProcess.exit(1);
     } else {
         console.log('Found images: ' + allImages.length);
     }

@@ -2,13 +2,33 @@
 area module - colors
 *******************************************************************************/
 
-[i-area~="amaranth"] { background-color: var(--c-amaranth); }
-[i-area~="purple"] { background-color: var(--c-purple); }
-[i-area~="violet"] { background-color: var(--c-violet); }
-[i-area~="gold"] { background-color: var(--c-gold); }
-[i-area~="white"] { background-color: var(--c-white); }
-[i-area~="silver"] { background-color: var(--c-silver); }
-[i-area~="charcoal"] { background-color: var(--c-charcoal); }
+[i-area~="amaranth"] {
+    background-color: var(--c-amaranth);
+}
+
+[i-area~="purple"] {
+    background-color: var(--c-purple);
+}
+
+[i-area~="violet"] {
+    background-color: var(--c-violet);
+}
+
+[i-area~="gold"] {
+    background-color: var(--c-gold);
+}
+
+[i-area~="white"] {
+    background-color: var(--c-white);
+}
+
+[i-area~="silver"] {
+    background-color: var(--c-silver);
+}
+
+[i-area~="charcoal"] {
+    background-color: var(--c-charcoal);
+}
 
 /* text color for light backgrounds */
 [i-area~="gold"],
@@ -29,7 +49,9 @@ area module - colors
 area module - spacing
 *******************************************************************************/
 
-[i-area~="medium"] { padding: var(--s-leading); }
+[i-area~="medium"] {
+    padding: var(--s-leading);
+}
 
 [i-area~="medium-v"] {
     padding-top: var(--s-leading);
@@ -37,11 +59,13 @@ area module - spacing
 }
 
 [i-area~="medium-h"] {
-    padding-left: var(--s-leading);
     padding-right: var(--s-leading);
+    padding-left: var(--s-leading);
 }
 
-[i-area~="half"] { padding: calc(var(--s-leading) * 0.5); }
+[i-area~="half"] {
+    padding: calc(var(--s-leading) * 0.5);
+}
 
 [i-area~="half-v"] {
     padding-top: calc(var(--s-leading) * 0.5);
@@ -49,8 +73,8 @@ area module - spacing
 }
 
 [i-area~="half-h"] {
-    padding-left: calc(var(--s-leading) * 0.5);
     padding-right: calc(var(--s-leading) * 0.5);
+    padding-left: calc(var(--s-leading) * 0.5);
 }
 
 [i-area~="double"] {
@@ -63,6 +87,6 @@ area module - spacing
 }
 
 [i-area~="double-h"] {
-    padding-left: calc(var(--s-leading) * 2);
     padding-right: calc(var(--s-leading) * 2);
+    padding-left: calc(var(--s-leading) * 2);
 }

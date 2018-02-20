@@ -10,10 +10,10 @@ as they tend to add unwanted pixels, thus braking the flow.
 html {
     min-height: 100%;
     background-color: var(--c-root-bg);
-    color: var(--c-root-txt);
     font-family: var(--font-sansSerif);
-    font-weight: 400;
     font-size: 100%;
+    font-weight: 400;
+    color: var(--c-root-txt);
     line-height: var(--root-lineHeight);
     text-rendering: optimizeLegibility;
 }

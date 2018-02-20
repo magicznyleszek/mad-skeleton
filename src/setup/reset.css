@@ -11,11 +11,11 @@ a simple reset
     border: 0;
     padding: 0;
     background-color: transparent;
-    color: inherit;
     font-family: inherit;
     font-size: inherit;
-    font-style: inherit;
     font-weight: inherit;
+    font-style: inherit;
+    color: inherit;
     line-height: inherit;
 }
 

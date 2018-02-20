@@ -18,9 +18,13 @@ icon config
 }
 
 /* bugfix for click target SVGElementInstance */
-[i-icon] > * { pointer-events: none; }
+[i-icon] > * {
+    pointer-events: none;
+}
 
-[i-icon~="middle"] { vertical-align: middle; }
+[i-icon~="middle"] {
+    vertical-align: middle;
+}
 
 /*******************************************************************************
 icon sizes
@@ -45,12 +49,29 @@ icon sizes
 icon colors
 *******************************************************************************/
 
-[i-icon~="amaranth"] { fill: var(--c-amaranth); }
-[i-icon~="purple"] { fill: var(--c-purple); }
-[i-icon~="violet"] { fill: var(--c-violet); }
-[i-icon~="gold"] { fill: var(--c-gold); }
-[i-icon~="white"] { fill: var(--c-white); }
-[i-icon~="silver"] { fill: var(--c-silver); }
+[i-icon~="amaranth"] {
+    fill: var(--c-amaranth);
+}
+
+[i-icon~="purple"] {
+    fill: var(--c-purple);
+}
+
+[i-icon~="violet"] {
+    fill: var(--c-violet);
+}
+
+[i-icon~="gold"] {
+    fill: var(--c-gold);
+}
+
+[i-icon~="white"] {
+    fill: var(--c-white);
+}
+
+[i-icon~="silver"] {
+    fill: var(--c-silver);
+}
 
 @keyframes crazyPulseAnimation {
     0% {
@@ -82,10 +103,10 @@ icon colors
 [i-icon~="crazyPulseAnimatedOnHover"]:hover {
     animation-name: crazyPulseAnimation;
     animation-duration: 1s;
-    animation-fill-mode: none;
     animation-delay: 0s;
-    animation-timing-function: ease-in-out;
     animation-direction: alternate;
+    animation-fill-mode: none;
     animation-iteration-count: infinite;
     animation-play-state: running;
+    animation-timing-function: ease-in-out;
 }

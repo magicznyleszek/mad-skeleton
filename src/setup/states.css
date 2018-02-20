@@ -9,11 +9,17 @@ a {
     text-decoration: underline;
 }
 
-a:visited { color: inherit; }
+a:visited {
+    color: inherit;
+}
 
-a:hover { color: var(--c-amaranth); }
+a:hover {
+    color: var(--c-amaranth);
+}
 
-a:active { color: var(--c-purple); }
+a:active {
+    color: var(--c-purple);
+}
 
 /* selection */
 
@@ -26,7 +32,9 @@ a:active { color: var(--c-purple); }
     background-color: var(--c-root-focus);
 }
 
-::-moz-focus-inner { border: 0; }
+::-moz-focus-inner {
+    border: 0;
+}
 
 ::selection {
     background-color: var(--c-amaranth);
@@ -40,5 +48,7 @@ a:active { color: var(--c-purple); }
     opacity: 0.5;
 
     /* avoid adding up opacity on nested disabled elements */
-    [disabled] { opacity: 1; }
+    [disabled] {
+        opacity: 1;
+    }
 }
