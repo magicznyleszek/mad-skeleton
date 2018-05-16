@@ -8,26 +8,32 @@ as they tend to add unwanted pixels, thus braking the flow.
 *******************************************************************************/
 
 html {
-    min-height: 100%;
-    background-color: var(--c-root-bg);
-    font-family: var(--font-sansSerif);
-    font-size: 100%;
-    font-weight: 400;
-    color: var(--c-root-txt);
-    line-height: var(--root-lineHeight);
-    text-rendering: optimizeLegibility;
+  min-height: 100%;
+  background-color: var(--c-root-bg);
+  font-family: var(--font-sansSerif);
+  font-size: 100%;
+  font-weight: 400;
+  color: var(--c-root-txt);
+  line-height: var(--root-lineHeight);
+  text-rendering: optimizeLegibility;
 }
 
 /*
 clever page scaling with root font size changes:
 https://www.smashingmagazine.com/2016/05/fluid-typography/
+calc(AZ + (B - A) * (100vw - CZ) / (D - C))
+- A: min font size
+- B: max font size
+- C: min screen size
+- D: max screen size
+- Z: unit (px, rem, etc.)
 */
 html {
-    font-size: calc(1rem + (2 - 1) * (100vw - 40rem) / (120 - 40));
+  font-size: calc(1rem + (1.5 - 1) * (100vw - 30rem) / (120 - 30));
 }
 
 body {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 40rem; /* 640px @ 16px */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 40rem; /* 640px @ 16px */
 }
