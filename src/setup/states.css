@@ -5,50 +5,50 @@ user-action influenced states
 /* links */
 
 a {
-    color: inherit;
-    text-decoration: underline;
+  color: inherit;
+  text-decoration: underline;
 }
 
 a:visited {
-    color: inherit;
+  color: inherit;
 }
 
 a:hover {
-    color: var(--c-amaranth);
+  color: var(--c-amaranth);
 }
 
 a:active {
-    color: var(--c-purple);
+  color: var(--c-purple);
 }
 
 /* selection */
 
 :focus {
-    outline: var(--c-root-focus) solid 0.125rem;
-    background-color: var(--c-root-focus);
+  outline: var(--c-root-focus) solid 0.125rem;
+  background-color: var(--c-root-focus);
 }
 
 :focus svg {
-    background-color: var(--c-root-focus);
+  background-color: var(--c-root-focus);
 }
 
 ::-moz-focus-inner {
-    border: 0;
+  border: 0;
 }
 
 ::selection {
-    background-color: var(--c-amaranth);
-    color: var(--c-white);
+  background-color: var(--c-amaranth);
+  color: var(--c-white);
 }
 
 /* disabled elements */
 
 [disabled] {
-    pointer-events: none;
-    opacity: 0.5;
+  pointer-events: none;
+  opacity: 0.5;
 
-    /* avoid adding up opacity on nested disabled elements */
-    [disabled] {
-        opacity: 1;
-    }
+  /* avoid adding up opacity on nested disabled elements */
+  [disabled] {
+    opacity: 1;
+  }
 }

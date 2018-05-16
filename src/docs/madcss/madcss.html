@@ -1,17 +1,17 @@
 <section i-area="medium-v">
-    <header i-area="medium-v">
-        <h2><a name="toc-madcss" href="#toc-toc">&uarr;</a> MADCSS philosophy</h2>
-    </header>
+  <header i-area="medium-v">
+    <h2><a name="toc-madcss" href="#toc-toc">&uarr;</a> MADCSS philosophy</h2>
+  </header>
 
-    <p><strong>MADCSS</strong> stands for <strong>M</strong>odular <strong>A</strong>ttribute-<strong>D</strong>riven <strong>CSS</strong>. Yeah, sooo clever. Basic architecture is <del>based on</del> inspired by: <a href="https://amcss.github.io/">AMCSS</a>, <a href="https://github.com/colepeters/gemma">Gemma</a>, <a href="http://krasimir.github.io/organic-css/">Organic CSS</a>, <a href="http://demo.patternlab.io">Atomic Design</a> and <a href="http://tachyons.io/">Tachyons</a>.</p>
+  <p><strong>MADCSS</strong> stands for <strong>M</strong>odular <strong>A</strong>ttribute-<strong>D</strong>riven <strong>CSS</strong>. Yeah, sooo clever. Basic architecture is <del>based on</del> inspired by: <a href="https://amcss.github.io/">AMCSS</a>, <a href="https://github.com/colepeters/gemma">Gemma</a>, <a href="http://krasimir.github.io/organic-css/">Organic CSS</a>, <a href="http://demo.patternlab.io">Atomic Design</a> and <a href="http://tachyons.io/">Tachyons</a>.</p>
 
-    <p>The base global prefix for all attribute modules is <code>i-</code>, as in "interface".</p>
+  <p>The base global prefix for all attribute modules is <code>i-</code>, as in "interface".</p>
 
-    <h3><a name="toc-madcss-naming" href="#toc-toc">&uarr;</a> Naming things</h3>
+  <h3><a name="toc-madcss-naming" href="#toc-toc">&uarr;</a> Naming things</h3>
 
-    <p>Attribute names are defined in a simple fashion: attribute always starts with the global prefix, followed by module name. If it's a child, then it appends a double hyphen, followed by the child name. Both parent and child names are written with <code>catepillar-case</code> And try not going deeper than 2 levels with that: i.e. grandchildren and further are forbidden.</p>
+  <p>Attribute names are defined in a simple fashion: attribute always starts with the global prefix, followed by module name. If it's a child, then it appends a double hyphen, followed by the child name. Both parent and child names are written with <code>catepillar-case</code> And try not going deeper than 2 levels with that: i.e. grandchildren and further are forbidden.</p>
 
-    <pre><code>{{ '<prefix>-<parent-name>[--<child-name>]' | xml_escape }}</code></pre>
+  <pre><code>{{ '<prefix>-<parent-name>[--<child-name>]' | xml_escape }}</code></pre>
 
     <p><strong>Warning:</strong> uppercase letters in attribute names are invalid HTML and can cause bugs in some browsers (as most browsers tend to auto-fix that problem in your code).</p>
 
@@ -40,10 +40,10 @@
     <h3><a name="toc-madcss-quirks" href="#toc-toc">&uarr;</a> Quirks and rules</h3>
 
     <ol>
-        <li><strong>Colors Purity</strong> -- the thing I am passionately crazy about: define new colors <em>only</em> inside <code>variables.css</code> to assure your design is not "50 shades of gray". Also try learning some proper words for naming them: like "amaranth" is much better than "redLight2".</li>
+      <li><strong>Colors Purity</strong> -- the thing I am passionately crazy about: define new colors <em>only</em> inside <code>variables.css</code> to assure your design is not "50 shades of gray". Also try learning some proper words for naming them: like "amaranth" is much better than "redLight2".</li>
 
-        <li><strong>The Leading Principle</strong> -- we want <em>all</em> of the elements, texts and empty spaces to be a multiplication of leading size (<code>line-height</code> of root element in CSS). That way, we assure things look beautiful and we avoid the issue of "50 shades of margins" (yes, I don't know much jokes).</li>
+      <li><strong>The Leading Principle</strong> -- we want <em>all</em> of the elements, texts and empty spaces to be a multiplication of leading size (<code>line-height</code> of root element in CSS). That way, we assure things look beautiful and we avoid the issue of "50 shades of margins" (yes, I don't know much jokes).</li>
 
-        <li><strong>Inverse Swiss Army knife</strong> -- avoid creating too diverse modules with plenty of modifiers, as it will be hell to maintain. In this instance I would prefer to make them a bit DRY instead. You can also try creating a "shared module" or go with some <code>@mixin</code> if you'd use SASS.</li>
+      <li><strong>Inverse Swiss Army knife</strong> -- avoid creating too diverse modules with plenty of modifiers, as it will be hell to maintain. In this instance I would prefer to make them a bit DRY instead. You can also try creating a "shared module" or go with some <code>@mixin</code> if you'd use SASS.</li>
     </ol>
-</section>
+  </section>

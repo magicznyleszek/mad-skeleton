@@ -3,32 +3,34 @@ variables - all global and pallete variables for project
 *******************************************************************************/
 
 :root {
-    /* colors palette */
-    --c-amaranth: hwb(348, 12%, 2%);
-    --c-purple: hwb(328, 12%, 24%);
-    --c-violet: hwb(276, 14%, 42%);
-    --c-gold: hwb(51, 0%, 0%);
-    --c-white: hwb(0, 100%, 0%);
-    --c-silver: hwb(0, 80%, 20%);
-    --c-charcoal: hwb(0, 20%, 80%);
+  /* colors palette */
+  --c-amaranth: hwb(348, 12%, 2%);
+  --c-purple: hwb(328, 12%, 24%);
+  --c-violet: hwb(276, 14%, 42%);
+  --c-gold: hwb(51, 0%, 0%);
+  --c-white: hwb(0, 100%, 0%);
+  --c-silver: hwb(0, 80%, 20%);
+  --c-charcoal: hwb(0, 20%, 80%);
 
-    /* font families palette */
-    --font-sansSerif: "Source Sans Pro", "Roboto", "PT Sans", "Droid Sans", "Fira Sans", "Work Sans", "Open Sans",
-        "Noto Sans", "Hind", "Dosis", "Cabin", "Verdana", "Tahoma", sans-serif;
-    --font-monospace: "Input", "Office Code Pro", "Source Code Pro", "Fira Mono", "Inconsolata", "Monaco", "Consolas",
-        "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", monospace;
+  /* font families palette */
+  --font-sansSerif: "Source Sans Pro", "Roboto", "PT Sans", "Droid Sans",
+    "Fira Sans", "Work Sans", "Open Sans", "Noto Sans", "Hind", "Dosis", "Cabin",
+    "Verdana", "Tahoma", sans-serif;
+  --font-monospace: "Input", "Office Code Pro", "Source Code Pro", "Fira Mono",
+    "Inconsolata", "Monaco", "Consolas", "Lucida Console", "Liberation Mono",
+    "DejaVu Sans Mono", monospace;
 
-    /* base */
-    --c-root-txt: var(--c-charcoal);
-    --c-root-bg: var(--c-white);
-    --c-root-focus: var(--c-gold);
+  /* base */
+  --c-root-txt: var(--c-charcoal);
+  --c-root-bg: var(--c-white);
+  --c-root-focus: var(--c-gold);
 
-    /* leading size for all spacing between elements to be pretty */
-    --root-lineHeight: 1.5;
-    --s-leading: calc(var(--root-lineHeight) * 1rem);
+  /* leading size for all spacing between elements to be pretty */
+  --root-lineHeight: 1.5;
+  --s-leading: calc(var(--root-lineHeight) * 1rem);
 
-    /* globals */
-    --s-global-br: 0.125rem;
+  /* globals */
+  --s-global-br: 0.125rem;
 }
 
 /*******************************************************************************
@@ -40,5 +42,15 @@ custom media queries and selectors shortcuts
 
 /* groups selectors */
 @custom-selector :--headers h1, h2, h3, h4;
-@custom-selector :--textblocks h1, h2, h3, h4, p, ul, ol, blockquote, pre, figure;
+@custom-selector :--textblocks
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul,
+  ol,
+  blockquote,
+  pre,
+  figure;
 @custom-selector :--formelements button, input, select, textarea;

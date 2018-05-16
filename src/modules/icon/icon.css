@@ -3,27 +3,27 @@ icon config
 *******************************************************************************/
 
 :root {
-    --s-mad-skeleton-logo-w: 22.5rem; /* 360px */
-    --s-mad-skeleton-logo-h: 15rem; /* 240px */
+  --s-mad-skeleton-logo-w: 22.5rem; /* 360px */
+  --s-mad-skeleton-logo-h: 15rem; /* 240px */
 }
 
 [i-icon] {
-    display: inline-block;
-    vertical-align: bottom;
-    width: var(--s-leading);
-    height: var(--s-leading);
-    color: inherit;
-    shape-rendering: geometricPrecision;
-    fill: currentColor;
+  display: inline-block;
+  vertical-align: bottom;
+  width: var(--s-leading);
+  height: var(--s-leading);
+  color: inherit;
+  shape-rendering: geometricPrecision;
+  fill: currentColor;
 }
 
 /* bugfix for click target SVGElementInstance */
 [i-icon] > * {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 [i-icon~="middle"] {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /*******************************************************************************
@@ -31,18 +31,18 @@ icon sizes
 *******************************************************************************/
 
 [i-icon~="double"] {
-    width: calc(var(--s-leading) * 2);
-    height: calc(var(--s-leading) * 2);
+  width: calc(var(--s-leading) * 2);
+  height: calc(var(--s-leading) * 2);
 }
 
 [i-icon~="triple"] {
-    width: calc(var(--s-leading) * 3);
-    height: calc(var(--s-leading) * 3);
+  width: calc(var(--s-leading) * 3);
+  height: calc(var(--s-leading) * 3);
 }
 
 [i-icon~="madSkeletonLogo"] {
-    width: var(--s-mad-skeleton-logo-w);
-    height: var(--s-mad-skeleton-logo-h);
+  width: var(--s-mad-skeleton-logo-w);
+  height: var(--s-mad-skeleton-logo-h);
 }
 
 /*******************************************************************************
@@ -50,63 +50,63 @@ icon colors
 *******************************************************************************/
 
 [i-icon~="amaranth"] {
-    fill: var(--c-amaranth);
+  fill: var(--c-amaranth);
 }
 
 [i-icon~="purple"] {
-    fill: var(--c-purple);
+  fill: var(--c-purple);
 }
 
 [i-icon~="violet"] {
-    fill: var(--c-violet);
+  fill: var(--c-violet);
 }
 
 [i-icon~="gold"] {
-    fill: var(--c-gold);
+  fill: var(--c-gold);
 }
 
 [i-icon~="white"] {
-    fill: var(--c-white);
+  fill: var(--c-white);
 }
 
 [i-icon~="silver"] {
-    fill: var(--c-silver);
+  fill: var(--c-silver);
 }
 
 @keyframes crazyPulseAnimation {
-    0% {
-        filter: blur(0);
-        fill: var(--c-charcoal);
-    }
+  0% {
+    filter: blur(0);
+    fill: var(--c-charcoal);
+  }
 
-    25% {
-        filter: blur(calc(var(--s-leading) * 0.5));
-        fill: var(--c-violet);
-    }
+  25% {
+    filter: blur(calc(var(--s-leading) * 0.5));
+    fill: var(--c-violet);
+  }
 
-    50% {
-        filter: blur(0);
-        fill: var(--c-gold);
-    }
+  50% {
+    filter: blur(0);
+    fill: var(--c-gold);
+  }
 
-    75% {
-        filter: blur(calc(var(--s-leading) * 0.5));
-        fill: var(--c-violet);
-    }
+  75% {
+    filter: blur(calc(var(--s-leading) * 0.5));
+    fill: var(--c-violet);
+  }
 
-    100% {
-        filter: blur(0);
-        fill: var(--c-amaranth);
-    }
+  100% {
+    filter: blur(0);
+    fill: var(--c-amaranth);
+  }
 }
 
 [i-icon~="crazyPulseAnimatedOnHover"]:hover {
-    animation-name: crazyPulseAnimation;
-    animation-duration: 1s;
-    animation-delay: 0s;
-    animation-direction: alternate;
-    animation-fill-mode: none;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
-    animation-timing-function: ease-in-out;
+  animation-name: crazyPulseAnimation;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
 }

@@ -5,35 +5,35 @@ a simple reset
 *,
 *::after,
 *::before {
-    vertical-align: baseline;
-    box-sizing: inherit;
-    margin: 0;
-    border: 0;
-    padding: 0;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    font-style: inherit;
-    color: inherit;
-    line-height: inherit;
+  vertical-align: baseline;
+  box-sizing: inherit;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  color: inherit;
+  line-height: inherit;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul,
 ol {
-    list-style: none;
+  list-style: none;
 }
 
 svg {
-    color: inherit;
-    shape-rendering: geometricPrecision;
-    fill: currentColor;
+  color: inherit;
+  shape-rendering: geometricPrecision;
+  fill: currentColor;
 }

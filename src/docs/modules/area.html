@@ -1,30 +1,30 @@
 <section i-area="medium-v">
-    <h3><a name="toc-modules-area" href="#toc-toc">&uarr;</a> area</h3>
+  <h3><a name="toc-modules-area" href="#toc-toc">&uarr;</a> area</h3>
 
-    {% capture example %}{% include modules/area/area-example.html %}{% endcapture %}
-    <pre><code>{{ example | xml_escape }}</code></pre>
+  {% capture example %}{% include modules/area/area-example.html %}{% endcapture %}
+  <pre><code>{{ example | xml_escape }}</code></pre>
 
-    <p>Area has two functions: setting the colors (background & text) and paddings.</p>
+  <p>Area has two functions: setting the colors (background & text) and paddings.</p>
 
-    <p>There are three sizes for spacing: <code>medium</code>, <code>half</code> and <code>double</code>. While defining paddings use optional <code>-v</code> and <code>-h</code> suffixes for setting only vertical (top & bottom) or horizontal (left & right) spacing.</p>
+  <p>There are three sizes for spacing: <code>medium</code>, <code>half</code> and <code>double</code>. While defining paddings use optional <code>-v</code> and <code>-h</code> suffixes for setting only vertical (top & bottom) or horizontal (left & right) spacing.</p>
 
-    <p>There are no single-side modifiers (top, bottom, left and right), as we want to keep the leading flow of the document pristine and we also try to follow <a href="http://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design">The LEGO Way</a> of handling spacing of stuff.</p>
+  <p>There are no single-side modifiers (top, bottom, left and right), as we want to keep the leading flow of the document pristine and we also try to follow <a href="http://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design">The LEGO Way</a> of handling spacing of stuff.</p>
 
-    <div i-area="charcoal half">
-        charcoal area, padded half size
-    </div>
+  <div i-area="charcoal half">
+    charcoal area, padded half size
+  </div>
 
-    <div i-area="silver medium">
-        silver area, padded medium size
-    </div>
+  <div i-area="silver medium">
+    silver area, padded medium size
+  </div>
 
-    <div i-area="amaranth half-v double-h">
-        <div i-area="purple medium">
-            <div i-area="silver half">
-                <div i-area="violet half-v double-h">
-                    violet area in silver area, that is in purple area that is in amaranth area, whilst all of them padded in some random way
-                </div>
-            </div>
+  <div i-area="amaranth half-v double-h">
+    <div i-area="purple medium">
+      <div i-area="silver half">
+        <div i-area="violet half-v double-h">
+          violet area in silver area, that is in purple area that is in amaranth area, whilst all of them padded in some random way
         </div>
+      </div>
     </div>
+  </div>
 </section>

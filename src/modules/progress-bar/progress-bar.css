@@ -3,19 +3,19 @@ progress-bar config
 *******************************************************************************/
 
 :root {
-    --progress-bar-bg: var(--c-silver);
-    --progress-bar-indicator-bg: var(--c-charcoal);
+  --progress-bar-bg: var(--c-silver);
+  --progress-bar-indicator-bg: var(--c-charcoal);
 
-    --progress-bar-short-w: 10rem; /* 160px @ 16px */
+  --progress-bar-short-w: 10rem; /* 160px @ 16px */
 
-    --progress-bar-pending-s: 1rem;
-    --progress-bar-pending-gr: radial-gradient(
-        circle 0.33rem,
-        var(--c-white) 0%,
-        var(--c-white) 50%,
-        transparent 50%,
-        transparent 100%
-    );
+  --progress-bar-pending-s: 1rem;
+  --progress-bar-pending-gr: radial-gradient(
+    circle 0.33rem,
+    var(--c-white) 0%,
+    var(--c-white) 50%,
+    transparent 50%,
+    transparent 100%
+  );
 }
 
 /*******************************************************************************
@@ -23,59 +23,59 @@ progress-bar module
 *******************************************************************************/
 
 [i-progress-bar] {
-    position: relative;
-    overflow: hidden;
-    margin-top: 0.25rem;
-    border-radius: var(--s-global-br);
-    width: 100%;
-    height: calc(var(--s-leading) - 0.5rem);
-    background-color: var(--progress-bar-bg);
+  position: relative;
+  overflow: hidden;
+  margin-top: 0.25rem;
+  border-radius: var(--s-global-br);
+  width: 100%;
+  height: calc(var(--s-leading) - 0.5rem);
+  background-color: var(--progress-bar-bg);
 }
 
 [i-progress-bar]:not(:last-child) {
-    margin-bottom: var(--s-leading);
+  margin-bottom: var(--s-leading);
 }
 
 [i-progress-bar--indicator] {
-    display: block;
-    border-radius: var(--s-global-br);
-    width: 0%;
-    height: 100%;
-    background-color: var(--progress-bar-indicator-bg);
-    transition: 0.25s;
+  display: block;
+  border-radius: var(--s-global-br);
+  width: 0%;
+  height: 100%;
+  background-color: var(--progress-bar-indicator-bg);
+  transition: 0.25s;
 }
 
 [i-progress-bar~="short"] {
-    max-width: var(--progress-bar-short-w);
+  max-width: var(--progress-bar-short-w);
 }
 
 @keyframes framesProgressPending {
-    0% {
-        background-position: calc(var(--progress-bar-pending-s) * -1) 0;
-    }
+  0% {
+    background-position: calc(var(--progress-bar-pending-s) * -1) 0;
+  }
 
-    100% {
-        background-position: var(--progress-bar-pending-s) 0;
-    }
+  100% {
+    background-position: var(--progress-bar-pending-s) 0;
+  }
 }
 
 [i-progress-bar~="pending"]::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.25;
-    background-image: var(--progress-bar-pending-gr);
-    background-repeat: repeat-x;
-    background-size: var(--progress-bar-pending-s) 100%;
-    animation-name: framesProgressPending;
-    animation-duration: 0.75s;
-    animation-delay: 0;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
-    animation-timing-function: linear;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+  background-image: var(--progress-bar-pending-gr);
+  background-repeat: repeat-x;
+  background-size: var(--progress-bar-pending-s) 100%;
+  animation-name: framesProgressPending;
+  animation-duration: 0.75s;
+  animation-delay: 0;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: linear;
 }

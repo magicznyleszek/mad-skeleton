@@ -3,35 +3,35 @@ table module
 *******************************************************************************/
 
 :root {
-    --c-table-border: var(--c-silver);
-    --table-bg: var(--c-white);
-    --table-bg-hover: color(var(--c-table-border) alpha(0.2));
+  --c-table-border: var(--c-silver);
+  --table-bg: var(--c-white);
+  --table-bg-hover: color(var(--c-table-border) alpha(0.2));
 }
 
 [i-table] {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 [i-table]:not(:last-child),
 [i-table] caption:not(:last-child) {
-    margin-bottom: var(--s-leading);
+  margin-bottom: var(--s-leading);
 }
 
 [i-table] td,
 [i-table] th {
-    border: 0.0625rem solid var(--c-table-border);
-    padding: calc(var(--s-leading) * 0.5);
-    word-wrap: break-word;
+  border: 0.0625rem solid var(--c-table-border);
+  padding: calc(var(--s-leading) * 0.5);
+  word-wrap: break-word;
 }
 
 [i-table] thead {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 [i-table] caption {
-    font-style: italic;
-    text-align: center;
+  font-style: italic;
+  text-align: center;
 }
 
 /*******************************************************************************
@@ -39,10 +39,10 @@ additional modifiers
 *******************************************************************************/
 
 [i-table~="hoverable"] tr:hover {
-    background-color: var(--table-bg-hover);
+  background-color: var(--table-bg-hover);
 }
 
 [i-table~="fullwidth"] {
-    table-layout: fixed;
-    width: 100%;
+  table-layout: fixed;
+  width: 100%;
 }

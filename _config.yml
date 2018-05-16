@@ -16,7 +16,7 @@ future: true
 encoding: utf-8
 markdown: kramdown
 kramdown:
-    auto_ids: false
+  auto_ids: false
 timezone: Europe/Warsaw
 # 0 to 65535
 port: 2038
@@ -24,12 +24,12 @@ port: 2038
 # pull includes from other directory
 includes_dir: src
 exclude:
-    # disabled src, as it breaks --watch (see includes_dir)
-    # - src
-    - bin
-    - node_modules
-    - LICENSE
-    - README.md
-    - package.json
-    - package-lock.json
-    - postcss.config.js
+  # disabled src, as it breaks --watch (see includes_dir)
+  # - src
+  - bin
+  - node_modules
+  - LICENSE
+  - README.md
+  - package.json
+  - package-lock.json
+  - postcss.config.js

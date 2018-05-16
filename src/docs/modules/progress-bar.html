@@ -1,44 +1,44 @@
 <section i-area="medium-v">
-    <h3><a name="toc-modules-progress-bar" href="#toc-toc">&uarr;</a> progress-bar</h3>
+  <h3><a name="toc-modules-progress-bar" href="#toc-toc">&uarr;</a> progress-bar</h3>
 
-    {% capture example %}{% include modules/progress-bar/progress-bar-example.html %}{% endcapture %}
-    <pre><code>{{ example | xml_escape }}</code></pre>
+  {% capture example %}{% include modules/progress-bar/progress-bar-example.html %}{% endcapture %}
+  <pre><code>{{ example | xml_escape }}</code></pre>
 
-    <p>Progress bars consist of a bar and an indicator. Indicator size should be probably managed by <em>JavaScript</em> with setting percentage <code>width</code>. It fills the vertical space on default, but has a <em>short</em> modifier too. There is also a nice <em>pending</em> animation.</p>
+  <p>Progress bars consist of a bar and an indicator. Indicator size should be probably managed by <em>JavaScript</em> with setting percentage <code>width</code>. It fills the vertical space on default, but has a <em>short</em> modifier too. There is also a nice <em>pending</em> animation.</p>
 
-    <h4>default:</h4>
+  <h4>default:</h4>
 
-    <div i-progress-bar>
-        <span i-progress-bar--indicator style="width: 0%;"></span>
-    </div>
+  <div i-progress-bar>
+    <span i-progress-bar--indicator style="width: 0%;"></span>
+  </div>
 
-    <div i-progress-bar>
-        <span i-progress-bar--indicator style="width: 33%;"></span>
-    </div>
+  <div i-progress-bar>
+    <span i-progress-bar--indicator style="width: 33%;"></span>
+  </div>
 
-    <div i-progress-bar>
-        <span i-progress-bar--indicator style="width: 100%;"></span>
-    </div>
+  <div i-progress-bar>
+    <span i-progress-bar--indicator style="width: 100%;"></span>
+  </div>
 
-    <div i-progress-bar="pending">
-        <span i-progress-bar--indicator style="width: 0%;"></span>
-    </div>
+  <div i-progress-bar="pending">
+    <span i-progress-bar--indicator style="width: 0%;"></span>
+  </div>
 
-    <div i-progress-bar="pending">
-        <span i-progress-bar--indicator style="width: 100%;"></span>
-    </div>
+  <div i-progress-bar="pending">
+    <span i-progress-bar--indicator style="width: 100%;"></span>
+  </div>
 
-    <h4>short:</h4>
+  <h4>short:</h4>
 
-    <div i-progress-bar="pending short">
-        <span i-progress-bar--indicator style="width: 0%;"></span>
-    </div>
+  <div i-progress-bar="pending short">
+    <span i-progress-bar--indicator style="width: 0%;"></span>
+  </div>
 
-    <div i-progress-bar="short">
-        <span i-progress-bar--indicator style="width: 67%;"></span>
-    </div>
+  <div i-progress-bar="short">
+    <span i-progress-bar--indicator style="width: 67%;"></span>
+  </div>
 
-    <div i-progress-bar="pending short">
-        <span i-progress-bar--indicator style="width: 100%;"></span>
-    </div>
+  <div i-progress-bar="pending short">
+    <span i-progress-bar--indicator style="width: 100%;"></span>
+  </div>
 </section>

@@ -3,16 +3,16 @@ naked-link module
 *******************************************************************************/
 
 [i-naked-link] {
-    cursor: pointer;
-    text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 [i-naked-link]:hover {
-    opacity: 0.8;
-    color: inherit;
+  opacity: 0.8;
+  color: inherit;
 }
 
 [i-naked-link]:active {
-    opacity: 0.6;
-    color: inherit;
+  opacity: 0.6;
+  color: inherit;
 }

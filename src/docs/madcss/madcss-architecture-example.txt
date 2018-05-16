@@ -1,12 +1,12 @@
 modules/
-    nietzsche.css
-    complex-thing/
-        complex-thing.css
-        complex-thing-part.css
-        complex-thing-config.css
+  nietzsche.css
+  complex-thing/
+    complex-thing.css
+    complex-thing-part.css
+    complex-thing-config.css
 setup/
-    root.css
-    states.css
-    typography.css
+  root.css
+  states.css
+  typography.css
 aggregate.css
 variables.css
