@@ -5,15 +5,15 @@
   "description": "A small MADCSS-based web boilerplate",
   "repository": {
     "type": "git",
-    "url": "https://github.com/smutnyleszek/mad-skeleton.git"
+    "url": "https://github.com/magicznyleszek/mad-skeleton.git"
   },
   "author": "Leszek Pietrzak",
   "license": "CC0 4.0 BY-NC-ND",
   "bugs": {
-    "url": "https://github.com/smutnyleszek/mad-skeleton/issues",
-    "email": "smutnyleszek@gmail.com"
+    "url": "https://github.com/magicznyleszek/mad-skeleton/issues",
+    "email": "leszek@magicznyleszek.xyz"
   },
-  "homepage": "https://github.com/smutnyleszek/mad-skeleton",
+  "homepage": "https://github.com/magicznyleszek/mad-skeleton",
   "scripts": {
     "start": "npm-run-all styles-build watch",
     "test": "npm-run-all lint",

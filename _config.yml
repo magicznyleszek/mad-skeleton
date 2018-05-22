@@ -5,8 +5,8 @@ keywords: "code, boilerplate, wireframe, assets, css, madcss"
 author: "Leszek Pietrzak"
 
 # address settings
-baseurl: "http://mad-skeleton.smutnyleszek.com"
-sourceurl: "https://github.com/smutnyleszek/mad-skeleton"
+baseurl: "http://mad-skeleton.magicznyleszek.xyz"
+sourceurl: "https://github.com/magicznyleszek/mad-skeleton"
 imagesPath: "/dist/images/"
 
 # site configuration
